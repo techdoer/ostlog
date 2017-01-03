@@ -1,5 +1,5 @@
 # ostlog
-ostlog is a simple data model and related impplementations to help families start with self-tracking and more generally, the digitization of their health, growth and well-being related data. 
+A simple data model and related implementations to help families start with self-tracking and the digitization of their health, growth and well-being related data. 
 
 ostlog is designed on the following principles:
 
