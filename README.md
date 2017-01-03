@@ -1,7 +1,7 @@
 # ostlog
 A simple data model and related implementations to help families get started on self-tracking their growth, health and well-being. 
 
-ostlog is designed on the following principles:
+ostlog is based on the following principles:
 
 	* every individual should own their health and well-being related data
 	* personal and confidential data should be protected and shared at the discretion of its owner 
