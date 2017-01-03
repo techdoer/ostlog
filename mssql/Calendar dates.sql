@@ -1,5 +1,5 @@
 ﻿--
--- This program is licensed to you under the MIT License
+-- This program is licensed to you under the MIT License  
 -- Copyright (c) 2017 family•smarts. All rights reserved.
 -- 
 -- Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal 
