@@ -28,8 +28,8 @@ CREATE TABLE [dbo].[Symptoms log]
 	[symptom_icd10_code] NVARCHAR(10), /* the WHO's ICD-10 code for this symptom */
 	[occurance] INT NULL, /* 1 = first, 2= recurring; 3 = last */
 	[remarks] NVARCHAR(2056) NULL, 
-    CONSTRAINT [PK_Symptoms log] PRIMARY KEY CLUSTERED ([id] ASC),
-    CONSTRAINT [FK_Symptoms log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-    CONSTRAINT [FK_Symptoms log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [PK_Symptoms log] PRIMARY KEY CLUSTERED ([id] ASC),
+	CONSTRAINT [FK_Symptoms log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Symptoms log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Symptoms log-Symptom] FOREIGN KEY ([symptom_id]) REFERENCES [dbo].[Symptoms] ([id])
 )

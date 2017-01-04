@@ -21,8 +21,8 @@
 CREATE TABLE [dbo].[Symptoms]
 (
 	[id] INT NOT NULL, 
-    [sname] NVARCHAR(256) NOT NULL, 
-    [classification] NVARCHAR(256) NOT NULL, 
-    [remarks] NVARCHAR(2056) NULL,
+	[sname] NVARCHAR(256) NOT NULL, 
+	[classification] NVARCHAR(256) NOT NULL, 
+	[remarks] NVARCHAR(2056) NULL,
 	CONSTRAINT [PK_Symptoms] PRIMARY KEY CLUSTERED ([id] ASC)
 )
