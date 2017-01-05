@@ -36,12 +36,12 @@ CREATE TABLE [dbo].[Health log]
 	[hrv] FLOAT NULL,
 	[hrv_rmssd] FLOAT NULL,
 	[hrv_sdnn] FLOAT NULL,
-	[blood_pressure_diastolic] INT NULL,
-	[blood_pressure_systolic] INT NULL,
+	[blood_pressure_diastolic_mmhg] INT NULL,
+	[blood_pressure_systolic_mmhg] INT NULL,
 	[respiratory_rate_bpm] FLOAT NULL, /* breaths per minute */
 	[bmi] FLOAT NULL, /* body mass index */
-	[bfp] FLOAT NULL, /* body fat percentage */
-	[spo2] FLOAT NULL, /* SpO2 (peripheral oxygen saturation). */
+	[bfp_%] FLOAT NULL, /* body fat percentage */
+	[spo2_%] FLOAT NULL, /* SpO2 (peripheral oxygen saturation). */
 	[remarks] NVARCHAR(2056) NULL, 
 	CONSTRAINT [PK_Health log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Health log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
