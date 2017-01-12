@@ -29,5 +29,7 @@ CREATE TABLE [dbo].[Menstrual cycle log]
 	[remarks] NVARCHAR(2056) NULL, 
 	CONSTRAINT [PK_Menstrual cycle log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Menstrual cycle log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Menstrual cycle log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id])
+	CONSTRAINT [FK_Menstrual cycle log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CHECK ([day_in_cycle] >= 1 AND [day_in_cycle] <= 10),
+	CHECK ([flow] >= 1 AND [flow] <= 3)
 )
