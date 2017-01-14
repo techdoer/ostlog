@@ -29,8 +29,8 @@ CREATE TABLE [dbo].[Blood log]
 	[hb_g_dl] FLOAT NULL, /* hemoglobin - this is the amount of hemoglobin in a volume of blood - measured as grams/dL */
 	[hct_%] FLOAT NULL, /* Hematocrit - this is the percentage of the volume ofred cells to the volume of whole blood. */
 	[mcv] FLOAT NULL, /* Mean corpuscular volume  - is the average volume of a red blood cell. */
-	[mch] FLOAT NULL, /* Mean Corpuscular Hemoglobin (MCH) is the average amount of hemoglobin in the average red cell */
-	[mchc] FLOAT NULL, /* Mean Corpuscular Hemoglobin Concentration (MCHC) is the average concentration of hemoglobin in a given volume of red cells. */
+	[mch_pg] FLOAT NULL, /* Mean Corpuscular Hemoglobin (MCH) is the average amount of hemoglobin in the average red cell */
+	[mchc_g_dl] FLOAT NULL, /* Mean Corpuscular Hemoglobin Concentration (MCHC) is the average concentration of hemoglobin in a given volume of red cells. */
 	[mpv] FLOAT NULL, /* Mean platelet volume (MPV). Mean platelet volume measures the average amount (volume) of platelets. */
 	[rdw_cv_%] FLOAT NULL, /* Red Cell Distribution Width (RDW-CV), - this is RDW-CV (oefficient of variation), is a measurement of the variability of red cell size and shape */
 	[pc] FLOAT NULL, /* Platelet count.  In italian called piastrine.  measured as billion/L */
@@ -55,13 +55,13 @@ CREATE TABLE [dbo].[Blood log]
 	[cholesterol_total] FLOAT NULL, /* cholesterol in blood. mg/dl */
 	[cholesterol_hdl] FLOAT NULL, /* hdl cholesterol in blood. mg/dl */
 	[cholesterol_ldl] FLOAT NULL, /* ldl cholesterol in blood. mg/dl */
-	[ast_ul_l] FLOAT NULL, /* aspartate aminotransferase. Liver - In Italian GOT/AST  - UI/L */
-	[alt_ul_l] FLOAT NULL, /* alanine aminotransferase. Liver - In Italian GPT/ALT - UI/L */
+	[ast_ui_l] FLOAT NULL, /* aspartate aminotransferase. Liver - In Italian GOT/AST  - UI/L */
+	[alt_ui_l] FLOAT NULL, /* alanine aminotransferase. Liver - In Italian GPT/ALT - UI/L */
 	[ggt] FLOAT NULL, /* gamma-glutamyl transferase. Liver U/I */
 	[ldh_ul_l] FLOAT NULL, /* ldh lactic dehydrogenase Ul/l */
 	[toxoplasma_igg] FLOAT NULL, /* Toxoplasma IgG antibody. */
 	[toxoplasma_igm_ul_ml] FLOAT NULL, /* Toxoplasma IgM antibody. */
-	[tsh_ulu_ul] FLOAT NULL, /* thyrotropin. Italian tireotropo.  ulU/ul */
+	[tsh_ulu_ml] FLOAT NULL, /* thyrotropin. Italian tireotropo.  ulU/ml */
 	[t3_pmol_l] FLOAT NULL, /* triiodothyronine pmol/l */
 	[t4_pmol_l] FLOAT NULL, /* thyroxine pmol/l */
 	[remarks] NVARCHAR(2056) NULL,
