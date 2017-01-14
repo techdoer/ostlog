@@ -25,11 +25,15 @@ CREATE TABLE [dbo].[Stool log]
 	[timestamp] TIME(0) NOT NULL,
 	[person_id] INT NOT NULL, 
 	[bss_type] INT NULL, -- Bristol Stool Chart classification
+	[color] NVARCHAR (10) NULL,
 	[amount] NVARCHAR (10) NULL,
+	[ph] INT NULL, -- 0..7..14
 	[remarks] NVARCHAR(2056) NULL, 
 	CONSTRAINT [PK_Stool log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Stool log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Stool log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CHECK ([bss_type] >= 1 AND [bss_type] <= 7), -- see https://en.wikipedia.org/wiki/Bristol_stool_scale
-	CHECK ([amount] = 'little' OR [amount] = 'normal' OR [amount] = 'alot')
+	CHECK ([amount] = 'little' OR [amount] = 'normal' OR [amount] = 'alot'),
+	CHECK ([color] = 'brown' OR [color] = 'green' OR [color] = 'yellow' OR [color] = 'black' OR [color] = 'white' OR [color] = 'red'),
+	CHECK ([ph] >= 1 AND [ph] <= 14)
 )
