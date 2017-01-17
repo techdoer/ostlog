@@ -20,6 +20,7 @@
 -- License:     MIT License
 CREATE TABLE [dbo].[Heart log]
 (
+	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[person_id] INT NOT NULL,
@@ -45,7 +46,7 @@ CREATE TABLE [dbo].[Heart log]
 	[ecg_rv5_mv] FLOAT NULL, /* amplification millivolts */
 	[ecg_sv1_mv] FLOAT NULL, /* amplification millivolts */
 	[remarks] NVARCHAR(2056) NULL, 
-	CONSTRAINT [PK_Heart log] PRIMARY KEY CLUSTERED ([calendar_date_id] ASC, [person_id] ASC),
+	CONSTRAINT [PK_Heart log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Heart log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Heart log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id])
 )
