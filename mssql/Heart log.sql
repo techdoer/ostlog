@@ -1,21 +1,4 @@
-﻿-- Copyright (c) 2017 family•smarts. All rights reserved.
---
--- This program is licensed to you under the Apache License Version 2.0,
--- and you may not use this file except in compliance with the Apache License Version 2.0.
--- You may obtain a copy of the Apache License Version 2.0 at http://www.apache.org/licenses/LICENSE-2.0.
---
--- Unless required by applicable law or agreed to in writing,
--- software distributed under the Apache License Version 2.0 is distributed on an
--- "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
--- See the Apache License Version 2.0 for the specific language governing permissions and limitations there under.
---
--- Version: A fact table recording heart and ECG test results.  Script supports Azure SQL Server. 
--- URL:         -
---
--- Authors:     Sergio Bogazzi
--- Copyright:   Copyright (c) 2017 family•smarts
--- License:     Apache License Version 2.0CREATE TABLE [dbo].[Heart log]
---
+﻿--
 -- This program is licensed to you under the MIT License
 -- Copyright (c) 2017 family•smarts. All rights reserved.
 -- 
@@ -43,6 +26,11 @@ CREATE TABLE [dbo].[Heart log]
 	[min_heart_rate_bpm] FLOAT NULL,
 	[avg_heart_rate_bpm] FLOAT NULL,
 	[max_heart_rate_bpm] FLOAT NULL,
+	[hrv] FLOAT NULL,
+	[hrv_rmssd] FLOAT NULL,
+	[hrv_sdnn] FLOAT NULL,
+	[blood_pressure_diastolic_mmhg] INT NULL,
+	[blood_pressure_systolic_mmhg] INT NULL,
 	[ecg_pr_ms] INT NULL,   /* PR interval milliseconds */
 	[ecg_p_ms] INT NULL,	/* p wave */
 	[ecg_qrs_ms] INT NULL, /* QRS complex milliseconds */
