@@ -30,8 +30,6 @@ CREATE TABLE [dbo].[Heart log]
 	[hrv] FLOAT NULL,
 	[hrv_rmssd] FLOAT NULL,
 	[hrv_sdnn] FLOAT NULL,
-	[blood_pressure_diastolic_mmhg] INT NULL,
-	[blood_pressure_systolic_mmhg] INT NULL,
 	[ecg_pr_ms] INT NULL,   /* PR interval milliseconds */
 	[ecg_p_ms] INT NULL,	/* p wave */
 	[ecg_qrs_ms] INT NULL, /* QRS complex milliseconds */

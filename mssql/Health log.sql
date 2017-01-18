@@ -30,12 +30,6 @@ CREATE TABLE [dbo].[Health log]
 	[right_foot_size_cm] FLOAT NULL,
 	[left_foot_size_cm] FLOAT NULL,
 	[body_temperature_c] FLOAT NULL,
-	[min_heart_rate_bpm] FLOAT NULL,
-	[avg_heart_rate_bpm] FLOAT NULL,
-	[max_heart_rate_bpm] FLOAT NULL,
-	[hrv] FLOAT NULL,
-	[hrv_rmssd] FLOAT NULL,
-	[hrv_sdnn] FLOAT NULL,
 	[blood_pressure_diastolic_mmhg] INT NULL,
 	[blood_pressure_systolic_mmhg] INT NULL,
 	[respiratory_rate_bpm] FLOAT NULL, /* breaths per minute */
