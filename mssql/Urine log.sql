@@ -26,7 +26,7 @@ CREATE TABLE [dbo].[Urine log]
 	[clarity] NVARCHAR(25) NULL, 
 	[color]  NVARCHAR(25) NULL, 
 	[density_15_c] FLOAT NULL,
-	[ph] NVARCHAR(25) NULL,
+	[ph] FLOAT NULL,
 	[albumin] FLOAT NULL,
 	[glucose] FLOAT NULL,
 	[ketones] FLOAT NULL,
