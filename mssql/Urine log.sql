@@ -38,4 +38,5 @@ CREATE TABLE [dbo].[Urine log]
 	CONSTRAINT [PK_Urine log] PRIMARY KEY CLUSTERED ([calendar_date_id] ASC, [person_id] ASC),
 	CONSTRAINT [FK_Urine log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Urine log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CHECK ([ph] >= 1 AND [ph] <= 14)
 )
