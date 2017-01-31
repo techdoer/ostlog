@@ -23,7 +23,7 @@ CREATE TABLE [dbo].[Allergy log]
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[person_id] INT NOT NULL,
-	[allergy_disorder_sctid] INT NOT NULL, -- SNOWMED CT ID for Allergic disorder
+	[allergen_type_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a type of allergen disorder
 	[remarks] NVARCHAR(2056) NULL,   
 	CONSTRAINT [PK_Allergy log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Allergy log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
