@@ -23,6 +23,8 @@ CREATE TABLE [dbo].[Therapy log]
 	[calendar_date_id] INT NOT NULL,
 	[person_id] INT NOT NULL,
 	[therapy_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a regime/therapy 
+	[effectiveness_score] INT NULL,
+	[effectivness_remarks] NVARCHAR (2048) NULL,
 	[remarks] NVARCHAR(2056) NULL,   
 	CONSTRAINT [PK_Therapy log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Therapy log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
