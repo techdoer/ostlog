@@ -34,5 +34,5 @@ CREATE TABLE [dbo].[Workouts log]
 	CONSTRAINT [PK_Workouts log] PRIMARY KEY CLUSTERED ([calendar_date_id] ASC, [person_id] ASC, [workout_type] ASC),
 	CONSTRAINT [FK_Workouts log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Workouts log-Person] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CHECK ([workout_type]='walking' OR [workout_type]='running' OR [workout_type]='swimming' OR [workout_type]='cycling' OR [workout_type]='hiking' OR [workout_type]='other' OR [workout_type]='physical therapy') 
+	CHECK ([workout_type]='walking' OR [workout_type]='running' OR [workout_type]='swimming' OR [workout_type]='cycling' OR [workout_type]='hiking' OR [workout_type]='other') 
 )
