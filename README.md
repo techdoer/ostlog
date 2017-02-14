@@ -1,5 +1,7 @@
 # introduction
-A do-it-yourself Personal Health Library for individuals and families. ostlog offers a data model and related data management tools to help families start self-tracking their growth, health and well-being.   See the [family•smarts](http://familysmarts.net) website for real-world examples of drawing insights from an ostlog-enabled Personal Health Library.  
+A do-it-yourself Personal Health Library for individuals and families. ostlog offers a data model and related data management tools to help families start self-tracking their growth, health and well-being.  
+
+See the [family•smarts](http://familysmarts.net) website for real-world examples of generating insights from an ostlog-powered Personal Health Library in order to boost household growth, health and well-being. 
 
 # principles
 ostlog is based on the following principles:
