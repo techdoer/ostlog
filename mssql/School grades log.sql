@@ -23,7 +23,7 @@ CREATE TABLE [dbo].[School grades log]
 	[start_calendar_date_id] INT NOT NULL,
 	[end_calendar_date_id] INT NOT NULL,
 	[person_id] INT NOT NULL,
-	[school_level] INT NOT NULL, -- referencing International Standard Classification of Education ISCED 2011
+	[school_level_isced] INT NOT NULL, -- referencing International Standard Classification of Education ISCED 2011
 	[subject_name] NVARCHAR (512) NOT NULL,
 	[grade_point] INT NOT NULL,
 	[grade_point_minimum] INT NOT NULL, -- maximum value supported by the grading system (e.g. 0)
@@ -34,5 +34,5 @@ CREATE TABLE [dbo].[School grades log]
 	CONSTRAINT [FK_School grades log-Calendar_date1] FOREIGN KEY ([start_calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_School grades log-Calendar_date2] FOREIGN KEY ([end_calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_School grades log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CHECK ([school_level] >= 0 AND [school_level] <= 8)
+	CHECK ([school_level_isced] >= 0 AND [school_level_isced] <= 8)
 )
