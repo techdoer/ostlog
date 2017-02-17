@@ -23,6 +23,7 @@ CREATE TABLE [dbo].[School grades log]
 	[start_calendar_date_id] INT NOT NULL,
 	[end_calendar_date_id] INT NOT NULL,
 	[person_id] INT NOT NULL,
+	[instructor_id] INT NULL,
 	[school_level_isced] INT NOT NULL, -- referencing International Standard Classification of Education ISCED 2011
 	[subject_name] NVARCHAR (512) NOT NULL,
 	[grade_point] INT NULL,
@@ -34,7 +35,8 @@ CREATE TABLE [dbo].[School grades log]
 	CONSTRAINT [PK_School grades log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_School grades log-Calendar_date1] FOREIGN KEY ([start_calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_School grades log-Calendar_date2] FOREIGN KEY ([end_calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_School grades log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_School grades log-People1] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_School grades log-People2] FOREIGN KEY ([instructor_id]) REFERENCES [dbo].[People] ([id]),
 	CHECK ([school_level_isced] >= 0 AND [school_level_isced] <= 8),
 	CHECK ([grade_desc] = 'excellent' OR [grade_desc] = 'very good' OR [grade_desc] = 'good' OR [grade_desc] = 'accepted' OR [grade_desc] = 'failed')
 )
