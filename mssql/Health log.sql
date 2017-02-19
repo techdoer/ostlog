@@ -36,7 +36,7 @@ CREATE TABLE [dbo].[Health log]
 	[bmi] FLOAT NULL, /* body mass index */
 	[bfp_%] FLOAT NULL, /* body fat percentage */
 	[spo2_%] FLOAT NULL, /* peripheral capillary oxygen saturation */
-	[remarks] NVARCHAR(2056) NULL, 
+	[remarks] NVARCHAR(4000) NULL, 
 	CONSTRAINT [PK_Health log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Health log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Health log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),

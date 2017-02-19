@@ -26,7 +26,7 @@ CREATE TABLE [dbo].[Menstrual cycle log]
 	[timestamp] TIME(0) NOT NULL,
 	[day_in_cycle] INT NOT NULL, -- 1 = first day, 2 = second day....
 	[flow] NVARCHAR(20) NULL,
-	[remarks] NVARCHAR(2056) NULL, 
+	[remarks] NVARCHAR(4000) NULL, 
 	CONSTRAINT [PK_Menstrual cycle log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Menstrual cycle log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Menstrual cycle log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),

@@ -31,7 +31,7 @@ CREATE TABLE [dbo].[School grades log]
 	[grade_point_minimum] INT NULL, -- maximum value supported by the grading system (e.g. 0)
 	[grade_point_maximum] INT NULL, -- the minimum value supported by the grading system (e.g 10)
 	[grade_letter] NVARCHAR(1) NULL, -- e.g. A=Excelent, B=Good, C=Average, D=Below Average, F=Failing
-	[remarks] NVARCHAR(2056) NULL,   
+	[remarks] NVARCHAR(4000) NULL,   
 	CONSTRAINT [PK_School grades log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_School grades log-Calendar_date1] FOREIGN KEY ([start_calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_School grades log-Calendar_date2] FOREIGN KEY ([end_calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),

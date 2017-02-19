@@ -45,7 +45,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	[effectiveness_score] INT NULL,
 	[effectivness_remarks] NVARCHAR (2048) NULL,
 	[side_effect_remarks] NVARCHAR (2048) NULL,
-	[remarks] NVARCHAR (2048) NULL,
+	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Drugs log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Drugs log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Drugs log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
