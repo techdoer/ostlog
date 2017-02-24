@@ -23,6 +23,7 @@ CREATE TABLE [dbo].[Urine log]
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[person_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[clarity] NVARCHAR(25) NULL, 
 	[color]  NVARCHAR(25) NULL, 
 	[density_15_c] FLOAT NULL,
@@ -38,5 +39,6 @@ CREATE TABLE [dbo].[Urine log]
 	CONSTRAINT [PK_Urine log] PRIMARY KEY CLUSTERED ([calendar_date_id] ASC, [person_id] ASC),
 	CONSTRAINT [FK_Urine log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Urine log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CHECK ([ph] >= 1 AND [ph] <= 14)
+	CHECK ([ph] >= 1 AND [ph] <= 14),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )

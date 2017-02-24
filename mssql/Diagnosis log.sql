@@ -22,10 +22,12 @@ CREATE TABLE [dbo].[Diagnosis log]
 (
 	[calendar_date_id]	INT	NOT NULL,
 	[person_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[diagnosis_icd10_code] NVARCHAR(7) NOT NULL, /* from the WHO's International Statistical Classification of Diseases and Related Health Problems. */
 	[doctor_visit_id] INT NOT NULL,
 	[remarks]	NVARCHAR (2056) NULL,
 	CONSTRAINT [PK_Diagnosis log] PRIMARY KEY CLUSTERED ([calendar_date_id] ASC, [person_id] ASC, [diagnosis_icd10_code] ASC),
 	CONSTRAINT [FK_Diagnosis log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Diagnosis log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id])
+	CONSTRAINT [FK_Diagnosis log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )

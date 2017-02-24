@@ -23,6 +23,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME (0) NOT NULL,
 	[person_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[doctor_visit_id] INT NULL,
 	[name] NVARCHAR (512) NOT NULL, -- commercial name of drug taken
 	[status] NVARCHAR (10) NULL, 
@@ -59,5 +60,6 @@ CREATE TABLE [dbo].[Drugs log] (
 	CHECK ([period_units]='s' OR [period_units]='min' OR [period_units] = 'h' OR [period_units] = 'd' OR [period_units] = 'wk' OR [period_units] = 'mo' OR [period_units] = 'a'),
 		
 	-- from timing event http://hl7.org/fhir/v3/TimingEvent
-	CHECK ([when] = 'HS' OR [when] = 'WAKE' OR [when] = 'C' OR [when] = 'CM' OR [when] = 'CD' OR [when] = 'CV' OR [when] = 'AC' OR [when] = 'ACM' OR [when] = 'ACD' OR [when] = 'ACV' OR [when] = 'IC'  OR [when] = 'ICD'  OR [when] = 'ICM'  OR [when] = 'ICV'  OR [when] = 'PC' OR [when] = 'PCM' OR [when] = 'PCD' OR [when] = 'PCV')
+	CHECK ([when] = 'HS' OR [when] = 'WAKE' OR [when] = 'C' OR [when] = 'CM' OR [when] = 'CD' OR [when] = 'CV' OR [when] = 'AC' OR [when] = 'ACM' OR [when] = 'ACD' OR [when] = 'ACV' OR [when] = 'IC'  OR [when] = 'ICD'  OR [when] = 'ICM'  OR [when] = 'ICV'  OR [when] = 'PC' OR [when] = 'PCM' OR [when] = 'PCD' OR [when] = 'PCV'),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 );

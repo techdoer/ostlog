@@ -23,9 +23,11 @@ CREATE TABLE [dbo].[Allergy log]
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[person_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[allergen_type_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a type of allergen disorder
 	[remarks] NVARCHAR(2056) NULL,   
 	CONSTRAINT [PK_Allergy log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Allergy log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Allergy log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )

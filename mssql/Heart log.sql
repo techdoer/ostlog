@@ -24,6 +24,7 @@ CREATE TABLE [dbo].[Heart log]
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[person_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[min_heart_rate_bpm] FLOAT NULL,
 	[avg_heart_rate_bpm] FLOAT NULL,
 	[max_heart_rate_bpm] FLOAT NULL,
@@ -46,5 +47,6 @@ CREATE TABLE [dbo].[Heart log]
 	[remarks] NVARCHAR(2056) NULL, 
 	CONSTRAINT [PK_Heart log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Heart log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Heart log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id])
+	CONSTRAINT [FK_Heart log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )

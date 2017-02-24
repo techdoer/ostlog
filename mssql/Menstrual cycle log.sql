@@ -24,6 +24,7 @@ CREATE TABLE [dbo].[Menstrual cycle log]
 	[calendar_date_id] INT NOT NULL,
 	[person_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[day_in_cycle] INT NOT NULL, -- 1 = first day, 2 = second day....
 	[flow] NVARCHAR(20) NULL,
 	[remarks] NVARCHAR(4000) NULL, 
@@ -31,5 +32,6 @@ CREATE TABLE [dbo].[Menstrual cycle log]
 	CONSTRAINT [FK_Menstrual cycle log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Menstrual cycle log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CHECK ([day_in_cycle] >= 1 AND [day_in_cycle] <= 10),
-	CHECK ([flow] = 'heavy' OR [flow] = 'light' OR [flow] = 'medium' OR [flow] = 'spotting')
+	CHECK ([flow] = 'heavy' OR [flow] = 'light' OR [flow] = 'medium' OR [flow] = 'spotting'),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )

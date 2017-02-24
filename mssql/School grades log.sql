@@ -23,6 +23,7 @@ CREATE TABLE [dbo].[School grades log]
 	[start_calendar_date_id] INT NOT NULL,
 	[end_calendar_date_id] INT NOT NULL,
 	[person_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[instructor_id] INT NULL,
 	[school_level_isced] INT NOT NULL, -- referencing International Standard Classification of Education ISCED 2011
 	[subject_name] NVARCHAR (512) NOT NULL,
@@ -38,5 +39,6 @@ CREATE TABLE [dbo].[School grades log]
 	CONSTRAINT [FK_School grades log-People1] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_School grades log-People2] FOREIGN KEY ([instructor_id]) REFERENCES [dbo].[People] ([id]),
 	CHECK ([school_level_isced] >= 0 AND [school_level_isced] <= 8),
-	CHECK ([grade_desc] = 'excellent' OR [grade_desc] = 'very good' OR [grade_desc] = 'good' OR [grade_desc] = 'accepted' OR [grade_desc] = 'failed')
+	CHECK ([grade_desc] = 'excellent' OR [grade_desc] = 'very good' OR [grade_desc] = 'good' OR [grade_desc] = 'accepted' OR [grade_desc] = 'failed'),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )

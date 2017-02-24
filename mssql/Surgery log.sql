@@ -21,10 +21,12 @@ CREATE TABLE [dbo].[Surgery log]
 (
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[procedure_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a surgical procedure
 	[remarks] NVARCHAR(2056) NULL,   
 	CONSTRAINT [PK_Surgery log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Surgery log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Surgery log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )

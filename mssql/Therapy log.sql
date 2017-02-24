@@ -22,6 +22,7 @@ CREATE TABLE [dbo].[Therapy log]
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[person_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[therapy_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a regime/therapy 
 	[effectiveness_score] INT NULL,
 	[effectivness_remarks] NVARCHAR (2048) NULL,
@@ -29,4 +30,5 @@ CREATE TABLE [dbo].[Therapy log]
 	CONSTRAINT [PK_Therapy log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Therapy log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Therapy log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )

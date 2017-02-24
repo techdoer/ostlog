@@ -22,6 +22,7 @@ CREATE TABLE [dbo].[Stool log]
 (
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[person_id] INT NOT NULL, 
 	[bss_type] INT NULL, -- Bristol Stool Chart classification
@@ -48,5 +49,6 @@ CREATE TABLE [dbo].[Stool log]
 	CHECK ([bss_type] >= 1 AND [bss_type] <= 7), -- see https://en.wikipedia.org/wiki/Bristol_stool_scale
 	CHECK ([amount] = 'little' OR [amount] = 'normal' OR [amount] = 'alot'),
 	CHECK ([color] = 'brown' OR [color] = 'green' OR [color] = 'yellow' OR [color] = 'black' OR [color] = 'white' OR [color] = 'red'),
-	CHECK ([ph] >= 1 AND [ph] <= 14)
+	CHECK ([ph] >= 1 AND [ph] <= 14),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )

@@ -23,12 +23,14 @@ CREATE TABLE [dbo].[Doctors log]
 	[calendar_date_id] INT NOT NULL,
 	[doctor_id] INT NOT NULL,
 	[patient_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[visit_key] INT NULL,   /* surrogate key */
 	[prescription_url] NVARCHAR(512) NULL,
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Doctors log] PRIMARY KEY CLUSTERED ([calendar_date_id] ASC, [doctor_id] ASC, [patient_id] ASC),
 	CONSTRAINT [FK_Doctors log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Doctors log-People] FOREIGN KEY ([doctor_id]) REFERENCES [dbo].[People] ([id]),
-	CONSTRAINT [FK_Doctors log-People1] FOREIGN KEY ([patient_id]) REFERENCES [dbo].[People] ([id])
+	CONSTRAINT [FK_Doctors log-People1] FOREIGN KEY ([patient_id]) REFERENCES [dbo].[People] ([id]),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )
 

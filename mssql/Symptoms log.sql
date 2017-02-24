@@ -23,6 +23,7 @@ CREATE TABLE [dbo].[Symptoms log]
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL, /* HH:MM:SS */
+	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,   
 	[symptom_id] INT NOT NULL, /* foreign key from standard Symptoms table included in this kit */
 	[symptom_icd10_code] NVARCHAR(10), /* the WHO's ICD-10 code for this symptom */
@@ -31,5 +32,6 @@ CREATE TABLE [dbo].[Symptoms log]
 	CONSTRAINT [PK_Symptoms log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Symptoms log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Symptoms log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CONSTRAINT [FK_Symptoms log-Symptom] FOREIGN KEY ([symptom_id]) REFERENCES [dbo].[Symptoms] ([id])
+	CONSTRAINT [FK_Symptoms log-Symptom] FOREIGN KEY ([symptom_id]) REFERENCES [dbo].[Symptoms] ([id]),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )

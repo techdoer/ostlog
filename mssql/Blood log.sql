@@ -23,6 +23,7 @@ CREATE TABLE [dbo].[Blood log]
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[person_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[blood_group] NVARCHAR(3),
 	[wbc] FLOAT NULL, /* white blood cell count - measured as cells/mcL ; italian leucociti*/
 	[rbc] FLOAT NULL, /* red blood cell count measured as million cells/mcL ; italian eritrociti */
@@ -69,4 +70,5 @@ CREATE TABLE [dbo].[Blood log]
 	CONSTRAINT [FK_Blood log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Blood log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CHECK ([blood_group]='A+' OR [blood_group]='A-' OR [blood_group]='B+' OR [blood_group]='B-' OR [blood_group]='O+' OR [blood_group]='O-' OR [blood_group]='AB+' OR [blood_group]='AB-'),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
 )
