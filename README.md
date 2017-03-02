@@ -11,3 +11,12 @@ ostlog is based on the following principles:
 	* self-tracking data and tools should be simple and accessible to all members of the family 
 	* data collection tools should favor accuracy over the latest fancy gadgets 
 	* data should ahere to established standards to facilitate interoperability 
+
+# installation
+The ostlog database can be deployed in the cloud or locally on your computer.  
+
+The Local deployment is a good alternative for those not wanting to store confidential personal information in the cloud.  The local deployment is in the form of a Microsoft Access 2013 database.  
+
+The cloud deployment supports Microsoft Azure SQL Server and opens up the possibility of using the full gammut of Azure data services including Machine Learning.  
+
+
