@@ -13,7 +13,7 @@
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -- Version: A dimension table to capture a date in time and its related metadata.  Designed for Azure SQL Server. 
--- URL:         -
+-- URL:         
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts

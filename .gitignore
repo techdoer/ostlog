@@ -3,3 +3,8 @@
 ################################################################################
 
 /mssql/.vs/mssql/v14
+/mssql/bin/Debug
+/mssql/obj/Debug
+/mssql/mssql.sqlproj.user
+/mssql/mssql.sln
+/mssql/mssql.sqlproj
