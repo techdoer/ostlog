@@ -8,3 +8,5 @@
 /mssql/mssql.sqlproj.user
 /mssql/mssql.sln
 /mssql/mssql.sqlproj
+/mssql/mssql.dbmdl
+/mssql/mssql.jfm
