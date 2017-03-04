@@ -15,7 +15,7 @@ ostlog is based on the following principles:
 # installation
 ostlog can be deployed as a database in the cloud or locally on your computer.  
 
-Local ostlog is a good option for those who prefer not to store confidential personal information in the cloud and is available as a  Microsoft Access 2013 database.  To start using local ostlog, simply clone/download the MS Access file from the ostlog GitHub repository and open it using Microsoft Access 2013 or later.  
+Local ostlog is a good option for those who prefer not to store confidential personal information in the cloud and is available as a  Microsoft Access 2013 database.  To start using local ostlog, simply clone/download the MS Access file from the ostlog GitHub repository and open it using Microsoft Access 2013 or later.  Once open, you will find sample tracking data for a fictitious family of five to help you get started. 
 
 Cloud ostlog is designed for Microsoft Azure SQL Server.  This makes self-tracking data readily availble to the rich catalog of Azure-based data services including Azure Machine Learning Studio. A valid Microsoft Azure subscription is required for cloud ostlog. 
 
