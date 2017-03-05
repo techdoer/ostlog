@@ -13,6 +13,33 @@
     },
     "day_in_week": {
       "type": "integer"
+    },
+    "day_in_month": {
+      "type": "integer"
+    },
+    "day_in_quarter": {
+      "type": "integer"
+    },
+    "day_in_year": {
+      "type": "integer"
+    },
+    "week_in_year": {
+      "type": "integer"
+    },
+    "month_in_quarter": {
+      "type": "integer"
+    },
+    "month_in_year": {
+      "type": "integer"
+    },
+    "quarter_in_year": {
+      "type": "integer"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "remarks": {
+      "type": "string"
     }
   }
 }
