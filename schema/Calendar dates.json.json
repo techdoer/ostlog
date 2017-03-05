@@ -1,0 +1,15 @@
+{
+  "id": "http://ostlog.org/calendar_dates#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "A date dimension to capture a date in time and its related metadata.",
+  "type": "object",
+  "properties": {
+    "date_id": {
+      "type": "integer"
+    },
+    "full_date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
