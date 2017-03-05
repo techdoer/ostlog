@@ -12,6 +12,9 @@ ostlog is based on the following principles:
 	* data collection tools should favor accuracy over the latest fancy gadgets 
 	* data should ahere to established standards to facilitate interoperability 
 
+# schema 
+A JSON Schema defining the ostlog datamodel is available in the schema folder. 
+
 # installation
 ostlog can be deployed as a database in the cloud or locally on your computer.  
 
