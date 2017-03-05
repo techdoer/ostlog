@@ -6,7 +6,7 @@
 	"type": "object",
 	"properties": {
 		"date_id": {
-			"type": "integer"
+			"type": "integer",
 			"description": "YYYYMMDD unique identifier"
 		},
 		"full_date": {
