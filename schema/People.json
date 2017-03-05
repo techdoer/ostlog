@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/people.json",
+	"title": "People",
+	"description": "A list of people referenced throughout ostlog.",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "integer"
+		},
+		"first_name": {
+			"type": "string"
+		},
+		"last_name": {
+			"type": "string"
+		},
+		"date_of_birth": {
+			"type": "integer",
+			"description": "YYYYMMDD foreign key references unique entry in calender dates"
+		},
+
+		"remarks": {
+			"type": "string"
+		}
+	},
+	"required": ["id", "first_name", "last_name"]
+}

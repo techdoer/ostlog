@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/calendar_dates#",
+	"id": "http://ostlog.org/calendar_dates.json",
 	"title": "Calendar dates",
 	"description": "A date dimension to capture a date in time and its related metadata.",
 	"type": "object",
