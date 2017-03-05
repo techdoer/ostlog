@@ -10,6 +10,9 @@
     "full_date": {
       "type": "string",
       "format": "date-time"
+    },
+    "day_in_week": {
+      "type": "integer"
     }
   }
 }
