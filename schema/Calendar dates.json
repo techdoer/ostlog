@@ -1,45 +1,57 @@
 {
-  "id": "http://ostlog.org/calendar_dates#",
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "A date dimension to capture a date in time and its related metadata.",
-  "type": "object",
-  "properties": {
-    "date_id": {
-      "type": "integer"
-    },
-    "full_date": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "day_in_week": {
-      "type": "integer"
-    },
-    "day_in_month": {
-      "type": "integer"
-    },
-    "day_in_quarter": {
-      "type": "integer"
-    },
-    "day_in_year": {
-      "type": "integer"
-    },
-    "week_in_year": {
-      "type": "integer"
-    },
-    "month_in_quarter": {
-      "type": "integer"
-    },
-    "month_in_year": {
-      "type": "integer"
-    },
-    "quarter_in_year": {
-      "type": "integer"
-    },
-    "year": {
-      "type": "integer"
-    },
-    "remarks": {
-      "type": "string"
-    }
-  }
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/calendar_dates#",
+	"title": "Calendar dates",
+	"description": "A date dimension to capture a date in time and its related metadata.",
+	"type": "object",
+	"properties": {
+		"date_id": {
+			"type": "integer"
+			"description": "YYYYMMDD unique identifier"
+		},
+		"full_date": {
+			"type": "string",
+			"format": "date-time"
+			"description": "DD/MM/YYYY formatted date"
+		},
+		"day_in_week": {
+			"type": "integer"
+			"description": "1..7"
+		},
+		"day_in_month": {
+			"type": "integer"
+			"description": "1..31"
+		},
+		"day_in_quarter": {
+			"type": "integer"
+		},
+		"day_in_year": {
+			"type": "integer"
+			"description": "1..366"
+		},
+		"week_in_year": {
+			"type": "integer"
+			"description": "1..52"
+		},
+		"month_in_quarter": {
+			"type": "integer"
+			"description": "1..3"
+		},
+		"month_in_year": {
+			"type": "integer"
+			"description": "1..12"
+		},
+		"quarter_in_year": {
+			"type": "integer"
+			"description": "1..4"
+		},
+		"year": {
+			"type": "integer"
+			"description": "YYYY"
+		},
+		"remarks": {
+			"type": "string"
+		}
+	},
+	"required": ["date_id", "full_date", "year"]
 }
