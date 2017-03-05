@@ -11,42 +11,42 @@
 		},
 		"full_date": {
 			"type": "string",
-			"format": "date-time"
+			"format": "date-time",
 			"description": "DD/MM/YYYY formatted date"
 		},
 		"day_in_week": {
-			"type": "integer"
+			"type": "integer",
 			"description": "1..7"
 		},
 		"day_in_month": {
-			"type": "integer"
+			"type": "integer",
 			"description": "1..31"
 		},
 		"day_in_quarter": {
 			"type": "integer"
 		},
 		"day_in_year": {
-			"type": "integer"
+			"type": "integer",
 			"description": "1..366"
 		},
 		"week_in_year": {
-			"type": "integer"
+			"type": "integer",
 			"description": "1..52"
 		},
 		"month_in_quarter": {
-			"type": "integer"
+			"type": "integer",
 			"description": "1..3"
 		},
 		"month_in_year": {
-			"type": "integer"
+			"type": "integer",
 			"description": "1..12"
 		},
 		"quarter_in_year": {
-			"type": "integer"
+			"type": "integer",
 			"description": "1..4"
 		},
 		"year": {
-			"type": "integer"
+			"type": "integer",
 			"description": "YYYY"
 		},
 		"remarks": {
