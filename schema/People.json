@@ -18,7 +18,6 @@
 			"type": "integer",
 			"description": "YYYYMMDD foreign key references unique entry in calender dates"
 		},
-
 		"remarks": {
 			"type": "string"
 		}
