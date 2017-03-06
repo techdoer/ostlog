@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/people.json",
 	"title": "People",
-	"description": "A list of people referenced throughout ostlog.",
+	"description": "A person referenced in ostlog.",
 	"type": "object",
 	"properties": {
 		"id": {

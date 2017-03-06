@@ -1,0 +1,31 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/Allergy_log.json",
+	"title": "Allergy log",
+	"description": "An allergic disorder caused by a specific antigen.",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "textual name of the symptom"
+		},
+		"person_id": {
+			"type": "string",
+			"description": "unique classification for the symptom"
+		},
+		"domain": {
+			"type": "string"
+			"description": "the five dimensions of well-being (social, physical, intellectual, financial, spiritual)"
+		},
+		"allergen_type_sctid": {
+			"description": "SNOWMED CT ID referencing a type of allergen disorder"
+		},
+		"remarks": {
+			"type": "string"
+		}
+		
+	"required": ["id", "calendar_date_id", "person_id"]
+}
