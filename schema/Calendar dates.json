@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/calendar_dates.json",
 	"title": "Calendar dates",
-	"description": "A date dimension to capture a date in time and its related metadata.",
+	"description": "A date in time and related metadata.",
 	"type": "object",
 	"properties": {
 		"date_id": {
