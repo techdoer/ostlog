@@ -9,11 +9,11 @@
 			"type": "integer"
 		},
 		"sname": {
-			"type": "string"
+			"type": "string",
 			"description": "textual name of the symptom"
 		},
 		"classification": {
-			"type": "string"
+			"type": "string",
 			"description": "unique classification for the symptom"
 		},
 		"remarks": {
