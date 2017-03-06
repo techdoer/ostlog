@@ -17,7 +17,7 @@
 			"description": "unique classification for the symptom"
 		},
 		"domain": {
-			"type": "string"
+			"type": "string",
 			"description": "the five dimensions of well-being (social, physical, intellectual, financial, spiritual)"
 		},
 		"allergen_type_sctid": {
@@ -25,7 +25,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		}
-		
-	"required": ["id", "calendar_date_id", "person_id"]
-}
+		},
+
+		"required": ["id", "calendar_date_id", "person_id"]
+	}
