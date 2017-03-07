@@ -1,27 +1,25 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Allergy_log.json",
-	"title": "Allergy log",
-	"description": "An allergic disorder caused by a specific antigen.",
+	"id": "http://ostlog.org/Blood_log.json",
+	"title": "Blood log",
+	"description": "Lab results from a Complete Blood Count exam or similar.",
 	"type": "object",
 	"properties": {
-		"id": {
-			"type": "integer"
-		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "formatted YYYYMMDD date of exam"
+			"description": "fomratted YYYYMMDD date of exam"
 		},
+		"timestamp: {
+			"type": "string"
+			"description": "formattted HH:MM:SS"
+		}
 		"person_id": {
 			"type": "string",
-			"description": "person suffering the allergic disorder"
+			"description": "the person from whom the blood was drawn"
 		},
 		"domain": {
 			"type": "string",
 			"description": "the five dimensions of well-being (social, physical, intellectual, financial, spiritual)"
-		},
-		"allergen_type_sctid": {
-			"description": "SNOWMED CT ID referencing a type of allergen disorder"
 		},
 		"remarks": {
 			"type": "string"
