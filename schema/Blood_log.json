@@ -159,7 +159,7 @@
 		"description": "alanine aminotransferase. Liver (italian: GPT/ALT) in UI/L"
 	},
 	"ggt_u_i": {
-		"type": "float"
+		"type": "float",
 		"description": "gamma-glutamyl transferase.  Liver U/I"
 	},
 	"ldh_ul_l": {
