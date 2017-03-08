@@ -13,7 +13,7 @@
 	"timestamp": {
 		"type ": "string ",
 		"description": "HH:MM:SS formatted"
-	}
+	},
 	"person_id ": {
 		"type": "integer",
 		"description ": "the person to whom the blood results correspond"
@@ -107,55 +107,55 @@
 		"description": "one of five types of white blood cells measured in cells/mcL."
 	},
 	"ferritin_ng_ml": {
-		"type": "float"
+		"type": "float",
 		"description": "ng/ml"
 	},
 	"sideremia_mcg_dl": {
-		"type": "float"
+		"type": "float",
 		"description": "transports iron in the blood; measured in mcg/dl"
 	},
 	"creatinine_mg_dl": {
-		"type": "float"
+		"type": "float",
 		"description": "mg/dl"
 	},
 	"albumin_g_dl": {
-		"type": "float"
+		"type": "float",
 		"description": "g/dl"
 	},
 	"bile_acides_mcmoli_l": {
-		"type": "float"
+		"type": "float",
 		"description": "mcMoli/l"
 	},
 	"glucose_mg_dl": {
-		"type": "float"
+		"type": "float",
 		"description": "gluoose in blood measured in mg/dl"
 	},
 	"uricacid_mg_dl": {
-		"type": "float"
+		"type": "float",
 		"description": "measure of uric acid in blood in mg/dl"
 	},
 	"triglycerides_mg_dl": {
-		"type": "float"
+		"type": "float",
 		"description": "measure of triglycerides in blood in mg/dl"
 	},
 	"cholesterol_total_mg_dl": {
-		"type": "float"
+		"type": "float",
 		"description": "cholesterol in blood mg/dl"
 	},
 	"cholesterol_hdl_mg_dl": {
-		"type": "float"
+		"type": "float",
 		"description": "hdl cholesterol in blood mg/dl "
 	},
 	"cholesterol_ldl_mg_dl": {
-		"type": "float"
+		"type": "float",
 		"description": "ldl cholesterol in blood mg/dl "
 	},
 	"ast_ui_l": {
-		"type": "float"
+		"type": "float",
 		"description": "aspartate aminotransferase. Liver (italian GOT/AST) in UI/L "
 	},
 	"alt_ui_l": {
-		"type": "float"
+		"type": "float",
 		"description": "alanine aminotransferase. Liver (italian: GPT/ALT) in UI/L"
 	},
 	"ggt_u_i": {
@@ -163,7 +163,7 @@
 		"description": "gamma-glutamyl transferase.  Liver U/I"
 	},
 	"ldh_ul_l": {
-		"type": "float"
+		"type": "float",
 		"description": "ldh lactic dehydrogenase Ul/l"
 	},
 	"toxoplasma_igg": {
@@ -186,10 +186,9 @@
 		"type": "float",
 		"description": "thyroxine in pmol/l."
 	},
-
 	"remarks": {
 		"type": "string"
-	}
+	},
 
 	"required": ["id", "calendar_date_id", "person_id"]
 }
