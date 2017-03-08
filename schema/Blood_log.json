@@ -1,136 +1,196 @@
-{
-	"$schema" : "http://json-schema.org/draft-04/schema#",
-	"id" : "http://ostlog.org/Blood_log.json",
-	"title" : "Blood log",
-	"description" : "Lab results from a Complete Blood Count exam or similar.",
-	"type" : "object",
-	"properties" : {
 
-		"calendar_date_id" : {
-			"type" : "string",
-			"description" : "YYYYMMDD formatted date of exam"
-		},
-		"timestamp" : {
-			"type " : "string ",
-			"description" : "HH:MM:SS formatted"
-		}
-		"person_id " : {
-			"type" : "integer",
-			"description " : "the person to whom the blood results correspond"
-		},
-		"domain " : {
-			"type" : "string",
-			"description" : "the five dimensions of well - being(social, physical, intellectual, financial, spiritual)"
-		},
-		"blood_group" : {
-			"type" : "string",
-			"description" : "A+, A-, B+, B-, O+, O-, AB+, AB-"
-		},
-		"white_blood_cells_mcl" : {
-			"type" : "float",
-			"description" : "white blood cell count cells/mcL"
-		},
-		"red_blood_cells_mcl" : {
-			"type" : "float",
-			"description" : "red blood cell count cells/mcL"
-		},
-		"hb_g_dl" : {
-			"type" : "float",
-			"description" : "hemoglobin count g/dL"
-		},
-		"hct_%" : {
-			"type" : "float",
-			"description" : "Hematocrit - percentage of white cell volume to red cell volume"
-		},
-		"mcv_fl" : {
-			"type" : "float",
-			"description" : "mean corpuscular volume - average volume of a red blood cell in femtoliters (fL)"
-		},
-		"mch_pg" : {
-			"type" : "float",
-			"description" : "mean corpuscular hemoglobin - the average amount of hemoglobin in the average red cell in picograms(pg)"
-		},
-		"mchc_g_dl" : {
-			"type" : "float",
-			"description" : "mean corpuscular hemoglobin concentration - the average concentration of hemoglobin in a given volume of red cells"
-		},
-		"mpv_fL" : {
-			"type" : "float",
-			"description" : "mean platelet volume - measures the average amount (volume) of platelets in femtoliters (fL)"
-		},
-		"rdw_cv_%" : {
-			"type" : "float",
-			"description" : "Red cell distribution width (coefficient of variation) - measures the variability of a red cell size and shape as percentage"
-		},
-		"pc_b_l" : {
-			"type" : "float",
-			"description" : "platelet count ;piastrine (italian) - measured as billion/L"
-		},
-		"neutrophils_%" : {
-			"type" : "float",
-			"description" : "one of five types of white blood cells in percentage"
-		},
-		"neutrophils_cells_mcl" : {
-			"type" : "float",
-			"description" : "one of five types of white blood cells measured in cells/mcL."
-		},
-		"eosinophils_%" : {
-			"type" : "float",
-			"description" : "one of five types of white blood cells in percentage"
-		},
-		"eosinophils_cells_mcl" : {
-			"type" : "float",
-			"description" : "one of five types of white blood cells measured in cells/mcL."
-		},
-		"basophils_%" : {
-			"type" : "float",
-			"description" : "one of five types of white blood cells in percentage"
-		},
-		"basophils_cells_mcl" : {
-			"type" : "float",
-			"description" : "one of five types of white blood cells measured in cells/mcL."
-		},
-		"lymphocytes_%" : {
-			"type" : "float",
-			"description" : "one of five types of white blood cells in percentage"
-		},
-		"lymphocytes_cells_mcl" : {
-			"type" : "float",
-			"description" : "one of five types of white blood cells measured in cells/mcL."
-		},
-		"monocytes_%" : {
-			"type" : "float",
-			"description" : "one of five types of white blood cells in percentage"
-		},
-		"monocytes_cells_mcl" : {
-			"type" : "float",
-			"description" : "one of five types of white blood cells measured in cells/mcL."
-		},
-		"ferritin_ng_ml" : {},
-		"sideremia_mcg_dl" : {},
-		"creatinine_mg_dl" : {},
-		"albumin_g_dl" : {},
-		"bile_acides_mcmoli_l" : {},
-		"glucose_mg_dl" : {},
-		"uricacid_mg_dl" : {},
-		"triglycerides_mg_dl" : {},
-		"cholesterol_total_mg_dl" : {},
-		"cholesterol_hdl_mg_dl" : {},
-		"cholesterol_ldl_mg_dl" : {},
-		"ast_ui_l" : {},
-		"alt_ui_l" : {},
-		"ggt" : {},
-		"ldh_ul_l" : {},
-		"toxoplasma_igg" : {},
-		"toxoplasma_igm_ul_ml" : {},
-		"tsh_ulu_ml" : {},
-		"t3_pmol_l" : {},
-		"t4_pmol_" l : {},
+"$schema": "http://json-schema.org/draft-04/schema#",
+"id": "http://ostlog.org/Blood_log.json",
+"title": "Blood log",
+"description": "Lab results from a Complete Blood Count exam or similar.",
+"type": "object",
+"properties": {
 
-		"remarks" : {
-			"type" : "string"
-		}
-
-		"required" : ["id", "calendar_date_id", "person_id"]
+	"calendar_date_id": {
+		"type": "string",
+		"description": "YYYYMMDD formatted date of exam"
+	},
+	"timestamp": {
+		"type ": "string ",
+		"description": "HH:MM:SS formatted"
 	}
+	"person_id ": {
+		"type": "integer",
+		"description ": "the person to whom the blood results correspond"
+	},
+	"domain ": {
+		"type": "string",
+		"description": "the five dimensions of well - being(social, physical, intellectual, financial, spiritual)"
+	},
+	"blood_group": {
+		"type": "string",
+		"description": "A+, A-, B+, B-, O+, O-, AB+, AB-"
+	},
+	"white_blood_cells_mcl": {
+		"type": "float",
+		"description": "white blood cell count cells/mcL"
+	},
+	"red_blood_cells_mcl": {
+		"type": "float",
+		"description": "red blood cell count cells/mcL"
+	},
+	"hb_g_dl": {
+		"type": "float",
+		"description": "hemoglobin count g/dL"
+	},
+	"hct_%": {
+		"type": "float",
+		"description": "Hematocrit - percentage of white cell volume to red cell volume"
+	},
+	"mcv_fl": {
+		"type": "float",
+		"description": "mean corpuscular volume - average volume of a red blood cell in femtoliters (fL)"
+	},
+	"mch_pg": {
+		"type": "float",
+		"description": "mean corpuscular hemoglobin - the average amount of hemoglobin in the average red cell in picograms(pg)"
+	},
+	"mchc_g_dl": {
+		"type": "float",
+		"description": "mean corpuscular hemoglobin concentration - the average concentration of hemoglobin in a given volume of red cells"
+	},
+	"mpv_fL": {
+		"type": "float",
+		"description": "mean platelet volume - measures the average amount (volume) of platelets in femtoliters (fL)"
+	},
+	"rdw_cv_%": {
+		"type": "float",
+		"description": "Red cell distribution width (coefficient of variation) - measures the variability of a red cell size and shape as percentage"
+	},
+	"pc_b_l": {
+		"type": "float",
+		"description": "platelet count ;piastrine (italian) - measured as billion/L"
+	},
+	"neutrophils_%": {
+		"type": "float",
+		"description": "one of five types of white blood cells in percentage"
+	},
+	"neutrophils_cells_mcl": {
+		"type": "float",
+		"description": "one of five types of white blood cells measured in cells/mcL."
+	},
+	"eosinophils_%": {
+		"type": "float",
+		"description": "one of five types of white blood cells in percentage"
+	},
+	"eosinophils_cells_mcl": {
+		"type": "float",
+		"description": "one of five types of white blood cells measured in cells/mcL."
+	},
+	"basophils_%": {
+		"type": "float",
+		"description": "one of five types of white blood cells in percentage"
+	},
+	"basophils_cells_mcl": {
+		"type": "float",
+		"description": "one of five types of white blood cells measured in cells/mcL."
+	},
+	"lymphocytes_%": {
+		"type": "float",
+		"description": "one of five types of white blood cells in percentage"
+	},
+	"lymphocytes_cells_mcl": {
+		"type": "float",
+		"description": "one of five types of white blood cells measured in cells/mcL."
+	},
+	"monocytes_%": {
+		"type": "float",
+		"description": "one of five types of white blood cells in percentage"
+	},
+	"monocytes_cells_mcl": {
+		"type": "float",
+		"description": "one of five types of white blood cells measured in cells/mcL."
+	},
+	"ferritin_ng_ml": {
+		"type": "float"
+		"description": "ng/ml"
+	},
+	"sideremia_mcg_dl": {
+		"type": "float"
+		"description": "transports iron in the blood; measured in mcg/dl"
+	},
+	"creatinine_mg_dl": {
+		"type": "float"
+		"description": "mg/dl"
+	},
+	"albumin_g_dl": {
+		"type": "float"
+		"description": "g/dl"
+	},
+	"bile_acides_mcmoli_l": {
+		"type": "float"
+		"description": "mcMoli/l"
+	},
+	"glucose_mg_dl": {
+		"type": "float"
+		"description": "gluoose in blood measured in mg/dl"
+	},
+	"uricacid_mg_dl": {
+		"type": "float"
+		"description": "measure of uric acid in blood in mg/dl"
+	},
+	"triglycerides_mg_dl": {
+		"type": "float"
+		"description": "measure of triglycerides in blood in mg/dl"
+	},
+	"cholesterol_total_mg_dl": {
+		"type": "float"
+		"description": "cholesterol in blood mg/dl"
+	},
+	"cholesterol_hdl_mg_dl": {
+		"type": "float"
+		"description": "hdl cholesterol in blood mg/dl "
+	},
+	"cholesterol_ldl_mg_dl": {
+		"type": "float"
+		"description": "ldl cholesterol in blood mg/dl "
+	},
+	"ast_ui_l": {
+		"type": "float"
+		"description": "aspartate aminotransferase. Liver (italian GOT/AST) in UI/L "
+	},
+	"alt_ui_l": {
+		"type": "float"
+		"description": "alanine aminotransferase. Liver (italian: GPT/ALT) in UI/L"
+	},
+	"ggt_u_i": {
+		"type": "float"
+		"description": "gamma-glutamyl transferase.  Liver U/I"
+	},
+	"ldh_ul_l": {
+		"type": "float"
+		"description": "ldh lactic dehydrogenase Ul/l"
+	},
+	"toxoplasma_igg": {
+		"type": "float",
+		"description": "toxoplasma IgG antibody"
+	},
+	"toxoplasma_igm_iu_ml": {
+		"type": "float",
+		"description": "toxoplasma IgM antibody in IU/mL"
+	},
+	"tsh_ulu_ml": {
+		"type": "float",
+		"description": "thyrotropin (italian: tireotropo) in ulU/ml."
+	},
+	"t3_pmol_l": {
+		"type": "float",
+		"description": "triiodothyronine in pmol/l."
+	},
+	"t4_pmol_l": {
+		"type": "float",
+		"description": "thyroxine in pmol/l."
+	},
+
+	"remarks": {
+		"type": "string"
+	}
+
+	"required": ["id", "calendar_date_id", "person_id"]
+}
 }
