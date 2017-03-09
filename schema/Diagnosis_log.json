@@ -32,7 +32,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		}
+		},
 
 		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain", "diagnosis_icd10_code"]
 	}

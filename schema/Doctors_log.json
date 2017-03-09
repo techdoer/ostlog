@@ -36,7 +36,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		}
+		},
 
 		"required": ["id", "calendar_date_id", "timestamp", "doctor_id", "patient_id", "domain"]
 
