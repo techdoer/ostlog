@@ -1,0 +1,38 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/Diagnosis_log.json",
+	"title": "Diagnosis log"
+	"description": "A diagnosis given by a medical professional.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the diagnosis"
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the diagnosis"
+		},
+		"person_id ": {
+			"type": "integer",
+			"description ": "the person to whom the diagnosis applies"
+		},
+		"domain ": {
+			"type": "string",
+			"description": "one of the five dimensions of well - being(social, physical, intellectual, financial, spiritual)"
+		},
+		"diagnosis_icd10_code": {
+			"type": "integer",
+			"description": "an ICD 10 reference code from the WHO's International Statistical Classification of Diseases and Related Health Problems."
+		},
+		"remarks": {
+			"type": "string"
+		}
+
+	}
+}
