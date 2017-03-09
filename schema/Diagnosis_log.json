@@ -2,7 +2,7 @@
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Diagnosis_log.json",
-	"title": "Diagnosis log"
+	"title": "Diagnosis log",
 	"description": "A diagnosis given by a medical professional.",
 	"type": "object",
 	"properties": {
@@ -34,5 +34,6 @@
 			"type": "string"
 		}
 
+		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain", "diagnosis_icd10_code"]
 	}
 }

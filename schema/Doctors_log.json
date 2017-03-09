@@ -1,0 +1,45 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/Doctors_log.json",
+	"title": "Doctors log",
+	"description": "A visit to the doctor's office or other consultation with a medical professional",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the visit"
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the visit"
+		},
+		"doctor_id": {
+			"type": "integer",
+			"description ": "the medical professional"
+		},
+		"patient_id": {
+			"type": "integer",
+			"description ": "the person visiting the medical professional"
+		},
+		"domain": {
+			"type": "string",
+			"description": "one of the five dimensions of well - being(social, physical, intellectual, financial, spiritual)"
+		},
+		"prescription_url": {
+			"type": "string",
+			"description": "url to a scan of the prescription"
+		},
+		"remarks": {
+			"type": "string"
+		}
+
+		"required": ["id", "calendar_date_id", "timestamp", "doctor_id", "patient_id", "domain"]
+
+	}
+
+}
