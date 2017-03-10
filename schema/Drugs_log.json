@@ -25,38 +25,95 @@
 			"$ref": "definitions.json#/domain"
 		},
 		"status": {
+			"type": "string",
+			"enum": ["started", "suspended"],
+			"description": "the status of the medication on the indicated date"
 		},
 		"drug_atc_code": {
+			"type": "string",
+			"description": "The Anatomical Therapeutic Chemical (ATC) Classification System of medications - a reference code"
 		},
 		"admin_route": {
+			"type": "string",
+			"enum": "implant",
+			"inhale",
+			"nasal",
+			"instill",
+			"oral",
+			"nasal",
+			"parenteral",
+			"rectal",
+			"sublingual",
+			"transdermal",
+			"vaginal"],
+			"description": "equivalent to ATC classification's Route of administration (Adm.R)"
 		},
 		"dosage_amount": {
+			"type": "float",
+			"description": "a scalar indicating quantity of dose in specified units"
 		},
 		"dosage_units": {
+			"type": "string",
+			"enum": "g",
+			"mg",
+			"mcg",
+			"U",
+			"TU",
+			"MU",
+			"mmol",
+			"ml",
+			"description": "equivalent to ATC classification's dosage units"
 		},
 		"duration": {
+			"type": "integer"
+			"description": "the period in which to administer a single dosage (e.g. over 30 minutes)"
 		},
 		"duration_units": {
+			"type": "string",
+			"enum": ["s", "min", "h", "d", "wk", "mo", "a"],
+			"description": "unit of measure for the duration"
 		},
 		"dosage_frequency": {
+			"type": "integer",
+			"description": ""
 		},
 		"dosage_frequence_max": {
+			"type": "integer",
+			"description": ""
 		},
 		"period": {
+			"type": "integer",
+			"description": ""
 		},
 		"period_units": {
+			"type": "string",
+			"enum": ["s", "min", "h", "d", "wk", "mo", "a"],
+			"description": "unit of measure for the duration"
 		},
 		"period_max": {
+			"type": "integer",
+			"description": ""
 		},
 		"when": {
+			"type": "string",
+			"enum": ["HS", "WAKE", "C", "CM", "CD", "CV", "AC", "ACM", "ACD", "ACV", "IC", "ICD", "ICM", "ICV", "PC", "PCM", "PCD", "PCV"],
+			"description": "when in the day to administer dosage - from timing event http://hl7.org/fhir/v3/TimingEvent"
 		},
 		"length_days": {
+			"type": "integer",
+			"description": "the length in days from start to finish for taking the medication"
 		},
 		"effectiveness_score": {
+			"type": "number",
+			"minimum": 1,
+			"maximum": 3,
+			"description": "1 = not very effective, 3 = very effective"
 		},
 		"effectiveness_remarks": {
+			"type": "string"
 		},
 		"side_effect_remarks": {
+			"type": "string"
 		},
 		"remarks": {
 			"type": "string"
