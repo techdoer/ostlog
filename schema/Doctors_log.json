@@ -26,8 +26,7 @@
 			"description ": "the person visiting the medical professional"
 		},
 		"domain": {
-			"type": "string",
-			"description": "one of the five dimensions of well - being(social, physical, intellectual, financial, spiritual)"
+			"$ref": "definitions.json#/domain"
 		},
 		"prescription_url": {
 			"type": "string",

@@ -23,8 +23,7 @@
 			"description ": "the person to whom the blood results correspond"
 		},
 		"domain ": {
-			"type": "string",
-			"description": "the five dimensions of well - being(social, physical, intellectual, financial, spiritual)"
+			"$ref": "definitions.json#/domain"
 		},
 		"blood_group": {
 			"type": "string",

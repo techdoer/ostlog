@@ -17,8 +17,7 @@
 			"description": "person suffering the allergic disorder"
 		},
 		"domain": {
-			"type": "string",
-			"description": "the five dimensions of well-being (social, physical, intellectual, financial, spiritual)"
+			"$ref": "definitions.json#/domain"
 		},
 		"allergen_type_sctid": {
 			"description": "SNOWMED CT ID referencing a type of allergen disorder"

@@ -22,7 +22,7 @@
 			"description ": "the person taking the medication"
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain" 
+			"$ref": "definitions.json#/domain"
 		},
 		"status": {
 		},
