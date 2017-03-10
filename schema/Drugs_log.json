@@ -54,14 +54,14 @@
 		},
 		"dosage_units": {
 			"type": "string",
-			"enum": "g",
-			"mg",
-			"mcg",
-			"U",
-			"TU",
-			"MU",
-			"mmol",
-			"ml",
+			"enum": ["g",
+				"mg",
+				"mcg",
+				"U",
+				"TU",
+				"MU",
+				"mmol",
+				"ml"],
 			"description": "equivalent to ATC classification's dosage units"
 		},
 		"duration": {
