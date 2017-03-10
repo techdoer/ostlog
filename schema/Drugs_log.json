@@ -35,17 +35,7 @@
 		},
 		"admin_route": {
 			"type": "string",
-			"enum": "implant",
-			"inhale",
-			"nasal",
-			"instill",
-			"oral",
-			"nasal",
-			"parenteral",
-			"rectal",
-			"sublingual",
-			"transdermal",
-			"vaginal"],
+			"enum": ["implant", "inhale", "nasal", "instill", "oral", "nasal", "parenteral", "rectal", "sublingual", "transdermal", "vaginal"],
 			"description": "equivalent to ATC classification's Route of administration (Adm.R)"
 		},
 		"dosage_amount": {
@@ -54,14 +44,7 @@
 		},
 		"dosage_units": {
 			"type": "string",
-			"enum": ["g",
-				"mg",
-				"mcg",
-				"U",
-				"TU",
-				"MU",
-				"mmol",
-				"ml"],
+			"enum": ["g", "mg", "mcg", "U", "TU", "MU", "mmol", "ml"],
 			"description": "equivalent to ATC classification's dosage units"
 		},
 		"duration": {
