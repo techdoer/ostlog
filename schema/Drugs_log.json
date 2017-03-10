@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Drug_log.json",
-	"title": "Drug log",
+	"title": "Drugs log",
 	"description": "A dose of medication taken once or regular intervals",
 	"type": "object",
 	"properties": {
