@@ -86,11 +86,8 @@
 			"type": "integer",
 			"description": "the length in days from start to finish for taking the medication"
 		},
-		"effectiveness_score": {
-			"type": "number",
-			"minimum": 1,
-			"maximum": 3,
-			"description": "1 = not very effective, 3 = very effective"
+		"drug_was_effectiveness": {
+			"$ref": "definitions.json#/likert_scale"
 		},
 		"effectiveness_remarks": {
 			"type": "string"

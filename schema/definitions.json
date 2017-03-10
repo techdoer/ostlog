@@ -4,6 +4,10 @@
 			"type": "string",
 			"enum": ["social", "physical", "intellectual", "financial", "spiritual"],
 			"description": "one of the five dimensions of well - being(social, physical, intellectual, financial, spiritual)"
+		},
+		"likert_scale": {
+			"type": "string"
+			"enum": ["strongly disagree", "disagree", "neutral", "agree", "strongly agree"],
+			"description": "a standard likert scale"
 		}
 	}
-}

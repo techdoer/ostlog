@@ -43,7 +43,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	[when] NVARCHAR (3) NULL,
 	[length_days] INT NULL,
 
-	[effectiveness_score] INT NULL,
+	[drug_was_effective] NVARCHAR (20) NULL,
 	[effectivness_remarks] NVARCHAR (2048) NULL,
 	[side_effect_remarks] NVARCHAR (2048) NULL,
 	[remarks] NVARCHAR (4000) NULL,
@@ -61,5 +61,6 @@ CREATE TABLE [dbo].[Drugs log] (
 		
 	-- from timing event http://hl7.org/fhir/v3/TimingEvent
 	CHECK ([when] = 'HS' OR [when] = 'WAKE' OR [when] = 'C' OR [when] = 'CM' OR [when] = 'CD' OR [when] = 'CV' OR [when] = 'AC' OR [when] = 'ACM' OR [when] = 'ACD' OR [when] = 'ACV' OR [when] = 'IC'  OR [when] = 'ICD'  OR [when] = 'ICM'  OR [when] = 'ICV'  OR [when] = 'PC' OR [when] = 'PCM' OR [when] = 'PCD' OR [when] = 'PCV'),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial'),
+	CHECK ([drug_was_effective] = 'strongly disagree' OR [drug_was_effective] = 'disagree' OR [drug_was_effective] = 'neutral' OR [drug_was_effective] = 'agree' OR [drug_was_effective] = 'strongly agree')
 );
