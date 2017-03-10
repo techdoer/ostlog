@@ -1,0 +1,69 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/Drug_log.json",
+	"title": "Drug log",
+	"description": "A dose of medication taken once or regular intervals",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date when first dose taken"
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time when first dose taken"
+		},
+		"person_id": {
+			"type": "integer",
+			"description ": "the person taking the medication"
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain" 
+		},
+		"status": {
+		},
+		"drug_atc_code": {
+		},
+		"admin_route": {
+		},
+		"dosage_amount": {
+		},
+		"dosage_units": {
+		},
+		"duration": {
+		},
+		"duration_units": {
+		},
+		"dosage_frequency": {
+		},
+		"dosage_frequence_max": {
+		},
+		"period": {
+		},
+		"period_units": {
+		},
+		"period_max": {
+		},
+		"when": {
+		},
+		"length_days": {
+		},
+		"effectiveness_score": {
+		},
+		"effectiveness_remarks": {
+		},
+		"side_effect_remarks": {
+		},
+		"remarks": {
+			"type": "string"
+		},
+
+		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+
+	}
+
+}

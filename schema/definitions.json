@@ -1,0 +1,9 @@
+{
+	"definitions": {
+		"domain": {
+			"type": "string",
+			"enum": ["social", "physical", "intellectual", "financial", "spiritual"],
+			"description": "one of the five dimensions of well - being(social, physical, intellectual, financial, spiritual)"
+		}
+	}
+}
