@@ -48,7 +48,7 @@
 			"description": "equivalent to ATC classification's dosage units"
 		},
 		"duration": {
-			"type": "integer"
+			"type": "integer",
 			"description": "the period in which to administer a single dosage (e.g. over 30 minutes)"
 		},
 		"duration_units": {
