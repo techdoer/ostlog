@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Allergy_log.json",
 	"title": "Allergy log",
-	"description": "An allergic disorder caused by a specific antigen.",
+	"description": "An allergic disorder caused by specified antigen.",
 	"type": "object",
 	"properties": {
 		"id": {
