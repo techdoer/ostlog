@@ -25,7 +25,7 @@ CREATE TABLE [dbo].[Health log]
 	[timestamp] TIME(0) NOT NULL,
 	[person_id] INT NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
-	[score] INT NULL, /* subjective assessment 1 = bedridden, 3 = feeling ok,  5=feeling superbb */
+	[feeling_great] NVARCHAR(20) NULL, /* subjective assessment 1 = bedridden, 3 = feeling ok,  5=feeling superbb */
 	[height_cm] FLOAT NULL,
 	[weight_kg] FLOAT NULL,
 	[right_foot_size_cm] FLOAT NULL,
@@ -41,5 +41,6 @@ CREATE TABLE [dbo].[Health log]
 	CONSTRAINT [PK_Health log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Health log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Health log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial'),
+	CHECK ([feeling_great] = 'strongly disagree' OR [feeling_great] = 'disagree' OR [feeling_great] = 'neutral' OR [feeling_great] = 'agree' OR [feeling_great] = 'strongly agree')
 )

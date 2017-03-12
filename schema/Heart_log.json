@@ -1,0 +1,34 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/Heart_log.json",
+	"title": "Heart log",
+	"description": "Heart and ECG results.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the measurement(s)"
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the measurement(s)"
+		},
+		"person_id ": {
+			"type": "integer",
+			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
+		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
+		"remarks": {
+			"type": "string"
+		},
+
+		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+	}
+}
