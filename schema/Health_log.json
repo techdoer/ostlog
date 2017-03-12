@@ -1,0 +1,81 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/Health_log.json",
+	"title": "Health log",
+	"description": "Phenotype and physiological measures in time.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the measurement(s)"
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the measurement(s)"
+		},
+		"person_id ": {
+			"type": "integer",
+			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
+		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
+		"feeling_great": {
+			"$ref": "definitions.json#/likert_scale"
+		},
+		"height_cm": {
+			"type": "float",
+			"description": "in centimeters"
+		},
+		"weight_kg": {
+			"type": "float",
+			"description": "in kilograms"
+		},
+		"right_foot_size_cm": {
+			"type": "float",
+			"description": "in centimeters"					
+		},
+		"left_foot_size_cm": {
+			"type": "float",
+			"description": "in centimeters"			
+		},
+		"body_temperature_c": {
+			"type": "float",
+			"description": "body temperature in celsius"
+		},
+		"blood_pressure_diastolic_mmhg": {
+			"type": "integer",
+			"description": ""
+		},
+		"blood_pressure_systolic_mmhg": {
+			"type": "integer",
+			"description": ""
+		},
+		"respiratory_rate_bpm": {
+			"type": "float",
+			"description": "breadth per minute"			
+		},
+		"bmi": {
+			"type": "float",
+			"description": "body mass index"
+		},
+		"bfp_%": {
+			"type": "float",
+			"description": "body fat percentage"
+		},
+		"spo2_%": {
+			"type": "float",
+			"description": "peripheral capillary oxygen saturation Sp02"			
+		},
+		"remarks": {
+			"type": "string"
+		},
+
+		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+	}
+}
