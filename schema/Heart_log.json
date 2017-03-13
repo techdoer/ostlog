@@ -25,6 +25,63 @@
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
+		"min_heart_rate_bpm": {
+			"type": "float"
+		},
+		"avg_heart_rate_bpm": {
+			"type": "float"
+		},
+		"max_heart_rate_bpm": {
+			"type": "float"
+		},
+		"hrv": {
+			"type": "float"
+		},
+		"hrv_rmssd": {
+			"type": "float"
+		},
+		"hrv_sdnn": {
+			"type": "float"
+		},
+		"ecg_pr_ms": {
+			"type": "integer"
+		},
+		"ecg_p_ms": {
+			"type": "integer"
+		},
+		"ecg_qrs_ms": {
+			"type": "integer"
+		},
+		"ecg_t_ms": {
+			"type": "integer"
+		},
+		"ecg_qt_ms": {
+			"type": "integer"
+		},
+		"ecg_qtc_ms": {
+			"type": "integer"
+		},
+		"ecg_p_axis": {
+			"type": "integer"
+		},
+		"ecg_qrs_axis": {
+			"type": "integer"
+		},
+		"ecg_t_axis": {
+			"type": "integer"
+		},
+		"ecg_rv1_mv": {
+			"type": "float"
+		},
+		"ecg_sv5_mv": {
+			"type": "float"
+		},
+		"ecg_rv5_mv": {
+			"type": "float"
+		},
+		"ecg_sv1_mv": {
+			"type": "float"
+		},
 		"remarks": {
 			"type": "string"
 		},

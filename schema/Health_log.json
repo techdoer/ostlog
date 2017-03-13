@@ -38,11 +38,11 @@
 		},
 		"right_foot_size_cm": {
 			"type": "float",
-			"description": "in centimeters"					
+			"description": "in centimeters"
 		},
 		"left_foot_size_cm": {
 			"type": "float",
-			"description": "in centimeters"			
+			"description": "in centimeters"
 		},
 		"body_temperature_c": {
 			"type": "float",
@@ -58,7 +58,7 @@
 		},
 		"respiratory_rate_bpm": {
 			"type": "float",
-			"description": "breadth per minute"			
+			"description": "breadth per minute"
 		},
 		"bmi": {
 			"type": "float",
@@ -70,7 +70,7 @@
 		},
 		"spo2_%": {
 			"type": "float",
-			"description": "peripheral capillary oxygen saturation Sp02"			
+			"description": "peripheral capillary oxygen saturation Sp02"
 		},
 		"remarks": {
 			"type": "string"
