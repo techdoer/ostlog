@@ -1,0 +1,57 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/Payments_log.json",
+	"title": "Payments log",
+	"description": "A credit/debit payment.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the transaction"
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of transaction"
+		},
+		"payer_id ": {
+			"type": "integer",
+			"description ": "the person making the payment"
+		},
+		"payee_id ": {
+			"type": "integer",
+			"description ": "the person receiving the payment"
+		},
+		"payment_type": {
+			"type": "string",
+			"enum": ["debit", "credit"],
+			"description": ""
+		},
+		"item_description": {
+			"type": "string",
+			"description": ""
+		},
+		"item_category": {
+			"type": "string",
+			"enum": ["arts", "transport", "xfer", "bills", "projects", "cash", "credit-payment", "education", "entertainment", "fees", "food", "gifts", "health", "home", "income", "kids", "loan", "loan-payment", "mortgage-rent", "shopping", "taxes", "travel"],
+			"description": ""
+		},
+		"amount_usd": {
+			"type": "float",
+			"description": "the value of the transaction in USD"
+		},
+		"amount_euro": {
+			"type": "float",
+			"description": "the value of the transaction in euro"
+		},
+		"remarks": {
+			"type": "string"
+		},
+
+		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+	}
+}
