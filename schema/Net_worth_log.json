@@ -1,0 +1,59 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/Net_worth_log.json",
+	"title": "Net worth log",
+	"description": "Net worth at a point in time.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of net worth"
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of net worth"
+		},
+		"person_id ": {
+			"type": "integer",
+			"description ": "the person associated to the net worth"
+		},
+		"cash_usd": {
+			"type": "float",
+			"description": "value of cash-on-hand in USD"
+		},
+		"financial_investments_usd": {
+			"type": "float",
+			"description": "value of financial investments in USD"
+		},
+		"real_estate_investments_usd": {
+			"type": "float",
+			"description": "value of of real-estate investments in USD"
+		},
+		"other_assets_usd": {
+			"type": "float",
+			"description": "value of other assets in USD"
+		},
+		"loans_usd": {
+			"type": "float",
+			"description": "amount of loan debt in USD"
+		},
+		"credit_card_usd": {
+			"type": "float",
+			"description": "amount of credit card debt in USD"
+		},
+		"other_liabilities_usd": {
+			"type": "float",
+			"description": "amount of other debt/liabilities in USD"
+		},
+		"remarks": {
+			"type": "string"
+		},
+
+		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+	}
+}
