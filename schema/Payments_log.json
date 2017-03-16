@@ -18,6 +18,9 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of transaction"
 		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
 		"payer_id ": {
 			"type": "integer",
 			"description ": "the person making the payment"

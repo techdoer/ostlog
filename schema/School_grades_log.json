@@ -1,0 +1,73 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/School_grades_log.json",
+	"title": "School grades log",
+	"description": "periodic grades.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"start_calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date marking the start of the grading period."
+		},
+		"end_calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date marking the end of the grading period."
+		},
+
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of net worth"
+		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
+
+		"person_id ": {
+			"type": "integer",
+			"description": "the person associated to the net worth"
+		},
+		"instructor_id ": {
+			"type": "integer",
+			"description": "the person teaching the course."
+		},
+		"school_level_isced": {
+			"type": "integer",
+			"description": "referencing International Standard Classification of Education ISCED 2011 "
+		},
+		"subject_name ": {
+			"type": "string"
+		},
+		"grade_point ": {
+			"type": "float",
+			"description": " "
+		},
+		"grade_description ": {
+			"type": " string",
+			"enum": ["excellent ", "very good ", "good ", "accepted ", "failed "],
+			"description": " "
+		},
+		"grade_point_minimum": {
+			"type": "float",
+			"description": " "
+		},
+		"grade_point_maximum": {
+			"type": "float",
+			"description": " "
+		},
+		"grade_letter": {
+			"type": "string",
+			"enum": [" A ", " B ", " C ", " D ", " F "],
+			"description": "A = Excelent, B = Good, C = Average, D = Below Average, F = Failing"
+		},
+		"remarks": {
+			"type": "string"
+		},
+
+		"required": [" id ", " calendar_date_id ", " timestamp ", " person_id ", " domain "]
+	}
+}

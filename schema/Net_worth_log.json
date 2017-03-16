@@ -22,6 +22,9 @@
 			"type": "integer",
 			"description ": "the person associated to the net worth"
 		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
 		"cash_usd": {
 			"type": "float",
 			"description": "value of cash-on-hand in USD"
