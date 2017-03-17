@@ -1,0 +1,102 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/Stool_log.json",
+	"title": "Stool log",
+	"description": "Stool analysis lab results",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the test sample(s)"
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the test sample(s)"
+		},
+		"person_id": {
+			"type": "integer",
+			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
+		},
+		"bss_type": {
+			"type": "integer",
+			"enum": [1, 2, 3, 4, 5, 6, 7],
+			"description": ""
+		},
+		"color": {},
+		"amount": {
+			"type": "string",
+			"enum": ["little", "normal", "a lot"],
+			"description": ""
+		},
+		"ph": {
+			"type": "integer",
+			"minimum": 1,
+			"maximum": 14,
+			"description": ""
+		},
+		"occult_blood": {
+			"type": "boolean",
+			"description": ""
+		},
+		"red_blood_cells": {
+			"type": "boolean",
+			"description": ""
+		},
+		"white_blood_cells": {
+			"type": "boolean",
+			"description": ""
+		},
+		"mucus": {
+			"type": "boolean",
+			"description": ""
+		},
+		"lysozyme_ng_ml": {
+			"type": "integer",
+			"description": ""
+		},
+		"calprotectin_ug_g": {
+			"type": "integer",
+			"description": ""
+		},
+		"lactoferrin_ug_ml": {
+			"type": "integer",
+			"description": ""
+		},
+		"carbohydrates": {
+			"type": "boolean",
+			"description": ""
+		},
+		"veg_fibers": {
+			"type": "boolean",
+			"description": ""
+		},
+		"muscle_fibers": {
+			"type": "boolean",
+			"description": ""
+		},
+		"fat_stain": {
+			"type": "boolean",
+			"description": ""
+		},
+		"elastase_ug_ml": {
+			"type": "integer",
+			"description": ""
+		},
+		"secretory_iga_mg_dl": {
+			"type": "integer",
+			"description": ""
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "domain", "calendar_date_id", "timestamp", "person_id"]
+	}
+}
