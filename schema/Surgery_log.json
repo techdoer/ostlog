@@ -1,9 +1,9 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Story_log.json",
-	"title": "Story log",
-	"description": "a narrative detailing a particular event or outcome",
+	"id": "http://ostlog.org/Surgery_log.json",
+	"title": "Surgery log",
+	"description": "a surgical intervention",
 	"type": "object",
 	"properties": {
 
@@ -25,9 +25,9 @@
 			"type": "integer",
 			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
 		},
-		"text": {
+		"procedure_sctid": {
 			"type": "string",
-			"description": ""
+			"description": " -- SNOWMED CT ID referencing a surgical procedure"
 		},
 		"remarks": {
 			"type": "string"
