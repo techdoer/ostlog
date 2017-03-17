@@ -1,9 +1,9 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Surgery_log.json",
-	"title": "Surgery log",
-	"description": "a surgical intervention",
+	"id": "http://ostlog.org/Urine_log.json",
+	"title": "Urine log",
+	"description": "lab test results for urine",
 	"type": "object",
 	"properties": {
 
@@ -25,17 +25,6 @@
 			"type": "integer",
 			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
 		},
-		"procedure_sctid": {
-			"type": "string",
-			"description": " -- SNOWMED CT ID referencing a surgical procedure"
-		},
-		"was_effective": {
-			"$ref": "definitions.json#/likert_scale"
-		},
-		"effective_remarks": {
-			"type": "string"
-		},
-
 		"remarks": {
 			"type": "string"
 		},

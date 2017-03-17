@@ -29,13 +29,6 @@
 			"type": "string",
 			"description": " -- SNOWMED CT ID referencing a surgical procedure"
 		},
-		"was_effective": {
-			"$ref": "definitions.json#/likert_scale"
-		},
-		"effective_remarks": {
-			"type": "string"
-		},
-
 		"remarks": {
 			"type": "string"
 		},

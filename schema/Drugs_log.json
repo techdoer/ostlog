@@ -86,7 +86,7 @@
 			"type": "integer",
 			"description": "the length in days from start to finish for taking the medication"
 		},
-		"drug_was_effective": {
+		"was_effective": {
 			"$ref": "definitions.json#/likert_scale"
 		},
 		"effectiveness_remarks": {

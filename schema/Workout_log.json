@@ -25,17 +25,28 @@
 			"type": "integer",
 			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
 		},
-		"procedure_sctid": {
+		"workout_type": {
 			"type": "string",
-			"description": " -- SNOWMED CT ID referencing a surgical procedure"
+			"description": ""
 		},
-		"was_effective": {
-			"$ref": "definitions.json#/likert_scale"
+		"duration_minutes": {
+			"type": "float"
 		},
-		"effective_remarks": {
-			"type": "string"
+		"distance_miles": {
+			"type": "float"
 		},
-
+		"elevation_gain_ft": {
+			"type": "float"
+		},
+		"avg_speed_mph": {
+			"type": "float"
+		},
+		"max_speed_mph": {
+			"type": "float"
+		},
+		"calories_burned": {
+			"type": "float"
+		},
 		"remarks": {
 			"type": "string"
 		},
