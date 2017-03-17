@@ -1,0 +1,37 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/Story_log.json",
+	"title": "Story log",
+	"description": "a narrative detailing a particular event or outcome",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
+		"caledar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the measurement(s)"
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the measurement(s)"
+		},
+		"person_id ": {
+			"type": "integer",
+			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
+		},
+		"text": {
+			"type": "string",
+			"description": ""
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "start_date_id", "start_time", "end_date_id", "end_time", "person_id", "domain"]
+	}
+}
