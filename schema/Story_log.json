@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Story_log.json",
 	"title": "Story log",
-	"description": "a narrative detailing a particular event or outcome",
+	"description": "Each entry provides a narrative detailing a particular event or outcome in time.",
 	"type": "object",
 	"properties": {
 

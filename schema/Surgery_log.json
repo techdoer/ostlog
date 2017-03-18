@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Surgery_log.json",
 	"title": "Surgery log",
-	"description": "a surgical intervention",
+	"description": "Each entry describes a surgical intervention.",
 	"type": "object",
 	"properties": {
 
