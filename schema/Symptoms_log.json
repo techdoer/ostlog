@@ -15,15 +15,15 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the measurement(s)"
+			"description": "YYYYMMDD formatted date when symptom experienced."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the measurement(s)"
+			"description": "HH:MM:SS formatted time of when symptom experienced."
 		},
 		"person_id ": {
 			"type": "integer",
-			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
+			"description ": "the person who suffered the symptom."
 		},
 		"symptom_id": {
 			"type": "integer",
@@ -33,14 +33,14 @@
 			"type": "string",
 			"description": ""
 		},
-		"occurance": {
-			"type": "integer",
-			"description": ""
+		"new_occurance": {
+			"type": "boolean",
+			"description": "True if symptom is new and not experienced in past 7 days."
 		},
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "symptom_id", "symptom_icd10_code", "new_occurance"]
 
 	}
 }

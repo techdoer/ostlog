@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Drugs_log.json",
 	"title": "Drugs log",
-	"description": "Each entry characcterizes a dose of medication taken at pre-defined intervals",
+	"description": "Each entry characterizes a dose of medication taken at pre-defined intervals",
 	"type": "object",
 	"properties": {
 
@@ -11,28 +11,27 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date when first dose taken"
+			"description": "YYYYMMDD formatted date when first dose taken."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time when first dose taken"
+			"description": "HH:MM:SS formatted time when first dose taken."
 		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
-
 		"person_id": {
 			"type": "integer",
-			"description ": "the person taking the medication"
+			"description ": "the person taking the medication."
 		},
 		"status": {
 			"type": "string",
 			"enum": ["started", "suspended"],
-			"description": "the status of the medication on the indicated date"
+			"description": "the status of the medication on the indicated date."
 		},
 		"drug_atc_code": {
 			"type": "string",
-			"description": "The Anatomical Therapeutic Chemical (ATC) Classification System of medications - a reference code"
+			"description": "The Anatomical Therapeutic Chemical (ATC) Classification System of medications - a reference code."
 		},
 		"admin_route": {
 			"type": "string",
@@ -46,16 +45,14 @@
 		"dosage_units": {
 			"type": "string",
 			"enum": ["g", "mg", "mcg", "U", "TU", "MU", "mmol", "ml"],
-			"description": "equivalent to ATC classification's dosage units"
+			"description": "equivalent to ATC classification's dosage units."
 		},
 		"duration": {
 			"type": "integer",
-			"description": "the period in which to administer a single dosage (e.g. over 30 minutes)"
+			"description": "the period in which to administer a single dosage (e.g. over 30 minutes)."
 		},
 		"duration_units": {
-			"type": "string",
-			"enum": ["s", "min", "h", "d", "wk", "mo", "a"],
-			"description": "unit of measure for the duration"
+			"$ref": "definitions.json#/time_units"
 		},
 		"dosage_frequency": {
 			"type": "integer",
@@ -70,9 +67,7 @@
 			"description": ""
 		},
 		"period_units": {
-			"type": "string",
-			"enum": ["s", "min", "h", "d", "wk", "mo", "a"],
-			"description": "unit of measure for the duration"
+			"$ref": "definitions.json#/time_units"
 		},
 		"period_max": {
 			"type": "integer",

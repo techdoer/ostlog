@@ -12,33 +12,33 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the test sample(s)"
+			"description": "YYYYMMDD formatted date of the stool sample."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the test sample(s)"
+			"description": "HH:MM:SS formatted time of the stool sample."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
 		"person_id": {
 			"type": "integer",
-			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
+			"description ": "the person to whom the stool sample belongs."
 		},
 		"bss_type": {
 			"type": "integer",
 			"enum": [1, 2, 3, 4, 5, 6, 7],
-			"description": ""
+			"description": "Bristol stool scale"
 		},
 		"color": {
 			"type": "string",
-			"enum": [""],
-			"description": ""
+			"enum": ["brown", "green", "yellow", "black", "white", "red"],
+			"description": "observed color of stool sample."
 		},
 		"amount": {
 			"type": "string",
 			"enum": ["little", "normal", "a lot"],
-			"description": ""
+			"description": "observed quantity of stool sample."
 		},
 		"ph": {
 			"type": "integer",
@@ -101,6 +101,6 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "bss_type", "color", "amount"]
 	}
 }

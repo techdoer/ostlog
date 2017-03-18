@@ -12,22 +12,22 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the measurement(s)"
+			"description": "YYYYMMDD formatted date of the surgery."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the measurement(s)"
+			"description": "HH:MM:SS formatted time of the surgery."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
 		"person_id ": {
 			"type": "integer",
-			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
+			"description ": "the person to whom underwent the surgical procedure."
 		},
 		"procedure_sctid": {
 			"type": "string",
-			"description": " -- SNOWMED CT ID referencing a surgical procedure"
+			"description": "SNOWMED CT ID referencing a surgical procedure"
 		},
 		"was_effective": {
 			"$ref": "definitions.json#/likert_scale"
@@ -39,7 +39,7 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "procedure_sctid", "was_effective"]
 
 	}
 }

@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Sleep_log.json",
 	"title": "Sleep log",
-	"description": "Each entry records daily sleep.",
+	"description": "Each entry records daily sleep times.",
 	"type": "object",
 	"properties": {
 
@@ -12,26 +12,26 @@
 		},
 		"start_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the measurement(s)"
+			"description": "YYYYMMDD formatted date when start of sleep occured.."
 		},
 		"start_time": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the measurement(s)"
+			"description": "HH:MM:SS formatted time when start of sleep occured."
 		},
 		"end_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the measurement(s)"
+			"description": "YYYYMMDD formatted date when sleep ended."
 		},
 		"end_time": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the measurement(s)"
+			"description": "HH:MM:SS formatted time when sleep ended."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
 		"person_id ": {
 			"type": "integer",
-			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
+			"description ": "the person who slept."
 		},
 		"remarks": {
 			"type": "string"

@@ -2,9 +2,10 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/People.json",
 	"title": "People",
-	"description": "A person referenced in ostlog.",
+	"description": "Each entry describes a person referenced in ostlog.",
 	"type": "object",
 	"properties": {
+
 		"id": {
 			"type": "integer"
 		},
@@ -16,7 +17,7 @@
 		},
 		"date_of_birth": {
 			"type": "integer",
-			"description": "formatted YYYYMMDD and references 'Calender dates'"
+			"description": "YYYYMMDD formatted date of birth."
 		},
 		"remarks": {
 			"type": "string"

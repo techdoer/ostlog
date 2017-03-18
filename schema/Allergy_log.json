@@ -5,12 +5,13 @@
 	"description": "Each entry characterizes an allergic disorder.",
 	"type": "object",
 	"properties": {
+
 		"id": {
 			"type": "integer"
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "formatted YYYYMMDD date of exam"
+			"description": "formatted YYYYMMDD date when allergic disorder first observed."
 		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
@@ -20,7 +21,7 @@
 			"description": "person suffering the allergic disorder"
 		},
 		"allergen_type_sctid": {
-			"description": "SNOWMED CT ID referencing a type of allergen disorder"
+			"description": "SNOWMED CT ID referencing a type of allergen disorder."
 		},
 		"remarks": {
 			"type": "string"

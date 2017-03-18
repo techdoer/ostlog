@@ -18,28 +18,22 @@
 			"type": "string",
 			"description": "YYYYMMDD formatted date marking the end of the grading period."
 		},
-
-		"timestamp": {
-			"type ": "string ",
-			"description": "HH:MM:SS formatted time of net worth"
-		},
-		"domain ": {
+		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
-
-		"person_id ": {
+		"person_id": {
 			"type": "integer",
-			"description": "the person associated to the net worth"
+			"description": "the person receiving the grade."
 		},
-		"instructor_id ": {
+		"instructor_id": {
 			"type": "integer",
 			"description": "the person teaching the course."
 		},
 		"school_level_isced": {
 			"type": "integer",
-			"description": "referencing International Standard Classification of Education ISCED 2011 "
+			"description": "referencing International Standard Classification of Education ISCED 2011."
 		},
-		"subject_name ": {
+		"subject_name": {
 			"type": "string"
 		},
 		"grade_point ": {

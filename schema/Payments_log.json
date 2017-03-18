@@ -12,22 +12,22 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the transaction"
+			"description": "YYYYMMDD formatted date of the transaction."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of transaction"
+			"description": "HH:MM:SS formatted time of transaction."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
 		"payer_id ": {
 			"type": "integer",
-			"description ": "the person making the payment"
+			"description ": "the person making the payment."
 		},
 		"payee_id ": {
 			"type": "integer",
-			"description ": "the person receiving the payment"
+			"description ": "the person receiving the payment."
 		},
 		"payment_type": {
 			"type": "string",

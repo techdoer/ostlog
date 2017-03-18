@@ -27,25 +27,32 @@
 		},
 		"workout_type": {
 			"type": "string",
+			"enum": ["walking", "running", "swimming", "cycling", "hiking", "other"]
 			"description": ""
 		},
 		"duration_minutes": {
-			"type": "float"
+			"type": "float",
+			"description": ""
 		},
 		"distance_miles": {
-			"type": "float"
+			"type": "float",
+			"description": ""
 		},
 		"elevation_gain_ft": {
-			"type": "float"
+			"type": "float",
+			"description": ""
 		},
 		"avg_speed_mph": {
-			"type": "float"
+			"type": "float",
+			"description": ""
 		},
 		"max_speed_mph": {
-			"type": "float"
+			"type": "float",
+			"description": ""
 		},
 		"calories_burned": {
-			"type": "float"
+			"type": "float",
+			"description": ""
 		},
 		"remarks": {
 			"type": "string"

@@ -11,11 +11,11 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the visit"
+			"description": "YYYYMMDD formatted date of the visit."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the visit"
+			"description": "HH:MM:SS formatted time of the visit."
 		},
 		"domain": {
 			"$ref": "definitions.json#/domain"

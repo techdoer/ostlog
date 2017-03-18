@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Therapy_log.json",
 	"title": "Therapy log",
-	"description": "Each entry describes a theraputical intervention",
+	"description": "Each entry describes a theraputical intervention in time.",
 	"type": "object",
 	"properties": {
 
@@ -38,7 +38,7 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "therapy_sctid", "was_effective"]
 
 	}
 }

@@ -27,7 +27,7 @@
 		},
 		"patient_id ": {
 			"type": "integer",
-			"description ": "the person to whom the diagnosis applies"
+			"description ": "the person to whom the diagnosis applies."
 		},
 		"diagnosis_icd10_code": {
 			"type": "integer",

@@ -12,21 +12,22 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the measurement(s)"
+			"description": "YYYYMMDD formatted date of the readings."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the measurement(s)"
+			"description": "HH:MM:SS formatted time of the readings."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
 		"person_id ": {
 			"type": "integer",
-			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
+			"description ": "the person to whom the readings belong."
 		},
 		"feeling_great": {
 			"$ref": "definitions.json#/likert_scale"
+			"description": "Commentary regarding how the person is feeling on this date and time."
 		},
 		"height_cm": {
 			"type": "float",

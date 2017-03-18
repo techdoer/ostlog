@@ -12,11 +12,11 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the measurement(s)"
+			"description": "YYYYMMDD formatted date when observation made."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the measurement(s)"
+			"description": "HH:MM:SS formatted when observation made."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
@@ -27,6 +27,7 @@
 		},
 		"day_in_cycle": {
 			"type": "integer",
+			"enum": [1,2,3,4,5,6,7]
 			"description": "no. days passed since cycle started"
 		},
 		"flow": {
@@ -37,6 +38,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "day_in_cycle", "flow"]
 	}
 }

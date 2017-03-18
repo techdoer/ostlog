@@ -2,19 +2,20 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Symptoms.json",
 	"title": "Symptoms",
-	"description": "A health symptom.",
+	"description": "Each entry describes a health symptom.",
 	"type": "object",
 	"properties": {
+
 		"id": {
 			"type": "integer"
 		},
 		"sname": {
 			"type": "string",
-			"description": "textual name of the symptom"
+			"description": "textual name of the symptom."
 		},
 		"classification": {
 			"type": "string",
-			"description": "unique classification for the symptom"
+			"description": "unique classification for the symptom."
 		},
 		"remarks": {
 			"type": "string"

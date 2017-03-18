@@ -12,18 +12,18 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the measurement(s)"
+			"description": "YYYYMMDD formatted date when heart observation made."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the measurement(s)"
+			"description": "HH:MM:SS formatted time when heart observation made."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
 		"person_id ": {
 			"type": "integer",
-			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
+			"description ": "the person to whose heart is being tested."
 		},
 		"min_heart_rate_bpm": {
 			"type": "float"
