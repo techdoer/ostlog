@@ -27,7 +27,7 @@
 		},
 		"blood_group": {
 			"type": "string",
-			"enum": ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"]
+			"enum": ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"],
 			"description": ""
 		},
 		"white_blood_cells_mcl": {

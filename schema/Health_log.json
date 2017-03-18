@@ -26,7 +26,7 @@
 			"description ": "the person to whom the readings belong."
 		},
 		"feeling_great": {
-			"$ref": "definitions.json#/likert_scale"
+			"$ref": "definitions.json#/likert_scale",
 			"description": "Commentary regarding how the person is feeling on this date and time."
 		},
 		"height_cm": {
