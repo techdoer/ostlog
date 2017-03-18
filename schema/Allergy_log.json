@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Allergy_log.json",
 	"title": "Allergy log",
-	"description": "An allergic disorder caused by specified antigen.",
+	"description": "Each entry characterizes an allergic disorder.",
 	"type": "object",
 	"properties": {
 		"id": {
@@ -12,12 +12,12 @@
 			"type": "string",
 			"description": "formatted YYYYMMDD date of exam"
 		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
 		"person_id": {
 			"type": "string",
 			"description": "person suffering the allergic disorder"
-		},
-		"domain": {
-			"$ref": "definitions.json#/domain"
 		},
 		"allergen_type_sctid": {
 			"description": "SNOWMED CT ID referencing a type of allergen disorder"
@@ -26,6 +26,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "person_id"]
+		"required": ["id", "calendar_date_id", "domain", "person_id", "allergen_type_sctid"]
 	}
 }

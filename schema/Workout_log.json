@@ -1,29 +1,29 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Surgery_log.json",
-	"title": "Surgery log",
-	"description": "a surgical intervention",
+	"id": "http://ostlog.org/Workout_log.json",
+	"title": "Workout log",
+	"description": "Each entry describes a workout in time.",
 	"type": "object",
 	"properties": {
 
 		"id": {
 			"type": "integer"
 		},
-		"domain ": {
-			"$ref": "definitions.json#/domain"
-		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the measurement(s)"
+			"description": "YYYYMMDD formatted date of the workout."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the measurement(s)"
+			"description": "HH:MM:SS formatted time of the workout."
+		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
 		},
 		"person_id ": {
 			"type": "integer",
-			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
+			"description ": "the person who worked out."
 		},
 		"workout_type": {
 			"type": "string",
@@ -50,7 +50,7 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "domain", "calendar_date_id", "timestamp", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
 
 	}
 }

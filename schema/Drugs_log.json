@@ -1,8 +1,8 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Drug_log.json",
+	"id": "http://ostlog.org/Drugs_log.json",
 	"title": "Drugs log",
-	"description": "A dose of medication taken once or regular intervals",
+	"description": "Each entry characcterizes a dose of medication taken at pre-defined intervals",
 	"type": "object",
 	"properties": {
 
@@ -17,12 +17,13 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time when first dose taken"
 		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+
 		"person_id": {
 			"type": "integer",
 			"description ": "the person taking the medication"
-		},
-		"domain": {
-			"$ref": "definitions.json#/domain"
 		},
 		"status": {
 			"type": "string",
@@ -99,7 +100,7 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "status", "drug_atc_code", "admin_route", "dosage_amount", "dosage_units"]
 
 	}
 

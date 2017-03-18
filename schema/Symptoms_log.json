@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Symptoms_log.json",
 	"title": "Symptoms log",
-	"description": "a chronic or acute health symptom experienced on a date in time",
+	"description": "Each entry describes a chronic or acute health symptom experienced in time.",
 	"type": "object",
 	"properties": {
 
@@ -40,7 +40,7 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "domain", "calendar_date_id", "timestamp", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
 
 	}
 }

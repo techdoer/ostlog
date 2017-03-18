@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Health_log.json",
 	"title": "Health log",
-	"description": "Phenotype and physiological measures in time.",
+	"description": "Each entry characterizes actual vital readings at a specific moment in time time.",
 	"type": "object",
 	"properties": {
 
@@ -18,12 +18,12 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the measurement(s)"
 		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
-		},
-		"domain ": {
-			"$ref": "definitions.json#/domain"
 		},
 		"feeling_great": {
 			"$ref": "definitions.json#/likert_scale"
@@ -76,6 +76,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
 	}
 }

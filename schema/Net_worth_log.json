@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Net_worth_log.json",
 	"title": "Net worth log",
-	"description": "Net worth at a point in time.",
+	"description": "Each entry records net worth at a point in time.",
 	"type": "object",
 	"properties": {
 
@@ -18,12 +18,12 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of net worth"
 		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the person associated to the net worth"
-		},
-		"domain ": {
-			"$ref": "definitions.json#/domain"
 		},
 		"cash_usd": {
 			"type": "float",
@@ -57,6 +57,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
 	}
 }

@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Heart_log.json",
 	"title": "Heart log",
-	"description": "Heart and ECG results.",
+	"description": "Each entry characterises results from heart examinations or ECG.",
 	"type": "object",
 	"properties": {
 
@@ -18,12 +18,12 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the measurement(s)"
 		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
-		},
-		"domain ": {
-			"$ref": "definitions.json#/domain"
 		},
 		"min_heart_rate_bpm": {
 			"type": "float"
@@ -96,6 +96,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
 	}
 }

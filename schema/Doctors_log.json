@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Doctors_log.json",
 	"title": "Doctors log",
-	"description": "A visit to the doctor's office or similar consultation with a medical professional",
+	"description": "Each entry characterizes a visit to the doctor's office or similar consultation with a medical professional",
 	"type": "object",
 	"properties": {
 
@@ -17,6 +17,9 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the visit"
 		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
 		"doctor_id": {
 			"type": "integer",
 			"description ": "the medical professional"
@@ -24,9 +27,6 @@
 		"patient_id": {
 			"type": "integer",
 			"description ": "the person visiting the medical professional"
-		},
-		"domain": {
-			"$ref": "definitions.json#/domain"
 		},
 		"prescription_url": {
 			"type": "string",
@@ -36,7 +36,7 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "doctor_id", "patient_id", "domain"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "doctor_id", "patient_id"]
 
 	}
 

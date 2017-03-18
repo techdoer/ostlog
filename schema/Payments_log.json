@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Payments_log.json",
 	"title": "Payments log",
-	"description": "A credit/debit payment.",
+	"description": "Each entry records a credit/debit transaction.",
 	"type": "object",
 	"properties": {
 
@@ -55,6 +55,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "payment_type", "item_description", "item_category", "amount_usd"]
 	}
 }

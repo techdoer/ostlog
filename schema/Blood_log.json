@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Blood_log.json",
 	"title": "Blood log",
-	"description": "Lab results from a Complete Blood Count exam or similar.",
+	"description": "Each entry records results from a Complete Blood Count or similar blood test.",
 	"type": "object",
 	"properties": {
 
@@ -18,12 +18,12 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted"
 		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the person to whom the blood results correspond"
-		},
-		"domain ": {
-			"$ref": "definitions.json#/domain"
 		},
 		"blood_group": {
 			"type": "string",
@@ -193,6 +193,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
 	}
 }

@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Menstrual_cycle_log.json",
 	"title": "Menstrual cycle log",
-	"description": "records the details of each menstrual cycle.",
+	"description": "Each entry records aspects of a day in the menstrual cycle.",
 	"type": "object",
 	"properties": {
 
@@ -18,12 +18,12 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the measurement(s)"
 		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
-		},
-		"domain ": {
-			"$ref": "definitions.json#/domain"
 		},
 		"day_in_cycle": {
 			"type": "integer",
@@ -37,6 +37,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
 	}
 }

@@ -10,9 +10,6 @@
 		"id": {
 			"type": "integer"
 		},
-		"domain ": {
-			"$ref": "definitions.json#/domain"
-		},
 		"calendar_date_id": {
 			"type": "string",
 			"description": "YYYYMMDD formatted date of the measurement(s)"
@@ -20,6 +17,9 @@
 		"timestamp": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the measurement(s)"
+		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
 		},
 		"person_id ": {
 			"type": "integer",
@@ -39,7 +39,7 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "domain", "calendar_date_id", "timestamp", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
 
 	}
 }

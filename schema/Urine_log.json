@@ -3,15 +3,12 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Urine_log.json",
 	"title": "Urine log",
-	"description": "lab test results for urine",
+	"description": "Each entry records results from a urine lab test.",
 	"type": "object",
 	"properties": {
 
 		"id": {
 			"type": "integer"
-		},
-		"domain ": {
-			"$ref": "definitions.json#/domain"
 		},
 		"calendar_date_id": {
 			"type": "string",
@@ -21,6 +18,9 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the measurement(s)"
 		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
@@ -28,7 +28,7 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "domain", "calendar_date_id", "timestamp", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
 
 	}
 }

@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Diagnosis_log.json",
 	"title": "Diagnosis log",
-	"description": "A diagnosis given by a medical professional.",
+	"description": "Each entry characterizes a diagnosis issued by a medical professional.",
 	"type": "object",
 	"properties": {
 
@@ -12,18 +12,22 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the diagnosis"
-		},
-		"timestamp": {
-			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the diagnosis"
-		},
-		"person_id ": {
-			"type": "integer",
-			"description ": "the person to whom the diagnosis applies"
+			"description": "YYYYMMDD formatted date of the diagnosis."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the diagnosis."
+		},
+		"medical_professional_id ": {
+			"type": "integer",
+			"description ": "the person to who issued the diagnosis."
+		},
+		"patient_id ": {
+			"type": "integer",
+			"description ": "the person to whom the diagnosis applies"
 		},
 		"diagnosis_icd10_code": {
 			"type": "integer",
@@ -33,6 +37,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain", "diagnosis_icd10_code"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "diagnosis_icd10_code"]
 	}
 }

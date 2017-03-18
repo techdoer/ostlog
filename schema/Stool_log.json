@@ -3,15 +3,12 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Stool_log.json",
 	"title": "Stool log",
-	"description": "Stool analysis lab results",
+	"description": "Each entry records results from a stool analysis examination",
 	"type": "object",
 	"properties": {
 
 		"id": {
 			"type": "integer"
-		},
-		"domain ": {
-			"$ref": "definitions.json#/domain"
 		},
 		"calendar_date_id": {
 			"type": "string",
@@ -20,6 +17,9 @@
 		"timestamp": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the test sample(s)"
+		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
 		},
 		"person_id": {
 			"type": "integer",
@@ -30,7 +30,11 @@
 			"enum": [1, 2, 3, 4, 5, 6, 7],
 			"description": ""
 		},
-		"color": {},
+		"color": {
+			"type": "string",
+			"enum": [""],
+			"description": ""
+		},
 		"amount": {
 			"type": "string",
 			"enum": ["little", "normal", "a lot"],
@@ -97,6 +101,6 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "domain", "calendar_date_id", "timestamp", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
 	}
 }

@@ -1,17 +1,14 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Surgery_log.json",
-	"title": "Surgery log",
-	"description": "a surgical intervention",
+	"id": "http://ostlog.org/Therapy_log.json",
+	"title": "Therapy log",
+	"description": "Each entry describes a theraputical intervention",
 	"type": "object",
 	"properties": {
 
 		"id": {
 			"type": "integer"
-		},
-		"domain ": {
-			"$ref": "definitions.json#/domain"
 		},
 		"calendar_date_id": {
 			"type": "string",
@@ -21,18 +18,27 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the measurement(s)"
 		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
 		},
-		"procedure_sctid": {
+		"therapy_sctid": {
 			"type": "string",
-			"description": " -- SNOWMED CT ID referencing a surgical procedure"
+			"description": " -- SNOWMED CT ID referencing a regime/therapy"
+		},
+		"was_effective": {
+			"$ref": "definitions.json#/likert_scale"
+		},
+		"effective_remarks": {
+			"type": "string"
 		},
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "domain", "calendar_date_id", "timestamp", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
 
 	}
 }
