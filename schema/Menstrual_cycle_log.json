@@ -27,7 +27,7 @@
 		},
 		"day_in_cycle": {
 			"type": "integer",
-			"enum": [1,2,3,4,5,6,7]
+			"enum": [1, 2, 3, 4, 5, 6, 7],
 			"description": "no. days passed since cycle started"
 		},
 		"flow": {
