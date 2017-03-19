@@ -23,7 +23,7 @@
 		},
 		"person_id ": {
 			"type": "integer",
-			"description ": "the person to whom underwent the surgical procedure."
+			"description ": "the person to whom underwent the surgery."
 		},
 		"procedure_sctid": {
 			"type": "string",
@@ -35,7 +35,6 @@
 		"effective_remarks": {
 			"type": "string"
 		},
-
 		"remarks": {
 			"type": "string"
 		},

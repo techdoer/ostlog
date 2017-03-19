@@ -10,9 +10,6 @@
 		"id": {
 			"type": "integer"
 		},
-		"domain ": {
-			"$ref": "definitions.json#/domain"
-		},
 		"calendar_date_id": {
 			"type": "string",
 			"description": "YYYYMMDD formatted date when symptom experienced."
@@ -20,6 +17,9 @@
 		"timestamp": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of when symptom experienced."
+		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
 		},
 		"person_id ": {
 			"type": "integer",
@@ -35,7 +35,7 @@
 		},
 		"new_occurance": {
 			"type": "boolean",
-			"description": "True if symptom is new and not experienced in past 7 days."
+			"description": "True if symptom is new and not occured in past 7 days."
 		},
 		"remarks": {
 			"type": "string"

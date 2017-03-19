@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/Sleep_log.json",
 	"title": "Sleep log",
-	"description": "Each entry records daily sleep times.",
+	"description": "Each entry records daily sleep time.",
 	"type": "object",
 	"properties": {
 
@@ -12,7 +12,7 @@
 		},
 		"start_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date when start of sleep occured.."
+			"description": "YYYYMMDD formatted date when start of sleep occured."
 		},
 		"start_time": {
 			"type ": "string ",

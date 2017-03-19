@@ -25,17 +25,50 @@
 			"type": "integer",
 			"description ": "the person to whom the urine belongs."
 		},
-		"clarity": {},
-		"color": {},
-		"density_15_c": {},
-		"ph": {},
-		"albumin": {},
-		"glucose": {},
-		"ketones": {},
-		"urobilinogen": {},
-		"bilirubin": {},
-		"hemoglobin": {},
-		"nitries": {},
+		"clarity": {
+			"type": "string",
+			"description": ""
+		},
+		"color": {
+			"type": "string",
+			"description": ""
+		},
+		"density_15_c": {
+			"type": "float",
+			"description": ""
+		},
+		"ph": {
+			"type": "float",
+			"description": ""
+		},
+		"albumin": {
+			"type": "float",
+			"description": ""
+		},
+		"glucose": {
+			"type": "float",
+			"description": ""
+		},
+		"ketones": {
+			"type": "float",
+			"description": ""
+		},
+		"urobilinogen": {
+			"type": "float",
+			"description": ""
+		},
+		"bilirubin": {
+			"type": "float",
+			"description": ""
+		},
+		"hemoglobin": {
+			"type": "float",
+			"description": ""
+		},
+		"nitries": {
+			"type": "float",
+			"description": ""
+		},
 		"remarks": {
 			"type": "string"
 		},

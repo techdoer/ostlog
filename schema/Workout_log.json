@@ -57,7 +57,7 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "workout_type", "duration_minutes"]
 
 	}
 }
