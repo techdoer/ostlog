@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Menstrual_cycle_log.json",
+	"id": "http://ostlog.org/schema/Menstrual_cycle_log.json",
 	"title": "Menstrual cycle log",
 	"description": "Each entry records aspects of a day in the menstrual cycle.",
 	"type": "object",

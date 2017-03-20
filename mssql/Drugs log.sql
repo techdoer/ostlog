@@ -12,8 +12,8 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: A simple fact table to record history of medicines taken.  Designed for Azure SQL Server. 
--- URL: 
+-- Version: Each entry records a dose of medicine taken.  Supports Azure SQL Server. 
+-- URL: http://ostlog.org/schema/Drugs_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
@@ -22,8 +22,8 @@ CREATE TABLE [dbo].[Drugs log] (
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME (0) NOT NULL,
-	[person_id] INT NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
+	[person_id] INT NOT NULL,
 	[doctor_visit_id] INT NULL,
 	[name] NVARCHAR (512) NOT NULL, -- commercial name of drug taken
 	[status] NVARCHAR (10) NULL, 
@@ -43,7 +43,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	[when] NVARCHAR (3) NULL,
 	[length_days] INT NULL,
 
-	[drug_was_effective] NVARCHAR (20) NULL,
+	[was_effective] NVARCHAR (20) NULL,
 	[effectivness_remarks] NVARCHAR (2048) NULL,
 	[side_effect_remarks] NVARCHAR (2048) NULL,
 	[remarks] NVARCHAR (4000) NULL,
@@ -62,5 +62,5 @@ CREATE TABLE [dbo].[Drugs log] (
 	-- from timing event http://hl7.org/fhir/v3/TimingEvent
 	CHECK ([when] = 'HS' OR [when] = 'WAKE' OR [when] = 'C' OR [when] = 'CM' OR [when] = 'CD' OR [when] = 'CV' OR [when] = 'AC' OR [when] = 'ACM' OR [when] = 'ACD' OR [when] = 'ACV' OR [when] = 'IC'  OR [when] = 'ICD'  OR [when] = 'ICM'  OR [when] = 'ICV'  OR [when] = 'PC' OR [when] = 'PCM' OR [when] = 'PCD' OR [when] = 'PCV'),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial'),
-	CHECK ([drug_was_effective] = 'strongly disagree' OR [drug_was_effective] = 'disagree' OR [drug_was_effective] = 'neutral' OR [drug_was_effective] = 'agree' OR [drug_was_effective] = 'strongly agree')
+	CHECK ([was_effective] = 'strongly disagree' OR [was_effective] = 'disagree' OR [was_effective] = 'neutral' OR [was_effective] = 'agree' OR [was_effective] = 'strongly agree')
 );

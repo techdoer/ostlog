@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Stool_log.json",
+	"id": "http://ostlog.org/schema/Stool_log.json",
 	"title": "Stool log",
 	"description": "Each entry records results from a stool analysis examination",
 	"type": "object",

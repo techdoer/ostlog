@@ -11,8 +11,8 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: A simple fact table to record school grades from primary school through to university. 
--- URL: 
+-- Version: Each entry records a grade received for a course during the specified term.  Supports Azure SQL Server.
+-- URL: http://ostlog.org/schema/School_grades.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
@@ -22,8 +22,8 @@ CREATE TABLE [dbo].[School grades log]
 	[id] INT NOT NULL,
 	[start_calendar_date_id] INT NOT NULL,
 	[end_calendar_date_id] INT NOT NULL,
-	[person_id] INT NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
+	[person_id] INT NOT NULL,
 	[instructor_id] INT NULL,
 	[school_level_isced] INT NOT NULL, -- referencing International Standard Classification of Education ISCED 2011
 	[subject_name] NVARCHAR (512) NOT NULL,

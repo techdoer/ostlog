@@ -12,8 +12,8 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: A simple fact table to capture health and phenotype related data.  Designed for Azure SQL Server. 
--- URL: 
+-- Version: Each entry records a number of body measurement or vital readings.  Supports Azure SQL Server. 
+-- URL: http://ostlog.org/schema/Health_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
@@ -23,9 +23,9 @@ CREATE TABLE [dbo].[Health log]
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
-	[person_id] INT NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
-	[feeling_great] NVARCHAR(20) NULL, /* subjective assessment 1 = bedridden, 3 = feeling ok,  5=feeling superbb */
+	[person_id] INT NOT NULL,
+	[feeling_great] NVARCHAR(20) NULL, 
 	[height_cm] FLOAT NULL,
 	[weight_kg] FLOAT NULL,
 	[right_foot_size_cm] FLOAT NULL,

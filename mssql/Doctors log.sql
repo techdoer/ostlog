@@ -12,22 +12,23 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: A simple fact table to record doctor's visits.  Designed for Azure SQL Server. 
--- URL: 
+-- Version: Each entry records a visit to a medical professional.  Supports Azure SQL Server. 
+-- URL: http://ostlog.org/schema/Doctors_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
 -- License:     MIT License
 CREATE TABLE [dbo].[Doctors log]
 (
+	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[doctor_id] INT NOT NULL,
 	[patient_id] INT NOT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
 	[visit_key] INT NULL,   /* surrogate key */
 	[prescription_url] NVARCHAR(512) NULL,
 	[remarks] NVARCHAR (4000) NULL,
-	CONSTRAINT [PK_Doctors log] PRIMARY KEY CLUSTERED ([calendar_date_id] ASC, [doctor_id] ASC, [patient_id] ASC),
+	CONSTRAINT [PK_Doctors log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Doctors log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Doctors log-People] FOREIGN KEY ([doctor_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Doctors log-People1] FOREIGN KEY ([patient_id]) REFERENCES [dbo].[People] ([id]),

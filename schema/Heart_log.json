@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Heart_log.json",
+	"id": "http://ostlog.org/schema/Heart_log.json",
 	"title": "Heart log",
 	"description": "Each entry characterises results from heart examinations or ECG.",
 	"type": "object",

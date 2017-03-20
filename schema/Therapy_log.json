@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Therapy_log.json",
+	"id": "http://ostlog.org/schema/Therapy_log.json",
 	"title": "Therapy log",
 	"description": "Each entry describes a theraputical intervention in time.",
 	"type": "object",

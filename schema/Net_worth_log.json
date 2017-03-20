@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Net_worth_log.json",
+	"id": "http://ostlog.org/schema/Net_worth_log.json",
 	"title": "Net worth log",
 	"description": "Each entry records a person's net worth at a point in time.",
 	"type": "object",

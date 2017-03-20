@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/School_grades_log.json",
+	"id": "http://ostlog.org/schema/School_grades_log.json",
 	"title": "School grades log",
 	"description": "Each entry records the grade received for a specific course during the specified term.",
 	"type": "object",

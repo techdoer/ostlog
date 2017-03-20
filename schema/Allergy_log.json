@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Allergy_log.json",
+	"id": "http://ostlog.org/schema/Allergy_log.json",
 	"title": "Allergy log",
 	"description": "Each entry characterizes an allergic disorder.",
 	"type": "object",

@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Health_log.json",
+	"id": "http://ostlog.org/schema/Health_log.json",
 	"title": "Health log",
 	"description": "Each entry characterizes actual vital readings at a specific moment in time time.",
 	"type": "object",

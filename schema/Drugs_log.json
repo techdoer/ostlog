@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Drugs_log.json",
+	"id": "http://ostlog.org/schema/Drugs_log.json",
 	"title": "Drugs log",
 	"description": "Each entry characterizes a dose of medication taken at pre-defined intervals",
 	"type": "object",

@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Symptoms.json",
+	"id": "http://ostlog.org/schema/Symptoms.json",
 	"title": "Symptoms",
 	"description": "Each entry describes a health symptom.",
 	"type": "object",

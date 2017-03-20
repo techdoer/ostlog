@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Surgery_log.json",
+	"id": "http://ostlog.org/schema/Surgery_log.json",
 	"title": "Surgery log",
 	"description": "Each entry describes a surgical intervention.",
 	"type": "object",

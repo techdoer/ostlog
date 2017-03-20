@@ -12,8 +12,8 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: A simple fact table to classify common allergies by referencing allergic disorders in the SNOWMED CT Classification. 
--- URL: 
+-- Version: Each entry characterizes a chronic/acute allergic reaction.  Supports Azure SQL Server.
+-- URL: http://ostlog.org/schema/Allergy_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
@@ -22,8 +22,8 @@ CREATE TABLE [dbo].[Allergy log]
 (
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
-	[person_id] INT NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
+	[person_id] INT NOT NULL,
 	[allergen_type_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a type of allergen disorder
 	[remarks] NVARCHAR(2056) NULL,   
 	CONSTRAINT [PK_Allergy log] PRIMARY KEY CLUSTERED ([id] ASC),

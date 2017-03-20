@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/People.json",
+	"id": "http://ostlog.org/schema/People.json",
 	"title": "People",
 	"description": "Each entry describes a person referenced in ostlog.",
 	"type": "object",

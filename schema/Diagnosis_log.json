@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Diagnosis_log.json",
+	"id": "http://ostlog.org/schema/Diagnosis_log.json",
 	"title": "Diagnosis log",
 	"description": "Each entry characterizes a diagnosis issued by a medical professional.",
 	"type": "object",

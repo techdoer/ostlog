@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Doctors_log.json",
+	"id": "http://ostlog.org/schema/Doctors_log.json",
 	"title": "Doctors log",
 	"description": "Each entry characterizes a visit to the doctor's office or similar consultation with a medical professional",
 	"type": "object",

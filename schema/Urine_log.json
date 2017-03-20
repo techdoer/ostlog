@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Urine_log.json",
+	"id": "http://ostlog.org/schema/Urine_log.json",
 	"title": "Urine log",
 	"description": "Each entry records results from a urine lab test.",
 	"type": "object",

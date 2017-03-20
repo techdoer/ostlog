@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Symptoms_log.json",
+	"id": "http://ostlog.org/schema/Symptoms_log.json",
 	"title": "Symptoms log",
 	"description": "Each entry describes a chronic or acute health symptom experienced in time.",
 	"type": "object",

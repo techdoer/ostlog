@@ -12,8 +12,8 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: A simple fact table to menstrual cycle related data.  Designed for Azure SQL Server. 
--- URL: 
+-- Version: Each entry characterizes a day of the menstrual cycle.  Supports Azure SQL Server. 
+-- URL: http://ostlog.org/schema/Menstrual_cycle_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
@@ -22,9 +22,9 @@ CREATE TABLE [dbo].[Menstrual cycle log]
 (
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
 	[day_in_cycle] INT NOT NULL, -- 1 = first day, 2 = second day....
 	[flow] NVARCHAR(20) NULL,
 	[remarks] NVARCHAR(4000) NULL, 

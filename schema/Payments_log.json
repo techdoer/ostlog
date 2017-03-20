@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Payments_log.json",
+	"id": "http://ostlog.org/schema/Payments_log.json",
 	"title": "Payments log",
 	"description": "Each entry records a credit/debit transaction.",
 	"type": "object",

@@ -12,8 +12,8 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: A simple fact table to log sleep activity. 
--- URL: 
+-- Version: Each entry records sleep activity on a day in time.  Supports Azure SQL Server.
+-- URL: http://ostlog.org/schema/Sleep_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
@@ -21,11 +21,11 @@
 CREATE TABLE [dbo].[Sleep log]
 (
 	[id] INT NOT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
 	[start_date_id] INT NOT NULL,
 	[start_timestamp] TIME (0) NOT NULL,
 	[end_date_id] INT NOT NULL,
 	[end_timestamp] TIME (0) NOT NULL,
+	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[remarks] NVARCHAR(2056) NULL,   
 	CONSTRAINT [PK_Sleep log] PRIMARY KEY CLUSTERED ([id] ASC),

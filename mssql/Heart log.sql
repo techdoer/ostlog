@@ -12,8 +12,8 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: A simple fact table to record heart/ECG exam results.  Designed for Azure SQL Server. 
--- URL: 
+-- Version: Each entry records heart/ECG exam results.  Supports Azure SQL Server. 
+-- URL: http://ostlog.org/schema/Heart_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
@@ -23,8 +23,8 @@ CREATE TABLE [dbo].[Heart log]
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
-	[person_id] INT NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
+	[person_id] INT NOT NULL,
 	[min_heart_rate_bpm] FLOAT NULL,
 	[avg_heart_rate_bpm] FLOAT NULL,
 	[max_heart_rate_bpm] FLOAT NULL,

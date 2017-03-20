@@ -1,7 +1,7 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/Blood_log.json",
+	"id": "http://ostlog.org/schema/Blood_log.json",
 	"title": "Blood log",
 	"description": "Each entry records results from a Complete Blood Count or similar blood test.",
 	"type": "object",
