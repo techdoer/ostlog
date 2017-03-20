@@ -13,16 +13,17 @@
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -- Version: A simple fact table to record workout activity.  Designed for Azure SQL Server. 
--- URL: 
+-- URL:  http://ostlog.org/schema/Workouts_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
 -- License:     MIT License
 CREATE TABLE [dbo].[Workouts log]
 (
+	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
-	[person_id] INT NOT NULL, 
 	[domain] NVARCHAR (15) NOT NULL,
+	[person_id] INT NOT NULL, 
 	[workout_type] NVARCHAR(20) NOT NULL, 
 	[start_time] TIME(0) NULL, 
 	[duration_minutes] FLOAT NULL, 

@@ -12,8 +12,8 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: A fact table recording symptoms experienced over time.   Designed for Azure SQL Server. 
--- URL:         -
+-- Version: Each entry records a chronic/acute health symptom experienced on a day in time.   Supports Azure SQL Server. 
+-- URL: http://ostlog.org/schema/Symptoms_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts

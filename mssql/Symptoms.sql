@@ -13,7 +13,7 @@
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -- Version: A dimension table to record a standard list of symptoms.   Designed for Azure SQL Server. 
--- URL:         -
+-- URL: http://ostlog.org/schema/Symptoms.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
