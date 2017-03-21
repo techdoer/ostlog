@@ -12,7 +12,7 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: A simple fact table to record workout activity.  Designed for Azure SQL Server. 
+-- Version: Each entry ecords a workout activity.  Supports Azure SQL Server. 
 -- URL:  http://ostlog.org/schema/Workouts_log.json
 --
 -- Authors:     Sergio Bogazzi
