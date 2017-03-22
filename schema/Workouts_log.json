@@ -1,8 +1,8 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Workout_log.json",
-	"title": "Workout log",
+	"id": "http://ostlog.org/schema/Workouts_log.json",
+	"title": "Workouts log",
 	"description": "Each entry describes a workout in time.",
 	"type": "object",
 	"properties": {
