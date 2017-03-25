@@ -13,7 +13,7 @@
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -- Version: Each entry describes a drug and the disorder(s) it targets.  Supports Azure SQL Server. 
--- URL: http://ostlog.org/schema/Drugs.json
+-- URL: http://ostlog.org/schema/Drug_targets.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
