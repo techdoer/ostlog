@@ -84,5 +84,6 @@
     <Build Include="Workouts log.sql" />
     <None Include="scripts\Load calendar dates.sql" />
     <None Include="scripts\Load symptoms.sql" />
+    <Build Include="Drug targets.sql" />
   </ItemGroup>
 </Project>
