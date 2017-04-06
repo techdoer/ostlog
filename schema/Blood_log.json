@@ -58,7 +58,7 @@
 			"type": "float",
 			"description": "mean corpuscular hemoglobin concentration - the average concentration of hemoglobin in a given volume of red cells"
 		},
-		"mpv_fL": {
+		"mpv_fl": {
 			"type": "float",
 			"description": "mean platelet volume - measures the average amount (volume) of platelets in femtoliters (fL)"
 		},
@@ -190,6 +190,18 @@
 			"type": "float",
 			"description": "thyroxine in pmol/l."
 		},
+		"potassium_meq_l": {
+			"type": "float",
+			"description": "potassium in mg/dl."
+		},
+		"sodium_meq_l": {
+			"type": "float",
+			"description": "sodium in mg/dl."			
+		}
+		"calcium_mg_dl": {
+			"type": "float",
+			"description": "calcium in mg/dl"
+		}
 		"remarks": {
 			"type": "string"
 		},

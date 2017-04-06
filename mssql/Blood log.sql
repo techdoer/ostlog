@@ -26,26 +26,26 @@ CREATE TABLE [dbo].[Blood log]
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[blood_group] NVARCHAR(3),
-	[wbc] FLOAT NULL, /* white blood cell count - measured as cells/mcL ; italian leucociti*/
-	[rbc] FLOAT NULL, /* red blood cell count measured as million cells/mcL ; italian eritrociti */
+	[white_blood_cells_mcl] FLOAT NULL, /* white blood cell count - measured as cells/mcL ; italian leucociti*/
+	[red_blood_cells_mcl] FLOAT NULL, /* red blood cell count measured as million cells/mcL ; italian eritrociti */
 	[hb_g_dl] FLOAT NULL, /* hemoglobin - this is the amount of hemoglobin in a volume of blood - measured as grams/dL */
 	[hct_%] FLOAT NULL, /* Hematocrit - this is the percentage of the volume ofred cells to the volume of whole blood. */
-	[mcv] FLOAT NULL, /* Mean corpuscular volume  - is the average volume of a red blood cell. */
+	[mcv_fl] FLOAT NULL, /* Mean corpuscular volume  - is the average volume of a red blood cell. */
 	[mch_pg] FLOAT NULL, /* Mean Corpuscular Hemoglobin (MCH) is the average amount of hemoglobin in the average red cell */
 	[mchc_g_dl] FLOAT NULL, /* Mean Corpuscular Hemoglobin Concentration (MCHC) is the average concentration of hemoglobin in a given volume of red cells. */
-	[mpv] FLOAT NULL, /* Mean platelet volume (MPV). Mean platelet volume measures the average amount (volume) of platelets. */
+	[mpv_fl] FLOAT NULL, /* Mean platelet volume (MPV). Mean platelet volume measures the average amount (volume) of platelets. */
 	[rdw_cv_%] FLOAT NULL, /* Red Cell Distribution Width (RDW-CV), - this is RDW-CV (oefficient of variation), is a measurement of the variability of red cell size and shape */
-	[pc] FLOAT NULL, /* Platelet count.  In italian called piastrine.  measured as billion/L */
+	[pc_b_l] FLOAT NULL, /* Platelet count.  In italian called piastrine.  measured as billion/L */
 	[neutrophils_%] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[neutrophils] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
+	[neutrophils_cells_mcl] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
 	[eosinophils_%] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[eosinophils] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
+	[eosinophils_cells_mcl] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
 	[basophils_%] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[basophils] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
+	[basophils_cells_mcl] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
 	[lymphocytes_%] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[lymphocytes] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
+	[lymphocytes_cells_mcl] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
 	[monocytes_%] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[monocytes] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
+	[monocytes_cells_mcl] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
 	[ferritin_ng_ml] FLOAT NULL, /* ng/ml */
 	[sideremia_mcg_dl] FLOAT NULL, /* transports iron in the blood */
 	[creatinine_mg_dl] FLOAT NULL, /* mg/dl */
@@ -59,13 +59,16 @@ CREATE TABLE [dbo].[Blood log]
 	[cholesterol_ldl] FLOAT NULL, /* ldl cholesterol in blood. mg/dl */
 	[ast_ui_l] FLOAT NULL, /* aspartate aminotransferase. Liver - In Italian GOT/AST  - UI/L */
 	[alt_ui_l] FLOAT NULL, /* alanine aminotransferase. Liver - In Italian GPT/ALT - UI/L */
-	[ggt] FLOAT NULL, /* gamma-glutamyl transferase. Liver U/I */
+	[ggt_u_i] FLOAT NULL, /* gamma-glutamyl transferase. Liver U/I */
 	[ldh_ul_l] FLOAT NULL, /* ldh lactic dehydrogenase Ul/l */
 	[toxoplasma_igg] FLOAT NULL, /* Toxoplasma IgG antibody. */
 	[toxoplasma_igm_ul_ml] FLOAT NULL, /* Toxoplasma IgM antibody. */
 	[tsh_ulu_ml] FLOAT NULL, /* thyrotropin. Italian tireotropo.  ulU/ml */
 	[t3_pmol_l] FLOAT NULL, /* triiodothyronine pmol/l */
 	[t4_pmol_l] FLOAT NULL, /* thyroxine pmol/l */
+	[potassium_meq_l] FLOAT NULL, /* potassium mEq/l */
+	[sodium_meq_l] FLOAT NULL, /*sodium mEq/l */
+	[calcium_mg_dl] FLOAT NULL, /* calcium mg/dl */
 	[remarks] NVARCHAR(2056) NULL,
 	CONSTRAINT [PK_Blood log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Blood log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
