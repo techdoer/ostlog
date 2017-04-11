@@ -26,10 +26,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time when sleep ended."
 		},
-		"domain ": {
+		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
-		"person_id ": {
+		"person_id": {
 			"type": "integer",
 			"description ": "the person who slept."
 		},
