@@ -1,5 +1,5 @@
 # introduction
-A do-it-yourself Personal Well-being Library for individuals and families. ostlog offers a local or cloud-based database and related tools to help families start tracking and unlocking insights regarding their growth, health and well-being.   
+A do-it-yourself Personal Well-being Library for individuals and families. ostlog offers an integrated reference schema and database to help families start tracking and unlocking insights regarding their growth, health and overall well-being.   
 
 See the [family•smarts](http://familysmarts.net) website for real-world examples of generating insights from an ostlog-powered Personal Health Library to boost household growth, health and well-being. 
 
@@ -13,7 +13,7 @@ ostlog is based on the following principles:
 	* data should ahere to established standards to facilitate interoperability 
 
 # schema 
-A JSON Schema defining the ostlog datamodel is available in the schema folder. 
+A JSON Schema defining a fully integrated self-tracking datamodel is available in the schema folder.   ostlog supports data collection across five dimensions of well-being.
 
 # installation
 ostlog can be deployed as a database in the cloud or locally on your computer.  
