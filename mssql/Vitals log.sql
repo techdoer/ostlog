@@ -12,13 +12,13 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: Each entry records a number of body measurement or vital readings.  Supports Azure SQL Server. 
+-- Version: Each entry records a number vital signs and body measurement readings.  Supports Azure SQL Server. 
 -- URL: http://ostlog.org/schema/Health_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
 -- License:     MIT License
-CREATE TABLE [dbo].[Health log]
+CREATE TABLE [dbo].[Vitals log]
 (
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
@@ -38,9 +38,9 @@ CREATE TABLE [dbo].[Health log]
 	[bfp_%] FLOAT NULL, /* body fat percentage */
 	[spo2_%] FLOAT NULL, /* peripheral capillary oxygen saturation */
 	[remarks] NVARCHAR(4000) NULL, 
-	CONSTRAINT [PK_Health log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Health log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Health log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [PK_Vitals log] PRIMARY KEY CLUSTERED ([id] ASC),
+	CONSTRAINT [FK_Vitals log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Vitals log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial'),
 	CHECK ([feeling_great] = 'strongly disagree' OR [feeling_great] = 'disagree' OR [feeling_great] = 'neutral' OR [feeling_great] = 'agree' OR [feeling_great] = 'strongly agree')
 )
