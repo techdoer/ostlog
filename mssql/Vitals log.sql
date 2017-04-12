@@ -13,7 +13,7 @@
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -- Version: Each entry records a number vital signs and body measurement readings.  Supports Azure SQL Server. 
--- URL: http://ostlog.org/schema/Health_log.json
+-- URL: http://ostlog.org/schema/Vitals_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
