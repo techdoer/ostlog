@@ -77,6 +77,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "feeling_great"]
 	}
 }
