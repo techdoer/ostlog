@@ -11,19 +11,20 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: A simple fact table to record surgical procedures referencing SNOWMED CT procedures. 
+-- Version: A simple fact table to record medical procedures referencing SNOWMED CT procedure identifiers. 
 -- URL: http://ostlog.org/schema/Surgery_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
 -- License:     MIT License
-CREATE TABLE [dbo].[Surgery log]
+CREATE TABLE [dbo].[Medical procedure log]
 (
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
-	[procedure_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a surgical procedure
+	[procedure_name] NVARCHAR(100) NOT NULL,
+	[procedure_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a procedure
 	[was_effective] NVARCHAR (20) NULL,
 	[effectivness_remarks] NVARCHAR (2048) NULL,
 	[remarks] NVARCHAR(2056) NULL,   
