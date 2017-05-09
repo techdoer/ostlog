@@ -79,7 +79,6 @@
     <Build Include="Medical procedure log..sql" />
     <Build Include="Symptoms log.sql" />
     <Build Include="Symptoms.sql" />
-    <Build Include="Therapy log.sql" />
     <Build Include="Urine log.sql" />
     <Build Include="Workouts log.sql" />
     <None Include="scripts\Load calendar dates.sql" />
