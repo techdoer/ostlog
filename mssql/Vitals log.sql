@@ -30,6 +30,7 @@ CREATE TABLE [dbo].[Vitals log]
 	[weight_kg] FLOAT NULL,
 	[right_foot_size_cm] FLOAT NULL,
 	[left_foot_size_cm] FLOAT NULL,
+	[head_circumference_cm] FLOAT NULL,
 	[body_temperature_c] FLOAT NULL,
 	[blood_pressure_diastolic_mmhg] INT NULL,
 	[blood_pressure_systolic_mmhg] INT NULL,

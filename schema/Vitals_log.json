@@ -45,6 +45,10 @@
 			"type": "float",
 			"description": "in centimeters"
 		},
+		"head_circumference_cm": {
+			"type": "float",
+			"description": "in centimeters"
+		},
 		"body_temperature_c": {
 			"type": "float",
 			"description": "body temperature in celsius"
