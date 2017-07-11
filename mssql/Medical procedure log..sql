@@ -31,6 +31,6 @@ CREATE TABLE [dbo].[Medical procedure log]
 	CONSTRAINT [PK_Surgery log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Surgery log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Surgery log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial'),
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
 	CHECK ([was_effective] = 'strongly disagree' OR [was_effective] = 'disagree' OR [was_effective] = 'neutral' OR [was_effective] = 'agree' OR [was_effective] = 'strongly agree')
 )

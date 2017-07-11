@@ -33,5 +33,5 @@ CREATE TABLE [dbo].[Menstrual cycle log]
 	CONSTRAINT [FK_Menstrual cycle log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CHECK ([day_in_cycle] >= 0 AND [day_in_cycle] <= 10),
 	CHECK ([flow] = 'heavy' OR [flow] = 'light' OR [flow] = 'medium' OR [flow] = 'spotting'),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )

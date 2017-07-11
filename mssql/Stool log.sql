@@ -50,5 +50,5 @@ CREATE TABLE [dbo].[Stool log]
 	CHECK ([amount] = 'little' OR [amount] = 'normal' OR [amount] = 'alot'),
 	CHECK ([color] = 'brown' OR [color] = 'green' OR [color] = 'yellow' OR [color] = 'black' OR [color] = 'white' OR [color] = 'red'),
 	CHECK ([ph] >= 1 AND [ph] <= 14),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial')
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )
