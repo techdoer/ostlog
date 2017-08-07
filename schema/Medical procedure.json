@@ -33,6 +33,14 @@
 			"type": "string",
 			"description": "SNOWMED CT ID referencing a surgical procedure"
 		},
+		"procedure_results_url": {
+			"type": "string",
+			"description": "URL refering to archived digital scans, notes etc."
+		},
+		"procedure_results_notes": {
+			"type": "string",
+			"description": "notes and observations from medical profesional regarding the procedure and results"
+		},
 		"was_effective": {
 			"$ref": "definitions.json#/likert_scale"
 		},
