@@ -33,6 +33,18 @@
 			"type": "integer",
 			"description ": "the person who traveled."
 		},
+		"departure_country_iso3_code": {
+			"type": "string",
+			"description ": "The ISO 3 code of the departure country."
+		},
+		"departure_latitude": {
+			"type": "float",
+			"description": "Latitude of departure"
+		},
+		"departure_longitude": {
+			"type": "float",
+			"description": "Longitude of departure"
+		},
 		"destination_country_iso3_code": {
 			"type": "string",
 			"description ": "The ISO 3 code of the country traveled to."
