@@ -69,6 +69,10 @@
 			"type": "float",
 			"description": ""
 		},
+		"culture": {
+			"type": "float",
+			"description": "Urine culture measured in colony forming units CFU/ml"
+		},
 		"remarks": {
 			"type": "string"
 		},
