@@ -36,7 +36,7 @@ CREATE TABLE [dbo].[Urine log]
 	[bilirubin] FLOAT NULL,
 	[hemoglobin] FLOAT NULL,
 	[nitries] FLOAT NULL,
-	[culture] FLOAT NULL,
+	[culture__cfu_ml] FLOAT NULL,
 	[remarks] NVARCHAR(2056) NULL,
 	CONSTRAINT [PK_Urine log] PRIMARY KEY CLUSTERED ([calendar_date_id] ASC, [person_id] ASC),
 	CONSTRAINT [FK_Urine log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
