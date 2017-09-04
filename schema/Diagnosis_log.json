@@ -12,7 +12,7 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the diagnosis."
+			"description": "YYYYMMDD formatted date when the diagnosis was given."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
@@ -23,15 +23,19 @@
 		},
 		"doctor_id ": {
 			"type": "integer",
-			"description ": "the person to who issued the diagnosis."
+			"description ": "the medical professional who issued the diagnosis."
 		},
 		"patient_id ": {
 			"type": "integer",
-			"description ": "the person to whom the diagnosis applies."
+			"description ": "the person who was diagnosed."
 		},
 		"diagnosis_icd10_code": {
 			"type": "integer",
 			"description": "an ICD 10 reference code from the WHO's International Statistical Classification of Diseases and Related Health Problems."
+		},
+		"num_days_with_symptoms": {
+			"type": "integer",
+			"description": "the number of days where symptoms associated to this illness were present."
 		},
 		"remarks": {
 			"type": "string"
