@@ -12,25 +12,26 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: Each entry records sleep activity on a day in time.  Supports Azure SQL Server.
+-- Version: Each entry records a person's assessment of their mood and a sentiment score on the response on a day in time.  Supports Azure SQL Server.
 -- URL: http://ostlog.org/schema/Sleep_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
 -- License:     MIT License
-CREATE TABLE [dbo].[Sleep log]
+CREATE TABLE [dbo].[Mood log]
 (
 	[id] INT NOT NULL,
-	[start_date_id] INT NOT NULL,
-	[start_timestamp] TIME (0) NOT NULL,
-	[end_date_id] INT NOT NULL,
-	[end_timestamp] TIME (0) NOT NULL,
+	[calendar_date_id] INT NOT NULL,
+	[timestamp] TIME (0) NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
-	[remarks] NVARCHAR(2056) NULL,   
-	CONSTRAINT [PK_Sleep log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Sleep log-Calendar_date1] FOREIGN KEY ([start_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Sleep log-Calendar_date2] FOREIGN KEY ([end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Sleep log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	[feeling_great] NVARCHAR(20) NOT NULL,
+	[how_are_you_doing_text] NVARCHAR(4000) NOT NULL,
+	[how_are_you_doing_score] FLOAT NULL,
+	[remarks] NVARCHAR(4000) NULL,   
+	CONSTRAINT [PK_Mood log] PRIMARY KEY CLUSTERED ([id] ASC),
+	CONSTRAINT [FK_Mood log-Calendar_date1] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Mood log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CHECK ([feeling_great] = 'strongly disagree' OR [feeling_great] = 'disagree' OR [feeling_great] = 'neutral' OR [feeling_great] = 'agree' OR [feeling_great] = 'strongly agree'),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )

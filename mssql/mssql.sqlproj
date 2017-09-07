@@ -87,5 +87,6 @@
     <Build Include="Drug targets.sql" />
     <Build Include="Travel log.sql" />
     <Build Include="views\View days betweeen menstrual cycle.sql" />
+    <Build Include="Mood log.sql" />
   </ItemGroup>
 </Project>
