@@ -78,7 +78,7 @@
     <Build Include="Stool log.sql" />
     <Build Include="Story log.sql" />
     <Build Include="Medical procedure log..sql" />
-    <Build Include="Symptoms log.sql" />
+    <Build Include="Health observations log.sql" />
     <Build Include="Symptoms.sql" />
     <Build Include="Urine log.sql" />
     <Build Include="Workouts log.sql" />

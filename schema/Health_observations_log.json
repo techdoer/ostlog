@@ -1,0 +1,46 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Health_observations_log.json",
+	"title": "Health observations log",
+	"description": "Each entry describes a chronic or acute health event observed in time.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date when event was observed/recorded."
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of when event was observed/recorded."
+		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
+		"person_id ": {
+			"type": "integer",
+			"description ": "the subject under observation."
+		},
+		"event_id": {
+			"type": "integer",
+			"description": ""
+		},
+		"event_icd10_code": {
+			"type": "string",
+			"description": ""
+		},
+		"new_occurance": {
+			"type": "boolean",
+			"description": "True if event is new and not observed in past 7 days."
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "symptom_id", "observation_icd10_code", "new_occurance"]
+
+	}
+}
