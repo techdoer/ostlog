@@ -33,7 +33,7 @@ CREATE TABLE [dbo].[Travel log]
 	[destination_country_iso3_code] NVARCHAR(3) NOT NULL,
 	[destination_latitude] FLOAT NOT NULL,
 	[destination_longitude] FLOAT NOT NULL,
-	[duration_days] INT NOT NULL,
+	[length_in_nights] INT NOT NULL,
 	[remarks] NVARCHAR(2056) NULL,   
 	CONSTRAINT [PK_Travel log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Travel log-Calendar_date1] FOREIGN KEY ([start_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),

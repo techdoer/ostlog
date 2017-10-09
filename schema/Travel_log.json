@@ -57,9 +57,9 @@
 			"type": "float",
 			"description": "Longitude of destination"
 		}
-		"duration_days" {
+		"length_in_nights" {
 			"type": "integer",
-			"description ": "the length of the trip in days."
+			"description ": "the length of the trip in nights spent at destination."
 		},
 		"remarks": {
 			"type": "string"
