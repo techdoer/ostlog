@@ -25,33 +25,33 @@
 			"type": "integer",
 			"description ": "the person whose eyes were examined."
 		},
-		"right_eye_sphere": {
+		"right_eye_sphere_d": {
 			"type": "float",
-			"description ":
+			"description": "The amount of lens power, measured in diopters (D), prescribed to correct nearsightedness or farsightedness." 
 		},
 		"right_eye_cylinder": {
 			"type": "float",
-			"description ":
+			"description": "Indicates the amount of lens power for astigmatism."
 		},
 		"right_eye_axis": {
 			"type": "float",
-			"description ":
+			"description": "Describes the lens meridian (1..180) that contains no cylinder power to correct astigmatism."
 		},
-		"right_eye_prism": {
+		"right_eye_prism_d": {
 			"type": "float",
-			"description ":
+			"description": "The amount of prismatic power, measured in prism diopters."
 		},
 		"right_eye_add": {
 			"type": "float",
-			"description ":
+			"description": "The added magnifying power applied to the bottom part of multifocal lenses to correct presbyopia."
 		},
-		"left_eye_sphere": {
+		"left_eye_sphere_d": {
 			"type": "float",
-			"description ":
+			"description": "The amount of lens power, measured in diopters (D), prescribed to correct nearsightedness or farsightedness."
 		},
 		"left_eye_cylinder": {
 			"type": "float",
-			"description ":
+			"description": "Indicates the amount of lens power for astigmatism."
 		},
 		"left_eye_axis": {
 			"type": "float",
