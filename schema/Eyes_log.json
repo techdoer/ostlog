@@ -1,0 +1,77 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Eyes_log.json",
+	"title": "Eyes log",
+	"description": "Each entry records results from a standard eye exam.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the eye exam."
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the eye exam."
+		},
+		"domain ": {
+			"$ref": "definitions.json#/domain"
+		},
+		"person_id": {
+			"type": "integer",
+			"description ": "the person whose eyes were examined."
+		},
+		"right_eye_sphere": {
+			"type": "float",
+			"description ":
+		},
+		"right_eye_cylinder": {
+			"type": "float",
+			"description ":
+		},
+		"right_eye_axis": {
+			"type": "float",
+			"description ":
+		},
+		"right_eye_prism": {
+			"type": "float",
+			"description ":
+		},
+		"right_eye_add": {
+			"type": "float",
+			"description ":
+		},
+		"left_eye_sphere": {
+			"type": "float",
+			"description ":
+		},
+		"left_eye_cylinder": {
+			"type": "float",
+			"description ":
+		},
+		"left_eye_axis": {
+			"type": "float",
+			"description ":
+		},
+		"left_eye_prism": {
+			"type": "float",
+			"description ":
+		},
+		"left_eye_add": {
+			"type": "float",
+			"description ":
+		},
+		"pupillary_distance_mm": {
+			"type": "float",
+			"description":
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
+	}
+}
