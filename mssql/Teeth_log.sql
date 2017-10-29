@@ -12,7 +12,7 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: Each entry records an event on a person's tooth.  Supports Azure SQL Server.
+-- Version: Each entry records an event on a person's tooth identified by ISO3950.  Supports Azure SQL Server.
 -- URL: http://ostlog.org/schema/Teeth_log.json
 --
 -- Authors:     Sergio Bogazzi
@@ -25,8 +25,8 @@ CREATE TABLE [dbo].[Teeth log]
 	[timestamp] TIME (0) NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
-	[tooth_universal_number] NVARCHAR (2) NOT NULL,
-	[tooth_universal_name] NVARCHAR (20) NOT NULL,
+	[tooth_iso3950_number] INT NOT NULL,
+	[tooth_iso3950_name] NVARCHAR (20) NOT NULL,
 	[event] NVARCHAR (20),
 	[remarks] NVARCHAR(4000) NULL,   
 	CONSTRAINT [PK_Teeth log] PRIMARY KEY CLUSTERED ([id] ASC),
