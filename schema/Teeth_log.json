@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Teeth_log.json",
 	"title": "Mood log",
-	"description": "Each entry records an observation or event on a person's tooth harmonzied to ISO3950 tooth numbering scheme.",
+	"description": "Each entry records an observation or event on a person's tooth harmonzied to FDI World Dental Federation notation (iso3950) tooth numbering scheme.",
 	"type": "object",
 	"properties": {
 
