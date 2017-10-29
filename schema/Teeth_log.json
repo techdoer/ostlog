@@ -1,0 +1,33 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Teeth_log.json",
+	"title": "Mood log",
+	"description": "Each entry records an observation or event on a person's tooth.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of data observation/event."
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of observation/event."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"person_id": {
+			"type": "integer",
+			"description ": "the person to whom the tooth belongs."
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
+	}
+}
