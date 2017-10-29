@@ -32,5 +32,6 @@ CREATE TABLE [dbo].[Teeth log]
 	CONSTRAINT [PK_Teeth log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Teeth log-Calendar_date1] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Teeth log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
+	CHECK ([tooth_iso3950_name] = 'molar' OR [tooth_iso3950_name] = 'premolar' OR [tooth_iso3950_name] = 'canine' OR [tooth_iso3950_name] = 'incisor')
 )
