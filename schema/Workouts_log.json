@@ -27,7 +27,7 @@
 		},
 		"workout_type": {
 			"type": "string",
-			"enum": ["walking", "running", "swimming", "cycling", "hiking", "gymnastics", "other"],
+			"enum": ["walking", "running", "swimming", "cycling", "hiking", "gymnastics", "dance", "other"],
 			"description": ""
 		},
 		"duration_minutes": {
