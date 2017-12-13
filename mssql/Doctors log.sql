@@ -26,12 +26,15 @@ CREATE TABLE [dbo].[Doctors log]
 	[doctor_id] INT NOT NULL,
 	[patient_id] INT NOT NULL,
 	[visit_key] INT NULL,   /* surrogate key */
+	[emergency] NVARCHAR(3) NULL,
 	[prescription_url] NVARCHAR(512) NULL,
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Doctors log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Doctors log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Doctors log-People] FOREIGN KEY ([doctor_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Doctors log-People1] FOREIGN KEY ([patient_id]) REFERENCES [dbo].[People] ([id]),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
+	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
+	CHECK ([emergency] = 'yes' OR [emergency] = 'no')
+
 )
 

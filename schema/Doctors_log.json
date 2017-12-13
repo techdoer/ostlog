@@ -28,6 +28,10 @@
 			"type": "integer",
 			"description ": "the person visiting the medical professional"
 		},
+		"emergency": {
+			"type": "boolean"
+			"description": "indicates whether visit was an emergency."
+		},
 		"prescription_url": {
 			"type": "string",
 			"description": "url to a scan of the prescription"
