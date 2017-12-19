@@ -33,6 +33,10 @@
 			"type": "integer",
 			"description ": "the person who slept."
 		},
+		"slept well": {
+			"$ref": "definitions.json#/likert_scale",
+			"description": "Commentary regarding how the person feels they slept on the specified date."
+		},
 		"remarks": {
 			"type": "string"
 		},
