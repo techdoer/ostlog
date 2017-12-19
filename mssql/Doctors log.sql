@@ -22,6 +22,7 @@ CREATE TABLE [dbo].[Doctors log]
 (
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
+	[timestamp] TIME(0) NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[doctor_id] INT NOT NULL,
 	[patient_id] INT NOT NULL,
