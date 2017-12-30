@@ -69,6 +69,10 @@
 			"type": "float",
 			"description": "The distance between the centre of one pupil (the central black dot of your eye) to the centre of the other pupil, measured in millimeters."
 		},
+		"exam_results_url": {
+			"type": "string",
+			"description": "The scanned copy of the exam results"
+		},
 		"remarks": {
 			"type": "string"
 		},

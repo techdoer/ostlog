@@ -44,6 +44,7 @@ CREATE TABLE [dbo].[Heart log]
 	[ecg_sv5_mv] FLOAT NULL, /* amplification millivolts */
 	[ecg_rv5_mv] FLOAT NULL, /* amplification millivolts */
 	[ecg_sv1_mv] FLOAT NULL, /* amplification millivolts */
+	[exam_results_url] NVARCHAR(512) NULL,
 	[remarks] NVARCHAR(2056) NULL, 
 	CONSTRAINT [PK_Heart log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Heart log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),

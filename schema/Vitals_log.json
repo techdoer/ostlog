@@ -77,6 +77,10 @@
 			"type": "float",
 			"description": "peripheral capillary oxygen saturation Sp02"
 		},
+		"document_url": {
+			"type": "string",
+			"description": "URL pointing to scanned results document"
+		},
 		"remarks": {
 			"type": "string"
 		},

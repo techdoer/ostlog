@@ -92,6 +92,10 @@
 			"type": "float",
 			"description": " amplification millivolts"
 		},
+		"exam_results_url": {
+			"type": "string",
+			"description": "url to scanned results"
+		},
 		"remarks": {
 			"type": "string"
 		},

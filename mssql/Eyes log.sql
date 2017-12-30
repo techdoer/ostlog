@@ -36,6 +36,7 @@ CREATE TABLE [dbo].[Eyes log]
 	[left_eye_prism_d] FLOAT NULL,
 	[left_eye_add] FLOAT NULL,
 	[pupillary_distance_mm] FLOAT NULL,
+	[exam_results_url] NVARCHAR (512) NULL,
 	[remarks] NVARCHAR(2056) NULL, 
 	CONSTRAINT [PK_Eyes log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Eyes log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
