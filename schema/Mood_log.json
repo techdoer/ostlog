@@ -29,10 +29,15 @@
 			"$ref": "definitions.json#/likert_scale",
 			"description": "Commentary regarding how the person is feeling on this date and time."
 		},
-		"how_are_you_doing_text": {
-			"type": "string"
+		"how_are_you_word": {
+			"type": "text",
+			"enum": ["fear", "anger", "sadness", "joy", "disgust", "surprise", "trust", "anticipation"],
+			"description": "a word to describe the emotion the person is feeling the most.  Based on Robert Plutchik's theory of the 8 basic emotions."
 		},
-		"how_are_you_doing_score": {
+		"how_are_you_text": {
+			"type": "string"
+		}
+		"how_are_you_score": {
 			"type": "float",
 			"description": "sentiment score assigned to answer to question - how are you doing?"
 		},
