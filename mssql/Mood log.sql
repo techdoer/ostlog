@@ -26,7 +26,8 @@ CREATE TABLE [dbo].[Mood log]
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[feeling_great] NVARCHAR(20) NOT NULL,
-	[how_are_you_word] NVARCHAR (100) NULL,
+	[emotion_1] NVARCHAR (100) NULL,
+	[emotion_2] NVARCHAR (100) NULL,
 	[how_are_you_text] NVARCHAR(4000) NOT NULL,
 	[how_are_you_score] FLOAT NULL,
 	[remarks] NVARCHAR(4000) NULL,   
@@ -35,5 +36,7 @@ CREATE TABLE [dbo].[Mood log]
 	CONSTRAINT [FK_Mood log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CHECK ([feeling_great] = 'strongly disagree' OR [feeling_great] = 'disagree' OR [feeling_great] = 'neutral' OR [feeling_great] = 'agree' OR [feeling_great] = 'strongly agree'),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
-	CHECK([how_are_you_word] = 'fear' OR [how_are_you_word] = 'anger' OR [how_are_you_word] = 'sadness' OR [how_are_you_word] = 'joy' OR [how_are_you_word] = 'disgust' OR [how_are_you_word] = 'surprise' OR [how_are_you_word] = 'trust' OR [how_are_you_word] = 'anticipation') 
+	CHECK([emotion_1] = 'fear' OR [emotion_1] = 'anger' OR [emotion_1] = 'sadness' OR [emotion_1] = 'joy' OR [emotion_1] = 'disgust' OR [emotion_1] = 'surprise' OR [emotion_1] = 'trust' OR [emotion_1] = 'anticipation'),
+	CHECK([emotion_2] = 'fear' OR [emotion_2] = 'anger' OR [emotion_2] = 'sadness' OR [emotion_2] = 'joy' OR [emotion_2] = 'disgust' OR [emotion_2] = 'surprise' OR [emotion_2] = 'trust' OR [emotion_2] = 'anticipation'),
+
 )
