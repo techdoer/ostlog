@@ -90,5 +90,6 @@
     <Build Include="Mood log.sql" />
     <Build Include="Eyes log.sql" />
     <Build Include="Teeth_log.sql" />
+    <Build Include="views\View sleep duration.sql" />
   </ItemGroup>
 </Project>
