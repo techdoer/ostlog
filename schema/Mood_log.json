@@ -25,10 +25,6 @@
 			"type": "integer",
 			"description ": "the person whose mood is being assessed"
 		},
-		"feeling_great": {
-			"$ref": "definitions.json#/likert_scale",
-			"description": "Commentary regarding how the person is feeling on this date and time."
-		},
 		"emotion_1": {
 			"type": "text",
 			"enum": ["fear", "anger", "sadness", "joy", "disgust", "surprise", "trust", "anticipation"],
