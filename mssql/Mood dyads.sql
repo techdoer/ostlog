@@ -12,26 +12,21 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: Each entry records a person's assessment of their mood and a sentiment score on the response on a day in time.  Supports Azure SQL Server.
--- URL: http://ostlog.org/schema/Sleep_log.json
+-- Version: a dyad is a combination of any two emotions. Based on Robert Plutchik's theory of the 8 basic emotions. Supports Azure SQL Server. 
+-- URL: http://ostlog.org/schema/Drug_targets.json
 --
 -- Authors:     Sergio Bogazzi
--- Copyright:   Copyright (c) 2017 family•smarts
+-- Copyright:   Copyright (c) 2018 family•smarts
 -- License:     MIT License
-CREATE TABLE [dbo].[Mood log]
+CREATE TABLE [dbo].[Mood dyads]
 (
-	[id] INT NOT NULL,
-	[calendar_date_id] INT NOT NULL,
-	[timestamp] TIME (0) NOT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
-	[person_id] INT NOT NULL,
-	[emotion_dyad_id] NVARCHAR(50) NULL,
-	[how_are_you_text] NVARCHAR(4000) NOT NULL,
-	[how_are_you_score] FLOAT NULL,
-	[remarks] NVARCHAR(4000) NULL,   
-	CONSTRAINT [PK_Mood log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Mood log-Calendar_date1] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Mood log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CONSTRAINT [FK_Mood log-Mood dyads] FOREIGN KEY ([emotion_dyad_id]) REFERENCES [dbo].[Mood dyads] ([name]),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
+	[name] NVARCHAR(50) NOT NULL,
+	[emotion_member_1] NVARCHAR (100) NOT NULL,
+	[emotion_member_2] NVARCHAR (100) NOT NULL,
+	[level] INT NOT NULL,
+	[remarks] NVARCHAR (4000) NULL,
+	CONSTRAINT [PK_Mood dyads] PRIMARY KEY CLUSTERED ([name] ASC),
+	CHECK([emotion_member_1] = 'fear' OR [emotion_member_1] = 'anger' OR [emotion_member_1] = 'sadness' OR [emotion_member_1] = 'joy' OR [emotion_member_1] = 'disgust' OR [emotion_member_1] = 'surprise' OR [emotion_member_1] = 'trust' OR [emotion_member_1] = 'anticipation'),
+	CHECK([emotion_member_2] = 'fear' OR [emotion_member_2] = 'anger' OR [emotion_member_2] = 'sadness' OR [emotion_member_2] = 'joy' OR [emotion_member_2] = 'disgust' OR [emotion_member_2] = 'surprise' OR [emotion_member_2] = 'trust' OR [emotion_member_2] = 'anticipation')
+
 )

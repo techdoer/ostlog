@@ -25,15 +25,9 @@
 			"type": "integer",
 			"description ": "the person whose mood is being assessed"
 		},
-		"emotion_1": {
+		"emotion_dyad_id": {
 			"type": "text",
-			"enum": ["fear", "anger", "sadness", "joy", "disgust", "surprise", "trust", "anticipation"],
-			"description": "a word to describe the emotion the person is feeling the most.  Based on Robert Plutchik's theory of the 8 basic emotions."
-		},
-		"emotion_2": {
-			"type": "text",
-			"enum": ["fear", "anger", "sadness", "joy", "disgust", "surprise", "trust", "anticipation"],
-			"description": "a word to describe the emotion the person is feeling the most.  Based on Robert Plutchik's theory of the 8 basic emotions."			
+			"description": "foreign key reference to the dyad dimension."
 		},
 		"how_are_you_text": {
 			"type": "string"

@@ -1,0 +1,31 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Mood_dyads.json",
+	"title": "Mood dyads",
+	"description": "a dyad is a combination of any two emotions. Based on Robert Plutchik's theory of the 8 basic emotions.",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"emotion_member_1": {
+			"type": "text",
+			"enum": ["fear", "anger", "sadness", "joy", "disgust", "surprise", "trust", "anticipation"],
+			"description": "a word to describe the emotion the person is feeling the most.  Based on Robert Plutchik's theory of the 8 basic emotions."
+		},
+		"emotion_member_2": {
+			"type": "text",
+			"enum": ["fear", "anger", "sadness", "joy", "disgust", "surprise", "trust", "anticipation"],
+			"description": "a word to describe the emotion the person is feeling the most.  Based on Robert Plutchik's theory of the 8 basic emotions."
+		},
+		"level": {
+			"type": "integer",
+			"enum": [1, 2, 3],
+			"description": "dyad level, from often felt (1) to seldom felt (3)"
+		},
+		"remarks": {
+			"type": "string"
+		}
+	},
+	"required": ["name", "emotion_member_1", "emotion_member_2", "level"]
+}
