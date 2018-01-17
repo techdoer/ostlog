@@ -1,5 +1,5 @@
 # introduction
-A do-it-yourself Personal Well-being Library for individuals and families. ostlog offers an integrated reference schema and database to help families start tracking and unlocking insights regarding their growth, health and overall well-being.   
+A do-it-yourself Personal Well-being Library for individuals and families. ostlog offers an integrated reference schema and database to help families start tracking and unlocking [observations of daily living](https://en.wikipedia.org/wiki/Observations_of_daily_living) in order to generate insights regarding their growth, health and overall well-being.   
 
 See the [family•smarts](http://familysmarts.net) website for real-world examples of generating insights from an ostlog-powered Personal Health Library. 
 
