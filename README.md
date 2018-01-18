@@ -10,4 +10,4 @@ ostlog is based on the following principles:
 	* personal and confidential data should be protected and shared at the discretion of its owner 
 	* data and tools should be simple and accessible to all members of the family 
 	* data collection should not wear you out; tools should favor accurate data over the fanciness of the latest gadgets 
-	* data should be standardized to facilitate integration and interoperability where required 
+	* data should facilitated integration and interoperability 
