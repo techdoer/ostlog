@@ -6,7 +6,6 @@
 	"description": "Each entry represets a drug and the disorder it targets.",
 	"type": "object",
 	"properties": {
-
 		"drug_atc_code": {
 			"type": "string"
 		},

@@ -1,0 +1,35 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Meta_log.json",
+	"title": "Meta log",
+	"description": "Each entry represents metadata for ostlog self-tracking.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the entry."
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the entry."
+		},
+		"person_id ": {
+			"type": "integer",
+			"description ": "the person associated to the entry."
+		},
+		"collection_minutes": {
+			"type": "integer",
+			"description": "the amount of minutes spent collecting, recording, tracking ostlog data from timestamp."
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "calendar_date_id", "timestamp", "person_id", "collection_minutes"]
+
+	}
+}
