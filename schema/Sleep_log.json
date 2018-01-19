@@ -10,21 +10,21 @@
 		"id": {
 			"type": "integer"
 		},
-		"start_date_id": {
+		"in_bed_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date when start of sleep occured."
+			"description": "YYYYMMDD formatted date when person went to bed."
 		},
-		"start_time": {
+		"in_bed_time": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time when start of sleep occured."
+			"description": "HH:MM:SS formatted time when person went to bed."
 		},
-		"end_date_id": {
+		"out_of_bed_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date when sleep ended."
+			"description": "YYYYMMDD formatted date when person got up from bed."
 		},
-		"end_time": {
+		"out_of_bed_time": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time when sleep ended."
+			"description": "HH:MM:SS formatted time when person got up from bed."
 		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
@@ -40,6 +40,6 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "start_date_id", "start_time", "end_date_id", "end_time", "domain", "person_id"]
+		"required": ["id", "in_bed_date_id", "in_bed_time", "out_of_bed_date_id", "out_of_bed_time", "domain", "person_id"]
 	}
 }
