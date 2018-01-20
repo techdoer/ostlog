@@ -93,5 +93,6 @@
     <Build Include="views\View sleep duration.sql" />
     <Build Include="Mood dyads.sql" />
     <Build Include="Meta log.sql" />
+    <Build Include="Worship log.sql" />
   </ItemGroup>
 </Project>
