@@ -22,7 +22,6 @@ CREATE TABLE [dbo].[Meta log]
 (
 	[id] INT NOT NULL,
 	[calendar_date_id] INT NOT NULL,
-	[timestamp] TIME(0) NOT NULL,
 	[person_id] INT NOT NULL, 
 	[collection_minutes] INT NOT NULL, 
 	[remarks] NVARCHAR (4000) NULL,

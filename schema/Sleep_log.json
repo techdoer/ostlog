@@ -14,7 +14,7 @@
 			"type": "string",
 			"description": "YYYYMMDD formatted date when person went to bed."
 		},
-		"in_bed_time": {
+		"in_bed_timestamp": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time when person went to bed."
 		},
@@ -22,7 +22,7 @@
 			"type": "string",
 			"description": "YYYYMMDD formatted date when person got up from bed."
 		},
-		"out_of_bed_time": {
+		"out_of_bed_timestamp": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time when person got up from bed."
 		},
