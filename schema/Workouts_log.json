@@ -54,6 +54,10 @@
 			"type": "float",
 			"description": ""
 		},
+		"steps": {
+			"type": "integer",
+			"description": ""
+		},
 		"remarks": {
 			"type": "string"
 		},

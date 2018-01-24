@@ -32,6 +32,7 @@ CREATE TABLE [dbo].[Workouts log]
 	[avg_speed_mph] FLOAT NULL, 
 	[max_speed_mph] FLOAT NULL, 
 	[calories_burned] FLOAT NULL, 
+	[steps] INT NULL,
 	[remarks] NVARCHAR(2056) NULL,
 	CONSTRAINT [PK_Workouts log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Workouts log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
