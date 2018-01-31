@@ -10,6 +10,10 @@
 		"id": {
 			"type": "integer"
 		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
 		"in_bed_date_id": {
 			"type": "string",
 			"description": "YYYYMMDD formatted date when person went to bed."
@@ -40,6 +44,6 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "in_bed_date_id", "in_bed_time", "out_of_bed_date_id", "out_of_bed_time", "domain", "person_id"]
+		"required": ["id", "version_id", "last_updated", "in_bed_date_id", "in_bed_time", "out_of_bed_date_id", "out_of_bed_time", "domain", "person_id"]
 	}
 }

@@ -9,6 +9,10 @@
 		"id": {
 			"type": "integer"
 		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
 		"calendar_date_id": {
 			"type": "string",
 			"description": "formatted YYYYMMDD date when allergic disorder first observed."

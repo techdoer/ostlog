@@ -21,6 +21,7 @@
 CREATE TABLE [dbo].[Sleep log]
 (
 	[id] INT NOT NULL,
+	[meta_id] INT NULL,
 	[in_bed_date_id] INT NOT NULL,
 	[in_bed_timestamp] TIME (0) NOT NULL,
 	[out_of_bed_date_id] INT NOT NULL,
@@ -33,6 +34,7 @@ CREATE TABLE [dbo].[Sleep log]
 	CONSTRAINT [FK_Sleep log-Calendar_date1] FOREIGN KEY ([in_bed_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Sleep log-Calendar_date2] FOREIGN KEY ([out_of_bed_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Sleep log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Sleep log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
 	CHECK ([slept_well] = 'strongly disagree' OR [slept_well] = 'disagree' OR [slept_well] = 'neutral' OR [slept_well] = 'agree' OR [slept_well] = 'strongly agree')
 )

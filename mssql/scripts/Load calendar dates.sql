@@ -89,7 +89,7 @@ BEGIN
 	WHERE DOW = DATEPART(DW, @CurrentDate)
 
 /* Load values */
-	INSERT INTO [dbo].[Calendar dates123]
+	INSERT INTO [dbo].[Calendar dates]
 	SELECT
 		CONVERT (char(8), @CurrentDate, 112) as date_id, -- YYYYMMDD
 		CONVERT (smalldatetime, @CurrentDate, 103) as full_date, -- dd/mm/yy

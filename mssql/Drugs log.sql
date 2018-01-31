@@ -20,6 +20,7 @@
 -- License:     MIT License
 CREATE TABLE [dbo].[Drugs log] (
 	[id] INT NOT NULL,
+	[meta_id] INT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME (0) NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
@@ -50,6 +51,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	CONSTRAINT [PK_Drugs log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Drugs log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Drugs log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Drugs log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 
 	CHECK ([status]='suspended' OR [status]='finished' OR [status]='started'),
 	CHECK ([admin_route]='implant' OR [admin_route]='inhale' OR [admin_route]='nasal' OR [admin_route]='instill' OR  [admin_route]='oral' OR  [admin_route]='nasal' OR [admin_route]='parenteral' OR [admin_route]='rectal' OR [admin_route]='sublingual' OR [admin_route]='transdermal' OR [admin_route]='vaginal'),

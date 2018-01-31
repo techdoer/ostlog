@@ -12,8 +12,8 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: Each entry provides data regarding ostlog itself.  Supports Azure SQL Server.
--- URL: http://ostlog.org/schema/Story_log.json
+-- Version: Each entry provides metadata for a single entry of self-tracking data.  Supports Azure SQL Server.
+-- URL: http://ostlog.org/schema/Meta_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2018 family•smarts
@@ -21,11 +21,11 @@
 CREATE TABLE [dbo].[Meta log]
 (
 	[id] INT NOT NULL,
-	[calendar_date_id] INT NOT NULL,
-	[person_id] INT NOT NULL, 
-	[collection_minutes] INT NOT NULL, 
+	[version_id] INT NOT NULL,
+	[last_updated] DATETIME NOT NULL,
+	[mode_description] NVARCHAR (1000) NOT NULL,
+	[collector_id] INT NULL,
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Meta log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Meta log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Meta log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Meta log-People] FOREIGN KEY ([collector_id]) REFERENCES [dbo].[People] ([id]),
 )
