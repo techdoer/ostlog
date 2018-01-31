@@ -10,6 +10,10 @@
 		"id": {
 			"type": "integer"
 		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
 		"calendar_date_id": {
 			"type": "string",
 			"description": "YYYYMMDD formatted date of data entry."

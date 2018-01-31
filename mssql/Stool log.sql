@@ -21,6 +21,7 @@
 CREATE TABLE [dbo].[Stool log]
 (
 	[id] INT NOT NULL,
+	[meta_id] INT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
@@ -46,6 +47,8 @@ CREATE TABLE [dbo].[Stool log]
 	CONSTRAINT [PK_Stool log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Stool log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Stool log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Stool log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+
 	CHECK ([bss_type] >= 1 AND [bss_type] <= 7), -- see https://en.wikipedia.org/wiki/Bristol_stool_scale
 	CHECK ([amount] = 'little' OR [amount] = 'normal' OR [amount] = 'alot'),
 	CHECK ([color] = 'brown' OR [color] = 'green' OR [color] = 'yellow' OR [color] = 'black' OR [color] = 'white' OR [color] = 'red'),

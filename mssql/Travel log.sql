@@ -21,6 +21,7 @@
 CREATE TABLE [dbo].[Travel log]
 (
 	[id] INT NOT NULL,
+	[meta_id] INT NULL,
 	[start_date_id] INT NOT NULL,
 	[start_time] TIME (0) NOT NULL,
 	[end_date_id] INT NOT NULL,
@@ -39,5 +40,7 @@ CREATE TABLE [dbo].[Travel log]
 	CONSTRAINT [FK_Travel log-Calendar_date1] FOREIGN KEY ([start_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Travel log-Calendar_date2] FOREIGN KEY ([end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Travel log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Travel log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )

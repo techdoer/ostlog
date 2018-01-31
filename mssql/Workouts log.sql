@@ -21,6 +21,7 @@
 CREATE TABLE [dbo].[Workouts log]
 (
 	[id] INT NOT NULL,
+	[meta_id] INT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[start_time] TIME(0) NULL, 
 	[domain] NVARCHAR (15) NOT NULL,
@@ -37,6 +38,8 @@ CREATE TABLE [dbo].[Workouts log]
 	CONSTRAINT [PK_Workouts log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Workouts log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Workouts log-Person] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Workouts log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+
 	CHECK ([workout_type]='walking' OR [workout_type]='running' OR [workout_type]='swimming' OR [workout_type]='cycling' OR [workout_type]='hiking' OR [workout_type]='gymnastics' OR [workout_type]='dance' OR [workout_type]='other'),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )

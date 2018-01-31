@@ -21,6 +21,7 @@
 CREATE TABLE [dbo].[Doctors log]
 (
 	[id] INT NOT NULL,
+	[meta_id] INT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NULL,
 	[domain] NVARCHAR (15) NOT NULL,
@@ -34,6 +35,8 @@ CREATE TABLE [dbo].[Doctors log]
 	CONSTRAINT [FK_Doctors log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Doctors log-People] FOREIGN KEY ([doctor_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Doctors log-People1] FOREIGN KEY ([patient_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Doctors log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
 	CHECK ([emergency] = 'yes' OR [emergency] = 'no')
 
