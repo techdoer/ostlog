@@ -22,8 +22,8 @@ CREATE TABLE [dbo].[Health observations log]
 (
 	[id] INT NOT NULL,
 	[meta_id] INT NULL,
-	[calendar_date_id] INT NOT NULL,
-	[timestamp] TIME(0) NOT NULL, /* HH:MM:SS */
+	[observation_date_id] INT NOT NULL,
+	[observation_time] TIME(0) NOT NULL, /* HH:MM:SS */
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,   
 	[event_id] INT NOT NULL, /* foreign key from standard Symptoms table included in this kit */
@@ -31,7 +31,7 @@ CREATE TABLE [dbo].[Health observations log]
 	[occurance] INT NULL, /* 1 = first, 2= recurring; 3 = last */
 	[remarks] NVARCHAR(4000) NULL, 
 	CONSTRAINT [PK_Health observations log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Health observations log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Health observations log-Calendar_date] FOREIGN KEY ([observation_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Health observations log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Health observations log-Symptom] FOREIGN KEY ([event_id]) REFERENCES [dbo].[Symptoms] ([id]),
 	CONSTRAINT [FK_Health observations log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
