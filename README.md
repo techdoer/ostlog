@@ -1,5 +1,5 @@
 # introduction
-A do-it-yourself Personal Well-being tracking Library for individuals and families. ostlog allows you to record medical records, [observations of daily living](https://en.wikipedia.org/wiki/Observations_of_daily_living), personal finances, school grades, activities, and more in an integrated and digital way. By analyzing the data, you will discover new ways to boost growth, health and overall well-being. 
+Use ostlog to record medical records, [observations of daily living](https://en.wikipedia.org/wiki/Observations_of_daily_living), personal finances, school and work performance, fitness activities, and more in an integrated and digital way. By analyzing the data, you will discover new ways to boost growth, health and overall well-being. 
 
 # principles
 ostlog is based on the following principles:
