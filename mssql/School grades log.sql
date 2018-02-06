@@ -21,12 +21,12 @@ CREATE TABLE [dbo].[School grades log]
 (
 	[id] INT NOT NULL,
 	[meta_id] INT NULL,
-	[start_calendar_date_id] INT NOT NULL,
-	[end_calendar_date_id] INT NOT NULL,
+	[term_start_date_id] INT NOT NULL,
+	[term_end_date_id] INT NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[instructor_id] INT NULL,
-	[school_level_isced] INT NOT NULL, -- referencing International Standard Classification of Education ISCED 2011
+	[education_level_isced] INT NOT NULL, -- referencing International Standard Classification of Education ISCED 2011
 	[subject_name] NVARCHAR (512) NOT NULL,
 	[grade_point] INT NULL,
 	[grade_desc] NVARCHAR (64) NULL, -- Excellent, Very Good, Good, Accepted, Failed
@@ -35,13 +35,13 @@ CREATE TABLE [dbo].[School grades log]
 	[grade_letter] NVARCHAR(1) NULL, -- e.g. A=Excelent, B=Good, C=Average, D=Below Average, F=Failing
 	[remarks] NVARCHAR(4000) NULL,   
 	CONSTRAINT [PK_School grades log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_School grades log-Calendar_date1] FOREIGN KEY ([start_calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_School grades log-Calendar_date2] FOREIGN KEY ([end_calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_School grades log-Calendar_date1] FOREIGN KEY ([term_start_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_School grades log-Calendar_date2] FOREIGN KEY ([term_end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_School grades log-People1] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_School grades log-People2] FOREIGN KEY ([instructor_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_School grades-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 
-	CHECK ([school_level_isced] >= 0 AND [school_level_isced] <= 8),
+	CHECK ([education_level_isced] >= 0 AND [education_level_isced] <= 8),
 	CHECK ([grade_desc] = 'excellent' OR [grade_desc] = 'very good' OR [grade_desc] = 'good' OR [grade_desc] = 'accepted' OR [grade_desc] = 'failed'),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )

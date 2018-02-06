@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/School_grades_log.json",
 	"title": "School grades log",
-	"description": "Each entry records the grade received for a specific course during the specified term.",
+	"description": "Each entry records a grade received for a specific course/subject during the specified term.",
 	"type": "object",
 	"properties": {
 
@@ -14,11 +14,11 @@
 			"type": "integer",
 			"description": "reference to entry's metadata"
 		},
-		"start_calendar_date_id": {
+		"term_start_date_id": {
 			"type": "string",
 			"description": "YYYYMMDD formatted date marking the start of the grading period."
 		},
-		"end_calendar_date_id": {
+		"term_end_date_id": {
 			"type": "string",
 			"description": "YYYYMMDD formatted date marking the end of the grading period."
 		},
@@ -33,7 +33,7 @@
 			"type": "integer",
 			"description": "the person teaching the course."
 		},
-		"school_level_isced": {
+		"education_level_isced": {
 			"type": "integer",
 			"description": "referencing International Standard Classification of Education ISCED 2011."
 		},
@@ -60,12 +60,12 @@
 		"grade_letter": {
 			"type": "string",
 			"enum": [" A ", " B ", " C ", " D ", " F "],
-			"description": "A = Excelent, B = Good, C = Average, D = Below Average, F = Failing"
+			"description": "A = Excellent, B = Good, C = Average, D = Below Average, F = Failing"
 		},
 		"remarks": {
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "person_id", "domain"]
+		"required": ["id", "term_start_date_id", "term_end_date_id", "domain", "person_id", "education_level_isced", "subject_name"]
 	}
 }
