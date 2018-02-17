@@ -89,10 +89,11 @@
     <Build Include="views\View days betweeen menstrual cycle.sql" />
     <Build Include="Mood log.sql" />
     <Build Include="Eyes log.sql" />
-    <Build Include="Teeth_log.sql" />
+    <Build Include="Teeth log.sql" />
     <Build Include="views\View sleep duration.sql" />
     <Build Include="Mood dyads.sql" />
     <Build Include="Meta log.sql" />
     <Build Include="Worship log.sql" />
+    <Build Include="Social gathering log.sql" />
   </ItemGroup>
 </Project>
