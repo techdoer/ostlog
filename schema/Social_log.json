@@ -1,9 +1,9 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Social_gathering_log.json",
-	"title": "Social gathering log",
-	"description": "Each entry records a person's attendance at a social gathering of some type.",
+	"id": "http://ostlog.org/schema/Social_log.json",
+	"title": "Social log",
+	"description": "Each entry records a person's socializing of some type.",
 	"type": "object",
 	"properties": {
 

@@ -94,6 +94,6 @@
     <Build Include="Mood dyads.sql" />
     <Build Include="Meta log.sql" />
     <Build Include="Worship log.sql" />
-    <Build Include="Social gathering log.sql" />
+    <Build Include="Social log.sql" />
   </ItemGroup>
 </Project>

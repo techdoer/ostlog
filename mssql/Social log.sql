@@ -13,12 +13,12 @@
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -- Version: Each entry records a person's attendance at a social gathering of some type. Supports Azure SQL Server.
--- URL: http://ostlog.org/schema/Social_gathering_log.json
+-- URL: http://ostlog.org/schema/Social_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2018 family•smarts
 -- License:     MIT License
-CREATE TABLE [dbo].[Social gathering log]
+CREATE TABLE [dbo].[Social log]
 (
 	[id] INT NOT NULL,
 	[meta_id] INT NULL,
@@ -28,10 +28,10 @@ CREATE TABLE [dbo].[Social gathering log]
 	[person_id] INT NOT NULL,
 	[type] NVARCHAR(20) NOT NULL,
 	[remarks] NVARCHAR(4000) NULL,   
-	CONSTRAINT [PK_Social gathering log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Social gathering log] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Social gathering log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CONSTRAINT [FK_Social gathering log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+	CONSTRAINT [PK_Social log] PRIMARY KEY CLUSTERED ([id] ASC),
+	CONSTRAINT [FK_Social log] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Social log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Social log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
 )
