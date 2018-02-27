@@ -25,7 +25,8 @@ CREATE TABLE [dbo].[Health observations log]
 	[observation_date_id] INT NOT NULL,
 	[observation_time] TIME(0) NOT NULL, /* HH:MM:SS */
 	[domain] NVARCHAR (15) NOT NULL,
-	[person_id] INT NOT NULL,   
+	[person_id] INT NOT NULL,
+	[body_site_code] INT NULL,
 	[event_id] INT NOT NULL, /* foreign key from standard Symptoms table included in this kit */
 	[event_icd10_code] NVARCHAR(10), /* the WHO's ICD-10 code for this event */
 	[occurance] INT NULL, /* 1 = first, 2= recurring; 3 = last */

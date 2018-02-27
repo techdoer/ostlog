@@ -18,20 +18,24 @@
 			"type": "string",
 			"description": "YYYYMMDD formatted date when the diagnosis was given."
 		},
-		"domain ": {
+		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
 		"timestamp": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the diagnosis."
 		},
-		"doctor_id ": {
+		"doctor_id": {
 			"type": "integer",
 			"description ": "the medical professional who issued the diagnosis."
 		},
-		"patient_id ": {
+		"patient_id": {
 			"type": "integer",
 			"description ": "the person who was diagnosed."
+		},
+		"body_site_code": {
+			"type": "integer",
+			"description": "This enumeration includes all codes from FHIR's body-site definition http://hl7.org/fhir/ValueSet/body-site."
 		},
 		"diagnosis_icd10_code": {
 			"type": "integer",

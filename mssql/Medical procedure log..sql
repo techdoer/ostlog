@@ -24,6 +24,7 @@ CREATE TABLE [dbo].[Medical procedure log]
 	[calendar_date_id] INT NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
+	[body_site_code] INT NULL,
 	[procedure_name] NVARCHAR(100) NOT NULL,
 	[procedure_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a procedure
 	[procedure_results_url] NVARCHAR(512) NULL,

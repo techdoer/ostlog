@@ -22,12 +22,16 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the surgery."
 		},
-		"domain ": {
+		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
-		"person_id ": {
+		"person_id": {
 			"type": "integer",
 			"description ": "the patient to who underwent the procedure."
+		},
+		"body_site_code": {
+			"type": "integer",
+			"description": "This enumeration includes all codes from FHIR's body-site definition http://hl7.org/fhir/ValueSet/body-site."
 		},
 		"procedure_name": {
 			"type": "string",

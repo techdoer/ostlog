@@ -26,6 +26,7 @@ CREATE TABLE [dbo].[Diagnosis log]
 	[domain] NVARCHAR (15) NOT NULL,
 	[doctor_id] INT NULL,
 	[patient_id] INT NOT NULL,
+	[body_site_code] INT NULL,
 	[diagnosis_icd10_code] NVARCHAR(7) NOT NULL, /* from the WHO's International Statistical Classification of Diseases and Related Health Problems. */
 	[num_days_with_symptoms] INT NULL,
 	[remarks]	NVARCHAR (2056) NULL,
