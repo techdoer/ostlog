@@ -24,7 +24,7 @@ CREATE TABLE [dbo].[Diagnosis log]
 	[meta_id] INT NULL,
 	[calendar_date_id]	INT	NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
-	[doctor_id] INT NULL,
+	[medical_visit_id] INT NULL,
 	[patient_id] INT NOT NULL,
 	[body_site_code] INT NULL,
 	[diagnosis_icd10_code] NVARCHAR(7) NOT NULL, /* from the WHO's International Statistical Classification of Diseases and Related Health Problems. */
@@ -33,7 +33,7 @@ CREATE TABLE [dbo].[Diagnosis log]
 	CONSTRAINT [PK_Diagnosis log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Diagnosis log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Diagnosis log-People] FOREIGN KEY ([patient_id]) REFERENCES [dbo].[People] ([id]),
-	CONSTRAINT [FK_Diagnosis log-People2] FOREIGN KEY ([doctor_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Diagnosis log-Doctors log] FOREIGN KEY ([medical_visit_id]) REFERENCES [dbo].[Doctors log] ([id]),
 	CONSTRAINT [FK_Diagnosis log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')

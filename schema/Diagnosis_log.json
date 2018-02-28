@@ -25,7 +25,7 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the diagnosis."
 		},
-		"doctor_id": {
+		"medical_visit_id": {
 			"type": "integer",
 			"description ": "the medical professional who issued the diagnosis."
 		},
