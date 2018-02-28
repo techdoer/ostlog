@@ -26,7 +26,6 @@ CREATE TABLE [dbo].[Drugs log] (
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[diagnosis_id] INT NULL,
-	[doctor_visit_id] INT NULL,
 	[name] NVARCHAR (512) NOT NULL, -- commercial name of drug taken
 	[status] NVARCHAR (10) NULL, 
 	[drug_atc_code] NVARCHAR (20) NULL, -- The Anatomical Therapeutic Chemical (ATC) Classification System
