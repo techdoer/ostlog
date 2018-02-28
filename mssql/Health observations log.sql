@@ -27,6 +27,7 @@ CREATE TABLE [dbo].[Health observations log]
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[body_site_code] INT NULL,
+	[diagnosis_id] INT NULL,
 	[event_id] INT NOT NULL, /* foreign key from standard Symptoms table included in this kit */
 	[event_icd10_code] NVARCHAR(10), /* the WHO's ICD-10 code for this event */
 	[occurance] INT NULL, /* 1 = first, 2= recurring; 3 = last */
@@ -36,5 +37,6 @@ CREATE TABLE [dbo].[Health observations log]
 	CONSTRAINT [FK_Health observations log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Health observations log-Symptom] FOREIGN KEY ([event_id]) REFERENCES [dbo].[Symptoms] ([id]),
 	CONSTRAINT [FK_Health observations log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+	CONSTRAINT [FK_Health observations log-Diagnosis log] FOREIGN KEY ([diagnosis_id]) REFERENCES [dbo].[Diagnosis log] ([id]),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )

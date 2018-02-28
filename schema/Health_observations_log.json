@@ -33,6 +33,11 @@
 			"type": "integer",
 			"description": "This enumeration includes all codes from FHIR's body-site definition http://hl7.org/fhir/ValueSet/body-site."
 		},
+		"diagnosis_id": {
+			"type": "integer"
+			"description": "Reference to the diagnosis causing the observed symptoms."
+		},
+
 		"event_id": {
 			"type": "integer",
 			"description": ""

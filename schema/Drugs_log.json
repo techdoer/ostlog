@@ -26,7 +26,11 @@
 		},
 		"person_id": {
 			"type": "integer",
-			"description ": "the person taking the medication."
+			"description": "the person taking the medication."
+		},
+		"diagnosis_id": {
+			"type": "integer"
+			"description": "Reference to the diagnosis requiring the medication."
 		},
 		"status": {
 			"type": "string",
