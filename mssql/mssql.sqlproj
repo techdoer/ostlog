@@ -95,5 +95,6 @@
     <Build Include="Meta log.sql" />
     <Build Include="Worship log.sql" />
     <Build Include="Social log.sql" />
+    <Build Include="Meal log.sql" />
   </ItemGroup>
 </Project>

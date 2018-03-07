@@ -1,0 +1,62 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Meal_log.json",
+	"title": "Meal log",
+	"description": "Each entry records a meal eating on a specific date and time.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of data entry."
+		},
+		"timestamp": {
+			"type": "string ",
+			"description": "HH:MM:SS formatted time of data entry."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"person_id": {
+			"type": "integer",
+			"description": "the person who ate the meal."
+		},
+		"meal_duration_minutes": {
+			"type": "integer",
+			"description": "the length in minutes for the meal to complete."
+		},
+		"meal_type": {
+			"type": "string",
+			"enum": ["breakfast", "lunch", "dinner", "snack"],
+			"description": ""
+		},
+		"total_calories": {
+			"type": "float",
+			"description": "total calories of the meal."
+		},
+		"meal_was_balanced": {
+			"$ref": "definitions.json#/likert_scale",
+			"description": "indicates whether or not the person felt the meal was balanced."
+		},
+		"meal_was_sufficient": {
+			"$ref": "definitions.json#/likert_scale",
+			"description": "indicates whether or not the person felt the meal was sufficient."
+		},
+		"meal_was_nutritious": {
+			"$ref": "definitions.json#/likert_scale",
+			"description": "indicates whether or not the person felt the meal was nutritious."
+		}
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "meal_was_balanced", "meal_was_nutritious", "meal_was_sufficient"]
+	}
+}
