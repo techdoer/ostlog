@@ -97,5 +97,6 @@
     <Build Include="Social log.sql" />
     <Build Include="Meal log.sql" />
     <Build Include="Projects log.sql" />
+    <Build Include="Continuous learning log.sql" />
   </ItemGroup>
 </Project>

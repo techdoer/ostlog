@@ -12,13 +12,13 @@
 -- FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
--- Version: Each entry records a project with a defined start and end date.  Supports Azure SQL Server.
--- URL: http://ostlog.org/schema/Projects_log.json
+-- Version: Each entry records the a continuous learning activity.  Supports Azure SQL Server.
+-- URL: http://ostlog.org/schema/Continuous_learning_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2018 family•smarts
 -- License:     MIT License
-CREATE TABLE [dbo].[Projects log]
+CREATE TABLE [dbo].[Continuous learning log]
 (
 	[id] INT NOT NULL,
 	[meta_id] INT NULL,
@@ -29,16 +29,18 @@ CREATE TABLE [dbo].[Projects log]
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[name] NVARCHAR(100) NOT NUll,
+	[type] NVARCHAR (10) NOT NULL,
 	[status] NVARCHAR(10) NOT NULL,
 	[was_successful] NVARCHAR(20) NULL,
 	[remarks] NVARCHAR(4000) NULL,   
 
-	CONSTRAINT [PK_Projects log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Projects log-Calendar_date1] FOREIGN KEY ([start_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Projects log-Calendar_date2] FOREIGN KEY ([end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Projects log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CONSTRAINT [FK_Projects log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+	CONSTRAINT [PK_Continuous learning log] PRIMARY KEY CLUSTERED ([id] ASC),
+	CONSTRAINT [FK_Continuous learning log-Calendar_date1] FOREIGN KEY ([start_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Continuous learning log-Calendar_date2] FOREIGN KEY ([end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Continuous learning log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Continuous learning log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	
+	CHECK ([type] = 'reading' OR [type] = 'writing' OR [type] = 'listening' OR [type] = 'doing' OR [type] = 'hybrid'),
 	CHECK ([status] = 'in-progress' OR [status] = 'completed' OR [status] = 'cancelled'),
 	CHECK ([was_successful] = 'strongly disagree' OR [was_successful] = 'disagree' OR [was_successful] = 'neutral' OR [was_successful] = 'agree' OR [was_successful] = 'strongly agree'),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),

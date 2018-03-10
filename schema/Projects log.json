@@ -2,7 +2,7 @@
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Projects_log.json",
-	"title": "Meal log",
+	"title": "Projects log",
 	"description": "Each entry records the state of new, ongoing, or recently completed project.",
 	"type": "object",
 	"properties": {
@@ -16,19 +16,19 @@
 		},
 		"start_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of data entry."
+			"description": "YYYYMMDD formatted date when project started."
 		},
 		"start_time": {
 			"type": "string ",
-			"description": "HH:MM:SS formatted time of data entry."
+			"description": "HH:MM:SS formatted time when project started"
 		},
 		"end_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of data entry."
+			"description": "YYYYMMDD formatted date when project completed."
 		},
 		"end_time" {
 			"type": "string ",
-			"description": "HH:MM:SS formatted time of data entry."
+			"description": "HH:MM:SS formatted time when project completed."
 		},
 		"domain": {
 			"$ref": "definitions.json#/domain"

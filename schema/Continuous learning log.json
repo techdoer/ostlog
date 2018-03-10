@@ -1,0 +1,62 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Continuous_learning_log.json",
+	"title": "Continuous_learning_log log",
+	"description": "Each entry records a continuous learning activity.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"start_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date when activity started."
+		},
+		"start_time": {
+			"type": "string ",
+			"description": "HH:MM:SS formatted time when activity started."
+		},
+		"end_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date when activity completed."
+		},
+		"end_time" {
+			"type": "string ",
+			"description": "HH:MM:SS formatted time when activity completed."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"person_id": {
+			"type": "integer",
+			"description": "the person who carried out the activity."
+		},
+		"name": {
+			"type": "string",
+			"description": "the name of the activity."
+		},
+		"type": {
+			"type": "string",
+			"enum": ["reading", "writing", "listening", "hybrid"],
+			"description": "the type of learning activity."
+		},
+		"status": {
+			"type": "string",
+			"enum": ["in-progress", "completed", "canceled"],
+		},
+		"was successful": {
+			"$ref": "definitions.json#/likert_scale",
+			"description": "indicates whether the learning activity was successful".
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "start_date_id", "start_dimte", "end_date_id", "end_time", "domain", "person_id", "name", "type", "status"]
+	}
+}
