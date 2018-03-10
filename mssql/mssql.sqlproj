@@ -96,5 +96,6 @@
     <Build Include="Worship log.sql" />
     <Build Include="Social log.sql" />
     <Build Include="Meal log.sql" />
+    <Build Include="Projects log.sql" />
   </ItemGroup>
 </Project>

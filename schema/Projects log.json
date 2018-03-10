@@ -1,0 +1,57 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Projects_log.json",
+	"title": "Meal log",
+	"description": "Each entry records the state of new, ongoing, or recently completed project.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"start_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of data entry."
+		},
+		"start_time": {
+			"type": "string ",
+			"description": "HH:MM:SS formatted time of data entry."
+		},
+		"end_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of data entry."
+		},
+		"end_time" {
+			"type": "string ",
+			"description": "HH:MM:SS formatted time of data entry."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"person_id": {
+			"type": "integer",
+			"description": "the person who led the project."
+		},
+		"name": {
+			"type": "string",
+			"description": "the name of the project."
+		},
+		"status": {
+			"type": "string",
+			"enum": ["in-progress", "completed", "canceled"],
+		},
+		"was successful": {
+			"$ref": "definitions.json#/likert_scale",
+			"description": "indicates whether the project was successful".
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "start_date_id", "start_dimte", "end_date_id", "end_time", "domain", "person_id", "name", "status"]
+	}
+}
