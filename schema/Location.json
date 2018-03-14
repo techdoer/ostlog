@@ -1,0 +1,22 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Location.json",
+	"title": "Location",
+	"description": "A specific place on earth.",
+	"type": "object",
+	"properties": {
+		"location_id": {
+			"type": "integer"
+		},
+		"name": {
+			"type": "string"
+		},
+		"country_iso3_code": {
+			"type": "string"
+		},
+		"remarks": {
+			"type": "string"
+		}
+	},
+	"required": ["id", "name"]
+}

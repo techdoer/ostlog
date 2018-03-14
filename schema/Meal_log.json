@@ -18,6 +18,10 @@
 			"type": "string",
 			"description": "YYYYMMDD formatted date of data entry."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where the meal took place."
+		},
 		"timestamp": {
 			"type": "string ",
 			"description": "HH:MM:SS formatted time of data entry."

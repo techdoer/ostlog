@@ -23,6 +23,7 @@ CREATE TABLE [dbo].[Meal log]
 	[id] INT NOT NULL,
 	[meta_id] INT NULL,
 	[calendar_date_id] INT NOT NULL,
+	[location_id] INT NULL,
 	[timestamp] TIME (0) NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
@@ -37,7 +38,7 @@ CREATE TABLE [dbo].[Meal log]
 	CONSTRAINT [FK_Meal log-Calendar_date1] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Meal log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Meal log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	
+	CONSTRAINT [FK_Meal log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 	CHECK ([meal_type] = 'breakfast' OR [meal_type] = 'lunch' OR [meal_type] = 'dinner' OR [meal_type] = 'snack'),
 	CHECK ([meal_was_balanced] = 'strongly disagree' OR [meal_was_balanced] = 'disagree' OR [meal_was_balanced] = 'neutral' OR [meal_was_balanced] = 'agree' OR [meal_was_balanced] = 'strongly agree'),
 	CHECK ([meal_was_sufficient] = 'strongly disagree' OR [meal_was_sufficient] = 'disagree' OR [meal_was_sufficient] = 'neutral' OR [meal_was_sufficient] = 'agree' OR [meal_was_sufficient] = 'strongly agree'),

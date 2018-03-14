@@ -98,5 +98,6 @@
     <Build Include="Meal log.sql" />
     <Build Include="Projects log.sql" />
     <Build Include="Continuous learning log.sql" />
+    <Build Include="Location.sql" />
   </ItemGroup>
 </Project>

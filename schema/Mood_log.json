@@ -33,14 +33,14 @@
 			"type": "text",
 			"description": "foreign key reference to the dyad dimension."
 		},
-		"how_are_you_text": {
-			"type": "string"
+		"feeling_term": {
+			"type": "text",
+			"description": "one word to describe the emotion a person is feeling."
 		}
-		"how_are_you_score": {
-			"type": "float",
-			"description": "sentiment score assigned to answer to question - how are you doing?"
+		"high_energy": {
+			"$ref": "definitions.json#/likert_scale"
 		},
-		"remarks": {
+]		"remarks": {
 			"type": "string"
 		},
 		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "feeling_great", "how_are_you_doing_text"]
