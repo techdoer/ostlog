@@ -29,10 +29,6 @@
 			"type": "integer",
 			"description ": "the person whose mood is being assessed"
 		},
-		"emotion_dyad_id": {
-			"type": "text",
-			"description": "foreign key reference to the dyad dimension."
-		},
 		"feeling_term": {
 			"type": "text",
 			"description": "one word to describe the emotion a person is feeling."
