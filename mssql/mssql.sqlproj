@@ -98,5 +98,6 @@
     <Build Include="Projects log.sql" />
     <Build Include="Continuous learning log.sql" />
     <Build Include="Location.sql" />
+    <Build Include="Growth charts.sql" />
   </ItemGroup>
 </Project>
