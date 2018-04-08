@@ -14,7 +14,7 @@
 		},
 		"gender": {
 			"type": "string"
-		}
+		},
 		"meta_id": {
 			"type": "integer"
 		},
