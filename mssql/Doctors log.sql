@@ -27,7 +27,6 @@ CREATE TABLE [dbo].[Doctors log]
 	[domain] NVARCHAR (15) NOT NULL,
 	[doctor_id] INT NOT NULL,
 	[patient_id] INT NOT NULL,
-	[visit_key] INT NULL,   /* surrogate key */
 	[emergency] NVARCHAR(3) NULL,
 	[prescription_url] NVARCHAR(512) NULL,
 	[remarks] NVARCHAR (4000) NULL,

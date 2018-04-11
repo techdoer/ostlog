@@ -41,7 +41,7 @@ CREATE TABLE [dbo].[Continuous learning log]
 	CONSTRAINT [FK_Continuous learning log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	
 	CHECK ([type] = 'reading' OR [type] = 'writing' OR [type] = 'listening' OR [type] = 'doing' OR [type] = 'hybrid'),
-	CHECK ([status] = 'in-progress' OR [status] = 'completed' OR [status] = 'cancelled'),
+	CHECK ([status] = 'planned' OR [status] = 'in-progress' OR [status] = 'completed' OR [status] = 'cancelled'),
 	CHECK ([was_successful] = 'strongly disagree' OR [was_successful] = 'disagree' OR [was_successful] = 'neutral' OR [was_successful] = 'agree' OR [was_successful] = 'strongly agree'),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
 )
