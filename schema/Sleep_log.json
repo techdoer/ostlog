@@ -41,6 +41,10 @@
 			"$ref": "definitions.json#/likert_scale",
 			"description": "Commentary regarding how the person feels they slept on the specified date."
 		},
+		"easy_wakeup": {
+			"$ref": "definitions.json#/likert_scale",
+			"description": "The person woke up and got out of bed easily and with little resistance."
+		},
 		"remarks": {
 			"type": "string"
 		},

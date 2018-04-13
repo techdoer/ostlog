@@ -43,7 +43,7 @@
 		},
 		"status": {
 			"type": "string",
-			"enum": ["in-progress", "completed", "canceled"],
+			"enum": ["planned", "in-progress", "completed", "canceled"],
 		},
 		"was successful": {
 			"$ref": "definitions.json#/likert_scale",

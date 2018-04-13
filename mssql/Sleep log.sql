@@ -29,6 +29,7 @@ CREATE TABLE [dbo].[Sleep log]
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[slept_well] NVARCHAR(20) NULL, 
+	[easy_wakeup] NVARCHAR(20) NULL, 
 	[remarks] NVARCHAR(2056) NULL,   
 	CONSTRAINT [PK_Sleep log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Sleep log-Calendar_date1] FOREIGN KEY ([in_bed_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
@@ -36,5 +37,6 @@ CREATE TABLE [dbo].[Sleep log]
 	CONSTRAINT [FK_Sleep log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Sleep log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
-	CHECK ([slept_well] = 'strongly disagree' OR [slept_well] = 'disagree' OR [slept_well] = 'neutral' OR [slept_well] = 'agree' OR [slept_well] = 'strongly agree')
+	CHECK ([slept_well] = 'strongly disagree' OR [slept_well] = 'disagree' OR [slept_well] = 'neutral' OR [slept_well] = 'agree' OR [slept_well] = 'strongly agree'),
+	CHECK ([easy_wakeup] = 'strongly disagree' OR [easy_wakeup] = 'disagree' OR [easy_wakeup] = 'neutral' OR [easy_wakeup] = 'agree' OR [easy_wakeup] = 'strongly agree')
 )
