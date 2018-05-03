@@ -22,6 +22,8 @@ CREATE TABLE [dbo].[Continuous learning log]
 (
 	[id] INT NOT NULL,
 	[meta_id] INT NULL,
+	[calendar_date_id] INT NOT NULL,
+	[timestamp] TIME (0) NOT NULL,
 	[start_date_id] INT NOT NULL,
 	[start_time] TIME (0) NOT NULL,
 	[end_date_id] INT NULL,
@@ -35,8 +37,9 @@ CREATE TABLE [dbo].[Continuous learning log]
 	[remarks] NVARCHAR(4000) NULL,   
 
 	CONSTRAINT [PK_Continuous learning log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Continuous learning log-Calendar_date1] FOREIGN KEY ([start_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Continuous learning log-Calendar_date2] FOREIGN KEY ([end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Continuous learning log-Calendar_date1] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Continuous learning log-Calendar_date2] FOREIGN KEY ([start_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Continuous learning log-Calendar_date3] FOREIGN KEY ([end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Continuous learning log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Continuous learning log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	
