@@ -1,9 +1,9 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Worship_log.json",
-	"title": "Worship log",
-	"description": "Each entry records and act of worship. For example, attending mass.",
+	"id": "http://ostlog.org/schema/Work_log.json",
+	"title": "Work log",
+	"description": "Each entry records a person's work responsibilities and effort at a given point in time.",
 	"type": "object",
 	"properties": {
 
@@ -16,18 +16,22 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date when the act took place."
+			"description": "YYYYMMDD formatted date."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time when the act took place."
+			"description": "HH:MM:SS formatted time."
 		},
-		"domain ": {
+		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
-		"person_id ": {
+		"person_id": {
 			"type": "integer",
-			"description ": "the person who is performed the act."
+			"description": "the worker."
+		},
+		"direct_reports": {
+			"type": "integer",
+			"description": "the number of people supervised/managed-by the worker."
 		},
 		"remarks": {
 			"type": "string"
