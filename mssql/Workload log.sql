@@ -31,7 +31,7 @@ CREATE TABLE [dbo].[Workload log]
 	[work_is_hurried_or_rushed] NVARCHAR (20) NULL,
 	[work_is_meeting_expectations] NVARCHAR (20) NULL,
 	[hard_work_is_required_to_meet_performance_level] NVARCHAR (20) NULL,
-	[work_is_causing_insecurity_irritation_or_stress"] NVARCHAR (20) NULL,
+	[work_is_causing_insecurity_irritation_or_stress] NVARCHAR (20) NULL,
 	[direct_reports] INT NOT NULL,
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Work log] PRIMARY KEY CLUSTERED ([id] ASC),
@@ -44,7 +44,7 @@ CREATE TABLE [dbo].[Workload log]
 	CHECK ([work_is_hurried_or_rushed] = 'strongly disagree' OR[work_is_hurried_or_rushed] = 'disagree' OR [work_is_hurried_or_rushed] = 'neutral' OR [work_is_hurried_or_rushed] = 'agree' OR [work_is_hurried_or_rushed] = 'strongly agree'),
 	CHECK ([work_is_meeting_expectations] = 'strongly disagree' OR [work_is_meeting_expectations] = 'disagree' OR [work_is_meeting_expectations] = 'neutral' OR [work_is_meeting_expectations] = 'agree' OR [work_is_meeting_expectations] = 'strongly agree'),
 	CHECK ([hard_work_is_required_to_meet_performance_level] = 'strongly disagree' OR [hard_work_is_required_to_meet_performance_level] = 'disagree' OR [hard_work_is_required_to_meet_performance_level] = 'neutral' OR [hard_work_is_required_to_meet_performance_level] = 'agree' OR [hard_work_is_required_to_meet_performance_level] = 'strongly agree'),
-	CHECK ([work_is_causing_insecurity_irritation_or_stress"] = 'strongly disagree' OR [work_is_causing_insecurity_irritation_or_stress"] = 'disagree' OR [work_is_causing_insecurity_irritation_or_stress"] = 'neutral' OR [work_is_causing_insecurity_irritation_or_stress"] = 'agree' OR [work_is_causing_insecurity_irritation_or_stress"] = 'strongly agree'),
+	CHECK ([work_is_causing_insecurity_irritation_or_stress] = 'strongly disagree' OR [work_is_causing_insecurity_irritation_or_stress] = 'disagree' OR [work_is_causing_insecurity_irritation_or_stress] = 'neutral' OR [work_is_causing_insecurity_irritation_or_stress] = 'agree' OR [work_is_causing_insecurity_irritation_or_stress] = 'strongly agree'),
 
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )
