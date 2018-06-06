@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Work_log.json",
 	"title": "Work log",
-	"description": "Each entry records a person's work responsibilities and effort at a given point in time.",
+	"description": "Each entry records a person's workload at a given point in time.  Derives from NASA's task load index.",
 	"type": "object",
 	"properties": {
 
@@ -28,6 +28,24 @@
 		"person_id": {
 			"type": "integer",
 			"description": "the worker."
+		},
+		"work is mentally demanding": {
+			"$ref": "definitions.json#/likert_scale",
+		},
+		"work is physically demanding": {
+			"$ref": "definitions.json#/likert_scale",
+		},
+		"feeling hurried or rushed at work": {
+			"$ref": "definitions.json#/likert_scale",
+		},
+		"work is meeting expectations": {
+			"$ref": "definitions.json#/likert_scale",
+		},
+		"hard work is required to meet performance levels": {
+			"$ref": "definitions.json#/likert_scale",
+		},
+		"work is causing insecurity, irritation, or stress": {
+			"$ref": "definitions.json#/likert_scale",
 		},
 		"direct_reports": {
 			"type": "integer",

@@ -99,6 +99,6 @@
     <Build Include="Continuous learning log.sql" />
     <Build Include="Location.sql" />
     <Build Include="Growth charts.sql" />
-    <Build Include="Work log.sql" />
+    <Build Include="Workload log.sql" />
   </ItemGroup>
 </Project>
