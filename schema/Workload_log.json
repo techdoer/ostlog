@@ -1,8 +1,8 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Work_log.json",
-	"title": "Work log",
+	"id": "http://ostlog.org/schema/Workload_log.json",
+	"title": "Workload log",
 	"description": "Each entry records a person's workload at a given point in time.  Derives from NASA's task load index.",
 	"type": "object",
 	"properties": {
@@ -50,6 +50,18 @@
 		"direct_reports": {
 			"type": "integer",
 			"description": "the number of people supervised/managed-by the worker."
+		},
+		"emails_received_last_week": {
+			"type": "integer",
+			"description": "the number of emails received in the last completed week of work."
+		},
+		"emails_sent_last_week": {
+			"type": "integer",
+			"description": "the number of emails sent in the last completed week of work."
+		},
+		"meetings_attended_last_week": {
+			"type": "integer",
+			"description": "the number of meetings attended in the last completed week of work."
 		},
 		"remarks": {
 			"type": "string"
