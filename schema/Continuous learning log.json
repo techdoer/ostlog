@@ -14,21 +14,6 @@
 			"type": "integer",
 			"description": "reference to entry's metadata"
 		},
-		"calendar_date_id": {
-			"type": "string",
-			"description": "YYYYMMDD formatted date when observation recorded."		
-		}
-		"timestamp": {
-			"type": "string ",
-			"description": "HH:MM:SS formatted time when observation recorded"
-		},
-		"domain": {
-			"$ref": "definitions.json#/domain"
-		},
-		"person_id": {
-			"type": "integer",
-			"description": "the person who carried out the learning."
-		},
 		"start_date_id": {
 			"type": "string",
 			"description": "YYYYMMDD formatted date when activity started."
@@ -44,6 +29,13 @@
 		"end_time" {
 			"type": "string ",
 			"description": "HH:MM:SS formatted time when activity completed."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"person_id": {
+			"type": "integer",
+			"description": "the person who carried out the learning."
 		},
 		"name": {
 			"type": "string",

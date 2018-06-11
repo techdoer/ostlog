@@ -22,8 +22,6 @@ CREATE TABLE [dbo].[Continuous learning log]
 (
 	[id] INT NOT NULL,
 	[meta_id] INT NULL,
-	[calendar_date_id] INT NOT NULL,
-	[timestamp] TIME (0) NOT NULL,
 	[start_date_id] INT NOT NULL,
 	[start_time] TIME (0) NOT NULL,
 	[end_date_id] INT NULL,
@@ -33,11 +31,10 @@ CREATE TABLE [dbo].[Continuous learning log]
 	[name] NVARCHAR(100) NOT NUll,
 	[type] NVARCHAR (10) NOT NULL,
 	[status] NVARCHAR(20) NOT NULL,
-	[was_successful] NVARCHAR(20) NULL,
+	[is_successful] NVARCHAR(20) NULL,
 	[remarks] NVARCHAR(4000) NULL,   
 
 	CONSTRAINT [PK_Continuous learning log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Continuous learning log-Calendar_date1] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Continuous learning log-Calendar_date2] FOREIGN KEY ([start_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Continuous learning log-Calendar_date3] FOREIGN KEY ([end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Continuous learning log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
@@ -45,6 +42,6 @@ CREATE TABLE [dbo].[Continuous learning log]
 	
 	CHECK ([type] = 'reading' OR [type] = 'writing' OR [type] = 'listening' OR [type] = 'doing' OR [type] = 'hybrid'),
 	CHECK ([status] = 'planned' OR [status] = 'in-progress' OR [status] = 'completed' OR [status] = 'cancelled'),
-	CHECK ([was_successful] = 'strongly disagree' OR [was_successful] = 'disagree' OR [was_successful] = 'neutral' OR [was_successful] = 'agree' OR [was_successful] = 'strongly agree'),
+	CHECK ([is_successful] = 'strongly disagree' OR [is_successful] = 'disagree' OR [is_successful] = 'neutral' OR [is_successful] = 'agree' OR [is_successful] = 'strongly agree'),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
 )
