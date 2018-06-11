@@ -14,21 +14,6 @@
 			"type": "integer",
 			"description": "reference to entry's metadata"
 		},
-		"calendar_date_id": {
-			"type": "string",
-			"description": "YYYYMMDD formatted date when observation recorded."		
-		}
-		"timestamp": {
-			"type": "string ",
-			"description": "HH:MM:SS formatted time when observation recorded"
-		},
-		"domain": {
-			"$ref": "definitions.json#/domain"
-		},
-		"person_id": {
-			"type": "integer",
-			"description": "the person who led the project."
-		},
 		"start_date_id": {
 			"type": "string",
 			"description": "YYYYMMDD formatted date when project started."
@@ -36,6 +21,13 @@
 		"end_date_id": {
 			"type": "string",
 			"description": "YYYYMMDD formatted date when project completed."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"person_id": {
+			"type": "integer",
+			"description": "the person who led the project."
 		},
 		"name": {
 			"type": "string",
@@ -45,13 +37,13 @@
 			"type": "string",
 			"enum": ["planned", "in-progress", "completed", "canceled"],
 		},
-		"was successful": {
+		"is_successful": {
 			"$ref": "definitions.json#/likert_scale",
 			"description": "indicates whether the project was successful".
 		},
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "calendar_date_id", "timestamp", "start_date_id", "end_date_id", "domain", "person_id", "name", "status"]
+		"required": ["id", "start_date_id", "end_date_id", "domain", "person_id", "name", "status"]
 	}
 }
