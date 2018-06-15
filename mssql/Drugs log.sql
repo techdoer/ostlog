@@ -19,7 +19,7 @@
 -- Copyright:   Copyright (c) 2017 family•smarts
 -- License:     MIT License
 CREATE TABLE [dbo].[Drugs log] (
-	[id] INT NOT NULL,
+	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME (0) NOT NULL,
