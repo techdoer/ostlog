@@ -36,7 +36,6 @@ CREATE TABLE [dbo].[Vitals log]
 	[blood_pressure_diastolic_mmhg] INT NULL,
 	[blood_pressure_systolic_mmhg] INT NULL,
 	[respiratory_rate_bpm] FLOAT NULL, /* breaths per minute */
-	[bmi] FLOAT NULL, /* body mass index */
 	[bfp_%] FLOAT NULL, /* body fat percentage */
 	[spo2_%] FLOAT NULL, /* peripheral capillary oxygen saturation */
 	[remarks] NVARCHAR(4000) NULL, 

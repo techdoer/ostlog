@@ -69,10 +69,6 @@
 			"type": "float",
 			"description": "breadth per minute"
 		},
-		"bmi": {
-			"type": "float",
-			"description": "body mass index"
-		},
 		"bfp_%": {
 			"type": "float",
 			"description": "body fat percentage"
