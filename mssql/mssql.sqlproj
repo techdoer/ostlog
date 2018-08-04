@@ -100,5 +100,6 @@
     <Build Include="Location.sql" />
     <Build Include="Growth charts.sql" />
     <Build Include="Workload log.sql" />
+    <Build Include="Environment log.sql" />
   </ItemGroup>
 </Project>

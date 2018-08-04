@@ -1,0 +1,50 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Environment_log.json",
+	"title": "Environment log",
+	"description": "Each entry records a number of environmental measures in a particular location.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of recording."
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of recording."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"location_id": {
+			"type": "integer",
+			"description ": "the location where the measures were recorded."
+		},
+		"temperature_celsius": {
+			"type": "float",
+			"description ": "the temperature in celsius degrees at the location."
+		},
+		"humidity_relative_%": {
+			"type": "float",
+			"description": "the relative humidity (%) at the location."
+		},
+		"sound_decibal": {
+			"type": "float",
+			"description": "the sound in decibals at the location."
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "location_id"]
+
+	}
+}
