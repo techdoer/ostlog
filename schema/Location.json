@@ -14,6 +14,14 @@
 		"country_iso3_code": {
 			"type": "string"
 		},
+		"latitude": {
+			"type": "float",
+			"description": "Latitude of location"
+		},
+		"longitude": {
+			"type": "float",
+			"description": "Longitude of location"
+		},
 		"remarks": {
 			"type": "string"
 		}

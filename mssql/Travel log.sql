@@ -28,9 +28,11 @@ CREATE TABLE [dbo].[Travel log]
 	[end_time] TIME (0) NOT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
+	[departure_location_id] INT NULL,
 	[departure_country_iso3_code] NVARCHAR(3) NOT NULL,
 	[departure_latitude] FLOAT NOT NULL,
 	[departure_longitude] FLOAT NOT NULL,
+	[destination_location_id] INT NULL,
 	[destination_country_iso3_code] NVARCHAR(3) NOT NULL,
 	[destination_latitude] FLOAT NOT NULL,
 	[destination_longitude] FLOAT NOT NULL,
@@ -41,6 +43,8 @@ CREATE TABLE [dbo].[Travel log]
 	CONSTRAINT [FK_Travel log-Calendar_date2] FOREIGN KEY ([end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Travel log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Travel log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+	CONSTRAINT [FK_Travel log-Location1] FOREIGN KEY ([departure_location_id]) REFERENCES [dbo].[Location] ([location_id]),
+	CONSTRAINT [FK_Travel log-Location2] FOREIGN KEY ([destination_location_id]) REFERENCES [dbo].[Location] ([location_id]),
 
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )
