@@ -34,8 +34,8 @@
 		},
 		"status": {
 			"type": "string",
-			"enum": ["started", "completed", "suspended"],
-			"description": "the status of the medication on the indicated date."
+			"enum": ["active", "completed", "entered-in-error", "intended", "stopped", "on-hold"],
+			"description": "the status of administering the drug.  Value set taken from ttp://hl7.org/fhir/ValueSet/medication-statement-status."
 		},
 		"drug_atc_code": {
 			"type": "string",

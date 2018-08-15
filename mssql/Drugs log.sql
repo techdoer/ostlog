@@ -27,7 +27,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	[person_id] INT NOT NULL,
 	[diagnosis_id] INT NULL,
 	[name] NVARCHAR (512) NOT NULL, -- commercial name of drug taken
-	[status] NVARCHAR (10) NULL, 
+	[status] NVARCHAR (10) NULL,  -- status based FHIR value-set: http://hl7.org/fhir/ValueSet/medication-statement-status 
 	[drug_atc_code] NVARCHAR (20) NULL, -- The Anatomical Therapeutic Chemical (ATC) Classification System
 	[admin_route] NVARCHAR (20) NOT NULL, -- equivalent to ATC classification's Route of administration (Adm.R)
 	[dosage_amount] FLOAT (53) NULL,
@@ -54,7 +54,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	CONSTRAINT [FK_Drugs log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	CONSTRAINT [FK_Drugs log-Diagnosis log] FOREIGN KEY ([diagnosis_id]) REFERENCES [dbo].[Diagnosis log] ([id]),
 
-	CHECK ([status]='suspended' OR [status]='finished' OR [status]='started'),
+	CHECK ([status]='active' OR [status]='completed' OR [status]='entered-in-error' OR [status]='intended' OR [status]='stopped' OR [status]='on-hold'),
 	CHECK ([admin_route]='implant' OR [admin_route]='inhale' OR [admin_route]='nasal' OR [admin_route]='instill' OR  [admin_route]='oral' OR  [admin_route]='nasal' OR [admin_route]='parenteral' OR [admin_route]='rectal' OR [admin_route]='sublingual' OR [admin_route]='transdermal' OR [admin_route]='vaginal'),
 	CHECK ([dosage_units]='g' OR [dosage_units]='mg' OR [dosage_units]='mcg' OR [dosage_units]='U' OR [dosage_units]='TU' OR [dosage_units]='MU' OR [dosage_units]='mmol' OR [dosage_units]='ml'),
 	
