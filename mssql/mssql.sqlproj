@@ -101,5 +101,6 @@
     <Build Include="Growth charts.sql" />
     <Build Include="Workload log.sql" />
     <Build Include="Environment log.sql" />
+    <Build Include="Chores log.sql" />
   </ItemGroup>
 </Project>
