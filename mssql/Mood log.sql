@@ -24,6 +24,7 @@ CREATE TABLE [dbo].[Mood log]
 	[meta_id] INT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME (0) NOT NULL,
+	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[feeling_term] NVARCHAR(50) NULL,
@@ -32,6 +33,7 @@ CREATE TABLE [dbo].[Mood log]
 	CONSTRAINT [PK_Mood log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Mood log-Calendar_date1] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Mood log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Mood log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 	CONSTRAINT [FK_Mood log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	
 	CHECK ([high_energy] = 'strongly disagree' OR [high_energy] = 'disagree' OR [high_energy] = 'neutral' OR [high_energy] = 'agree' OR [high_energy] = 'strongly agree'),
