@@ -33,13 +33,17 @@
 			"type": "integer",
 			"description ": "the person who carried out the chore."
 		},
-		"chore_description": {
-			"type": "string",
-			"description ": "description of the chore that was carried out"
+		"min_per_day": {
+			"type": "integer",
+			"description ": "the minimum chores person carries out per day."
 		},
-		"status": {
-			"type": "string",
-			"enum": ["planned", "in-progress", "completed", "canceled"],
+		"avg_per_day": {
+			"type": "integer",
+			"description ": "the average chores person carries out per day."			
+		},
+		"max_per_day": {
+			"type": "integer",
+			"description ": "the maximum chores person carries out per day."		
 		},
 		"remarks": {
 			"type": "string"

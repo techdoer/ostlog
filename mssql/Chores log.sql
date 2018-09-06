@@ -27,8 +27,9 @@ CREATE TABLE [dbo].[Chores log]
 	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL, 
-	[chore_description] NVARCHAR (128),
-	[status] NVARCHAR(20) NOT NULL,
+	[min_per_day] INT NULL,
+	[avg_per_day] INT NULL,
+	[max_per_day] INT NULL,
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Chores log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Chores log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
@@ -37,5 +38,4 @@ CREATE TABLE [dbo].[Chores log]
 	CONSTRAINT [FK_Chores log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
-	CHECK ([status] = 'planned' OR [status] = 'in-progress' OR [status] = 'completed' OR [status] = 'cancelled')
 )
