@@ -44,7 +44,7 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "location_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "location_id"	]
 
 	}
 }

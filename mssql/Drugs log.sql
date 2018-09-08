@@ -23,6 +23,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	[meta_id] INT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME (0) NOT NULL,
+	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[diagnosis_id] INT NULL,

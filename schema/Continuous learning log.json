@@ -29,6 +29,10 @@
 		"end_time" {
 			"type": "string ",
 			"description": "HH:MM:SS formatted time when activity completed."
+		}
+		"location_id": {
+			"type": "integer",
+			"description": "location where observation was observed."
 		},
 		"domain": {
 			"$ref": "definitions.json#/domain"

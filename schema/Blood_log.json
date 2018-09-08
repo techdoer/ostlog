@@ -22,6 +22,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted"
 		},
+		"location_id": { 
+			"type": "integer",
+			"description": "location where observation was observed."
+		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},

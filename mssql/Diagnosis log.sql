@@ -23,6 +23,7 @@ CREATE TABLE [dbo].[Diagnosis log]
 	[id] INT NOT NULL,
 	[meta_id] INT NULL,
 	[calendar_date_id]	INT	NOT NULL,
+	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[medical_visit_id] INT NULL,
 	[patient_id] INT NOT NULL,

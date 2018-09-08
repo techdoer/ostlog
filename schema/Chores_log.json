@@ -39,11 +39,11 @@
 		},
 		"avg_per_day": {
 			"type": "integer",
-			"description ": "the average chores person carries out per day."			
+			"description ": "the average chores person carries out per day."
 		},
 		"max_per_day": {
 			"type": "integer",
-			"description ": "the maximum chores person carries out per day."		
+			"description ": "the maximum chores person carries out per day."
 		},
 		"remarks": {
 			"type": "string"

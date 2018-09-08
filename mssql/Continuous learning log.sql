@@ -26,6 +26,7 @@ CREATE TABLE [dbo].[Continuous learning log]
 	[start_time] TIME (0) NOT NULL,
 	[end_date_id] INT NULL,
 	[end_time] TIME (0) NULL,
+	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[name] NVARCHAR(100) NOT NUll,

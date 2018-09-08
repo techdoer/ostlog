@@ -24,6 +24,7 @@ CREATE TABLE [dbo].[Health observations log]
 	[meta_id] INT NULL,
 	[observation_date_id] INT NOT NULL,
 	[observation_time] TIME(0) NOT NULL, /* HH:MM:SS */
+	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[body_site_code] INT NULL,
