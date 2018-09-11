@@ -20,7 +20,7 @@
 -- License:     MIT License
 CREATE TABLE [dbo].[Environment log]
 (
-	[id] INT NOT NULL,
+	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE [dbo].[Environment log]
 	[condition] NVARCHAR (512) NULL,
 	[temperature_celsius] FLOAT NULL,
 	[humidity_relative_%] FLOAT NULL,
-	[pressure_mb] INT NULL,
+	[pressure_mb] FLOAT NULL,
 	[sound_decibals] FLOAT NULL,
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Environment log] PRIMARY KEY CLUSTERED ([id] ASC),
