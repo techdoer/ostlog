@@ -39,5 +39,7 @@ CREATE TABLE [dbo].[Health observations log]
 	CONSTRAINT [FK_Health observations log-Symptom] FOREIGN KEY ([event_id]) REFERENCES [dbo].[Symptoms] ([id]),
 	CONSTRAINT [FK_Health observations log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	CONSTRAINT [FK_Health observations log-Diagnosis log] FOREIGN KEY ([diagnosis_id]) REFERENCES [dbo].[Diagnosis log] ([id]),
+	CONSTRAINT [FK_Health observations log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
+
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )

@@ -36,6 +36,8 @@ CREATE TABLE [dbo].[Diagnosis log]
 	CONSTRAINT [FK_Diagnosis log-People] FOREIGN KEY ([patient_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Diagnosis log-Doctors log] FOREIGN KEY ([medical_visit_id]) REFERENCES [dbo].[Doctors log] ([id]),
 	CONSTRAINT [FK_Diagnosis log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+	CONSTRAINT [FK_Diagnosis log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
+
 
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )
