@@ -24,6 +24,7 @@ CREATE TABLE [dbo].[Projects log]
 	[meta_id] INT NULL,
 	[start_date_id] INT NOT NULL,
 	[end_date_id] INT NULL,
+	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[name] NVARCHAR(100) NOT NUll,
@@ -36,6 +37,7 @@ CREATE TABLE [dbo].[Projects log]
 	CONSTRAINT [FK_Projects log-Calendar_date3] FOREIGN KEY ([end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Projects log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Projects log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+	CONSTRAINT [FK_Projects log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 	
 	CHECK ([status] = 'planned' OR [status] = 'in-progress' OR [status] = 'completed' OR [status] = 'cancelled'),
 	CHECK ([is_successful] = 'strongly disagree' OR [is_successful] = 'disagree' OR [is_successful] = 'neutral' OR [is_successful] = 'agree' OR [is_successful] = 'strongly agree'),

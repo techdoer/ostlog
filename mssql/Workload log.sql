@@ -24,6 +24,7 @@ CREATE TABLE [dbo].[Workload log]
 	[meta_id] INT NULL,
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
+	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL,
 	[work_is_mentally_demanding] NVARCHAR (20) NULL,
@@ -41,6 +42,7 @@ CREATE TABLE [dbo].[Workload log]
 	CONSTRAINT [FK_Workload log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Workload log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Workload log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+	CONSTRAINT [FK_Workload log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 
 	CHECK ([work_is_mentally_demanding] = 'strongly disagree' OR [work_is_mentally_demanding] = 'disagree' OR [work_is_mentally_demanding] = 'neutral' OR [work_is_mentally_demanding] = 'agree' OR [work_is_mentally_demanding] = 'strongly agree'),
 	CHECK ([work_is_physically_demanding] = 'strongly disagree' OR[work_is_physically_demanding] = 'disagree' OR[work_is_physically_demanding] = 'neutral' OR [work_is_physically_demanding] = 'agree' OR [work_is_physically_demanding] = 'strongly agree'),
