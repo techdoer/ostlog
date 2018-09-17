@@ -61,6 +61,6 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "start_date_id", "start_dimte", "end_date_id", "end_time", "domain", "person_id", "name", "type", "status"]
+		"required": ["id", "start_date_id", "start_time", "end_date_id", "end_time", "location_id", "domain", "person_id", "name", "type", "status"]
 	}
 }

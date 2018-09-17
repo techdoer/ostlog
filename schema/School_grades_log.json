@@ -22,6 +22,10 @@
 			"type": "string",
 			"description": "YYYYMMDD formatted date marking the end of the grading period."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where school was carried out."
+		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -66,6 +70,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "term_start_date_id", "term_end_date_id", "domain", "person_id", "education_level_isced", "subject_name"]
+		"required": ["id", "term_start_date_id", "term_end_date_id", "location_id", "domain", "person_id", "education_level_isced", "subject_name"]
 	}
 }

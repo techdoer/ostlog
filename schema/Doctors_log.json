@@ -21,6 +21,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the visit."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where visit was made."
+		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -44,7 +48,7 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "doctor_id", "patient_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "doctor_id", "patient_id"]
 
 	}
 

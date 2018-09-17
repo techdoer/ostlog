@@ -53,6 +53,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "diagnosis_icd10_code"]
+		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "diagnosis_icd10_code"]
 	}
 }

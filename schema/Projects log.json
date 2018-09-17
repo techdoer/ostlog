@@ -22,6 +22,10 @@
 			"type": "string",
 			"description": "YYYYMMDD formatted date when project completed."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where project was carried out."
+		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -44,6 +48,6 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "start_date_id", "end_date_id", "domain", "person_id", "name", "status"]
+		"required": ["id", "start_date_id", "end_date_id", "location_id", "domain", "person_id", "name", "status"]
 	}
 }

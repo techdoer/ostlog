@@ -22,6 +22,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time when heart observation made."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where observation was made."
+		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -104,6 +108,6 @@
 			"type": "string"
 		},
 
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
+		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id"]
 	}
 }

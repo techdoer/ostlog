@@ -22,6 +22,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the surgery."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where procedure carried out."
+		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -63,7 +67,7 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "procedure_name", "procedure_sctid", "was_effective"]
+		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "procedure_name", "procedure_sctid", "was_effective"]
 
 	}
 }

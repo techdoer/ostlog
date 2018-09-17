@@ -22,7 +22,7 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of when event was observed/recorded."
 		},
-		"location_id": { 
+		"location_id": {
 			"type": "integer",
 			"description": "location where observation was observed."
 		},
@@ -57,7 +57,7 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "symptom_id", "observation_icd10_code", "new_occurance"]
+		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "symptom_id", "observation_icd10_code", "new_occurance"]
 
 	}
 }
