@@ -90,7 +90,6 @@
     <Build Include="Mood log.sql" />
     <Build Include="Eyes log.sql" />
     <Build Include="Teeth log.sql" />
-    <Build Include="views\View sleep duration.sql" />
     <Build Include="Meta log.sql" />
     <Build Include="Worship log.sql" />
     <Build Include="Social log.sql" />
