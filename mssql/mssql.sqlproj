@@ -58,7 +58,6 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="scripts" />
-    <Folder Include="views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Allergy log.sql" />
@@ -86,7 +85,6 @@
     <None Include="scripts\Load symptoms.sql" />
     <Build Include="Drug targets.sql" />
     <Build Include="Travel log.sql" />
-    <Build Include="views\View days betweeen menstrual cycle.sql" />
     <Build Include="Mood log.sql" />
     <Build Include="Eyes log.sql" />
     <Build Include="Teeth log.sql" />
