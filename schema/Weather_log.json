@@ -1,9 +1,9 @@
 {
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Environment_log.json",
+	"id": "http://ostlog.org/schema/Weather_log.json",
 	"title": "Environment log",
-	"description": "Each entry records a number of environmental measures in a particular location.",
+	"description": "Each entry records a weather-related measures for a particular location.",
 	"type": "object",
 	"properties": {
 

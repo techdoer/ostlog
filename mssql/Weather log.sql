@@ -13,12 +13,12 @@
 -- IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -- Version: Each entry records environmental measures at a particular location.  Supports Azure SQL Server.
--- URL: http://ostlog.org/schema/Environment_log.json
+-- URL: http://ostlog.org/schema/Weather_log.json
 --
 -- Authors:     Sergio Bogazzi
 -- Copyright:   Copyright (c) 2017 family•smarts
 -- License:     MIT License
-CREATE TABLE [dbo].[Environment log]
+CREATE TABLE [dbo].[Weather log]
 (
 	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
@@ -32,11 +32,11 @@ CREATE TABLE [dbo].[Environment log]
 	[pressure_mb] FLOAT NULL,
 	[sound_decibals] FLOAT NULL,
 	[remarks] NVARCHAR (4000) NULL,
-	CONSTRAINT [PK_Environment log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Environment log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Environment log-People] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
-	CONSTRAINT [FK_Environment log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	CONSTRAINT [FK_Environment log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
+	CONSTRAINT [PK_Weather log] PRIMARY KEY CLUSTERED ([id] ASC),
+	CONSTRAINT [FK_Weather log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Weather log-People] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
+	CONSTRAINT [FK_Weather log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+	CONSTRAINT [FK_Weather log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )
