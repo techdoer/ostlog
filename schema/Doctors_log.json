@@ -28,6 +28,9 @@
 		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
+		"status": {
+			"$ref": "definitions.json#/status"
+		},
 		"doctor_id": {
 			"type": "integer",
 			"description ": "the medical professional"

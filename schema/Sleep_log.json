@@ -30,7 +30,7 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time when person got up from bed."
 		},
-		"location_id": { 
+		"location_id": {
 			"type": "integer",
 			"description": "location where person slept."
 		},
@@ -52,6 +52,6 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "version_id", "last_updated", "in_bed_date_id", "in_bed_time", "out_of_bed_date_id", "out_of_bed_time", "domain", "person_id"]
+		"required": ["id", "version_id", "last_updated", "in_bed_date_id", "in_bed_time", "out_of_bed_date_id", "out_of_bed_time", "location_id", "domain", "person_id"]
 	}
 }

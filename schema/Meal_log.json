@@ -61,6 +61,6 @@
 		"remarks": {
 			"type": "string"
 		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "meal_was_balanced", "meal_was_nutritious", "meal_was_sufficient"]
+		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "meal_was_balanced", "meal_was_nutritious", "meal_was_sufficient"]
 	}
 }

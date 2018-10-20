@@ -37,9 +37,7 @@
 			"description": "Reference to the diagnosis requiring the medication."
 		},
 		"status": {
-			"type": "string",
-			"enum": ["active", "completed", "entered-in-error", "intended", "stopped", "on-hold"],
-			"description": "the status of administering the drug.  Value set taken from ttp://hl7.org/fhir/ValueSet/medication-statement-status."
+			"$ref": "definitions.json#/status"
 		},
 		"drug_atc_code": {
 			"type": "string",
