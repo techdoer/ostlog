@@ -14,12 +14,11 @@
 			"type": "string",
 			"enum": ["s", "min", "h", "d", "wk", "mo", "a"],
 			"description": "unit of measure for the duration."
-		}
+		},
 		"status": {
 			"type": "string",
 			"enum": ["active", "completed", "entered-in-error", "intended", "stopped", "on-hold"],
 			"description": "the status of administering the drug.  Value set taken from ttp://hl7.org/fhir/ValueSet/medication-statement-status."
 		},
-
 
 	}

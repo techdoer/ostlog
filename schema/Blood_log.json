@@ -214,6 +214,10 @@
 			"type": "float",
 			"description": "hormone human chorionic gonadotropin mIU/mL produced during pregnancy"
 		},
+		"crp_mg_l": {
+			"type": "float",
+			"description": "c-reactive protein"
+		},
 		"exam_results_url": {
 			"type": "string",
 			"description": "url to scanned copy of the results"

@@ -72,6 +72,7 @@ CREATE TABLE [dbo].[Blood log]
 	[sodium_meq_l] FLOAT NULL, /*sodium mEq/l */
 	[calcium_mg_dl] FLOAT NULL, /* calcium mg/dl */
 	[beta_hcg_miu_ml] FLOAT NULL, /*  hormone human chorionic gonadotropin mIU/mL produced during pregnancy */
+	[crp_mg_l] FLOAT NULL, /* c-reactive protein */
 	[exam_results_url] NVARCHAR(512) NULL, /* scanned copy of the results */
 	[remarks] NVARCHAR(2056) NULL,
 	CONSTRAINT [PK_Blood log] PRIMARY KEY CLUSTERED ([id] ASC),
