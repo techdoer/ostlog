@@ -59,9 +59,9 @@ CREATE TABLE [dbo].[Blood log]
 	[cholesterol_total] FLOAT NULL, /* cholesterol in blood. mg/dl */
 	[cholesterol_hdl] FLOAT NULL, /* hdl cholesterol in blood. mg/dl */
 	[cholesterol_ldl] FLOAT NULL, /* ldl cholesterol in blood. mg/dl */
-	[ast_ui_l] FLOAT NULL, /* aspartate aminotransferase. Liver - In Italian GOT/AST  - UI/L */
-	[alt_ui_l] FLOAT NULL, /* alanine aminotransferase. Liver - In Italian GPT/ALT - UI/L */
-	[ggt_u_i] FLOAT NULL, /* gamma-glutamyl transferase. Liver U/I */
+	[ast_u_l] FLOAT NULL, /* aspartate aminotransferase. Liver - In Italian GOT/AST  - UI/L */
+	[alt_u_l] FLOAT NULL, /* alanine aminotransferase. Liver - In Italian GPT/ALT - UI/L */
+	[ggt_u_l] FLOAT NULL, /* gamma-glutamyl transferase. Liver U/I */
 	[ldh_ul_l] FLOAT NULL, /* ldh lactic dehydrogenase Ul/l */
 	[toxoplasma_igg] FLOAT NULL, /* Toxoplasma IgG antibody. */
 	[toxoplasma_igm_ul_ml] FLOAT NULL, /* Toxoplasma IgM antibody. */
@@ -73,6 +73,9 @@ CREATE TABLE [dbo].[Blood log]
 	[calcium_mg_dl] FLOAT NULL, /* calcium mg/dl */
 	[beta_hcg_miu_ml] FLOAT NULL, /*  hormone human chorionic gonadotropin mIU/mL produced during pregnancy */
 	[crp_mg_l] FLOAT NULL, /* c-reactive protein */
+	[alp_u_l] FLOAT NULL, /* alkaline phosphatase; italian: fosfatasi alcalina */
+	[psa_ng_ml] FLOAT NULL, /* prostage specific antigen */
+	[psa_free_ng_ml] FLOAT NULL, /* free prostate specific antigen */
 	[exam_results_url] NVARCHAR(512) NULL, /* scanned copy of the results */
 	[remarks] NVARCHAR(2056) NULL,
 	CONSTRAINT [PK_Blood log] PRIMARY KEY CLUSTERED ([id] ASC),

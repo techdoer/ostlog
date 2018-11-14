@@ -22,7 +22,7 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted"
 		},
-		"location_id": { 
+		"location_id": {
 			"type": "integer",
 			"description": "location where observation was observed."
 		},
@@ -162,17 +162,17 @@
 			"type": "float",
 			"description": "ldl cholesterol in blood mg/dl "
 		},
-		"ast_ui_l": {
+		"ast_u_l": {
 			"type": "float",
 			"description": "aspartate aminotransferase. Liver (italian GOT/AST) in UI/L "
 		},
-		"alt_ui_l": {
+		"alt_u_l": {
 			"type": "float",
 			"description": "alanine aminotransferase. Liver (italian: GPT/ALT) in UI/L"
 		},
-		"ggt_u_i": {
+		"ggt_u_l": {
 			"type": "float",
-			"description": "gamma-glutamyl transferase.  Liver U/I"
+			"description": "gamma-glutamyl transferase.  Liver U/Litre"
 		},
 		"ldh_ul_l": {
 			"type": "float",
@@ -217,6 +217,18 @@
 		"crp_mg_l": {
 			"type": "float",
 			"description": "c-reactive protein"
+		},
+		"alp_u_l": {
+			"type": "float",
+			"description": "alkaline phosphatase; italian: fosfatasi alcalina"
+		},
+		"psa_ng_ml": {
+			"type": "float",
+			"description": "prostate specific antigen"
+		},
+		"psa_free_ng_ml": {
+			"type": "float",
+			"description": "free prostate-specific antigen test"
 		},
 		"exam_results_url": {
 			"type": "string",
