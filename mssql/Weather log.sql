@@ -30,7 +30,6 @@ CREATE TABLE [dbo].[Weather log]
 	[temperature_celsius] FLOAT NULL,
 	[humidity_relative_%] FLOAT NULL,
 	[pressure_mb] FLOAT NULL,
-	[sound_decibals] FLOAT NULL,
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Weather log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Weather log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),

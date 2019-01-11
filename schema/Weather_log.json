@@ -2,7 +2,7 @@
 
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Weather_log.json",
-	"title": "Environment log",
+	"title": "Weather log",
 	"description": "Each entry records a weather-related measures for a particular location.",
 	"type": "object",
 	"properties": {
@@ -44,10 +44,6 @@
 		"pressure_mb": {
 			"type": "integer",
 			"description": "the atmospheric pressure in mb"
-		},
-		"sound_decibal": {
-			"type": "float",
-			"description": "the sound in decibals at the location."
 		},
 		"remarks": {
 			"type": "string"

@@ -29,8 +29,8 @@
 			"type": "integer",
 			"description ": "the location where the measures were recorded."
 		},
-		"noise_db": {
-			"type": "integer",
+		"noise_decibals": {
+			"type": "float",
 			"description": "the noise reading in dB at location"
 		},
 		"remarks": {
