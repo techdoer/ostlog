@@ -100,5 +100,6 @@
     <Build Include="Weather log.sql" />
     <Build Include="Chores log.sql" />
     <Build Include="Job application log.sql" />
+    <Build Include="Noise log.sql" />
   </ItemGroup>
 </Project>

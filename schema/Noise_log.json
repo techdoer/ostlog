@@ -1,0 +1,42 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Noise_log.json",
+	"title": "Noise log",
+	"description": "Each entry records ambient noise at a particular location.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of recording."
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of recording."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"location_id": {
+			"type": "integer",
+			"description ": "the location where the measures were recorded."
+		},
+		"noise_db": {
+			"type": "integer",
+			"description": "the noise reading in dB at location"
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "location_id", "noise_db"]
+
+	}
+}
