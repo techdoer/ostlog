@@ -1,0 +1,68 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Diet_log.json",
+	"title": "Diet log",
+	"description": "Each entry identifies a food item that is part of a diet over a period of time.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"start_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the story."
+		},
+		"start_time": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the story."
+		},
+		"end_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the story."
+		},
+		"end_time": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the story."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"person_id": {
+			"type": "integer",
+			"description ": "the person who is the subject of the story."
+		},
+		"status": {
+			"type": "string",
+			"enum": ["planned", "in-progress", "completed", "canceled"],
+		},
+		"diet_type": {
+			"type": "string",
+			"enum": ["vegetarian", "dairy-free", "nut-free", "gluten-free", "vegan", "halal", "kosher", "other"],
+			"description": "from FHIR's https://www.hl7.org/fhir/valueset-encounter-diet.html"
+		},
+		"food_item_id": { 
+			"type": "integer",
+			"description": "FHIR's valueset covering food https://www.hl7.org/fhir/valueset-food-type.html."
+		},
+		"was_effective": {
+			"$ref": "definitions.json#/likert_scale"
+		},
+		"effectiveness_remarks": {
+			"type": "string"
+		},
+		"side_effect_remarks": {
+			"type": "string"
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "diet_type", "food_item_id"]
+
+	}
+}
