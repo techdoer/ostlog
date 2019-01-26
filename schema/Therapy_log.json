@@ -1,0 +1,64 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Therapy_log.json",
+	"title": "Therapy log",
+	"description": "Each entry describes an instance of a therapy treatment.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the therapy."
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the therapy."
+		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where therapy carried out."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"person_id": {
+			"type": "integer",
+			"description ": "the person to who underwent the therapy treatment."
+		},
+		"body_site_code": {
+			"type": "integer",
+			"description": "This enumeration includes all codes from FHIR's body-site definition http://hl7.org/fhir/ValueSet/body-site."
+		},
+		"diagnosis_id": {
+			"type": "integer"
+			"description": "Reference to the diagnosis requiring the therapy treatment."
+		},
+		"therapy_name": {
+			"type": "string",
+			"description": "A textual name of the therapy e.g. massage."
+		},
+		"therapy_sctid": {
+			"type": "string",
+			"description": "SNOWMED CT ID referencing a surgical procedure"
+		},
+		"was_effective": {
+			"$ref": "definitions.json#/likert_scale"
+		},
+		"effective_remarks": {
+			"type": "string"
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "therapy_name", "therapy_sctid", "was_effective"]
+
+	}
+}
