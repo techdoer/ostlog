@@ -30,6 +30,7 @@ CREATE TABLE [dbo].[Therapy log]
 	[diagnosis_id] INT NULL,
 	[therapy_name] NVARCHAR(100) NOT NULL,
 	[therapy_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a procedure
+	[duration_minutes] INT NULL,
 	[was_effective] NVARCHAR (20) NULL,
 	[effectivness_remarks] NVARCHAR (2048) NULL,
 	[remarks] NVARCHAR(2056) NULL,   
