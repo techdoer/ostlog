@@ -29,6 +29,7 @@ CREATE TABLE [dbo].[Stool log]
 	[bss_type] INT NULL, -- Bristol Stool Chart classification
 	[color] NVARCHAR (10) NULL,
 	[amount] NVARCHAR (10) NULL,
+	[photo_url] NVARCHAR (512) NULL,
 	[ph] INT NULL, -- 0..7..14
 	[occult_blood] BIT NULL,
 	[red_blood_cells] BIT NULL,

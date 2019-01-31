@@ -44,6 +44,10 @@
 			"enum": ["little", "normal", "a lot"],
 			"description": "observed quantity of stool sample."
 		},
+		"photo_url" {
+			"type": "string",
+			"description": "url linking to a photo of stool."		
+		},
 		"ph": {
 			"type": "integer",
 			"minimum": 1,

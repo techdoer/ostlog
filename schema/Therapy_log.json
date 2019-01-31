@@ -49,6 +49,10 @@
 			"type": "string",
 			"description": "SNOWMED CT ID referencing a surgical procedure"
 		},
+		"duration_minutes": {
+			"type": "integer",
+			"description": "duration in minutes for the therapy treatment" 
+		},
 		"was_effective": {
 			"$ref": "definitions.json#/likert_scale"
 		},
