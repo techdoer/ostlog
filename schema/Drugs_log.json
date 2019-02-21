@@ -64,6 +64,10 @@
 		"duration_units": {
 			"$ref": "definitions.json#/time_units"
 		},
+		"site": {
+			"type": "integer",
+			"description": "Body site administered to.  From FHIR/SNOWMED CT's Value Set http://hl7.org/fhir/ValueSet/approach-site-codes" 	 
+		},
 		"dosage_frequency": {
 			"type": "integer",
 			"description": ""
@@ -82,6 +86,10 @@
 		"period_max": {
 			"type": "integer",
 			"description": ""
+		},
+		"days_of_week": {
+			"type": "string",
+			"description": "mon | tue | wed | thu | fri | sat | sun" 
 		},
 		"when": {
 			"type": "string",

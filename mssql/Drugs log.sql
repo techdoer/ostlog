@@ -33,6 +33,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	[admin_route] NVARCHAR (20) NOT NULL, -- equivalent to ATC classification's Route of administration (Adm.R)
 	[dosage_amount] FLOAT (53) NULL,
 	[dosage_units] NVARCHAR (32) NULL, -- equivalent to ATC classification's dosage units
+	[body_site_code] INT NULL, -- equivalent to SNOMED CT's body site https://www.hl7.org/fhir/valueset-approach-site-codes.html
 
 	-- Duration, Frequency and Period based on https://www.hl7.org/fhir/datatypes.html#timing
 	[duration] INT NULL,
@@ -42,6 +43,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	[period] INT NULL,
 	[period_units] NVARCHAR (3) NULL,
 	[period_max] INT NULL,
+	[days_of_week] NVARCHAR (50) NULL,
 	[when] NVARCHAR (3) NULL,
 	[length_days] INT NULL,
 
@@ -56,7 +58,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	CONSTRAINT [FK_Drugs log-Diagnosis log] FOREIGN KEY ([diagnosis_id]) REFERENCES [dbo].[Diagnosis log] ([id]),
 	CONSTRAINT [FK_Drugs log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 
-	CHECK ([status]='active' OR [status]='completed' OR [status]='entered-in-error' OR [status]='intended' OR [status]='stopped' OR [status]='on-hold'),
+	CHECK ([status]='active' OR [status]='completed' OR [status]='entered-in-error' OR [status]='intended' OR [status]='stopped' OR [status]='on-hold' OR [status] = 'unknown' OR [status] = 'not-taken'),
 	CHECK ([admin_route]='implant' OR [admin_route]='inhale' OR [admin_route]='nasal' OR [admin_route]='instill' OR  [admin_route]='oral' OR  [admin_route]='nasal' OR [admin_route]='parenteral' OR [admin_route]='rectal' OR [admin_route]='sublingual' OR [admin_route]='transdermal' OR [admin_route]='vaginal'),
 	CHECK ([dosage_units]='g' OR [dosage_units]='mg' OR [dosage_units]='mcg' OR [dosage_units]='U' OR [dosage_units]='TU' OR [dosage_units]='MU' OR [dosage_units]='mmol' OR [dosage_units]='ml'),
 	
