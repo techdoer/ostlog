@@ -103,5 +103,6 @@
     <Build Include="Noise log.sql" />
     <Build Include="Diet log.sql" />
     <Build Include="Therapy log.sql" />
+    <Build Include="Air quality log.sql" />
   </ItemGroup>
 </Project>
