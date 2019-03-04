@@ -45,6 +45,14 @@
 			"type": "float",
 			"description": "carbon monoxide ug/m^3"
 		},
+		"hcho_mg_m3": {
+			"type": "float",
+			"description": "Formaldehyde mg/m^3"
+		},
+		"tvoc_mg_m3": {
+			"type": "float",
+			"description": "Total volcanic organic compounds mg/m^3"
+		},
 		"pm10_ug_m3": {
 			"type": "float",
 			"description": "particulate matter 10 micrometers ug/m^3"
@@ -52,6 +60,10 @@
 		"pm25_ug_m3": {
 			"type": "float",
 			"description": "particulate matter 2.5 micrometers ug/m^3"
+		},
+		"pm1_ug_m3": {
+			"type": "float",
+			"description": "particulate matter 1 micrometers ug/m^3"
 		},
 		"remarks": {
 			"type": "string"
