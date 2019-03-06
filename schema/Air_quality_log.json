@@ -65,6 +65,10 @@
 			"type": "float",
 			"description": "particulate matter 1 micrometers ug/m^3"
 		},
+		"usaqi": {
+			"type": "float",
+			"description": "US air quality index"
+		},
 		"remarks": {
 			"type": "string"
 		},
