@@ -22,12 +22,12 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of recording."
 		},
-		"domain": {
-			"$ref": "definitions.json#/domain"
-		},
 		"location_id": {
 			"type": "integer",
 			"description ": "the location where the measures were recorded."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
 		},
 		"o3_ug_m3": {
 			"type": "float",

@@ -22,6 +22,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time when the act took place."
 		},
+		"location_id": {
+			"type": "integer",
+			"description ": "the location where the research was made."
+		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},

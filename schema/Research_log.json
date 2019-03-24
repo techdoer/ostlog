@@ -1,0 +1,50 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Research_log.json",
+	"title": "Research_log",
+	"description": "A log of well-being related research and advice.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date the research was created or published."
+		},
+		"timestamp": {
+			"type ": "string",
+			"description": "HH:MM:SS formatted time of the research publication."
+		},
+		"location_id": {
+			"type": "integer",
+			"description ": "the location where the research was made."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"summary_text": {
+			"type": "string"
+		},
+		"full_text": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string"
+		},
+		"keywords_csv": {
+			"type": "string"
+		},
+		"remarks": {
+			"type": "string"
+		},
+		"required": ["id", "calendar_date_id", "timestamp", "domain"]
+
+	}
+}

@@ -22,6 +22,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the workout."
 		},
+		"location_id": {
+			"type": "integer",
+			"description ": "the location where the workout started."
+		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
