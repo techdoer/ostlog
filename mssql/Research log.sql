@@ -27,7 +27,7 @@ CREATE TABLE [dbo].[Research log]
 	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
 	[summary_text] NVARCHAR (4000) NOT NULL,
-	[full_text] TEXT NULL,
+	[full_text] NTEXT NULL,
 	[url] NVARCHAR(1000) NULL,
 	[keywords_csv] NVARCHAR (1000) NOT NULL,
 	[remarks] NVARCHAR (4000) NULL,
