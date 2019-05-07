@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Meta_log.json",
 	"title": "Meta log",
-	"description": "Each entry provides metadata for a single entry of self-tracking data.",
+	"description": "Each entry provides metadata for a single entry of self-tracking data. ",
 	"type": "object",
 	"properties": {
 
@@ -13,15 +13,15 @@
 			"type": "integer",
 			"description": "changes each time the entry's value(s) change."
 		},
-		"last_updated" {
+		"last_updated": {
 			"type": "date-time",
 			"description": "records the last date and time when the entry's value(s) changed"
 		},
-		"mode_description" {
+		"mode_description": {
 			"type": "string",
 			"description": "describes how the entry was recorded e.g. device, manual entry"
 		},
-		"collector_id" {
+		"collector_id": {
 			"type": "integer",
 			"description": "the id of the person or object who provided the data"
 		},	
