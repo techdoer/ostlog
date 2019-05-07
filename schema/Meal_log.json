@@ -57,7 +57,7 @@
 		"meal_was_nutritious": {
 			"$ref": "definitions.json#/likert_scale",
 			"description": "indicates whether or not the person felt the meal was nutritious."
-		}
+		},
 		"remarks": {
 			"type": "string"
 		},

@@ -39,11 +39,11 @@
 		},
 		"status": {
 			"type": "string",
-			"enum": ["planned", "in-progress", "completed", "canceled"],
+			"enum": ["planned", "in-progress", "completed", "canceled"]
 		},
 		"is_successful": {
 			"$ref": "definitions.json#/likert_scale",
-			"description": "indicates whether the project was successful".
+			"description": "indicates whether the project was successful"
 		},
 		"remarks": {
 			"type": "string"

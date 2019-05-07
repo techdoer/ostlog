@@ -40,7 +40,7 @@
 		},
 		"flow": {
 			"type": "string",
-			"enum": ["heavy", "light", "medium", "spotting"],
+			"enum": ["heavy", "light", "medium", "spotting"]
 		},
 		"remarks": {
 			"type": "string"

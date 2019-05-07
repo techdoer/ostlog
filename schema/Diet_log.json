@@ -39,7 +39,7 @@
 		},
 		"status": {
 			"type": "string",
-			"enum": ["planned", "in-progress", "completed", "canceled"],
+			"enum": ["planned", "in-progress", "completed", "canceled"]
 		},
 		"diet_type": {
 			"type": "string",

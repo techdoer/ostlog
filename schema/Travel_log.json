@@ -45,7 +45,7 @@
 			"type": "string",
 			"description ": "The id of the destination location."
 		},
-		"length_in_nights" {
+		"length_in_nights": {
 			"type": "integer",
 			"description ": "the length of the trip in nights spent at destination."
 		},

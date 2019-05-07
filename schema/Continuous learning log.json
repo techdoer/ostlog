@@ -26,10 +26,10 @@
 			"type": "string",
 			"description": "YYYYMMDD formatted date when activity completed."
 		},
-		"end_time" {
+		"end_time": {
 			"type": "string ",
 			"description": "HH:MM:SS formatted time when activity completed."
-		}
+		},
 		"location_id": {
 			"type": "integer",
 			"description": "location where observation was observed."
@@ -52,11 +52,11 @@
 		},
 		"status": {
 			"type": "string",
-			"enum": ["planned", "in-progress", "completed", "canceled"],
+			"enum": ["planned", "in-progress", "completed", "canceled"]
 		},
 		"was successful": {
 			"$ref": "definitions.json#/likert_scale",
-			"description": "indicates whether the learning activity was successful".
+			"description": "indicates whether the learning activity was successful"
 		},
 		"remarks": {
 			"type": "string"

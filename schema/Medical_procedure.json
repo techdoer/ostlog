@@ -38,7 +38,7 @@
 			"description": "This enumeration includes all codes from FHIR's body-site definition http://hl7.org/fhir/ValueSet/body-site."
 		},
 		"diagnosis_id": {
-			"type": "integer"
+			"type": "integer",
 			"description": "Reference to the diagnosis requiring the medical procedure."
 		},
 

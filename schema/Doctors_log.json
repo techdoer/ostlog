@@ -40,7 +40,7 @@
 			"description ": "the person visiting the medical professional"
 		},
 		"emergency": {
-			"type": "boolean"
+			"type": "boolean",
 			"description": "indicates whether visit was an emergency."
 		},
 		"prescription_url": {

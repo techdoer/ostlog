@@ -36,11 +36,11 @@
 		"feeling_term": {
 			"type": "text",
 			"description": "one word to describe the emotion a person is feeling."
-		}
+		},
 		"high_energy": {
 			"$ref": "definitions.json#/likert_scale"
 		},
-]		"remarks": {
+		"remarks": {
 			"type": "string"
 		},
 		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "feeling_great", "how_are_you_doing_text"]
