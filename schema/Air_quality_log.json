@@ -1,5 +1,4 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Air_quality_log.json",
 	"title": "Air quality log",
@@ -30,49 +29,48 @@
 			"$ref": "definitions.json#/domain"
 		},
 		"o3_ug_m3": {
-			"type": "float",
+			"type": "number",
 			"description": "ozone ug/m^3"
 		},
 		"no2_ug_m3": {
-			"type": "float",
+			"type": "number",
 			"description ": "nitron dioxide ug/m^3"
 		},
 		"so3_ug_m3": {
-			"type": "float",
+			"type": "number",
 			"description": "sulfur dioxide ug/m^3"
 		},
 		"co_ug_m3": {
-			"type": "float",
+			"type": "number",
 			"description": "carbon monoxide ug/m^3"
 		},
 		"hcho_mg_m3": {
-			"type": "float",
+			"type": "number",
 			"description": "Formaldehyde mg/m^3"
 		},
 		"tvoc_mg_m3": {
-			"type": "float",
+			"type": "number",
 			"description": "Total volcanic organic compounds mg/m^3"
 		},
 		"pm10_ug_m3": {
-			"type": "float",
+			"type": "number",
 			"description": "particulate matter 10 micrometers ug/m^3"
 		},
 		"pm25_ug_m3": {
-			"type": "float",
+			"type": "number",
 			"description": "particulate matter 2.5 micrometers ug/m^3"
 		},
 		"pm1_ug_m3": {
-			"type": "float",
+			"type": "number",
 			"description": "particulate matter 1 micrometers ug/m^3"
 		},
 		"usaqi": {
-			"type": "float",
+			"type": "number",
 			"description": "US air quality index"
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "location_id"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain"]
 }
