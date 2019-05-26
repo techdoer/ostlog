@@ -22,23 +22,23 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of recording."
 		},
-		"domain": {
-			"$ref": "definitions.json#/domain"
-		},
 		"location_id": {
 			"type": "integer",
 			"description ": "the location where the measures were recorded."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
 		},
 		"condition": {
 			"type": "string",
 			"description": "sunny, rainy etc."
 		},
 		"temperature_celsius": {
-			"type": "float",
+			"type": "number",
 			"description ": "the temperature in celsius degrees at the location."
 		},
 		"humidity_relative_%": {
-			"type": "float",
+			"type": "number",
 			"description": "the relative humidity (%) at the location."
 		},
 		"pressure_mb": {
@@ -47,8 +47,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "location_id"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain"]
 }

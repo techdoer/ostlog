@@ -22,21 +22,20 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of recording."
 		},
-		"domain": {
-			"$ref": "definitions.json#/domain"
-		},
 		"location_id": {
 			"type": "integer",
 			"description ": "the location where the measures were recorded."
 		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
 		"noise_decibals": {
-			"type": "float",
+			"type": "number",
 			"description": "the noise reading in dB at location"
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "location_id", "noise_db"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "noise_db"]
 }

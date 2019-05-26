@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Social_log.json",
 	"title": "Social log",
 	"description": "Each entry records a person's socializing of some type.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -22,6 +20,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of data entry."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where person slept."
+		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -35,7 +37,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "type"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "type"]
 }

@@ -53,5 +53,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["date_id", "full_date", "year"]
+	"required": ["date_id"]
 }

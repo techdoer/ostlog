@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Diagnosis_log.json",
 	"title": "Diagnosis log",
 	"description": "Each entry characterizes a diagnosis issued by a medical professional.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -51,8 +49,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-
-		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "diagnosis_icd10_code"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "diagnosis_icd10_code"]
 }

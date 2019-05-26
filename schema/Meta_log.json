@@ -5,7 +5,6 @@
 	"description": "Each entry provides metadata for a single entry of self-tracking data. ",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -13,9 +12,9 @@
 			"type": "integer",
 			"description": "changes each time the entry's value(s) change."
 		},
-		"last_updated": {
-			"type": "date-time",
-			"description": "records the last date and time when the entry's value(s) changed"
+		"last_updated_date": {
+			"type": "string",
+			"description": "records the last YYYYMMDD date and time when the entry's value(s) changed"
 		},
 		"mode_description": {
 			"type": "string",
@@ -27,7 +26,7 @@
 		},	
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "version_id", "last_updated", "mode_description"]
-	}
+		}
+	},
+	"required": ["id", "version_id", "last_updated", "mode_description"]
 }

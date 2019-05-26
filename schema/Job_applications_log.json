@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Job_applications_log.json",
 	"title": "Job applcications log",
 	"description": "Each entry records a job applciation submitted by person.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -42,8 +40,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "location_id",  "employer_location_id", "domain", "person_id", "job_description"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id",  "employer_location_id", "domain", "person_id", "job_description"]
 }

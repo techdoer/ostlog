@@ -17,6 +17,10 @@
 			"type": "string",
 			"description": "formatted YYYYMMDD date when allergic disorder first observed."
 		},
+		"location_id": {
+			"type": "integer",
+			"description ": "the location where the allergy were recorded."
+		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -29,8 +33,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-
-		"required": ["id", "calendar_date_id", "domain", "person_id", "allergen_type_sctid"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "location_id", "domain", "person_id", "allergen_type_sctid"]
 }

@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Medical_procedure_log.json",
 	"title": "Medical procedure log",
 	"description": "Each entry describes a medical procedure administered to patient.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -66,8 +64,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "procedure_name", "procedure_sctid", "was_effective"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "procedure_name", "procedure_sctid", "was_effective"]
 }

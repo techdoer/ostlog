@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Workload_log.json",
 	"title": "Workload log",
 	"description": "Each entry records a person's workload at a given point in time.  Derives from NASA's task load index.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -21,6 +19,10 @@
 		"timestamp": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time."
+		},
+		"location_id": {
+			"type": "integer",
+			"description ": "the location where the measures were recorded."
 		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
@@ -65,8 +67,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id"]
 }

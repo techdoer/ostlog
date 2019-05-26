@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Menstrual_cycle_log.json",
 	"title": "Menstrual cycle log",
 	"description": "Each entry records aspects of a day in the menstrual cycle.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -44,8 +42,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-
-		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "day_in_cycle", "flow"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "day_in_cycle", "flow"]
 }

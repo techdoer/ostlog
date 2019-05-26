@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Blood_log.json",
 	"title": "Blood log",
 	"description": "Each entry records results from a Complete Blood Count or similar blood test.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -39,195 +37,195 @@
 			"description": ""
 		},
 		"white_blood_cells_mcl": {
-			"type": "float",
+			"type": "number",
 			"description": "white blood cell count cells/mcL"
 		},
 		"red_blood_cells_mcl": {
-			"type": "float",
+			"type": "number",
 			"description": "red blood cell count cells/mcL"
 		},
 		"hb_g_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "hemoglobin count g/dL"
 		},
 		"hct_%": {
-			"type": "float",
+			"type": "number",
 			"description": "Hematocrit - percentage of white cell volume to red cell volume"
 		},
 		"mcv_fl": {
-			"type": "float",
+			"type": "number",
 			"description": "mean corpuscular volume - average volume of a red blood cell in femtoliters (fL)"
 		},
 		"mch_pg": {
-			"type": "float",
+			"type": "number",
 			"description": "mean corpuscular hemoglobin - the average amount of hemoglobin in the average red cell in picograms(pg)"
 		},
 		"mchc_g_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "mean corpuscular hemoglobin concentration - the average concentration of hemoglobin in a given volume of red cells"
 		},
 		"mpv_fl": {
-			"type": "float",
+			"type": "number",
 			"description": "mean platelet volume - measures the average amount (volume) of platelets in femtoliters (fL)"
 		},
 		"rdw_cv_%": {
-			"type": "float",
+			"type": "number",
 			"description": "Red cell distribution width (coefficient of variation) - measures the variability of a red cell size and shape as percentage"
 		},
 		"pc_b_l": {
-			"type": "float",
+			"type": "number",
 			"description": "platelet count ;piastrine (italian) - measured as billion/L"
 		},
 		"neutrophils_%": {
-			"type": "float",
+			"type": "number",
 			"description": "one of five types of white blood cells in percentage"
 		},
 		"neutrophils_cells_mcl": {
-			"type": "float",
+			"type": "number",
 			"description": "one of five types of white blood cells measured in cells/mcL."
 		},
 		"eosinophils_%": {
-			"type": "float",
+			"type": "number",
 			"description": "one of five types of white blood cells in percentage"
 		},
 		"eosinophils_cells_mcl": {
-			"type": "float",
+			"type": "number",
 			"description": "one of five types of white blood cells measured in cells/mcL."
 		},
 		"basophils_%": {
-			"type": "float",
+			"type": "number",
 			"description": "one of five types of white blood cells in percentage"
 		},
 		"basophils_cells_mcl": {
-			"type": "float",
+			"type": "number",
 			"description": "one of five types of white blood cells measured in cells/mcL."
 		},
 		"lymphocytes_%": {
-			"type": "float",
+			"type": "number",
 			"description": "one of five types of white blood cells in percentage"
 		},
 		"lymphocytes_cells_mcl": {
-			"type": "float",
+			"type": "number",
 			"description": "one of five types of white blood cells measured in cells/mcL."
 		},
 		"monocytes_%": {
-			"type": "float",
+			"type": "number",
 			"description": "one of five types of white blood cells in percentage"
 		},
 		"monocytes_cells_mcl": {
-			"type": "float",
+			"type": "number",
 			"description": "one of five types of white blood cells measured in cells/mcL."
 		},
 		"ferritin_ng_ml": {
-			"type": "float",
+			"type": "number",
 			"description": "ng/ml"
 		},
 		"sideremia_mcg_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "transports iron in the blood; measured in mcg/dl"
 		},
 		"creatinine_mg_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "mg/dl"
 		},
 		"albumin_g_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "g/dl"
 		},
 		"bile_acides_mcmoli_l": {
-			"type": "float",
+			"type": "number",
 			"description": "mcMoli/l"
 		},
 		"glucose_mg_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "gluoose in blood measured in mg/dl"
 		},
 		"uricacid_mg_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "measure of uric acid in blood in mg/dl"
 		},
 		"triglycerides_mg_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "measure of triglycerides in blood in mg/dl"
 		},
 		"cholesterol_total_mg_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "cholesterol in blood mg/dl"
 		},
 		"cholesterol_hdl_mg_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "hdl cholesterol in blood mg/dl "
 		},
 		"cholesterol_ldl_mg_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "ldl cholesterol in blood mg/dl "
 		},
 		"ast_u_l": {
-			"type": "float",
+			"type": "number",
 			"description": "aspartate aminotransferase. Liver (italian GOT/AST) in UI/L "
 		},
 		"alt_u_l": {
-			"type": "float",
+			"type": "number",
 			"description": "alanine aminotransferase. Liver (italian: GPT/ALT) in UI/L"
 		},
 		"ggt_u_l": {
-			"type": "float",
+			"type": "number",
 			"description": "gamma-glutamyl transferase.  Liver U/Litre"
 		},
 		"ldh_ul_l": {
-			"type": "float",
+			"type": "number",
 			"description": "ldh lactic dehydrogenase Ul/l"
 		},
 		"toxoplasma_igg": {
-			"type": "float",
+			"type": "number",
 			"description": "toxoplasma IgG antibody"
 		},
 		"toxoplasma_igm_iu_ml": {
-			"type": "float",
+			"type": "number",
 			"description": "toxoplasma IgM antibody in IU/mL"
 		},
 		"tsh_ulu_ml": {
-			"type": "float",
+			"type": "number",
 			"description": "thyrotropin (italian: tireotropo) in ulU/ml."
 		},
 		"t3_pmol_l": {
-			"type": "float",
+			"type": "number",
 			"description": "triiodothyronine in pmol/l."
 		},
 		"t4_pmol_l": {
-			"type": "float",
+			"type": "number",
 			"description": "thyroxine in pmol/l."
 		},
 		"potassium_meq_l": {
-			"type": "float",
+			"type": "number",
 			"description": "potassium in mg/dl."
 		},
 		"sodium_meq_l": {
-			"type": "float",
+			"type": "number",
 			"description": "sodium in mg/dl."
 		},
 		"calcium_mg_dl": {
-			"type": "float",
+			"type": "number",
 			"description": "calcium in mg/dl"
 		},
 		"beta_hcg_miu_ml": {
-			"type": "float",
+			"type": "number",
 			"description": "hormone human chorionic gonadotropin mIU/mL produced during pregnancy"
 		},
 		"crp_mg_l": {
-			"type": "float",
+			"type": "number",
 			"description": "c-reactive protein"
 		},
 		"alp_u_l": {
-			"type": "float",
+			"type": "number",
 			"description": "alkaline phosphatase; italian: fosfatasi alcalina"
 		},
 		"psa_ng_ml": {
-			"type": "float",
+			"type": "number",
 			"description": "prostate specific antigen"
 		},
 		"psa_free_ng_ml": {
-			"type": "float",
+			"type": "number",
 			"description": "free prostate-specific antigen test"
 		},
 		"exam_results_url": {
@@ -236,8 +234,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id"]
 }

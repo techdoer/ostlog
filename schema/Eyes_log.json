@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Eyes_log.json",
 	"title": "Eyes log",
 	"description": "Each entry records results from a standard eye exam.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -22,6 +20,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the eye exam."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where eye exam was given."
+		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -30,47 +32,47 @@
 			"description ": "the person whose eyes were examined."
 		},
 		"right_eye_sphere_d": {
-			"type": "float",
+			"type": "number",
 			"description": "The amount of lens power, measured in diopters (D), prescribed to correct nearsightedness or farsightedness."
 		},
 		"right_eye_cylinder": {
-			"type": "float",
+			"type": "number",
 			"description": "Indicates the amount of lens power for astigmatism."
 		},
 		"right_eye_axis": {
-			"type": "float",
+			"type": "number",
 			"description": "Describes the lens meridian (1..180) that contains no cylinder power to correct astigmatism."
 		},
 		"right_eye_prism_d": {
-			"type": "float",
+			"type": "number",
 			"description": "The amount of prismatic power, measured in prism diopters."
 		},
 		"right_eye_add": {
-			"type": "float",
+			"type": "number",
 			"description": "The added magnifying power applied to the bottom part of multifocal lenses to correct presbyopia."
 		},
 		"left_eye_sphere_d": {
-			"type": "float",
+			"type": "number",
 			"description": "The amount of lens power, measured in diopters (D), prescribed to correct nearsightedness or farsightedness."
 		},
 		"left_eye_cylinder": {
-			"type": "float",
+			"type": "number",
 			"description": "Indicates the amount of lens power for astigmatism."
 		},
 		"left_eye_axis": {
-			"type": "float",
+			"type": "number",
 			"description": "Describes the lens meridian (1..180) that contains no cylinder power to correct astigmatism."
 		},
 		"left_eye_prism": {
-			"type": "float",
+			"type": "number",
 			"description": "The amount of prismatic power, measured in prism diopters."
 		},
 		"left_eye_add": {
-			"type": "float",
+			"type": "number",
 			"description": "The added magnifying power applied to the bottom part of multifocal lenses to correct presbyopia."
 		},
 		"pupillary_distance_mm": {
-			"type": "float",
+			"type": "number",
 			"description": "The distance between the centre of one pupil (the central black dot of your eye) to the centre of the other pupil, measured in millimeters."
 		},
 		"exam_results_url": {
@@ -79,7 +81,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id"]
 }

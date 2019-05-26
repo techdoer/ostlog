@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Stool_log.json",
 	"title": "Stool log",
 	"description": "Each entry records results from a stool analysis examination",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -21,6 +19,10 @@
 		"timestamp": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the stool sample."
+		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where person slept."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
@@ -108,7 +110,8 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "bss_type", "color", "amount"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "bss_type", "color", "amount"]
 }
+

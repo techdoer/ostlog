@@ -30,6 +30,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the story."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where observation was observed."
+		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -61,8 +65,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "diet_type", "food_item_id"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "diet_type", "food_item_id"]
 }

@@ -15,11 +15,11 @@
 			"type": "string"
 		},
 		"latitude": {
-			"type": "float",
+			"type": "number",
 			"description": "Latitude of location"
 		},
 		"longitude": {
-			"type": "float",
+			"type": "number",
 			"description": "Longitude of location"
 		},
 		"remarks": {

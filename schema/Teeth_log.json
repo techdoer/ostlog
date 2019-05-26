@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Teeth_log.json",
 	"title": "Mood log",
 	"description": "Each entry records an observation or event on a person's tooth harmonzied to FDI World Dental Federation notation (iso3950) tooth numbering scheme.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -21,6 +19,10 @@
 		"timestamp": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of observation/event."
+		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where observation carried out."
 		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
@@ -52,7 +54,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "tooth_iso3950_number", "tooth_iso3950_name", "event"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "tooth_iso3950_number", "tooth_iso3950_name", "event"]
 }

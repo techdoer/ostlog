@@ -22,6 +22,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the readings."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where lab carried out."
+		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -34,27 +38,27 @@
 			"description": "Commentary regarding how the person is feeling on this date and time."
 		},
 		"height_cm": {
-			"type": "float",
+			"type": "number",
 			"description": "in centimeters"
 		},
 		"weight_kg": {
-			"type": "float",
+			"type": "number",
 			"description": "in kilograms"
 		},
 		"right_foot_size_cm": {
-			"type": "float",
+			"type": "number",
 			"description": "in centimeters"
 		},
 		"left_foot_size_cm": {
-			"type": "float",
+			"type": "number",
 			"description": "in centimeters"
 		},
 		"head_circumference_cm": {
-			"type": "float",
+			"type": "number",
 			"description": "in centimeters"
 		},
 		"body_temperature_c": {
-			"type": "float",
+			"type": "number",
 			"description": "body temperature in celsius"
 		},
 		"blood_pressure_diastolic_mmhg": {
@@ -66,15 +70,15 @@
 			"description": ""
 		},
 		"respiratory_rate_bpm": {
-			"type": "float",
+			"type": "number",
 			"description": "breadth per minute"
 		},
 		"bfp_%": {
-			"type": "float",
+			"type": "number",
 			"description": "body fat percentage"
 		},
 		"spo2_%": {
-			"type": "float",
+			"type": "number",
 			"description": "peripheral capillary oxygen saturation Sp02"
 		},
 		"document_url": {
@@ -83,8 +87,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "feeling_great"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "feeling_great"]
 }

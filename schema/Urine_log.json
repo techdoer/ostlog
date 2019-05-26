@@ -1,5 +1,4 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Urine_log.json",
 	"title": "Urine log",
@@ -22,6 +21,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the urine sample."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where lab carried out."
+		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -38,49 +41,48 @@
 			"description": ""
 		},
 		"density_15_c": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"ph": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"albumin": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"glucose": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"ketones": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"urobilinogen": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"bilirubin": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"hemoglobin": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"nitries": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"culture": {
-			"type": "float",
+			"type": "number",
 			"description": "Urine culture measured in colony forming units CFU/ml"
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id"]
 }

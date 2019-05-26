@@ -1,5 +1,4 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Story_log.json",
 	"title": "Story log",
@@ -22,6 +21,10 @@
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the story."
 		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where person slept."
+		},	
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
@@ -35,8 +38,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "text"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "text"]
 }

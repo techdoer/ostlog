@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Mood_log.json",
 	"title": "Mood log",
 	"description": "Each entry records a subjective assessment of a person's mood at specific time.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -19,7 +17,7 @@
 			"description": "YYYYMMDD formatted date of data entry."
 		},
 		"timestamp": {
-			"type ": "string ",
+			"type ": "string",
 			"description": "HH:MM:SS formatted time of data entry."
 		},
 		"location_id": { 
@@ -34,7 +32,7 @@
 			"description ": "the person whose mood is being assessed"
 		},
 		"feeling_term": {
-			"type": "text",
+			"type": "string",
 			"description": "one word to describe the emotion a person is feeling."
 		},
 		"high_energy": {
@@ -42,7 +40,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "feeling_great", "how_are_you_doing_text"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "feeling_great", "how_are_you_doing_text"]
 }

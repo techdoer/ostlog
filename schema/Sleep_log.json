@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Sleep_log.json",
 	"title": "Sleep log",
 	"description": "Each entry records daily sleep time.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -51,7 +49,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "version_id", "last_updated", "in_bed_date_id", "in_bed_time", "out_of_bed_date_id", "out_of_bed_time", "location_id", "domain", "person_id"]
-	}
+		}
+	},
+	"required": ["id", "version_id", "last_updated", "in_bed_date_id", "in_bed_time", "out_of_bed_date_id", "out_of_bed_time", "location_id", "domain", "person_id"]
 }

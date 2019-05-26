@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Continuous_learning_log.json",
 	"title": "Continuous_learning_log log",
 	"description": "Each entry records a continuous learning activity.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -19,7 +17,7 @@
 			"description": "YYYYMMDD formatted date when activity started."
 		},
 		"start_time": {
-			"type": "string ",
+			"type": "string",
 			"description": "HH:MM:SS formatted time when activity started."
 		},
 		"end_date_id": {
@@ -27,7 +25,7 @@
 			"description": "YYYYMMDD formatted date when activity completed."
 		},
 		"end_time": {
-			"type": "string ",
+			"type": "string",
 			"description": "HH:MM:SS formatted time when activity completed."
 		},
 		"location_id": {
@@ -60,7 +58,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "start_date_id", "start_time", "end_date_id", "end_time", "location_id", "domain", "person_id", "name", "type", "status"]
-	}
+		}
+	},
+	"required": ["id", "start_date_id", "start_time", "end_date_id", "end_time", "location_id", "domain", "person_id", "name", "type", "status"]
 }

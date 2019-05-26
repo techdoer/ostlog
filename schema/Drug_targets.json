@@ -13,10 +13,12 @@
 			"type": "integer",
 			"description": "YYYYMMDD formatted date when symptom experienced."
 		},
-		"remarks": {
+		"disorder_name": {
 			"type": "string"
 		},
-		"required": ["drug_atc_code", "disorder_sctid"]
-
-	}
+		"remarks": {
+			"type": "string"
+		}
+	},
+	"required": ["drug_atc_code", "disorder_sctid", "disorder_name"]
 }

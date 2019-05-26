@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Heart_log.json",
 	"title": "Heart log",
 	"description": "Each entry characterises results from heart examinations or ECG.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -34,22 +32,22 @@
 			"description ": "the person to whose heart is being tested."
 		},
 		"min_heart_rate_bpm": {
-			"type": "float"
+			"type": "number"
 		},
 		"avg_heart_rate_bpm": {
-			"type": "float"
+			"type": "number"
 		},
 		"max_heart_rate_bpm": {
-			"type": "float"
+			"type": "number"
 		},
 		"hrv": {
-			"type": "float"
+			"type": "number"
 		},
 		"hrv_rmssd": {
-			"type": "float"
+			"type": "number"
 		},
 		"hrv_sdnn": {
-			"type": "float"
+			"type": "number"
 		},
 		"ecg_pr_ms": {
 			"type": "integer",
@@ -85,19 +83,19 @@
 			"type": "integer"
 		},
 		"ecg_rv1_mv": {
-			"type": "float",
+			"type": "number",
 			"description": " amplification millivolts"
 		},
 		"ecg_sv5_mv": {
-			"type": "float",
+			"type": "number",
 			"description": " amplification millivolts"
 		},
 		"ecg_rv5_mv": {
-			"type": "float",
+			"type": "number",
 			"description": " amplification millivolts"
 		},
 		"ecg_sv1_mv": {
-			"type": "float",
+			"type": "number",
 			"description": " amplification millivolts"
 		},
 		"exam_results_url": {
@@ -106,8 +104,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-
-		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id"]
 }

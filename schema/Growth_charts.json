@@ -1,5 +1,4 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Growth_charts.json",
 	"title": "Growth charts",
@@ -19,34 +18,35 @@
 			"type": "integer"
 		},
 		"3rd": {
-			"type": "float"
+			"type": "number"
 		},
 		"5th": {
-			"type": "float"
+			"type": "number"
 		},
 		"10th": {
-			"type": "float"
+			"type": "number"
 		},
 		"25th": {
-			"type": "float"
+			"type": "number"
 		},
 		"50th": {
-			"type": "float"
+			"type": "number"
 		},
 		"75th": {
-			"type": "float"
+			"type": "number"
 		},
 		"90th": {
-			"type": "float"
+			"type": "number"
 		},
 		"95th": {
-			"type": "float"
+			"type": "number"
 		},
 		"97th": {
-			"type": "float"
+			"type": "number"
 		},
-		"type": "string"
-		},
-		"required": ["months", "measure", "gender"]
-
+		"remarks": {
+			"type": "string"
+		}
+	},
+	"required": ["months", "measure", "gender"]
 }

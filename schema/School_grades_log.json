@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/School_grades_log.json",
 	"title": "School grades log",
 	"description": "Each entry records a grade received for a specific course/subject during the specified term.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -45,20 +43,20 @@
 			"type": "string"
 		},
 		"grade_point ": {
-			"type": "float",
+			"type": "number",
 			"description": " "
 		},
 		"grade_description ": {
-			"type": " string",
+			"type": "string",
 			"enum": ["excellent ", "very good ", "good ", "accepted ", "failed "],
 			"description": " "
 		},
 		"grade_point_minimum": {
-			"type": "float",
+			"type": "number",
 			"description": " "
 		},
 		"grade_point_maximum": {
-			"type": "float",
+			"type": "number",
 			"description": " "
 		},
 		"grade_letter": {
@@ -68,8 +66,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-
-		"required": ["id", "term_start_date_id", "term_end_date_id", "location_id", "domain", "person_id", "education_level_isced", "subject_name"]
-	}
+		}
+	},
+	"required": ["id", "term_start_date_id", "term_end_date_id", "location_id", "domain", "person_id", "education_level_isced", "subject_name"]
 }

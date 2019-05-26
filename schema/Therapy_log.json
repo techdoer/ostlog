@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Therapy_log.json",
 	"title": "Therapy log",
 	"description": "Each entry describes an instance of a therapy treatment.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -61,8 +59,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "therapy_name", "therapy_sctid", "was_effective"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "therapy_name", "therapy_sctid", "was_effective"]
 }

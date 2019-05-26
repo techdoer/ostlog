@@ -39,27 +39,27 @@
 			"description": ""
 		},
 		"duration_minutes": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"distance_miles": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"elevation_gain_ft": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"avg_speed_mph": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"max_speed_mph": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"calories_burned": {
-			"type": "float",
+			"type": "number",
 			"description": ""
 		},
 		"steps": {
@@ -68,8 +68,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "workout_type", "duration_minutes"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "workout_type", "duration_minutes"]
 }

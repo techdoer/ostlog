@@ -5,7 +5,6 @@
 	"description": "Each entry describes a person referenced in ostlog.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},

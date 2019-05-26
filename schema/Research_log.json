@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Research_log.json",
 	"title": "Research_log",
 	"description": "A log of well-being related research and advice.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -43,8 +41,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "calendar_date_id", "timestamp", "domain"]
-
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "domain"]
 }

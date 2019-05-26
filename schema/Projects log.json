@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Projects_log.json",
 	"title": "Projects log",
 	"description": "Each entry records the state of new, ongoing, or recently completed project.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -47,7 +45,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-		"required": ["id", "start_date_id", "end_date_id", "location_id", "domain", "person_id", "name", "status"]
-	}
+		}
+	},
+	"required": ["id", "start_date_id", "end_date_id", "location_id", "domain", "person_id", "name", "status"]
 }

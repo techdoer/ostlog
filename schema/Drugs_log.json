@@ -5,7 +5,6 @@
 	"description": "Each entry characterizes a dose of medication taken at pre-defined intervals",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -45,11 +44,11 @@
 		},
 		"admin_route": {
 			"type": "string",
-			"enum": ["implant", "inhale", "nasal", "instill", "oral", "nasal", "parenteral", "rectal", "sublingual", "transdermal", "vaginal"],
+			"enum": ["implant", "inhale", "instill", "oral", "nasal", "parenteral", "rectal", "sublingual", "transdermal", "vaginal"],
 			"description": "equivalent to ATC classification's Route of administration (Adm.R)"
 		},
 		"dosage_amount": {
-			"type": "float",
+			"type": "number",
 			"description": "a scalar indicating quantity of dose in specified units"
 		},
 		"dosage_units": {
@@ -111,10 +110,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-
-		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "status", "drug_atc_code", "admin_route", "dosage_amount", "dosage_units"]
-
-	}
-
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "status", "drug_atc_code", "admin_route", "dosage_amount", "dosage_units"]
 }

@@ -5,7 +5,6 @@
 	"description": "Each entry characterizes a visit to the doctor's office or similar consultation with a medical professional",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -49,10 +48,7 @@
 		},
 		"remarks": {
 			"type": "string"
-		},
-
-		"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "doctor_id", "patient_id"]
-
-	}
-
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "doctor_id", "patient_id"]
 }

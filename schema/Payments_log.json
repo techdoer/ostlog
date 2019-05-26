@@ -1,12 +1,10 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Payments_log.json",
 	"title": "Payments log",
 	"description": "Each entry records a credit/debit transaction.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
 		},
@@ -21,6 +19,10 @@
 		"timestamp": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of transaction."
+		},
+		"location_id": {
+			"type": "integer",
+			"description ": "the location where payment was made."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
@@ -48,17 +50,16 @@
 			"description": ""
 		},
 		"amount_usd": {
-			"type": "float",
+			"type": "number",
 			"description": "the value of the transaction in USD"
 		},
 		"amount_euro": {
-			"type": "float",
+			"type": "number",
 			"description": "the value of the transaction in euro"
 		},
 		"remarks": {
 			"type": "string"
-		},
-
-		"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "payment_type", "item_description", "item_category", "amount_usd"]
-	}
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "payment_type", "item_description", "item_category", "amount_usd"]
 }
