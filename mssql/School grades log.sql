@@ -6,7 +6,7 @@ CREATE TABLE [dbo].[School grades log]
 (
 	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
-	[term_start_date_id] INT NOT NULL,
+	[term_start_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[term_end_date_id] INT NOT NULL,
 	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,

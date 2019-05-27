@@ -6,7 +6,7 @@ CREATE TABLE [dbo].[Sleep log]
 (
 	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
-	[in_bed_date_id] INT NOT NULL,
+	[in_bed_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[in_bed_timestamp] TIME (0) NOT NULL,
 	[out_of_bed_date_id] INT NOT NULL,
 	[out_of_bed_timestamp] TIME (0) NOT NULL,

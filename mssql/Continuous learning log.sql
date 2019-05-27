@@ -6,7 +6,7 @@ CREATE TABLE [dbo].[Continuous learning log]
 (
 	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
-	[start_date_id] INT NOT NULL,
+	[start_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[start_time] TIME (0) NOT NULL,
 	[end_date_id] INT NULL,
 	[end_time] TIME (0) NULL,

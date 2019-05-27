@@ -6,7 +6,7 @@ CREATE TABLE [dbo].[Health observations log]
 (
 	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
-	[observation_date_id] INT NOT NULL,
+	[observation_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[observation_time] TIME(0) NOT NULL, /* HH:MM:SS */
 	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,

@@ -6,7 +6,7 @@ CREATE TABLE [dbo].[Urine log]
 (
 	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
-	[calendar_date_id] INT NOT NULL,
+	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NULL,
 	[domain] NVARCHAR (15) NOT NULL,
