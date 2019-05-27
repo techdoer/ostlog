@@ -24,7 +24,7 @@
 		},
 		"location_id": {
 			"type": "integer",
-			"description": "location where lab carried out."
+			"description": "location where readings carried out."
 		},
 		"domain ": {
 			"$ref": "definitions.json#/domain"
