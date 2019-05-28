@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[Social log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME (0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'social' NOT NULL,
 	[person_id] INT NOT NULL,
 	[type] NVARCHAR(20) NOT NULL,
 	[remarks] NVARCHAR(4000) NULL,   

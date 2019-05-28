@@ -11,7 +11,7 @@ CREATE TABLE [dbo].[Sleep log]
 	[out_of_bed_date_id] INT NOT NULL,
 	[out_of_bed_timestamp] TIME (0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[slept_well] NVARCHAR(20) NULL, 
 	[easy_wakeup] NVARCHAR(20) NULL, 

@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[Workload log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'intellectual' NOT NULL,
 	[person_id] INT NOT NULL,
 	[work_is_mentally_demanding] NVARCHAR (20) NULL,
 	[work_is_physically_demanding] NVARCHAR (20) NULL,

@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[Vitals log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[feeling_great] NVARCHAR(20) NULL, 
 	[height_cm] FLOAT NULL,

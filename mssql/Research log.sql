@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[Research log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'intellectual' NOT NULL,
 	[summary_text] NVARCHAR (4000) NOT NULL,
 	[full_text] NTEXT NULL,
 	[url] NVARCHAR(1000) NULL,

@@ -11,7 +11,7 @@ CREATE TABLE [dbo].[Continuous learning log]
 	[end_date_id] INT NULL,
 	[end_time] TIME (0) NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[name] NVARCHAR(100) NOT NUll,
 	[type] NVARCHAR (10) NOT NULL,

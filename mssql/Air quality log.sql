@@ -8,7 +8,7 @@ CREATE TABLE [dbo].[Air quality log]
 	[meta_id] INT NULL,
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'environmental' NOT NULL,
 	[location_id] INT NOT NULL, 
 	[o3_ug_m3] FLOAT NULL,
 	[no2_ug_m3] FLOAT NULL,

@@ -10,7 +10,7 @@ CREATE TABLE [dbo].[Travel log]
 	[start_time] TIME (0) NOT NULL,
 	[end_date_id] INT NOT NULL,
 	[end_time] TIME (0) NOT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'social' NOT NULL,
 	[person_id] INT NOT NULL,
 	[departure_location_id] INT NULL,
 	[destination_location_id] INT NULL,

@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[Blood log]
 	[calendar_date_id] INT NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[blood_group] NVARCHAR(3),
 	[white_blood_cells_mcl] FLOAT NULL, /* white blood cell count - measured as cells/mcL ; italian leucociti*/

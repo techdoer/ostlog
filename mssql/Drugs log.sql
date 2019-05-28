@@ -8,7 +8,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME (0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[diagnosis_id] INT NULL,
 	[name] NVARCHAR (512) NOT NULL, -- commercial name of drug taken

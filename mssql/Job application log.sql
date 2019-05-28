@@ -10,7 +10,7 @@ CREATE TABLE [dbo].[Job application log]
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NOT NULL,
 	[employer_location_id] INT NOT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'intellectual' NOT NULL,
 	[person_id] INT NOT NULL, 
 	[job_description] NVARCHAR (4000) NOT NULL,
 	[remarks] NVARCHAR (4000) NULL,

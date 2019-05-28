@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[School grades log]
 	[term_start_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[term_end_date_id] INT NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'intellectual' NOT NULL,
 	[person_id] INT NOT NULL,
 	[instructor_id] INT NULL,
 	[education_level_isced] INT NOT NULL, -- referencing International Standard Classification of Education ISCED 2011

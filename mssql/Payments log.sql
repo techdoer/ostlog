@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[Payments log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NULL,
 	[location_id] INT NULL, 
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'financial' NOT NULL,
 	[payer_id] INT NOT NULL,
 	[payee_id] INT NULL,
 	[payment_type] NVARCHAR(10) NOT NULL,

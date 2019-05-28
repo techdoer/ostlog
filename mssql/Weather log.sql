@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[Weather log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NOT NULL, 
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'environmental' NOT NULL,
 	[condition] NVARCHAR (512) NULL,
 	[temperature_celsius] FLOAT NULL,
 	[humidity_relative_%] FLOAT NULL,

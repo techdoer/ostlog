@@ -11,7 +11,7 @@ CREATE TABLE [dbo].[Diet log]
 	[end_date_id] INT NULL,
 	[end_time] TIME (0) NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[status] NVARCHAR(20) NOT NULL,
 	[diet_type] NVARCHAR (15) NOT NULL,

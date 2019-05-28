@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[Worship log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
+	[domain] NVARCHAR (15) DEFAULT 'spiritual' NOT NULL,
 	[person_id] INT NOT NULL, 
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Worship log] PRIMARY KEY CLUSTERED ([id] ASC),
