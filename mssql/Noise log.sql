@@ -1,4 +1,5 @@
 ﻿--
+
 -- Version: Each entry records noise levels  at a particular location.  Supports Azure SQL Server.
 -- URL: http://ostlog.org/schema/Weather_log.json
 --
