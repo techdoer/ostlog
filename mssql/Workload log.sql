@@ -21,6 +21,7 @@ CREATE TABLE [dbo].[Workload log]
 	[emails_received_last_week] INT NULL,
 	[emails_sent_last_week] INT NULL,
 	[meetings_attended_last_week] INT NULL,
+	[hours_worked_last_week] FLOAT NULL,
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Workloag log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Workload log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),

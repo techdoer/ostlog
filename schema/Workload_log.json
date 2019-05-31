@@ -65,6 +65,10 @@
 			"type": "integer",
 			"description": "the number of meetings attended in the last completed week of work."
 		},
+		"hours_worked_last_week": {
+			"type": "number",
+			"description": "the sum of hours worked in the last completed work week."
+		},
 		"remarks": {
 			"type": "string"
 		}
