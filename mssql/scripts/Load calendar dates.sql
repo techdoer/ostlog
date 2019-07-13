@@ -72,12 +72,14 @@ BEGIN
 	FROM @DayOfWeek
 	WHERE DOW = DATEPART(DW, @CurrentDate)
 
+
 /* Load values */
 	INSERT INTO [dbo].[Calendar dates]
 	SELECT
 		CONVERT (char(8), @CurrentDate, 112) as date_id, -- YYYYMMDD
 		CONVERT (smalldatetime, @CurrentDate, 103) as full_date, -- dd/mm/yy
 		DATEPART(DW, @CurrentDate) AS day_in_week,
+		DATENAME(weekday, @CurrentDate) AS day_in_week_name,
 		DATEPART(DD, @CurrentDate) AS day_in_month,
 		@DayInQuarter AS day_in_quarter,
 		DATEPART(DY, @CurrentDate) AS day_in_year,
@@ -88,6 +90,7 @@ BEGIN
 			WHEN DATEPART(MM, @CurrentDate) IN (3, 6, 9, 12) THEN 3
 			END AS MonthInQuarter,
 		DATEPART(MM, @CurrentDate) AS month_in_year,
+		FORMAT(@CurrentDate, 'MMMM', 'en-US') AS month_in_year_name,
 		@CurrentQuarter,
 		@CurrentYear,
 		' ' 
