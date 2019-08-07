@@ -17,6 +17,7 @@ CREATE TABLE [dbo].[Calendar dates]
 	[month_in_year_name] NVARCHAR (10),
 	[quarter_in_year] SMALLINT NOT NULL, 
 	[year] INT NOT NULL, 
+	[is_holiday] BIT NULL,
 	[remarks] NVARCHAR(2056) NULL,
 	CONSTRAINT [PK Calendar dates] PRIMARY KEY ([date_id]),
 )

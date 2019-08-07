@@ -55,6 +55,9 @@
 			"type": "integer",
 			"description": "YYYY"
 		},
+		"is_holiday": {
+			"type": "boolean"
+		},
 		"remarks": {
 			"type": "string"
 		}
