@@ -1,4 +1,4 @@
---
+﻿--
 -- Version: Each entry records a holiday date.  Supports Azure SQL Server.
 -- URL: http://ostlog.org/schema/Holidays_log.json
 --
@@ -11,6 +11,5 @@ CREATE TABLE [dbo].[Holidays log]
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Holidays log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Holidays log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Chores log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
+	CONSTRAINT [FK_Holidays log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id])
 )
