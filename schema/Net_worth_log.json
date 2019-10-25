@@ -43,6 +43,10 @@
 			"type": "number",
 			"description": "value of of real-estate investments in USD."
 		},
+		"yearly_pension_entitlement_usd": {
+			"type": "number",
+			"description": "yearly value of total pension entitlement in USD."
+		},
 		"other_assets_usd": {
 			"type": "number",
 			"description": "value of other assets in USD."
