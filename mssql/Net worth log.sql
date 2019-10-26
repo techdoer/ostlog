@@ -13,7 +13,7 @@ CREATE TABLE [dbo].[Net worth log]
 	[cash_usd] INT NULL,
 	[financial_investments_usd] INT NULL,
 	[real_estate_investments_usd] INT NULL,
-	[yearly_pension_entitlement_usd] INT NULL,
+	[pension_lump_sum_equivalent_usd] INT NULL,
 	[other_assets_usd] INT NULL,
 	[loans_usd] INT NULL,
 	[credit_card_usd] INT NULL,

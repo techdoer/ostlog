@@ -43,7 +43,7 @@
 			"type": "number",
 			"description": "value of of real-estate investments in USD."
 		},
-		"yearly_pension_entitlement_usd": {
+		"pension_lump_sum_equivalent_usd": {
 			"type": "number",
 			"description": "yearly value of total pension entitlement in USD."
 		},
