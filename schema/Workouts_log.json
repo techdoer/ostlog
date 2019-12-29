@@ -42,6 +42,10 @@
 			"type": "number",
 			"description": ""
 		},
+		"moving_minutes": {
+			"type": "number",
+			"description": ""
+		},
 		"distance_miles": {
 			"type": "number",
 			"description": ""

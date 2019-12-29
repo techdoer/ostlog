@@ -13,6 +13,7 @@ CREATE TABLE [dbo].[Workouts log]
 	[person_id] INT NOT NULL, 
 	[workout_type] NVARCHAR(20) NOT NULL, 
 	[duration_minutes] FLOAT NULL, 
+	[moving_minutes] FLOAT NULL,
 	[distance_miles] FLOAT NULL, 
 	[elevation_gain_ft] FLOAT NULL, 
 	[avg_speed_mph] FLOAT NULL, 
