@@ -12,11 +12,19 @@
 			"type": "integer",
 			"description": "reference to entry's metadata"
 		},
-		"calendar_date_id": {
+		"start_date_id": {
 			"type": "string",
 			"description": "YYYYMMDD formatted date."
 		},
-		"timestamp": {
+		"start_time": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time."
+		},
+		"end_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date."
+		},
+		"end_time": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time."
 		},
@@ -53,21 +61,21 @@
 			"type": "integer",
 			"description": "the number of people supervised/managed-by the worker."
 		},
-		"emails_received_last_week": {
+		"emails_received": {
 			"type": "integer",
-			"description": "the number of emails received in the last completed week of work."
+			"description": "the number of emails received during start and end date."
 		},
-		"emails_sent_last_week": {
+		"emails_sent": {
 			"type": "integer",
-			"description": "the number of emails sent in the last completed week of work."
+			"description": "the number of emails sent during start and end date."
 		},
-		"meetings_attended_last_week": {
+		"meetings_attended": {
 			"type": "integer",
-			"description": "the number of meetings attended in the last completed week of work."
+			"description": "the number of meetings attended during start and end date."
 		},
-		"hours_worked_last_week": {
+		"hours_worked": {
 			"type": "number",
-			"description": "the sum of hours worked in the last completed work week."
+			"description": "the sum of hours worked during start and end date."
 		},
 		"remarks": {
 			"type": "string"
