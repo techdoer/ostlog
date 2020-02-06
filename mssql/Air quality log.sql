@@ -1,4 +1,4 @@
-﻿-- 
+﻿--
 -- Version: Each entry records air-quality related measures at a particular location.  Supports Azure SQL Server.
 -- URL: http://ostlog.org/schema/Air_quality_log.json
 --
