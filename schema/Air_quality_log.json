@@ -11,7 +11,7 @@
 		},
 		"meta_id": {
 			"type": "integer",
-			"description": "reference to entry's metadata"
+			"description": "reference to entry's metadata."
 		},
 		"calendar_date_id": {
 			"type": "string",
