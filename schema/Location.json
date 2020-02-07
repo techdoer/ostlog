@@ -22,6 +22,10 @@
 			"type": "number",
 			"description": "Longitude of location"
 		},
+		"customGroup1": {
+			"type": "string",
+			"description": "for convenient grouping of multiple locations."
+		},
 		"remarks": {
 			"type": "string"
 		}
