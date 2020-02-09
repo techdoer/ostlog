@@ -48,7 +48,7 @@
 		},
 		"grade_description ": {
 			"type": "string",
-			"enum": ["excellent ", "very good ", "good ", "accepted ", "failed "],
+			"enum": ["distinguished", "excellent ", "very good ", "good ", "accepted ", "failed "],
 			"description": " "
 		},
 		"grade_point_minimum": {

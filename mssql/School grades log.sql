@@ -1,4 +1,4 @@
-﻿--
+--
 -- Version: Each entry records a grade received for a course during the specified term.  Supports Azure SQL Server.
 -- URL: http://ostlog.org/schema/School_grades.json
 --
@@ -29,6 +29,6 @@ CREATE TABLE [dbo].[School grades log]
 	CONSTRAINT [FK_School log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 
 	CHECK ([education_level_isced] >= 0 AND [education_level_isced] <= 8),
-	CHECK ([grade_desc] = 'excellent' OR [grade_desc] = 'very good' OR [grade_desc] = 'good' OR [grade_desc] = 'accepted' OR [grade_desc] = 'failed'),
+	CHECK ([grade_desc] = 'distinguished' OR [grade_desc] = 'excellent' OR [grade_desc] = 'very good' OR [grade_desc] = 'good' OR [grade_desc] = 'accepted' OR [grade_desc] = 'failed'),
 	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
 )
