@@ -1,0 +1,55 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Step_count_log.json",
+	"title": "Step count log",
+	"description": "Each entry records number of steps taken in a given time interval.",
+	"type": "object",
+	"properties": {
+
+        "id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"start_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date identifying start of interval. "
+		},
+		"start_time": {
+			"type": "string",
+			"description": "HH:MM:SS formatted time identifying start of interval."
+        },
+        "end_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date identifying end of interval. "
+		},
+		"end_time": {
+			"type": "string",
+			"description": "HH:MM:SS formatted time identifying end of interval."
+		},
+
+		"start_location_id": {
+			"type": "integer",
+			"description": "location where the meal took place."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+        },
+        
+		"person_id": {
+			"type": "integer",
+			"description": "the step taker."
+        },
+        "step_count": {
+            "type": "integer"
+        },
+        "remarks": {
+			"type": "string"
+        }
+    },
+
+    "required": ["id", "start_date_id", "start_time", "end_date_id", "end_time", "start_location_id", "domain", "person_id", "step_count"]
+}
