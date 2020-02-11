@@ -1,4 +1,4 @@
-﻿--
+--
 -- Version: Each entry records a dose of medicine taken.  Supports Azure SQL Server. 
 -- URL: http://ostlog.org/schema/Drugs_log.json
 --
@@ -29,7 +29,7 @@ CREATE TABLE [dbo].[Drugs log] (
 	[period_max] INT NULL,
 	[days_of_week] NVARCHAR (50) NULL,
 	[when] NVARCHAR (3) NULL,
-	[length_days] INT NULL,
+	[length_days] INT NOT NULL,
 
 	[was_effective] NVARCHAR (20) NULL,
 	[effectivness_remarks] NVARCHAR (2048) NULL,
