@@ -1,0 +1,25 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Sleep_duration_targets.json",
+	"title": "Sleep duration targets",
+	"description": "Each entry represents the range of sleep hours recommended at a given age in months (see https://www.sleepfoundation.org/).",
+	"type": "object",
+	"properties": {
+		"age_in_months": {
+			"type": "integer"
+		},
+		"age_category":  { 
+			"type": "string"
+		},
+		"min_sleep_hours_recommended": { 
+			"type": "integer"
+		},
+		"max_sleep_hours_recommended": {
+			"type": "integer"
+		},
+		"remarks": {
+			"type": "string"
+		}
+	},
+    "required": ["age_in_months", "min_sleep_hours_recommended", "max_sleep_hours_recommended"]
+}
