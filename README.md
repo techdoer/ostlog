@@ -1,5 +1,5 @@
 # introduction
-Use ostlog to record and track medical records, [observations of daily living](https://en.wikipedia.org/wiki/Observations_of_daily_living), personal finances, school and work performance, worship and fitness activities, and much more in an integrated and digital way. By analyzing the data, you will discover new ways to motivate individual health and well-being. 
+Use ostlog to record and track family medical records, [observations of daily living](https://en.wikipedia.org/wiki/Observations_of_daily_living), personal finances, sleep, nutrition, physical activity, school and work performance, worship activities, and much more in an integrated and digital way. By analyzing the data, you will discover new ways to motivate individual health and well-being.
 
 # principles
 ostlog is based on the following principles:
