@@ -39,6 +39,14 @@
 			"type": "integer",
 			"description ": "the person who slept."
 		},
+		"wakeup_count": {
+			"type": "integer",
+			"description": "nubmer of times person awoke froms sleep while still in bed."
+		},
+		"wakeup_minutes": {
+			"type": "integer",
+			"description": "total minutes person remained awake from sleep while still in bed."
+		},
 		"slept well": {
 			"$ref": "definitions.json#/likert_scale",
 			"description": "Commentary regarding how the person feels they slept on the specified date."
