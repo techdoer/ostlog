@@ -47,6 +47,10 @@
 			"type": "integer",
 			"description": "total minutes person remained awake from sleep while still in bed."
 		},
+		"minutes_to_sleep_avg": {
+			"type": "integer",
+			"description": "average of minutes elapsed between awakeness and falling asleep."
+		}, 
 		"slept well": {
 			"$ref": "definitions.json#/likert_scale",
 			"description": "Commentary regarding how the person feels they slept on the specified date."

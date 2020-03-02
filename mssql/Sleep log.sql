@@ -15,6 +15,7 @@ CREATE TABLE [dbo].[Sleep log]
 	[person_id] INT NOT NULL,
 	[wakeup_count] INT NULL,
 	[wakeup_minutes] INT NULL,
+	[minutes_to_sleep_avg] INT NULL,
 	[slept_well] NVARCHAR(20) NULL, 
 	[easy_wakeup] NVARCHAR(20) NULL, 
 	[remarks] NVARCHAR(2056) NULL,   
