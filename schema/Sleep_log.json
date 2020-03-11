@@ -39,15 +39,15 @@
 			"type": "integer",
 			"description ": "the person who slept."
 		},
-		"sleep_total_minutes": {
+		"sleep_minutes_total": {
 			"type": "integer",
-			"description": "the amount of time, in minutes, spent asleep during the sleep episode."
+			"description": "the total amount of time, in minutes, spent asleep during the sleep episode."
 		},
 		"awakening_count": {
 			"type": "integer",
 			"description": "the number of times a person awoke from sleep after sleep onset and before final awakening."
 		},
-		"awakening_total_minutes": {
+		"awakening_minutes_total": {
 			"type": "integer",
 			"description": "total time in minutes that a person remained awake after sleep onset and before final awakening."
 		},
