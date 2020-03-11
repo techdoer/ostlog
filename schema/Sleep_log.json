@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Sleep_log.json",
 	"title": "Sleep log",
-	"description": "Each entry records daily sleep time.",
+	"description": "Each entry records one sleep episode which can be the main sleep event at night or a nap.",
 	"type": "object",
 	"properties": {
 		"id": {
@@ -14,19 +14,19 @@
 		},
 		"in_bed_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date when person went to bed."
+			"description": "YYYYMMDD formatted date when person went to bed for the main sleep event at night or a nap."
 		},
 		"in_bed_timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time when person went to bed."
+			"description": "HH:MM:SS formatted time when person went to bed for the main sleep event at night or a nap."
 		},
 		"out_of_bed_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date when person got up from bed."
+			"description": "YYYYMMDD formatted date when person got up from bed for the main sleep event at night or a nap."
 		},
 		"out_of_bed_timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time when person got up from bed."
+			"description": "HH:MM:SS formatted time when person got up from bed for the main sleep event at night or a nap."
 		},
 		"location_id": {
 			"type": "integer",
@@ -39,17 +39,17 @@
 			"type": "integer",
 			"description ": "the person who slept."
 		},
-		"wakeup_count": {
+		"awakening_count": {
 			"type": "integer",
-			"description": "nubmer of times person awoke froms sleep while still in bed."
+			"description": "the number of times a person awoke from sleep after sleep onset and before final awakening."
 		},
-		"wakeup_minutes": {
+		"awakening_duration": {
 			"type": "integer",
-			"description": "total minutes person remained awake from sleep while still in bed."
+			"description": "total time in minutes that a person remained awake after sleep onset and before final awakening."
 		},
-		"minutes_to_sleep_avg": {
+		"sleep_onset_duration_avg": {
 			"type": "integer",
-			"description": "average of minutes elapsed between awakeness and falling asleep."
+			"description": "average of minutes elapsed in the transition from wakefulness to falling asleep."
 		}, 
 		"slept well": {
 			"$ref": "definitions.json#/likert_scale",

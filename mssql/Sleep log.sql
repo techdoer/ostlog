@@ -1,4 +1,3 @@
---
 -- Version: Each entry records sleep activity on a day in time.  Supports Azure SQL Server.
 -- URL: http://ostlog.org/schema/Sleep_log.json
 --
@@ -13,9 +12,9 @@ CREATE TABLE [dbo].[Sleep log]
 	[location_id] INT NULL,
 	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
-	[wakeup_count] INT NULL,
-	[wakeup_minutes] INT NULL,
-	[minutes_to_sleep_avg] INT NULL,
+	[awakening_count] INT NULL,
+	[awakening_duration] INT NULL,
+	[sleep_onset_duration_avg] INT NULL,
 	[slept_well] NVARCHAR(20) NULL, 
 	[easy_wakeup] NVARCHAR(20) NULL, 
 	[remarks] NVARCHAR(2056) NULL,   
