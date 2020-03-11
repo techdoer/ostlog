@@ -39,15 +39,19 @@
 			"type": "integer",
 			"description ": "the person who slept."
 		},
+		"sleep_total_minutes": {
+			"type": "integer",
+			"description": "the amount of time, in minutes, spent asleep during the sleep episode."
+		},
 		"awakening_count": {
 			"type": "integer",
 			"description": "the number of times a person awoke from sleep after sleep onset and before final awakening."
 		},
-		"awakening_duration": {
+		"awakening_total_minutes": {
 			"type": "integer",
 			"description": "total time in minutes that a person remained awake after sleep onset and before final awakening."
 		},
-		"sleep_onset_duration_avg": {
+		"sleep_onset_duration_minutes_avg": {
 			"type": "integer",
 			"description": "average of minutes elapsed in the transition from wakefulness to falling asleep."
 		}, 
