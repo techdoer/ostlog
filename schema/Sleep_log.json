@@ -43,6 +43,14 @@
 			"type": "integer",
 			"description": "the total amount of time, in minutes, spent asleep during sleep episode."
 		},
+		"light_sleep_percentage": {
+			"type": "number",
+			"description": "the percentage of total sleep time that was spent in light (REM) sleep during sleep episode."
+		},
+		"deep_sleep_percentage": {
+			"type": "number",
+			"description": "the percentage of total sleep time that was spent in deep (NREM) sleep during sleep episode."
+		},
 		"awakening_count": {
 			"type": "integer",
 			"description": "the number of times a person awoke from sleep after onset and before final awakening in sleep episode."
@@ -51,10 +59,6 @@
 			"type": "integer",
 			"description": "total time in minutes that a person remained awake after sleep onset and before final awakening in sleep episode."
 		},
-		"sleep_onset_duration_minutes_avg": {
-			"type": "integer",
-			"description": "average of elapsed minutes in the transition from wakefulness to falling asleep in sleep episode."
-		}, 
 		"slept well": {
 			"$ref": "definitions.json#/likert_scale",
 			"description": "Commentary regarding the quality of sleep in sleep episode."
