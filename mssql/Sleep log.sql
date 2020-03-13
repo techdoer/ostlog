@@ -1,5 +1,5 @@
 --
--- URL: http://ostlog.org/schema/Sleep_log.json
+-- URL: https://github.com/techdoer/ostlog/blob/master/schema/Sleep_log.json
 --
 CREATE TABLE [dbo].[Sleep log]
 (
@@ -12,9 +12,9 @@ CREATE TABLE [dbo].[Sleep log]
 	[location_id] INT NULL,
 	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
+	[sleep_minutes_total] INT NULL,
 	[light_sleep_percentage] FLOAT NULL,
 	[deep_sleep_percentage] FLOAT NULL,
-	[sleep_minutes_total] INT NULL,
 	[awakening_count] INT NULL,
 	[awakening_minutes_total] INT NULL,
 	[slept_well] NVARCHAR(20) NULL, 
