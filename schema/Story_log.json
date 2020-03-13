@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Story_log.json",
 	"title": "Story log",
-	"description": "Each entry provides a narrative detailing a particular event or outcome in time.",
+	"description": "Each entry provides summary text describing a single day or period of time.",
 	"type": "object",
 	"properties": {
 
@@ -13,32 +13,44 @@
 			"type": "integer",
 			"description": "reference to entry's metadata"
 		},
-		"calendar_date_id": {
+		"start_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the story."
+			"description": "YYYYMMDD formatted date of a single day or start of a time period."
 		},
-		"timestamp": {
+		"start_time": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the story."
+			"description": "HH:MM:SS formatted time in a single day or start of a time period."
 		},
+		"end_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the end of a time period."
+		},
+		"end_time": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the end of a time period."
+		},	
 		"location_id": {
 			"type": "integer",
-			"description": "location where person slept."
+			"description": "location where related to day or time period."
 		},	
 		"domain ": {
 			"$ref": "definitions.json#/domain"
 		},
 		"person_id ": {
 			"type": "integer",
-			"description ": "the person who is the subject of the story."
+			"description ": "tha person related to the single day or time period being described."
 		},
-		"text": {
+		"title": {
 			"type": "string",
-			"description": ""
+			"description": "a title describing observations or events during a single day or time period."
+		},
+		"text_summary": {
+			"type": "string",
+			"description": "a narrative description of observations or events during a single day or time period."
 		},
 		"remarks": {
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "text"]
+	"required": ["id", "start_date_id", "start_time", "location_id", "domain", "person_id", "title", "text_summary"]
 }
