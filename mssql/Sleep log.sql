@@ -1,4 +1,4 @@
--- Version: Each entry records sleep activity on a day in time.  Supports Azure SQL Server.
+--
 -- URL: http://ostlog.org/schema/Sleep_log.json
 --
 CREATE TABLE [dbo].[Sleep log]
