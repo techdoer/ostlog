@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Sleep_log.json",
 	"title": "Sleep log",
-	"description": "Each entry records one sleep episode which can be the main sleep event at night or an afternoon nap.",
+	"description": "Each entry records one sleep episode that can be the main sleep event at night or an afternoon nap.",
 	"type": "object",
 	"properties": {
 		"id": {
