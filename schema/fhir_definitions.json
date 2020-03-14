@@ -1,17 +1,12 @@
 {
 	"fhir_definitions": {
-	
-		"fhir_timing": { 
-
+		"fhir_timing": {
 			"$schema": "http://json-schema.org/draft-04/schema#",
 			"id": "https://github.com/techdoer/ostlog/blob/master/schema/fhir_definitions.json",
 			"title": "FHIR Timing",
 			"description": "A timing schedule that specifies an event that may occur multiple times as defined by FHIR Timing https://www.hl7.org/fhir/datatypes.html#Timing.",
-	
 			"type": "object",
-			
 			"properties": {
-			
 				"bounds_range_start_date": {
 					"type": "integer",
 					"description": "date when the event starts."
@@ -51,7 +46,7 @@
 				"frequency": {
 					"type": "integer",
 					"description": "event occurs frequency times per period"
-				}
+				},
 				"frequency_max": {
 					"type": "integer",
 					"description": "event occurs frequency_max times per period"
@@ -79,19 +74,25 @@
 				"when": {
 					"type": "integer",
 					"description": ""
-				}
+				},
 				"offset": {
 					"type": "integer",
 					"description": ""
 				}
 			}
 		},
-		
 		"time_units": {
-
-				"type": "string",
-				"enum": ["s", "min", "h", "d", "wk", "mo", "a"],
-				"description": "unit of measure for the duration."
+			"type": "string",
+			"enum": [
+				"s",
+				"min",
+				"h",
+				"d",
+				"wk",
+				"mo",
+				"a"
+			],
+			"description": "unit of measure for the duration."
 		}
 	}
 }
