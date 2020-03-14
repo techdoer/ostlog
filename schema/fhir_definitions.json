@@ -1,5 +1,97 @@
 {
-  "fhir_definitions": {
-  
-  }
+	"fhir_definitions": {
+	
+		"fhir_timing": { 
+
+			"$schema": "http://json-schema.org/draft-04/schema#",
+			"id": "https://github.com/techdoer/ostlog/blob/master/schema/fhir_definitions.json",
+			"title": "FHIR Timing",
+			"description": "A timing schedule that specifies an event that may occur multiple times as defined by FHIR Timing https://www.hl7.org/fhir/datatypes.html#Timing.",
+	
+			"type": "object",
+			
+			"properties": {
+			
+				"bounds_range_start_date": {
+					"type": "integer",
+					"description": "date when the event starts."
+				},
+				"bounds_range_start_time": {
+					"type": "integer",
+					"description": "time when the event starts."
+				},
+				"bounds_range_end_date": {
+					"type": "integer",
+					"description": "date when the event ends."
+				},
+				"bounds_range_end_time": {
+					"type": "integer",
+					"description": "time when the event ends."
+				},
+				"count": {
+					"type": "integer",
+					"description": "number of times to repeat"
+				},
+				"count_max": {
+					"type": "integer",
+					"description": "maximum number of times to repeat"
+				},
+				"duration": {
+					"type": "number",
+					"description": "how long when it happens"
+				},
+				"duration_max": {
+					"type": "number",
+					"description": "how long when it happens (max)"
+				},
+				"duration_units": {
+					"$ref": "#/fhir_definitions/time_units",
+					"description": "units of time"
+				},
+				"frequency": {
+					"type": "integer",
+					"description": "event occurs frequency times per period"
+				}
+				"frequency_max": {
+					"type": "integer",
+					"description": "event occurs frequency_max times per period"
+				},
+				"period": {
+					"type": "integer",
+					"description": "event occurs frequency times per period"
+				},
+				"period_max": {
+					"type": "integer",
+					"description": "upper limit of period (e.g. 3-4 hours)"
+				},
+				"period_unit": {
+					"$ref": "#/fhir_definitions/time_units",
+					"description": "units of time"
+				},
+				"day_of_week": {
+					"type": "integer",
+					"description": ""
+				},
+				"time_of_day": {
+					"type": "integer",
+					"description": ""
+				},
+				"when": {
+					"type": "integer",
+					"description": ""
+				}
+				"offset": {
+					"type": "integer",
+					"description": ""
+				}
+			}
+		},
+		
+		"time_units": {
+
+				"type": "string",
+				"enum": ["s", "min", "h", "d", "wk", "mo", "a"],
+				"description": "unit of measure for the duration."
+		}
+	}
 }
