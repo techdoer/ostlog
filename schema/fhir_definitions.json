@@ -64,20 +64,20 @@
 					"description": "units of time"
 				},
 				"day_of_week": {
-					"type": "integer",
+					"$ref": "#/fhir_definitions/day_of_week",
 					"description": ""
 				},
 				"time_of_day": {
-					"type": "integer",
-					"description": ""
+					"type": "string",
+					"description": "HH:MM:SS"
 				},
 				"when": {
 					"type": "integer",
-					"description": ""
+					"description": "code for time period of occurance"
 				},
 				"offset": {
 					"type": "integer",
-					"description": ""
+					"description": "minutes from event (before or after)"
 				}
 			}
 		},
@@ -93,6 +93,19 @@
 				"a"
 			],
 			"description": "unit of measure for the duration."
+		},
+		"day_of_week": {
+			"type": "string",
+			"enum": [
+				"mon",
+				"tue",
+				"wed",
+				"thu",
+				"fri",
+				"sat",
+				"sun"
+			],
+			"description": "unit of measure for the day of the week."
 		}
 	}
 }
