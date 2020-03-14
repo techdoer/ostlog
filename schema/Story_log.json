@@ -33,9 +33,6 @@
 			"type": "integer",
 			"description": "location where related to day or time period."
 		},	
-		"domain ": {
-			"$ref": "definitions.json#/domain"
-		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "tha person related to the single day or time period being described."
