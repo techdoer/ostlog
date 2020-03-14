@@ -10,7 +10,6 @@ CREATE TABLE [dbo].[Story log]
 	[end_date_id] INT NULL, 
 	[end_time] TIME(0) NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) NOT NULL,
 	[person_id] INT NOT NULL, 
 	[title] NVARCHAR (512) NULL,
 	[text_summary] NVARCHAR(4000) NULL, 
