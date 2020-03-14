@@ -49,5 +49,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "start_date_id", "start_time", "location_id", "domain", "person_id", "title", "text_summary"]
+	"required": ["id", "start_date_id", "start_time", "location_id", "person_id", "title", "text_summary"]
 }
