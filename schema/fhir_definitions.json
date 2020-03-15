@@ -1,12 +1,16 @@
 {
 	"fhir_definitions": {
-		"fhir_timing": {
+		"timing": {
 			"$schema": "http://json-schema.org/draft-04/schema#",
 			"id": "https://github.com/techdoer/ostlog/blob/master/schema/fhir_definitions.json",
 			"title": "FHIR Timing",
 			"description": "A timing schedule that specifies an event that may occur multiple times as defined by FHIR Timing https://www.hl7.org/fhir/datatypes.html#Timing.",
 			"type": "object",
 			"properties": {
+				"bounds_duration_minutes": {
+					"type": "integer",
+					"description": "duration of the event in minutes."
+				},
 				"bounds_range_start_date": {
 					"type": "integer",
 					"description": "date when the event starts."
@@ -60,20 +64,20 @@
 					"description": "upper limit of period (e.g. 3-4 hours)"
 				},
 				"period_unit": {
-					"$ref": "#/fhir_definitions/time_units",
+					"$ref": "#/fhir_definitins/time_units",
 					"description": "units of time"
 				},
 				"day_of_week": {
-					"$ref": "#/fhir_definitions/day_of_week",
-					"description": ""
+					"$ref": "string",
+					"description": "CSV values from day_of_week to allow for multiple values as required by fhir."
 				},
 				"time_of_day": {
 					"type": "string",
 					"description": "HH:MM:SS"
 				},
 				"when": {
-					"type": "integer",
-					"description": "code for time period of occurance"
+					"type": "string",
+					"description": "code for time period of occurance as defined in http://hl7.org/fhir/event-timing"
 				},
 				"offset": {
 					"type": "integer",
