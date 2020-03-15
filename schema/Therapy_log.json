@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Therapy_log.json",
 	"title": "Therapy log",
-	"description": "Each entry describes an instance of a therapy treatment.",
+	"description": "Each entry describes theraputic action taken or to be taken over a period of time.",
 	"type": "object",
 	"properties": {
 		"id": {
@@ -47,9 +47,9 @@
 			"type": "string",
 			"description": "SNOWMED CT ID referencing a surgical procedure"
 		},
-		"duration_minutes": {
-			"type": "integer",
-			"description": "duration in minutes for the therapy treatment" 
+		"timing": {
+			"$ref": "fhir_definitions.json#/timing",
+			"description": "when the therapy should take place"
 		},
 		"was_effective": {
 			"$ref": "definitions.json#/likert_scale"
@@ -61,5 +61,15 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "therapy_name", "therapy_sctid", "was_effective"]
+	"required": [
+		"id",
+		"calendar_date_id",
+		"timestamp",
+		"location_id",
+		"domain",
+		"person_id",
+		"therapy_name",
+		"therapy_sctid",
+		"was_effective"
+	]
 }
