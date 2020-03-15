@@ -14,22 +14,22 @@
 		},
 		"calendar_date_id": {
 			"type": "string",
-			"description": "YYYYMMDD formatted date of the therapy."
+			"description": "YYYYMMDD formatted date when therapy was received or when plan was established."
 		},
 		"timestamp": {
 			"type ": "string ",
-			"description": "HH:MM:SS formatted time of the therapy."
+			"description": "HH:MM:SS formatted time when therapy was received or when plan was established"
 		},
 		"location_id": {
 			"type": "integer",
-			"description": "location where therapy carried out."
+			"description": "location where therapy was received or will be carried out."
 		},
 		"domain": {
 			"$ref": "definitions.json#/domain"
 		},
 		"person_id": {
 			"type": "integer",
-			"description ": "the person to who underwent the therapy treatment."
+			"description ": "the person to who underwent or will undergo the therapy treatment."
 		},
 		"body_site_code": {
 			"type": "integer",
@@ -45,7 +45,7 @@
 		},
 		"therapy_sctid": {
 			"type": "string",
-			"description": "SNOWMED CT ID referencing a surgical procedure"
+			"description": "SNOWMED CT ID referencing a procedure. See https://www.hl7.org/fhir/valueset-procedure-code.html"
 		},
 		"timing": {
 			"$ref": "fhir_definitions.json#/timing",
