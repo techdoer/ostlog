@@ -16,11 +16,11 @@ CREATE TABLE [dbo].[Therapy log]
 	[therapy_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a procedure
 	
 	-- begin columns based on FHIR Timing type - an event that may occur multiple times 
-	[boundary_duration_minutes] INT NULL,
-	[boundary_range_start_date] INT NULL,
-	[boundary_range_start_time] TIME(0) NULL,
-	[boundary_range_end_date] INT NULL,
-	[boundary_range_end_time] TIME(0) NULL,
+	[bounds_duration_minutes] INT NULL,
+	[bounds_range_start_date] INT NULL,
+	[bounds_range_start_time] TIME(0) NULL,
+	[bounds_range_end_date] INT NULL,
+	[bounds_range_end_time] TIME(0) NULL,
 	[count] INT NULL,
 	[count_max] INT NULL,
 	[duration] FLOAT NULL,
@@ -49,8 +49,8 @@ CREATE TABLE [dbo].[Therapy log]
 	CONSTRAINT [FK_Therapy log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 
 	-- start FHIR type constraints 
-	CONSTRAINT [FK_Therapy log-Calendar_date2] FOREIGN KEY ([boundary_range_start_date]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Therapy log-Calendar_date3] FOREIGN KEY ([boundary_range_end_date]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Therapy log-Calendar_date2] FOREIGN KEY ([bounds_range_start_date]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Therapy log-Calendar_date3] FOREIGN KEY ([bounds_range_end_date]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CHECK ([duration_units] = 's' OR [duration_units] = 'min' OR [duration_units] = 'h' OR [duration_units] = 'd' OR [duration_units] = 'wk' OR [duration_units] = 'mo' OR [duration_units] = 'a'),
 	CHECK ([period_units] = 's' OR [period_units] = 'min' OR [period_units] = 'h' OR [period_units] = 'd' OR [period_units] = 'wk' OR [period_units] = 'mo' OR [period_units] = 'a'),  
 	-- end FHIR type constraints 
