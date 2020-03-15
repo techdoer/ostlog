@@ -16,6 +16,7 @@ CREATE TABLE [dbo].[Therapy log]
 	[therapy_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a procedure
 	
 	-- begin columns based on FHIR Timing type - an event that may occur multiple times 
+	[boundary_duration_minutes] INT NULL,
 	[boundary_range_start_date] INT NULL,
 	[boundary_range_start_time] TIME(0) NULL,
 	[boundary_range_end_date] INT NULL,
