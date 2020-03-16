@@ -12,7 +12,7 @@
 					"event_date_id": {
 						"type": "integer",
 						"description": "YYYMMDD when the event occurs"
-					}
+					},
 					"event_time": {
 						"type": "string",
 						"description": "HH:MM:SS when the event occurs"
