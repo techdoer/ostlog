@@ -12,9 +12,9 @@
 			"type": "integer",
 			"description": "reference to entry's metadata"
 		},
-		"calendar_date_id": {
-			"type": "string",
-			"description": "YYYYMMDD formatted date of the surgery."
+		"schedule_id": {
+			"type": "integer",
+			"description": "Procedure's timing schedule."
 		},
 		"timestamp": {
 			"type ": "string ",
@@ -66,5 +66,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "procedure_name", "procedure_sctid", "was_effective"]
+	"required": ["id", "schedule_id", "timestamp", "location_id", "domain", "person_id", "procedure_name", "procedure_sctid", "was_effective"]
 }
