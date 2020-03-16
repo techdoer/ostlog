@@ -1,7 +1,7 @@
 -- 
--- URL: https://github.com/techdoer/ostlog/blob/master/schema/Timing_schedules.json
+-- URL: https://github.com/techdoer/ostlog/blob/master/schema/Timing_schedule.json
 --
-CREATE TABLE [dbo].[Timing schedules]
+CREATE TABLE [dbo].[Timing schedule]
 (
 
 	[id] INT IDENTITY (1,1) NOT NULL,
