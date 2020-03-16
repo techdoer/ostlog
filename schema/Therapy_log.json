@@ -56,7 +56,6 @@
 	"required": [
 		"id",
 		"schedule_id",
-		"timestamp",
 		"location_id",
 		"domain",
 		"person_id",
