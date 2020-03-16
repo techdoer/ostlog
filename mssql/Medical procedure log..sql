@@ -1,12 +1,11 @@
-﻿--
--- Version: A simple fact table to record medical procedures referencing SNOWMED CT procedure identifiers. 
--- URL: http://ostlog.org/schema/Medical_procedure_log.json
+--
+-- URL: https://github.com/techdoer/ostlog/blob/master/schema/Medical_procedure.json
 --
 CREATE TABLE [dbo].[Medical procedure log]
 (
 	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
-	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
+	[schedule_id] INT NOT NULL,
 	[location_id] INT NULL,
 	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
@@ -20,7 +19,7 @@ CREATE TABLE [dbo].[Medical procedure log]
 	[effectivness_remarks] NVARCHAR (2048) NULL,
 	[remarks] NVARCHAR(2056) NULL,   
 	CONSTRAINT [PK_Medical procedure log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Medical procedure log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Medical procedure log-Timing schedule] FOREIGN KEY ([schedule_id]) REFERENCES [dbo].[Timing schedule] ([id]),
 	CONSTRAINT [FK_Medical procedure log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Medical procedure log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	CONSTRAINT [FK_Medical procedure log-Diagnosis log] FOREIGN KEY ([diagnosis_id]) REFERENCES [dbo].[Diagnosis log] ([id]),
