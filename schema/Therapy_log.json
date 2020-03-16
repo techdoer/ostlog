@@ -12,7 +12,7 @@
 			"type": "integer",
 			"description": "reference to entry's metadata"
 		},
-		"schedule_id: {
+		"schedule_id": {
 			"type": "integer",
 			"description": "reference to therapy's timings."
 		},
