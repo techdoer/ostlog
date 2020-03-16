@@ -29,7 +29,7 @@ CREATE TABLE [dbo].[Timing schedule]
 	[repeat_period] INT NULL, 
 	[repeat_period_max] INT NULL,
 	[repeat_period_units] NVARCHAR(3) NULL, 
-	[repeat_day_of_week] NVARCHAR(3) NULL, 
+	[repeat_day_of_week] NVARCHAR(30) NULL, 
 	[repeat_time_of_day] TIME(0) NULL,
 	[repeat_when] NVARCHAR(10),
 	[repeat_offset] INT NULL,  
