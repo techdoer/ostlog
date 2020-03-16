@@ -1,131 +1,75 @@
 {
-	"fhir_definitions": {
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Therapy_log.json",
+	"title": "Therapy log",
+	"description": "Each entry describes theraputic action taken or to be taken over a period of time.",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date when therapy was received or when plan was established."
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time when therapy was received or when plan was established"
+		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where therapy was received or will be carried out."
+		},
+		"domain": {
+			"$ref": "definitions.json#/domain"
+		},
+		"person_id": {
+			"type": "integer",
+			"description ": "the person to who underwent or will undergo the therapy treatment."
+		},
+		"body_site_code": {
+			"type": "integer",
+			"description": "This enumeration includes all codes from FHIR's body-site definition http://hl7.org/fhir/ValueSet/body-site."
+		},
+		"diagnosis_id": {
+			"type": "integer",
+			"description": "Reference to the diagnosis requiring the therapy treatment."
+		},
+		"therapy_name": {
+			"type": "string",
+			"description": "A textual name of the therapy e.g. massage."
+		},
+		"therapy_sctid": {
+			"type": "string",
+			"description": "SNOWMED CT ID referencing a procedure. See https://www.hl7.org/fhir/valueset-procedure-code.html"
+		},
 		"timing": {
-			"$schema": "http://json-schema.org/draft-04/schema#",
-			"id": "https://github.com/techdoer/ostlog/blob/master/schema/fhir_definitions.json",
-			"title": "FHIR Timing",
-			"description": "A timing schedule that specifies an event that occured or may occur multiple times as defined by FHIR Timing https://www.hl7.org/fhir/datatypes.html#Timing.",
-			"type": "object",
-			"properties": {
-				"event": {
-					"event_date_id": {
-						"type": "integer",
-						"description": "YYYMMDD when the event occurs"
-					},
-					"event_time": {
-						"type": "string",
-						"description": "HH:MM:SS when the event occurs"
-					}
-				},
-				"repeat": {
-					"bounds_duration_minutes": {
-						"type": "integer",
-						"description": "duration of the event in minutes."
-					},
-					"bounds_range_start_date": {
-						"type": "integer",
-						"description": "date when the event starts."
-					},
-					"bounds_range_start_time": {
-						"type": "integer",
-						"description": "time when the event starts."
-					},
-					"bounds_range_end_date": {
-						"type": "integer",
-						"description": "date when the event ends."
-					},
-					"bounds_range_end_time": {
-						"type": "integer",
-						"description": "time when the event ends."
-					},
-					"count": {
-						"type": "integer",
-						"description": "number of times to repeat"
-					},
-					"count_max": {
-						"type": "integer",
-						"description": "maximum number of times to repeat"
-					},
-					"duration": {
-						"type": "number",
-						"description": "how long when it happens"
-					},
-					"duration_max": {
-						"type": "number",
-						"description": "how long when it happens (max)"
-					},
-					"duration_units": {
-						"$ref": "#/fhir_definitions/time_units",
-						"description": "units of time"
-					},
-					"frequency": {
-						"type": "integer",
-						"description": "event occurs frequency times per period"
-					},
-					"frequency_max": {
-						"type": "integer",
-						"description": "event occurs frequency_max times per period"
-					},
-					"period": {
-						"type": "integer",
-						"description": "event occurs frequency times per period"
-					},
-					"period_max": {
-						"type": "integer",
-						"description": "upper limit of period (e.g. 3-4 hours)"
-					},
-					"period_unit": {
-						"$ref": "#/fhir_definitins/time_units",
-						"description": "units of time"
-					},
-					"day_of_week": {
-						"$ref": "string",
-						"description": "CSV values from day_of_week to allow for multiple values as required by fhir."
-					},
-					"time_of_day": {
-						"type": "string",
-						"description": "HH:MM:SS"
-					},
-					"when": {
-						"type": "string",
-						"description": "code for time period of occurance as defined in http://hl7.org/fhir/event-timing"
-					},
-					"offset": {
-						"type": "integer",
-						"description": "minutes from event (before or after)"
-					}
-				},
-				"code": {
-					"type": "string",
-					"description": "BID | TID | QID | AM | PM | QD | QOD | + and other values defined here: https://www.hl7.org/fhir/v3/GTSAbbreviation/cs.html"
-				}
-			}
+			"$ref": "fhir_definitions.json#/timing",
+			"description": "when the therapy should take place"
 		},
-		"time_units": {
-			"type": "string",
-			"enum": [
-				"s",
-				"min",
-				"h",
-				"d",
-				"wk",
-				"mo",
-				"a"
-			],
-			"description": "unit of measure for the duration."
+		"was_effective": {
+			"$ref": "definitions.json#/likert_scale"
 		},
-		"day_of_week": {
-			"type": "string",
-			"enum": [
-				"mon",
-				"tue",
-				"wed",
-				"thu",
-				"fri",
-				"sat",
-				"sun"
-			],
-			"description": "unit of measure for the day of the week."
+		"effective_remarks": {
+			"type": "string"
+		},
+		"remarks": {
+			"type": "string"
 		}
-	}
+	},
+	"required": [
+		"id",
+		"calendar_date_id",
+		"timestamp",
+		"location_id",
+		"domain",
+		"person_id",
+		"therapy_name",
+		"therapy_sctid",
+		"was_effective"
+	]
 }
