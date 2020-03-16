@@ -6,10 +6,7 @@ CREATE TABLE [dbo].[Diet log]
 (
 	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
-	[start_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
-	[start_time] TIME (0) NOT NULL,
-	[end_date_id] INT NULL,
-	[end_time] TIME (0) NULL,
+	[schedule_id] INT NOT NULL,
 	[location_id] INT NULL,
 	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
@@ -22,8 +19,7 @@ CREATE TABLE [dbo].[Diet log]
 	[remarks] NVARCHAR(4000) NULL,   
 
 	CONSTRAINT [PK_Diet log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Diet log-Calendar_date2] FOREIGN KEY ([start_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
-	CONSTRAINT [FK_Diet log-Calendar_date3] FOREIGN KEY ([end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
+	CONSTRAINT [FK_Diet log-Timing schedule] FOREIGN KEY ([schedule_id]) REFERENCES [dbo].[Calendar dates] ([id]),
 	CONSTRAINT [FK_Diet log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Diet log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	CONSTRAINT [FK_Diet log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
