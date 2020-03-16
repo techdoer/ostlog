@@ -1,6 +1,5 @@
 --
--- Version: Each entry records a dose of medicine taken.  Supports Azure SQL Server. 
--- URL: http://ostlog.org/schema/Drugs_log.json
+-- URL: https://github.com/techdoer/ostlog/blob/master/schema/Drugs_log.json
 --
 CREATE TABLE [dbo].[Drugs log] (
 	[id] INT IDENTITY (1,1) NOT NULL,
