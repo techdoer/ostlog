@@ -55,5 +55,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "diet_type", "food_item_id"]
+	"required": ["id", "schedule_id", "location_id", "domain", "person_id", "diet_type", "food_item_id"]
 }
