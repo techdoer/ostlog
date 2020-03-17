@@ -1,7 +1,7 @@
 {
 	"Timing schedule": {
 		"$schema": "http://json-schema.org/draft-04/schema#",
-		"id": "https://ostlog.org/schemas/Timing_schedule.json",
+		"id": "https://ostlog.org/schema/Timing_schedule.json",
 		"title": "Timing schedule",
 		"description": "A timing schedule that specifies an event that occured or may occur multiple times as defined by FHIR Timing https://www.hl7.org/fhir/datatypes.html#Timing.",
 		"type": "object",
