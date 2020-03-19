@@ -31,11 +31,11 @@
 		},	
 		"location_id": {
 			"type": "integer",
-			"description": "location related to storyline."
+			"description": "geographic location related to storyline."
 		},	
 		"person_id ": {
 			"type": "integer",
-			"description ": "tha person related to storyline."
+			"description ": "the person related to storyline."
 		},
 		"title": {
 			"type": "string",
