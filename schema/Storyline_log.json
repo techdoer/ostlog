@@ -1,0 +1,53 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Storyline_log.json",
+	"title": "Storyline log",
+	"description": "Each entry summarizes an event over a period of time.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"start_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted start date of a storyline."
+		},
+		"start_time": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted start time of a storyline."
+		},
+		"end_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted end date of a storyline."
+		},
+		"end_time": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted end time of a storyline."
+		},	
+		"location_id": {
+			"type": "integer",
+			"description": "location related to storyline."
+		},	
+		"person_id ": {
+			"type": "integer",
+			"description ": "tha person related to storyline."
+		},
+		"title": {
+			"type": "string",
+			"description": "a title describing the storyline."
+		},
+		"text_summary": {
+			"type": "string",
+			"description": "a narrative summary of the storyline."
+		},
+		"remarks": {
+			"type": "string"
+		}
+	},
+	"required": ["id", "start_date_id", "start_time", "location_id", "person_id", "title", "text_summary"]
+}
