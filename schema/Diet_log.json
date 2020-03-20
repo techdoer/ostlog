@@ -38,6 +38,10 @@
 			"enum": ["vegetarian", "dairy-free", "nut-free", "gluten-free", "vegan", "halal", "kosher", "other"],
 			"description": "from FHIR's https://www.hl7.org/fhir/valueset-encounter-diet.html"
 		},
+		"summary" {
+			"type": "string", 
+			"description": "a brief summary of the diet."
+		},
 		"food_item_id": { 
 			"type": "integer",
 			"description": "FHIR's valueset covering food https://www.hl7.org/fhir/valueset-food-type.html."
