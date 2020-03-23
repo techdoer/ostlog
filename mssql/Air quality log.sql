@@ -19,7 +19,7 @@ CREATE TABLE [dbo].[Air quality log]
 	[pm10_ug_m3] FLOAT NULL,
 	[pm25_ug_m3] FLOAT NULL,
 	[pm1_ug_m3] FLOAT NULL,
-	[usaqi] FLOAT NULL,
+	[aqi] FLOAT NULL,
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Air quality log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Air quality log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),

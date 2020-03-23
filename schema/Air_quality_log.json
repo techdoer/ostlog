@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Air_quality_log.json",
 	"title": "Air quality log",
-	"description": "Each entry records an air-quality related measure for a particular location.",
+	"description": "Each entry records air-quality related measures for a particular location.",
 	"type": "object",
 	"properties": {
 
@@ -64,9 +64,9 @@
 			"type": "number",
 			"description": "particulate matter 1 micrometers ug/m^3"
 		},
-		"usaqi": {
+		"aqi": {
 			"type": "number",
-			"description": "US air quality index"
+			"description": "Air quality index"
 		},
 		"remarks": {
 			"type": "string"
