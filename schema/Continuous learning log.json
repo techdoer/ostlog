@@ -12,21 +12,9 @@
 			"type": "integer",
 			"description": "reference to entry's metadata"
 		},
-		"start_date_id": {
-			"type": "string",
-			"description": "YYYYMMDD formatted date when activity started."
-		},
-		"start_time": {
-			"type": "string",
-			"description": "HH:MM:SS formatted time when activity started."
-		},
-		"end_date_id": {
-			"type": "string",
-			"description": "YYYYMMDD formatted date when activity completed."
-		},
-		"end_time": {
-			"type": "string",
-			"description": "HH:MM:SS formatted time when activity completed."
+		"schedule_id": {
+			"type": "integer",
+			"description": "reference to learning schedule."
 		},
 		"location_id": {
 			"type": "integer",
@@ -60,5 +48,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "start_date_id", "start_time", "end_date_id", "end_time", "location_id", "domain", "person_id", "name", "type", "status"]
+	"required": [ "id", "schedule_id", "location_id", "domain", "person_id", "name", "type", "status" ]
 }
