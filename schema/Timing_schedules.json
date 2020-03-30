@@ -54,7 +54,7 @@
 					"description": "how long when it happens (max)"
 				},
 				"duration_units": {
-					"$ref": "#/fhir_definitions/time_units",
+					"$ref": "#/time_units",
 					"description": "units of time"
 				},
 				"frequency": {
@@ -74,7 +74,7 @@
 					"description": "upper limit of period (e.g. 3-4 hours)"
 				},
 				"period_unit": {
-					"$ref": "#/fhir_definitins/time_units",
+					"$ref": "#/time_units",
 					"description": "units of time"
 				},
 				"day_of_week": {
