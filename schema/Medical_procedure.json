@@ -25,7 +25,7 @@
 			"description": "location where procedure carried out."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"person_id": {
 			"type": "integer",
@@ -57,7 +57,7 @@
 			"description": "notes and observations from medical profesional regarding the procedure and results"
 		},
 		"was_effective": {
-			"$ref": "definitions.json#/likert_scale"
+			"$ref": "definitions.json#/definitions/likert_scale"
 		},
 		"effective_remarks": {
 			"type": "string"

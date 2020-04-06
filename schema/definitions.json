@@ -10,11 +10,6 @@
 			"enum": ["strongly disagree", "disagree", "neutral", "agree", "strongly agree"],
 			"description": "a standard likert scale"
 		},
-		"time_units": {
-			"type": "string",
-			"enum": ["s", "min", "h", "d", "wk", "mo", "a"],
-			"description": "unit of measure for the duration."
-		},
 		"status": {
 			"type": "string",
 			"enum": ["active", "completed", "entered-in-error", "intended", "stopped", "on-hold", "unknown", "not-taken"],

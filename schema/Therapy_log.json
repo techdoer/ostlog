@@ -21,7 +21,7 @@
 			"description": "location where therapy was received or will be carried out."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"person_id": {
 			"type": "integer",
@@ -44,7 +44,7 @@
 			"description": "SNOWMED CT ID referencing a procedure. See https://www.hl7.org/fhir/valueset-procedure-code.html"
 		},
 		"was_effective": {
-			"$ref": "definitions.json#/likert_scale"
+			"$ref": "definitions.json#/definitions/likert_scale"
 		},
 		"effective_remarks": {
 			"type": "string"

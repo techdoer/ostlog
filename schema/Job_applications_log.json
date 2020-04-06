@@ -29,7 +29,7 @@
 			"description": "Main location where job is to be performed."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"person_id ": {
 			"type": "integer",

@@ -27,7 +27,7 @@
 			"description": "location where the meal took place."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"person_id": {
 			"type": "integer",
@@ -47,15 +47,15 @@
 			"description": "total calories of the meal."
 		},
 		"meal_was_balanced": {
-			"$ref": "definitions.json#/likert_scale",
+			"$ref": "definitions.json#/definitions/likert_scale",
 			"description": "indicates whether or not the person felt the meal was balanced."
 		},
 		"meal_was_sufficient": {
-			"$ref": "definitions.json#/likert_scale",
+			"$ref": "definitions.json#/definitions/likert_scale",
 			"description": "indicates whether or not the person felt the meal was sufficient."
 		},
 		"meal_was_nutritious": {
-			"$ref": "definitions.json#/likert_scale",
+			"$ref": "definitions.json#/definitions/likert_scale",
 			"description": "indicates whether or not the person felt the meal was nutritious."
 		},
 		"remarks": {

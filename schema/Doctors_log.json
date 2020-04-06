@@ -25,10 +25,10 @@
 			"description": "location where visit was made."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"status": {
-			"$ref": "definitions.json#/status"
+			"$ref": "definitions.json#/definitions/status"
 		},
 		"doctor_id": {
 			"type": "integer",

@@ -1,59 +1,59 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Health_observations_log.json",
-	"title": "Health observations log",
-	"description": "Each entry describes a chronic or acute health event observed in time.",
-	"type": "object",
-	"properties": {
-		"id": {
-			"type": "integer"
-		},
-		"meta_id": {
-			"type": "integer",
-			"description": "reference to entry's metadata"
-		},
-		"observation_date_id": {
-			"type": "string",
-			"description": "YYYYMMDD formatted date when event was observed/recorded."
-		},
-		"observation_time": {
-			"type ": "string ",
-			"description": "HH:MM:SS formatted time of when event was observed/recorded."
-		},
-		"location_id": {
-			"type": "integer",
-			"description": "location where observation was observed."
-		},
-		"domain": {
-			"$ref": "definitions.json#/domain"
-		},
-		"person_id": {
-			"type": "integer",
-			"description ": "the subject under observation."
-		},
-		"body_site_code": {
-			"type": "integer",
-			"description": "This enumeration includes all codes from FHIR's body-site definition http://hl7.org/fhir/ValueSet/body-site."
-		},
-		"diagnosis_id": {
-			"type": "integer",
-			"description": "Reference to the diagnosis causing the observed symptoms."
-		},
-		"event_id": {
-			"type": "integer",
-			"description": ""
-		},
-		"event_icd10_code": {
-			"type": "string",
-			"description": ""
-		},
-		"new_occurance": {
-			"type": "boolean",
-			"description": "True if event is new and not observed in past 7 days."
-		},
-		"remarks": {
-			"type": "string"
-		}
-	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "symptom_id", "observation_icd10_code", "new_occurance"]
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Each entry describes a chronic or acute health event observed in time.",
+  "id": "http://ostlog.org/schema/Health_observations_log.json",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "meta_id": {
+      "type": "integer",
+      "description": "reference to entry's metadata"
+    },
+    "observation_date_id": {
+      "type": "string",
+      "description": "YYYYMMDD formatted date when event was observed/recorded."
+    },
+    "observation_time": {
+      "type ": "string ",
+      "description": "HH:MM:SS formatted time of when event was observed/recorded."
+    },
+    "location_id": {
+      "type": "integer",
+      "description": "location where observation was observed."
+    },
+    "domain": {
+      "$ref": "definitions.json#/definitions/domain"
+    },
+    "person_id": {
+      "type": "integer",
+      "description ": "the subject under observation."
+    },
+    "body_site_code": {
+      "type": "integer",
+      "description": "This enumeration includes all codes from FHIR's body-site definition http://hl7.org/fhir/ValueSet/body-site."
+    },
+    "diagnosis_id": {
+      "type": "integer",
+      "description": "Reference to the diagnosis causing the observed symptoms."
+    },
+    "event_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "event_icd10_code": {
+      "type": "string",
+      "description": ""
+    },
+    "new_occurance": {
+      "type": "boolean",
+      "description": "True if event is new and not observed in past 7 days."
+    },
+    "remarks": {
+      "type": "string"
+    }
+  },
+  "required": [ "id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "symptom_id", "observation_icd10_code", "new_occurance" ],
+  "title": "Health observations log",
+  "type": "object"
 }

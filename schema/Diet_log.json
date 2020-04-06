@@ -23,7 +23,7 @@
 			"description": "location where observation was observed."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"person_id": {
 			"type": "integer",
@@ -47,7 +47,7 @@
 			"description": "FHIR's valueset covering food https://www.hl7.org/fhir/valueset-food-type.html."
 		},
 		"was_effective": {
-			"$ref": "definitions.json#/likert_scale"
+			"$ref": "definitions.json#/definitions/likert_scale"
 		},
 		"effectiveness_remarks": {
 			"type": "string"

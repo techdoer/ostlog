@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://ostlog.org/schema/Screen_log.json",
+  "title": "Screen log",
+  "description": "Each entry summarizes a session of screen time.",
+  "type": "object",
+  "properties": {
+
+    "id": {
+      "type": "integer"
+    },
+    "meta_id": {
+      "type": "integer",
+      "description": "reference to entry's metadata"
+    },
+    "start_date_id": {
+      "type": "string",
+      "description": "YYYYMMDD formatted start date of screen session."
+    },
+    "start_time": {
+      "type ": "string ",
+      "description": "HH:MM:SS formatted start time of screen session."
+    },
+    "location_id": {
+      "type": "integer",
+      "description": "geographic location related to screen session."
+    },
+    "domain ": {
+      "$ref": "definitions.json#/definitions/domain"
+    },
+    "person_id ": {
+      "type": "integer",
+      "description ": "the person behind the screen."
+    },
+    "screen_minutes": {
+      "type": "string",
+      "description": "Duration in minutes spent behind the screen."
+    },
+    "remarks": {
+      "type": "string"
+    }
+  },
+  "required": [ "id", "start_date_id", "start_time", "location_id", "person_id", "screen_minutes" ]
+}

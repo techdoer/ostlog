@@ -25,7 +25,7 @@
 			"description": "location where mood was observed."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"person_id": {
 			"type": "integer",
@@ -36,7 +36,7 @@
 			"description": "one word to describe the emotion a person is feeling."
 		},
 		"high_energy": {
-			"$ref": "definitions.json#/likert_scale"
+			"$ref": "definitions.json#/definitions/likert_scale"
 		},
 		"remarks": {
 			"type": "string"

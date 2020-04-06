@@ -25,7 +25,7 @@
 			"description": "location where person slept."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "$ref/definitions.json#/definitions/domain"
 		},
 		"person_id": {
 			"type": "integer",

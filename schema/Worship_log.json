@@ -27,7 +27,7 @@
 			"description ": "the location where the research was made."
 		},
 		"domain ": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"person_id ": {
 			"type": "integer",

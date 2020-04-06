@@ -78,7 +78,7 @@
 					"description": "units of time"
 				},
 				"day_of_week": {
-					"$ref": "string",
+					"type": "string",
 					"description": "CSV values from day_of_week to allow for multiple values as required by fhir."
 				},
 				"time_of_day": {

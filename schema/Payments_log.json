@@ -25,7 +25,7 @@
 			"description ": "the location where payment was made."
 		},
 		"domain ": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"payer_id ": {
 			"type": "integer",

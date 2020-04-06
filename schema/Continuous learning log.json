@@ -21,7 +21,7 @@
 			"description": "location where observation was observed."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"person_id": {
 			"type": "integer",
@@ -41,7 +41,7 @@
 			"enum": ["planned", "in-progress", "completed", "canceled"]
 		},
 		"was successful": {
-			"$ref": "definitions.json#/likert_scale",
+			"$ref": "definitions.json#/definitions/likert_scale",
 			"description": "indicates whether the learning activity was successful"
 		},
 		"remarks": {

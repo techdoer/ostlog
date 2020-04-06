@@ -17,7 +17,7 @@
 			"description": "YYYYMMDD formatted date when the diagnosis was given."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"timestamp": {
 			"type ": "string ",

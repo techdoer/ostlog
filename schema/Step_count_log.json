@@ -36,7 +36,7 @@
 			"description": "location where the meal took place."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
         },
         
 		"person_id": {

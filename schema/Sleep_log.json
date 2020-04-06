@@ -33,7 +33,7 @@
 			"description": "location where sleep episode occured."
 		},
 		"domain": {
-			"$ref": "definitions.json#/domain"
+			"$ref": "definitions.json#/definitions/domain"
 		},
 		"person_id": {
 			"type": "integer",
@@ -60,11 +60,11 @@
 			"description": "total time in minutes that a person remained awake after sleep onset and before final awakening in sleep episode."
 		},
 		"slept well": {
-			"$ref": "definitions.json#/likert_scale",
+			"$ref": "definitions.json#/definitions/likert_scale",
 			"description": "Commentary regarding the quality of sleep in sleep episode."
 		},
 		"easy_wakeup": {
-			"$ref": "definitions.json#/likert_scale",
+			"$ref": "definitions.json#/definitions/likert_scale",
 			"description": "Commentary regaring the ease in which person awoke at end of sleep episode."
 		},
 		"remarks": {
