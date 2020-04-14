@@ -22,7 +22,8 @@ CREATE TABLE [dbo].[Vitals log]
 	[blood_pressure_systolic_mmhg] INT NULL,
 	[respiratory_rate_bpm] FLOAT NULL, /* breaths per minute */
 	[bfp_%] FLOAT NULL, /* body fat percentage */
-	[spo2_%] FLOAT NULL, /* peripheral capillary oxygen saturation */
+	[spo2_%] FLOAT NULL, /* peripheral capillary oxygen saturation */ 
+	[pef_l_min] FLOAT NULL,
 	[remarks] NVARCHAR(4000) NULL, 
 	CONSTRAINT [PK_Vitals log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Vitals log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),

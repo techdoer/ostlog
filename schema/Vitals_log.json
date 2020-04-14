@@ -81,12 +81,16 @@
 			"type": "number",
 			"description": "peripheral capillary oxygen saturation Sp02"
 		},
+		"pef_l_min": {
+			"type": "number",
+			"description": "peak expiratory flow in litres per minute."
+		},
 		"document_url": {
-			"type": "string",
-			"description": "URL pointing to scanned results document"
+				"type": "string",
+				"description": "URL pointing to scanned results document"
 		},
 		"remarks": {
-			"type": "string"
+				"type": "string"
 		}
 	},
 	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "feeling_great"]
