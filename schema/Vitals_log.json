@@ -85,10 +85,6 @@
 			"type": "number",
 			"description": "peak expiratory flow in litres per minute."
 		},
-		"document_url": {
-				"type": "string",
-				"description": "URL pointing to scanned results document"
-		},
 		"remarks": {
 				"type": "string"
 		}
