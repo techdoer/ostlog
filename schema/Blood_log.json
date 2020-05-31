@@ -228,6 +228,14 @@
 			"type": "number",
 			"description": "free prostate-specific antigen test"
 		},
+		"esr_mm": {
+			"type": "number",
+			"description": "Erythro Sedimentation rate; italian: Velocità Eritro Sedimentazione"
+		},
+		"urea_mg_dl": {
+			"type": "number",
+			"description": "Enzymatic-spectrophotometric; italian Enzimatico-spettrofotometrico"
+		},
 		"exam_results_url": {
 			"type": "string",
 			"description": "url to scanned copy of the results"

@@ -60,6 +60,8 @@ CREATE TABLE [dbo].[Blood log]
 	[alp_u_l] FLOAT NULL, /* alkaline phosphatase; italian: fosfatasi alcalina */
 	[psa_ng_ml] FLOAT NULL, /* prostage specific antigen */
 	[psa_free_ng_ml] FLOAT NULL, /* free prostate specific antigen */
+	[esr_mm] FLOAT NULL, /* Erythro Sedimentation rate */
+	[urea_mg_dl] FLOAT NULL, /* Enzymatic-spectrophotometric */
 	[exam_results_url] NVARCHAR(512) NULL, /* scanned copy of the results */
 	[remarks] NVARCHAR(2056) NULL,
 	CONSTRAINT [PK_Blood log] PRIMARY KEY CLUSTERED ([id] ASC),
