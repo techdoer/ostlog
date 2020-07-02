@@ -13,7 +13,7 @@ CREATE TABLE [dbo].[Research log]
 	[summary_text] NVARCHAR (4000) NOT NULL,
 	[full_text] NTEXT NULL,
 	[url] NVARCHAR(1000) NULL,
-	[keywords_csv] NVARCHAR (1000) NULL,
+	[keywords_csv] NVARCHAR (1000) NULL, 
 	[remarks] NVARCHAR (4000) NULL,
 	CONSTRAINT [PK_Research log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Research log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
