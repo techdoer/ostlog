@@ -45,7 +45,7 @@
 			"description": "A textual name of the procedure e.g. x-ray"
 		},
 		"procedure_sctid": {
-			"type": "string",
+			"type": "integer",
 			"description": "SNOWMED CT ID referencing a surgical procedure"
 		},
 		"procedure_results_url": {

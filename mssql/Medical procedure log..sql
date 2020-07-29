@@ -12,7 +12,7 @@ CREATE TABLE [dbo].[Medical procedure log]
 	[body_site_code] INT NULL,
 	[diagnosis_id] INT NULL,
 	[procedure_name] NVARCHAR(100) NOT NULL,
-	[procedure_sctid] INT NOT NULL, -- SNOWMED CT ID referencing a procedure
+	[procedure_sctid] BIGINT NOT NULL, -- SNOWMED CT ID referencing a procedure
 	[procedure_results_url] NVARCHAR(512) NULL,
 	[procedure_results_notes] NVARCHAR(2056) NULL,
 	[was_effective] NVARCHAR (20) NULL,
