@@ -59,12 +59,15 @@
 		"was_effective": {
 			"$ref": "definitions.json#/definitions/likert_scale"
 		},
-		"effective_remarks": {
+		"effectiveness_remarks": {
+			"type": "string"
+		},
+		"side_effect_remarks": {
 			"type": "string"
 		},
 		"remarks": {
 			"type": "string"
 		}
 	},
-	"required": ["id", "schedule_id", "timestamp", "location_id", "domain", "person_id", "procedure_name", "procedure_sctid", "was_effective"]
+	"required": ["id", "schedule_id", "timestamp", "location_id", "domain", "person_id", "procedure_name", "procedure_sctid"]
 }

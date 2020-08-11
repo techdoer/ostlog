@@ -17,6 +17,7 @@ CREATE TABLE [dbo].[Medical procedure log]
 	[procedure_results_notes] NVARCHAR(2056) NULL,
 	[was_effective] NVARCHAR (20) NULL,
 	[effectivness_remarks] NVARCHAR (2048) NULL,
+	[side_effect_remarks] NVARCHAR (2048) NULL,
 	[remarks] NVARCHAR(2056) NULL,   
 	CONSTRAINT [PK_Medical procedure log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Medical procedure log-Timing schedule] FOREIGN KEY ([schedule_id]) REFERENCES [dbo].[Timing schedule] ([id]),
