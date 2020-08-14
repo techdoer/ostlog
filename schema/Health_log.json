@@ -1,7 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "Each entry describes a chronic or acute health event observed in time.",
-  "id": "http://ostlog.org/schema/Health_observations_log.json",
+  "id": "http://ostlog.org/schema/Health_log.json",
+  "title": "Health log",
+  "type": "object",
   "properties": {
     "id": {
       "type": "integer"
@@ -53,7 +55,6 @@
       "type": "string"
     }
   },
-  "required": [ "id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "symptom_id", "observation_icd10_code", "new_occurance" ],
-  "title": "Health observations log",
-  "type": "object"
+  "required": [ "id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "symptom_id", "event_icd10_code", "new_occurance" ]
+
 }
