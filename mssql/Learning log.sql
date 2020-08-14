@@ -1,8 +1,8 @@
 ﻿--
 -- Version: Each entry records the a continuous learning activity.  Supports Azure SQL Server.
--- URL: http://ostlog.org/schema/Continuous_learning_log.json
+-- URL: http://ostlog.org/schema/Learning_log.json
 --
-CREATE TABLE [dbo].[Continuous learning log]
+CREATE TABLE [dbo].[Learning log]
 (
 	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
@@ -16,11 +16,11 @@ CREATE TABLE [dbo].[Continuous learning log]
 	[is_successful] NVARCHAR(20) NULL,
 	[remarks] NVARCHAR(4000) NULL,   
 
-	CONSTRAINT [PK_Continuous learning log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Continuous learning log-Timing schedule] FOREIGN KEY ([schedule_id]) REFERENCES [dbo].[Timing schedule] ([id]),
-	CONSTRAINT [FK_Continuous learning log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CONSTRAINT [FK_Continuous learning log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	CONSTRAINT [FK_Continuous learning log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
+	CONSTRAINT [PK_Learning log] PRIMARY KEY CLUSTERED ([id] ASC),
+	CONSTRAINT [FK_Learning log-Timing schedule] FOREIGN KEY ([schedule_id]) REFERENCES [dbo].[Timing schedule] ([id]),
+	CONSTRAINT [FK_Learning log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_Learning log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+	CONSTRAINT [FK_Learning log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 
 	
 	CHECK ([type] = 'reading' OR [type] = 'writing' OR [type] = 'listening' OR [type] = 'doing' OR [type] = 'hybrid'),

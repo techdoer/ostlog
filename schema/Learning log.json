@@ -1,8 +1,8 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Continuous_learning_log.json",
-	"title": "Continuous_learning_log log",
-	"description": "Each entry records a continuous learning activity.",
+	"id": "http://ostlog.org/schema/Learning_log.json",
+	"title": "Learning_log log",
+	"description": "Each entry records a learning activity.",
 	"type": "object",
 	"properties": {
 		"id": {
@@ -18,7 +18,7 @@
 		},
 		"location_id": {
 			"type": "integer",
-			"description": "location where observation was observed."
+			"description": "location where learning took place."
 		},
 		"domain": {
 			"$ref": "definitions.json#/definitions/domain"
