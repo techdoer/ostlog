@@ -12,57 +12,57 @@ CREATE TABLE [dbo].[Blood log]
 	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[blood_group] NVARCHAR(3),
-	[white_blood_cells_mcl] FLOAT NULL, /* white blood cell count - measured as cells/mcL ; italian leucociti*/
-	[red_blood_cells_mcl] FLOAT NULL, /* red blood cell count measured as million cells/mcL ; italian eritrociti */
-	[hb_g_dl] FLOAT NULL, /* hemoglobin - this is the amount of hemoglobin in a volume of blood - measured as grams/dL */
-	[hct_%] FLOAT NULL, /* Hematocrit - this is the percentage of the volume ofred cells to the volume of whole blood. */
-	[mcv_fl] FLOAT NULL, /* Mean corpuscular volume  - is the average volume of a red blood cell. */
-	[mch_pg] FLOAT NULL, /* Mean Corpuscular Hemoglobin (MCH) is the average amount of hemoglobin in the average red cell */
-	[mchc_g_dl] FLOAT NULL, /* Mean Corpuscular Hemoglobin Concentration (MCHC) is the average concentration of hemoglobin in a given volume of red cells. */
-	[mpv_fl] FLOAT NULL, /* Mean platelet volume (MPV). Mean platelet volume measures the average amount (volume) of platelets. */
-	[rdw_cv_%] FLOAT NULL, /* Red Cell Distribution Width (RDW-CV), - this is RDW-CV (oefficient of variation), is a measurement of the variability of red cell size and shape */
-	[pc_b_l] FLOAT NULL, /* Platelet count.  In italian called piastrine.  measured as billion/L */
-	[neutrophils_%] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[neutrophils_cells_mcl] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[eosinophils_%] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[eosinophils_cells_mcl] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[basophils_%] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[basophils_cells_mcl] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[lymphocytes_%] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[lymphocytes_cells_mcl] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[monocytes_%] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[monocytes_cells_mcl] FLOAT NULL, /* The five types of white blood cells include neutrophils, lymphocytes, monocytes, eosinophils, and basophils. */
-	[ferritin_ng_ml] FLOAT NULL, /* ng/ml */
-	[sideremia_mcg_dl] FLOAT NULL, /* transports iron in the blood */
-	[creatinine_mg_dl] FLOAT NULL, /* mg/dl */
-	[albumin_g_dl] FLOAT NULL, /*  g/dl */
-	[bile_acids_mcMoli_l] FLOAT NULL, /* mcMoli/l */
-	[glucose_mg_dl] FLOAT NULL, /* glucose in the blood.  In italian it is Glicemia - mg/dl */
-	[uricacid_mg_dl] FLOAT NULL, /* measure of uric acid in blood. In Italian it is Ac. Urico Ematico - mg/dl */
-	[triglycerides] FLOAT NULL, /* measure of triglycerides in blood. In Italian it is Trigliceridi - mg/dl */
-	[cholesterol_total] FLOAT NULL, /* cholesterol in blood. mg/dl */
-	[cholesterol_hdl] FLOAT NULL, /* hdl cholesterol in blood. mg/dl */
-	[cholesterol_ldl] FLOAT NULL, /* ldl cholesterol in blood. mg/dl */
-	[ast_u_l] FLOAT NULL, /* aspartate aminotransferase. Liver - In Italian GOT/AST  - UI/L */
-	[alt_u_l] FLOAT NULL, /* alanine aminotransferase. Liver - In Italian GPT/ALT - UI/L */
-	[ggt_u_l] FLOAT NULL, /* gamma-glutamyl transferase. Liver U/I */
-	[ldh_ul_l] FLOAT NULL, /* ldh lactic dehydrogenase Ul/l */
-	[toxoplasma_igg] FLOAT NULL, /* Toxoplasma IgG antibody. */
-	[toxoplasma_igm_ul_ml] FLOAT NULL, /* Toxoplasma IgM antibody. */
-	[tsh_ulu_ml] FLOAT NULL, /* thyrotropin. Italian tireotropo.  ulU/ml */
-	[t3_pmol_l] FLOAT NULL, /* triiodothyronine pmol/l */
-	[t4_pmol_l] FLOAT NULL, /* thyroxine pmol/l */
-	[potassium_meq_l] FLOAT NULL, /* potassium mEq/l */
-	[sodium_meq_l] FLOAT NULL, /*sodium mEq/l */
-	[calcium_mg_dl] FLOAT NULL, /* calcium mg/dl */
-	[beta_hcg_miu_ml] FLOAT NULL, /*  hormone human chorionic gonadotropin mIU/mL produced during pregnancy */
-	[crp_mg_l] FLOAT NULL, /* c-reactive protein */
-	[alp_u_l] FLOAT NULL, /* alkaline phosphatase; italian: fosfatasi alcalina */
-	[psa_ng_ml] FLOAT NULL, /* prostage specific antigen */
-	[psa_free_ng_ml] FLOAT NULL, /* free prostate specific antigen */
-	[esr_mm] FLOAT NULL, /* Erythro Sedimentation rate */
-	[urea_mg_dl] FLOAT NULL, /* Enzymatic-spectrophotometric */
-	[exam_results_url] NVARCHAR(512) NULL, /* scanned copy of the results */
+	[white_blood_cells_k_uL] FLOAT NULL,
+	[red_blood_cells_M_uL] FLOAT NULL,
+	[hemoglobin_g_dL] FLOAT NULL,
+	[hematocrit_%] FLOAT NULL, 
+	[mcv_fL] FLOAT NULL, 
+	[mch_pg] FLOAT NULL, 
+	[mchc_g_dL] FLOAT NULL, 
+	[mpv_fL] FLOAT NULL, 
+	[rdw_%] FLOAT NULL, 
+	[platelet_k_uL] FLOAT NULL, 
+	[neutrophils_%] FLOAT NULL, 
+	[neutrophils_cells_k_uL] FLOAT NULL, 
+	[eosinophils_%] FLOAT NULL, 
+	[eosinophils_cells_k_uL] FLOAT NULL, 
+	[basophils_%] FLOAT NULL, 
+	[basophils_cells_k_uL] FLOAT NULL, 
+	[lymphocytes_%] FLOAT NULL, 
+	[lymphocytes_cells_k_uL] FLOAT NULL, 
+	[monocytes_%] FLOAT NULL, 
+	[monocytes_cells_k_uL] FLOAT NULL, 
+	[ferritin_ug_L] FLOAT NULL, 
+	[sideremia_ug_dL] FLOAT NULL, 
+	[creatinine_mg_dL] FLOAT NULL, 
+	[albumin_g_dL] FLOAT NULL, 
+	[bile_acids_umol_L] FLOAT NULL, 
+	[glucose_mg_dL] FLOAT NULL,
+	[uricacid_mg_dL] FLOAT NULL, 
+	[triglycerides_mg_dL] FLOAT NULL, 
+	[cholesterol_total_mg_dL] FLOAT NULL,
+	[cholesterol_hdl_mg_dL] FLOAT NULL, 
+	[cholesterol_ldl_mg_dL] FLOAT NULL, 
+	[ast_u_L] FLOAT NULL, 
+	[alt_u_L] FLOAT NULL, 
+	[ggt_u_L] FLOAT NULL, 
+	[ldh_uL_L] FLOAT NULL,
+	[toxoplasma_IgG_u_mL] FLOAT NULL, 
+	[toxoplasma_IgM_u_mL] FLOAT NULL, 
+	[tsh_uu_mL] FLOAT NULL,
+	[t3_pmol_L] FLOAT NULL, 
+	[t4_pmol_L] FLOAT NULL, 
+	[potassium_meq_L] FLOAT NULL, 
+	[sodium_meq_L] FLOAT NULL, 
+	[calcium_meq_L] FLOAT NULL, 
+	[beta_hcg_mu_mL] FLOAT NULL, 
+	[crp_mg_L] FLOAT NULL, 
+	[alp_u_L] FLOAT NULL,
+	[psa_ng_mL] FLOAT NULL, 
+	[psa_free_ng_mL] FLOAT NULL, 
+	[esr_mm_hr] FLOAT NULL, 
+	[urea_mg_dL] FLOAT NULL, 
+	[exam_results_url] NVARCHAR(512) NULL, 
 	[remarks] NVARCHAR(2056) NULL,
 	CONSTRAINT [PK_Blood log] PRIMARY KEY CLUSTERED ([id] ASC),
 	CONSTRAINT [FK_Blood log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),

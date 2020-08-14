@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Blood_log.json",
 	"title": "Blood log",
-	"description": "Each entry records results from a Complete Blood Count or similar blood test.",
+	"description": "Each entry records results from a Complete Blood Count or similar blood examination .",
 	"type": "object",
 	"properties": {
 		"id": {
@@ -36,205 +36,205 @@
 			"enum": ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"],
 			"description": ""
 		},
-		"white_blood_cells_mcl": {
+		"white_blood_cells_k_uL": {
 			"type": "number",
-			"description": "white blood cell count cells/mcL"
+			"description": "white blood cell count - thousand (k) per microliter (uL)"
 		},
-		"red_blood_cells_mcl": {
+		"red_blood_cells_M_uL": {
 			"type": "number",
-			"description": "red blood cell count cells/mcL"
+			"description": "red blood cell count - million (M) per microliter (uL)"
 		},
-		"hb_g_dl": {
+		"hemoglobin_g_dL": {
 			"type": "number",
-			"description": "hemoglobin count g/dL"
+			"description": "hemoglobin count - grams (g) per deciliter (dL)"
 		},
-		"hct_%": {
+		"hematocrit_%": {
 			"type": "number",
 			"description": "Hematocrit - percentage of white cell volume to red cell volume"
 		},
-		"mcv_fl": {
+		"mcv_fL": {
 			"type": "number",
 			"description": "mean corpuscular volume - average volume of a red blood cell in femtoliters (fL)"
 		},
 		"mch_pg": {
 			"type": "number",
-			"description": "mean corpuscular hemoglobin - the average amount of hemoglobin in the average red cell in picograms(pg)"
+			"description": "mean corpuscular hemoglobin - the average amount of hemoglobin in the average red cell in picograms (pg)"
 		},
-		"mchc_g_dl": {
+		"mchc_g_dL": {
 			"type": "number",
-			"description": "mean corpuscular hemoglobin concentration - the average concentration of hemoglobin in a given volume of red cells"
+			"description": "mean corpuscular hemoglobin concentration - the average concentration of hemoglobin in a given volume of red cells in grams (g) per deciliter (dL)"
 		},
-		"mpv_fl": {
+		"mpv_fL": {
 			"type": "number",
 			"description": "mean platelet volume - measures the average amount (volume) of platelets in femtoliters (fL)"
 		},
-		"rdw_cv_%": {
+		"rdw_%": {
 			"type": "number",
 			"description": "Red cell distribution width (coefficient of variation) - measures the variability of a red cell size and shape as percentage"
 		},
-		"pc_b_l": {
+		"platelet_k_uL": {
 			"type": "number",
-			"description": "platelet count ;piastrine (italian) - measured as billion/L"
+			"description": "platelet count - measured as thousands (k) per microliter (uL)"
 		},
 		"neutrophils_%": {
 			"type": "number",
 			"description": "one of five types of white blood cells in percentage"
 		},
-		"neutrophils_cells_mcl": {
+		"neutrophils_cells_k_uL": {
 			"type": "number",
-			"description": "one of five types of white blood cells measured in cells/mcL."
+			"description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
 		},
 		"eosinophils_%": {
 			"type": "number",
 			"description": "one of five types of white blood cells in percentage"
 		},
-		"eosinophils_cells_mcl": {
+		"eosinophils_cells_k_uL": {
 			"type": "number",
-			"description": "one of five types of white blood cells measured in cells/mcL."
+			"description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
 		},
 		"basophils_%": {
 			"type": "number",
 			"description": "one of five types of white blood cells in percentage"
 		},
-		"basophils_cells_mcl": {
+		"basophils_cells_k_uL": {
 			"type": "number",
-			"description": "one of five types of white blood cells measured in cells/mcL."
+			"description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
 		},
 		"lymphocytes_%": {
 			"type": "number",
 			"description": "one of five types of white blood cells in percentage"
 		},
-		"lymphocytes_cells_mcl": {
+		"lymphocytes_cells_k_uL": {
 			"type": "number",
-			"description": "one of five types of white blood cells measured in cells/mcL."
+			"description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
 		},
 		"monocytes_%": {
 			"type": "number",
 			"description": "one of five types of white blood cells in percentage"
 		},
-		"monocytes_cells_mcl": {
+		"monocytes_cells_k_uL": {
 			"type": "number",
-			"description": "one of five types of white blood cells measured in cells/mcL."
+			"description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
 		},
-		"ferritin_ng_ml": {
+		"ferritin_ug_L": {
 			"type": "number",
-			"description": "ng/ml"
+			"description": "ferritin measured as micrograms (ug) per liter (L)"
 		},
-		"sideremia_mcg_dl": {
+		"sideremia_ug_dL": {
 			"type": "number",
-			"description": "transports iron in the blood; measured in mcg/dl"
+			"description": "transports iron in the blood; measured in micrograms (ug) per deciliter (dL)"
 		},
-		"creatinine_mg_dl": {
+		"creatinine_mg_dL": {
 			"type": "number",
-			"description": "mg/dl"
+			"description": "creatinine in milligrams (mg) per deciliter (dL)"
 		},
-		"albumin_g_dl": {
+		"albumin_g_dL": {
 			"type": "number",
-			"description": "g/dl"
+			"description": "albumin in grams (g) per deciliter (dL)"
 		},
-		"bile_acides_mcmoli_l": {
+		"bile_acids_umol_L": {
 			"type": "number",
-			"description": "mcMoli/l"
+			"description": "bile acids micromol (umol) per liter (L)"
 		},
-		"glucose_mg_dl": {
+		"glucose_mg_dL": {
 			"type": "number",
-			"description": "gluoose in blood measured in mg/dl"
+			"description": "glucose in blood measured in milliggrams (mg) per deciliter (dL) "
 		},
-		"uricacid_mg_dl": {
+		"uricacid_mg_dL": {
 			"type": "number",
-			"description": "measure of uric acid in blood in mg/dl"
+			"description": "measure of uric acid in blood in milligrams (mg) per deciliter (dL)"
 		},
-		"triglycerides_mg_dl": {
+		"triglycerides_mg_dL": {
 			"type": "number",
-			"description": "measure of triglycerides in blood in mg/dl"
+			"description": "measure of triglycerides in blood in milligrams (mg) per deciliter (dL)"
 		},
-		"cholesterol_total_mg_dl": {
+		"cholesterol_total_mg_dL": {
 			"type": "number",
-			"description": "cholesterol in blood mg/dl"
+			"description": "cholesterol in blood milligrams (mg) per deciliter (dL)"
 		},
-		"cholesterol_hdl_mg_dl": {
+		"cholesterol_hdl_mg_dL": {
 			"type": "number",
-			"description": "hdl cholesterol in blood mg/dl "
+			"description": "hdl cholesterol in blood milligrams (mg) per deciliter (dL)"
 		},
-		"cholesterol_ldl_mg_dl": {
+		"cholesterol_ldl_mg_dL": {
 			"type": "number",
-			"description": "ldl cholesterol in blood mg/dl "
+			"description": "ldl cholesterol in blood milligrams (mg) per deciliter (dL)"
 		},
-		"ast_u_l": {
+		"ast_u_L": {
 			"type": "number",
-			"description": "aspartate aminotransferase. Liver (italian GOT/AST) in UI/L "
+			"description": "Aspartate Aminotransferase for checking liver damage in units (u) per liter (L) "
 		},
-		"alt_u_l": {
+		"alt_u_L": {
 			"type": "number",
-			"description": "alanine aminotransferase. Liver (italian: GPT/ALT) in UI/L"
+			"description": "Alanine Aminotransferase for checking liver damange in units (u) per liter (L)"
 		},
-		"ggt_u_l": {
+		"ggt_u_L": {
 			"type": "number",
-			"description": "gamma-glutamyl transferase.  Liver U/Litre"
+			"description": "Gamma-glutamyl Transferase for checking liber damage. In units (u) per liter (L)"
 		},
-		"ldh_ul_l": {
+		"ldh_uL_L": {
 			"type": "number",
-			"description": "ldh lactic dehydrogenase Ul/l"
+			"description": "ldh lactic dehydrogenase in microliter (uL) per liter (L)"
 		},
-		"toxoplasma_igg": {
+		"toxoplasma_IgG_u_mL": {
 			"type": "number",
-			"description": "toxoplasma IgG antibody"
+			"description": "Toxoplasma IgG antibody in units (u) per milliliter (mL)"
 		},
-		"toxoplasma_igm_iu_ml": {
+		"toxoplasma_IgM_u_mL": {
 			"type": "number",
-			"description": "toxoplasma IgM antibody in IU/mL"
+			"description": "Toxoplasma IgM antibody in units (u) per milliliter (mL)"
 		},
-		"tsh_ulu_ml": {
+		"tsh_uu_mL": {
 			"type": "number",
-			"description": "thyrotropin (italian: tireotropo) in ulU/ml."
+			"description": "Thyrotropin in microunit (uu) per milliliter (mL)"
 		},
-		"t3_pmol_l": {
+		"t3_pmol_L": {
 			"type": "number",
-			"description": "triiodothyronine in pmol/l."
+			"description": "Triodothyronine in picomoles (pmol) per liter (L)"
 		},
-		"t4_pmol_l": {
+		"t4_pmol_L": {
 			"type": "number",
-			"description": "thyroxine in pmol/l."
+			"description": "thyroxine in picomoles (pmol) per liter (L)"
 		},
-		"potassium_meq_l": {
+		"potassium_meq_L": {
 			"type": "number",
-			"description": "potassium in mg/dl."
+			"description": "potassium in milligrams (meq) per liter (L)"
 		},
-		"sodium_meq_l": {
+		"sodium_meq_L": {
 			"type": "number",
-			"description": "sodium in mg/dl."
+			"description": "sodium in milliequivalents (meq) per liter (L)"
 		},
-		"calcium_mg_dl": {
+		"calcium_meq_L": {
 			"type": "number",
-			"description": "calcium in mg/dl"
+			"description": "calcium in in milliequivalents (meq) per liter (L)"
 		},
-		"beta_hcg_miu_ml": {
+		"beta_hcg_mu_mL": {
 			"type": "number",
-			"description": "hormone human chorionic gonadotropin mIU/mL produced during pregnancy"
+			"description": "hormone human chorionic gonadotropin measured in million units (mu) per milliliter (mL)"
 		},
-		"crp_mg_l": {
+		"crp_mg_L": {
 			"type": "number",
-			"description": "c-reactive protein"
+			"description": "c-reactive protein measured in milligrams (mg) per liter (L)"
 		},
-		"alp_u_l": {
+		"alp_u_L": {
 			"type": "number",
-			"description": "alkaline phosphatase; italian: fosfatasi alcalina"
+			"description": "alkaline phosphatase measured in units (u) per liter (L) "
 		},
-		"psa_ng_ml": {
+		"psa_ng_mL": {
 			"type": "number",
-			"description": "prostate specific antigen"
+			"description": "prostate specific antigen measured in nanograms (ng) per milliliter (mL)"
 		},
-		"psa_free_ng_ml": {
+		"psa_free_ng_mL": {
 			"type": "number",
-			"description": "free prostate-specific antigen test"
+			"description": "Free prostate-specific antigen measured in nanograms (ng) per milliliter (mL)"
 		},
-		"esr_mm": {
+		"esr_mm_hr": {
 			"type": "number",
-			"description": "Erythro Sedimentation rate; italian: Velocità Eritro Sedimentazione"
+			"description": "Erythro Sedimentation rate measured in millimeters (mm) per hour (hr)"
 		},
-		"urea_mg_dl": {
+		"urea_mg_dL": {
 			"type": "number",
-			"description": "Enzymatic-spectrophotometric; italian Enzimatico-spettrofotometrico"
+			"description": "Enzymatic-spectrophotometric milligrams (mg) per deciliter (dL)"
 		},
 		"exam_results_url": {
 			"type": "string",
