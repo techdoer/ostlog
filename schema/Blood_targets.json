@@ -1,0 +1,44 @@
+{
+
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://ostlog.org/schema/Blood_targets.json",
+  "title": "Blood targets",
+  "description": "Each entry represets the target values for features of a blood lab exam.",
+  "type": "object",
+  "properties": {
+    "blood_feature_name": {
+      "type": "string"
+    },
+    "target_value": {
+      "type": "number",
+      "description": ""
+    },
+    "min_value": {
+      "type": "number",
+      "description": ""
+    },
+    "max_value": {
+      "type": "number"
+    },
+    "min_male_adult_value": {
+      "type": "number",
+      "description": ""
+    },
+    "max_male_adult_value": {
+      "type": "number",
+      "description": ""
+    },
+    "min_female_adult_value": {
+      "type": "number",
+      "description": ""
+    },
+    "max_female_adult_value": {
+      "type": "number",
+      "description": ""
+    },
+    "remarks": {
+      "type": "string"
+    }
+  },
+  "required": [ "blood_feature_name" ]
+}
