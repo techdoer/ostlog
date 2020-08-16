@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Sleep_duration_targets.json",
-	"title": "Sleep duration targets",
+	"id": "http://ostlog.org/schema/Sleep_targets.json",
+	"title": "Sleep targets",
 	"description": "Each entry represents the range of sleep hours recommended at a given age in months (see https://www.sleepfoundation.org/).",
 	"type": "object",
 	"properties": {

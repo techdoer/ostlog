@@ -1,8 +1,8 @@
 --
 -- Version: Each entry represents the range of sleep hours recommended at a given age in months (see https://www.sleepfoundation.org/. Supports Azure SQL Server. 
--- URL: http://ostlog.org/schema/Sleep_duration_targets.json
+-- URL: http://ostlog.org/schema/Sleep_targets.json
 --
-CREATE TABLE [dbo].[Sleep duration targets] (
+CREATE TABLE [dbo].[Sleep targets] (
 	[age_in_months] FLOAT NOT NULL,
     [meta_id] INT NULL,
     [age_category] NVARCHAR (15) NOT NULL, 
