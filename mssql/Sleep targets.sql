@@ -9,8 +9,8 @@ CREATE TABLE [dbo].[Sleep targets] (
     [min_sleep_hours_recommended] INT NOT NULL,
     [max_sleep_hours_recommended] INT NOT NULL, 
     [remarks] NVARCHAR(2056) NULL,
-	CONSTRAINT [PK_Sleep duration targets] PRIMARY KEY CLUSTERED ([age_in_months] ASC),
-	CONSTRAINT [FK_Sleep duration targets charts-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
+	CONSTRAINT [PK_Sleep targets] PRIMARY KEY CLUSTERED ([age_in_months] ASC),
+	CONSTRAINT [FK_Sleep targets charts-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 
     CHECK([age_category] = 'newborn' 
     OR [age_category] = 'infant'
