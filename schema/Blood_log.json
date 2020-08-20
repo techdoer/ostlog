@@ -33,7 +33,7 @@
 		},
 		"blood_group": {
 			"type": "string",
-			"enum": ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"],
+			"enum": [ "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" ],
 			"description": ""
 		},
 		"white_blood_cells_k_uL": {
@@ -128,6 +128,10 @@
 			"type": "number",
 			"description": "creatinine in milligrams (mg) per deciliter (dL)"
 		},
+		"eGFR_mL_min": {
+			"type": "number",
+			"description": "estimated glomerular filtration rate in milliliters (mL) per minute (min)."
+		},
 		"albumin_g_dL": {
 			"type": "number",
 			"description": "albumin in grams (g) per deciliter (dL)"
@@ -167,6 +171,18 @@
 		"alt_u_L": {
 			"type": "number",
 			"description": "Alanine Aminotransferase for checking liver damange in units (u) per liter (L)"
+		},
+		"bilirubin_total_mg_dL": {
+			"type": "number",
+			"description": "Bilirubin total in milligrams (mg) per deciliter (dL)"
+		},
+		"bilirubin_direct_mg_dL": {
+			"type": "number",
+			"description": "Bilirubin direct in milligrams (mg) per deciliter (dL)"
+		},
+		"bilirubin_indirect_mg_dL": {
+			"type": "number",
+			"description": "Bilirubin indirect in milligrams (mg) per deciliter (dL)"
 		},
 		"ggt_u_L": {
 			"type": "number",
