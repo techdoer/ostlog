@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Travel_log.json",
+	"id": "http://ostlog.org/schema/Trip_log.json",
 	"title": "Trip log",
 	"description": "Each entry records a vacation/journey/trip in time.",
 	"type": "object",
