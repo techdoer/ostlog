@@ -1,0 +1,55 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Travel_log.json",
+	"title": "Trip log",
+	"description": "Each entry records a vacation/journey/trip in time.",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"start_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date when trip started."
+		},
+		"start_time": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time when trip started."
+		},
+		"end_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date when trip ended."
+		},
+		"end_time": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time when trip ended."
+		},
+		"domain": {
+			"$ref": "definitions.json#/definitions/domain"
+		},
+		"person_id": {
+			"type": "integer",
+			"description ": "the person who went on the trip."
+		},
+		"departure_location_id": {
+			"type": "integer",
+			"description ": "The id of the departure location."
+		},
+		"destination_location_id": {
+			"type": "string",
+			"description ": "The id of the destination location."
+		},
+		"length_in_nights": {
+			"type": "integer",
+			"description ": "the length of the trip in nights spent at destination."
+		},
+		"remarks": {
+			"type": "string"
+		}
+	},
+	"required": ["id", "start_date_id", "start_time", "end_date_id", "end_time", "domain", "person_id", "destination_country_iso3_code", "duration_days"]
+}
