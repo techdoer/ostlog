@@ -9,7 +9,6 @@ CREATE TABLE [dbo].[Eyes log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL, 
 	[right_eye_sphere_d] FLOAT NULL,
 	[right_eye_cylinder] FLOAT NULL,
@@ -28,7 +27,5 @@ CREATE TABLE [dbo].[Eyes log]
 	CONSTRAINT [FK_Eyes log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Eyes log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Eyes log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	CONSTRAINT [FK_Eyes log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
-
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
+	CONSTRAINT [FK_Eyes log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id])
 )

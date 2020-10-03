@@ -20,9 +20,6 @@
 			"type": "integer",
 			"description": "location where therapy was received or will be carried out."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description ": "the person to who underwent or will undergo the therapy treatment."
@@ -57,7 +54,6 @@
 		"id",
 		"schedule_id",
 		"location_id",
-		"domain",
 		"person_id",
 		"therapy_name",
 		"therapy_sctid",

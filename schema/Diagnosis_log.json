@@ -16,9 +16,6 @@
 			"type": "string",
 			"description": "YYYYMMDD formatted date when the diagnosis was given."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"timestamp": {
 			"type ": "string ",
 			"description": "HH:MM:SS formatted time of the diagnosis."
@@ -51,5 +48,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "diagnosis_icd10_code"]
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id", "diagnosis_icd10_code"]
 }

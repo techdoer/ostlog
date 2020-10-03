@@ -20,9 +20,6 @@
 			"type": "integer",
 			"description": "location where observation was observed."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description": "the person taking the medication."
@@ -69,5 +66,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "schedule_id", "location_id", "domain", "person_id", "status", "drug_atc_code", "admin_route", "dosage_amount", "dosage_units"]
+	"required": ["id", "schedule_id", "location_id", "person_id", "status", "drug_atc_code", "admin_route", "dosage_amount", "dosage_units"]
 }

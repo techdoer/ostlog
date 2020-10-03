@@ -9,9 +9,7 @@ CREATE TABLE [dbo].[Vitals log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
-	[feeling_great] NVARCHAR(20) NULL, 
 	[height_cm] FLOAT NULL,
 	[weight_kg] FLOAT NULL,
 	[right_foot_size_cm] FLOAT NULL,
@@ -29,8 +27,5 @@ CREATE TABLE [dbo].[Vitals log]
 	CONSTRAINT [FK_Vitals log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Vitals log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Vitals log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	CONSTRAINT [FK_Vitals log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
-
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
-	CHECK ([feeling_great] = 'strongly disagree' OR [feeling_great] = 'disagree' OR [feeling_great] = 'neutral' OR [feeling_great] = 'agree' OR [feeling_great] = 'strongly agree')
+	CONSTRAINT [FK_Vitals log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id])
 )

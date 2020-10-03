@@ -20,9 +20,6 @@
 			"type": "integer",
 			"description": "location where learning took place."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description": "the person who carried out the learning."
@@ -48,5 +45,5 @@
 			"type": "string"
 		}
 	},
-	"required": [ "id", "schedule_id", "location_id", "domain", "person_id", "name", "type", "status" ]
+	"required": [ "id", "schedule_id", "location_id", "person_id", "name", "type", "status" ]
 }

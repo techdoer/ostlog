@@ -10,7 +10,6 @@ CREATE TABLE [dbo].[Trip log]
 	[start_time] TIME (0) NOT NULL,
 	[end_date_id] INT NOT NULL,
 	[end_time] TIME (0) NOT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'social' NOT NULL,
 	[person_id] INT NOT NULL,
 	[departure_location_id] INT NULL,
 	[destination_location_id] INT NULL,
@@ -22,7 +21,5 @@ CREATE TABLE [dbo].[Trip log]
 	CONSTRAINT [FK_Trip log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Trip log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	CONSTRAINT [FK_Trip log-Location1] FOREIGN KEY ([departure_location_id]) REFERENCES [dbo].[Location] ([location_id]),
-	CONSTRAINT [FK_Trip log-Location2] FOREIGN KEY ([destination_location_id]) REFERENCES [dbo].[Location] ([location_id]),
-
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
+	CONSTRAINT [FK_Trip log-Location2] FOREIGN KEY ([destination_location_id]) REFERENCES [dbo].[Location] ([location_id])
 )

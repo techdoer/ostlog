@@ -8,7 +8,6 @@ CREATE TABLE [dbo].[Learning log]
 	[meta_id] INT NULL,
 	[schedule_id] INT NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[name] NVARCHAR(100) NOT NUll,
 	[type] NVARCHAR (10) NOT NULL,
@@ -25,6 +24,4 @@ CREATE TABLE [dbo].[Learning log]
 	
 	CHECK ([type] = 'reading' OR [type] = 'writing' OR [type] = 'listening' OR [type] = 'doing' OR [type] = 'hybrid'),
 	CHECK ([status] = 'planned' OR [status] = 'in-progress' OR [status] = 'completed' OR [status] = 'cancelled'),
-	CHECK ([is_successful] = 'strongly disagree' OR [is_successful] = 'disagree' OR [is_successful] = 'neutral' OR [is_successful] = 'agree' OR [is_successful] = 'strongly agree'),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
-)
+	CHECK ([is_successful] = 'strongly disagree' OR [is_successful] = 'disagree' OR [is_successful] = 'neutral' OR [is_successful] = 'agree' OR [is_successful] = 'strongly agree'))

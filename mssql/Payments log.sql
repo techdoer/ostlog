@@ -9,7 +9,6 @@ CREATE TABLE [dbo].[Payments log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NULL,
 	[location_id] INT NULL, 
-	[domain] NVARCHAR (15) DEFAULT 'financial' NOT NULL,
 	[payer_id] INT NOT NULL,
 	[payee_id] INT NULL,
 	[payment_type] NVARCHAR(10) NOT NULL,
@@ -25,6 +24,5 @@ CREATE TABLE [dbo].[Payments log]
 	CONSTRAINT [FK_Payments log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 
 	CHECK ([payment_type]='credit' OR [payment_type]='debit'),
-	CHECK ([item_category]='arts' OR [item_category]='transport' OR [item_category]='xfer' OR [item_category]='bills' OR [item_category]='projects' OR [item_category]='cash' OR [item_category]='credit-payment' OR [item_category]='education' OR [item_category]='entertainment' OR [item_category]='fees' OR [item_category]='food' OR [item_category]='gifts' OR [item_category]='health' OR [item_category]='home' OR [item_category]='income' OR [item_category]='kids' OR [item_category]='loan' OR [item_category]='loan-payment' OR [item_category]='mortgage-rent' OR [item_category]='shopping' OR [item_category]='taxes' OR [item_category]='travel'),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
+	CHECK ([item_category]='arts' OR [item_category]='transport' OR [item_category]='xfer' OR [item_category]='bills' OR [item_category]='projects' OR [item_category]='cash' OR [item_category]='credit-payment' OR [item_category]='education' OR [item_category]='entertainment' OR [item_category]='fees' OR [item_category]='food' OR [item_category]='gifts' OR [item_category]='health' OR [item_category]='home' OR [item_category]='income' OR [item_category]='kids' OR [item_category]='loan' OR [item_category]='loan-payment' OR [item_category]='mortgage-rent' OR [item_category]='shopping' OR [item_category]='taxes' OR [item_category]='travel')
 )

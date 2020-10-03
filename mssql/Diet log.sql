@@ -8,7 +8,6 @@ CREATE TABLE [dbo].[Diet log]
 	[meta_id] INT NULL,
 	[schedule_id] INT NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[status] NVARCHAR(20) NOT NULL,
 	[diet_type] NVARCHAR (15) NOT NULL,
@@ -27,6 +26,5 @@ CREATE TABLE [dbo].[Diet log]
 
 	CHECK ([diet_type] = 'vegetarian' OR [diet_type] = 'dairy-free' OR [diet_type] = 'nut-free' OR [diet_type] = 'gluten-free' OR [diet_type] = 'vegan'  OR [diet_type] = 'halal'  OR [diet_type] = 'kosher'  OR [diet_type] = 'other'),
 	CHECK ([status] = 'planned' OR [status] = 'in-progress' OR [status] = 'completed' OR [status] = 'cancelled'),
-	CHECK ([was_successful] = 'strongly disagree' OR [was_successful] = 'disagree' OR [was_successful] = 'neutral' OR [was_successful] = 'agree' OR [was_successful] = 'strongly agree'),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
+	CHECK ([was_successful] = 'strongly disagree' OR [was_successful] = 'disagree' OR [was_successful] = 'neutral' OR [was_successful] = 'agree' OR [was_successful] = 'strongly agree')
 )

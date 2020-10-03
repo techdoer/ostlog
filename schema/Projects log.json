@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description": "location where project was carried out."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description": "the person who led the project."
@@ -47,5 +44,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "start_date_id", "end_date_id", "location_id", "domain", "person_id", "name", "status"]
+	"required": ["id", "start_date_id", "end_date_id", "location_id", "person_id", "name", "status"]
 }

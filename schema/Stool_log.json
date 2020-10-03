@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description": "location where person slept."
 		},
-		"domain ": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description ": "the person to whom the stool sample belongs."
@@ -112,6 +109,6 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "bss_type", "color", "amount"]
+	"required": ["id", "calendar_date_id", "timestamp", "person_id", "bss_type", "color", "amount"]
 }
 

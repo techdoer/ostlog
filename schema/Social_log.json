@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description": "location where person slept."
 		},
-		"domain": {
-			"$ref": "$ref/definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description ": "the person whose mood is being assessed"
@@ -39,5 +36,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id", "type"]
+	"required": ["id", "calendar_date_id", "timestamp", "person_id", "type"]
 }

@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description ": "the location where the research was made."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"summary_text": {
 			"type": "string"
 		},
@@ -43,5 +40,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "domain"]
+	"required": ["id", "calendar_date_id", "timestamp"]
 }

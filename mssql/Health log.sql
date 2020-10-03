@@ -9,7 +9,6 @@ CREATE TABLE [dbo].[Health log]
 	[observation_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[observation_time] TIME(0) NOT NULL, /* HH:MM:SS */
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[body_site_code] INT NULL,
 	[diagnosis_id] INT NULL,
@@ -23,7 +22,5 @@ CREATE TABLE [dbo].[Health log]
 	CONSTRAINT [FK_Health log-Symptom] FOREIGN KEY ([event_id]) REFERENCES [dbo].[Symptoms] ([id]),
 	CONSTRAINT [FK_Health log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	CONSTRAINT [FK_Health log-Diagnosis log] FOREIGN KEY ([diagnosis_id]) REFERENCES [dbo].[Diagnosis log] ([id]),
-	CONSTRAINT [FK_Health log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
-
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
+	CONSTRAINT [FK_Health log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id])
 )

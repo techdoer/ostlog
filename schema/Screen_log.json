@@ -25,9 +25,6 @@
       "type": "integer",
       "description": "geographic location related to screen session."
     },
-    "domain ": {
-      "$ref": "definitions.json#/definitions/domain"
-    },
     "person_id ": {
       "type": "integer",
       "description ": "the person behind the screen."

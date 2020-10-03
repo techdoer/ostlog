@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description": "location where procedure carried out."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description ": "the patient to who underwent the procedure."
@@ -69,5 +66,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "schedule_id", "timestamp", "location_id", "domain", "person_id", "procedure_name", "procedure_sctid"]
+	"required": ["id", "schedule_id", "timestamp", "location_id", "person_id", "procedure_name", "procedure_sctid"]
 }

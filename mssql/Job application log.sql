@@ -10,7 +10,6 @@ CREATE TABLE [dbo].[Job application log]
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NOT NULL,
 	[employer_location_id] INT NOT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'intellectual' NOT NULL,
 	[person_id] INT NOT NULL, 
 	[job_description] NVARCHAR (4000) NOT NULL,
 	[remarks] NVARCHAR (4000) NULL,
@@ -18,7 +17,5 @@ CREATE TABLE [dbo].[Job application log]
 	CONSTRAINT [FK_Job application log-Calendar_date] FOREIGN KEY ([calendar_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
 	CONSTRAINT [FK_Job application log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Job application log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
-	CONSTRAINT [FK_Job application log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
+	CONSTRAINT [FK_Job application log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id])
 )

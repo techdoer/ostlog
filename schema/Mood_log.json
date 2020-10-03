@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description": "location where mood was observed."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description ": "the person whose mood is being assessed"
@@ -42,5 +39,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "feeling_great", "how_are_you_doing_text"]
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id", "feeling_great", "how_are_you_doing_text"]
 }

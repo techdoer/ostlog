@@ -22,9 +22,6 @@
 			"type": "integer",
 			"description": "location where observation was observed."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description ": "the person who is the subject of the story."
@@ -59,5 +56,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "schedule_id", "location_id", "domain", "person_id", "diet_type", "food_item_id"]
+	"required": ["id", "schedule_id", "location_id", "person_id", "diet_type", "food_item_id"]
 }

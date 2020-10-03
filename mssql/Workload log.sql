@@ -11,7 +11,6 @@ CREATE TABLE [dbo].[Workload log]
 	[end_date_id] INT DEFAULT CONVERT (char(8), DATEADD(day, 5, GETDATE()), 112) NOT NULL,
 	[end_time] TIME(0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'intellectual' NOT NULL,
 	[person_id] INT NOT NULL,
 	[work_is_mentally_demanding] NVARCHAR (20) NULL,
 	[work_is_physically_demanding] NVARCHAR (20) NULL,
@@ -37,7 +36,5 @@ CREATE TABLE [dbo].[Workload log]
 	CHECK ([work_is_hurried_or_rushed] = 'strongly disagree' OR[work_is_hurried_or_rushed] = 'disagree' OR [work_is_hurried_or_rushed] = 'neutral' OR [work_is_hurried_or_rushed] = 'agree' OR [work_is_hurried_or_rushed] = 'strongly agree'),
 	CHECK ([work_is_meeting_expectations] = 'strongly disagree' OR [work_is_meeting_expectations] = 'disagree' OR [work_is_meeting_expectations] = 'neutral' OR [work_is_meeting_expectations] = 'agree' OR [work_is_meeting_expectations] = 'strongly agree'),
 	CHECK ([hard_work_is_required_to_meet_performance_level] = 'strongly disagree' OR [hard_work_is_required_to_meet_performance_level] = 'disagree' OR [hard_work_is_required_to_meet_performance_level] = 'neutral' OR [hard_work_is_required_to_meet_performance_level] = 'agree' OR [hard_work_is_required_to_meet_performance_level] = 'strongly agree'),
-	CHECK ([work_is_causing_insecurity_irritation_or_stress] = 'strongly disagree' OR [work_is_causing_insecurity_irritation_or_stress] = 'disagree' OR [work_is_causing_insecurity_irritation_or_stress] = 'neutral' OR [work_is_causing_insecurity_irritation_or_stress] = 'agree' OR [work_is_causing_insecurity_irritation_or_stress] = 'strongly agree'),
-
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
+	CHECK ([work_is_causing_insecurity_irritation_or_stress] = 'strongly disagree' OR [work_is_causing_insecurity_irritation_or_stress] = 'disagree' OR [work_is_causing_insecurity_irritation_or_stress] = 'neutral' OR [work_is_causing_insecurity_irritation_or_stress] = 'agree' OR [work_is_causing_insecurity_irritation_or_stress] = 'strongly agree')
 )

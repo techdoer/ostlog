@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description": "location where eye exam was given."
 		},
-		"domain ": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description ": "the person whose eyes were examined."
@@ -83,5 +80,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id"]
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id"]
 }

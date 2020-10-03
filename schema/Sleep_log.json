@@ -32,9 +32,6 @@
 			"type": "integer",
 			"description": "location where sleep episode occured."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description ": "the person who slept."
@@ -71,5 +68,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "version_id", "last_updated", "in_bed_date_id", "in_bed_time", "out_of_bed_date_id", "out_of_bed_time", "location_id", "domain", "person_id"]
+	"required": ["id", "version_id", "last_updated", "in_bed_date_id", "in_bed_time", "out_of_bed_date_id", "out_of_bed_time", "location_id", "person_id"]
 }

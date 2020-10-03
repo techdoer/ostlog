@@ -26,9 +26,6 @@
 			"type": "integer",
 			"description ": "the location where the workout started."
 		},
-		"domain ": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the person who worked out."
@@ -70,5 +67,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "workout_type", "duration_minutes"]
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id", "workout_type", "duration_minutes"]
 }

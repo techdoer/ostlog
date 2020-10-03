@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description": "location where net worth was recorded."
 		},
-		"domain ": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the person associated to the net worth."
@@ -67,5 +64,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "domain", "person_id"]
+	"required": ["id", "calendar_date_id", "timestamp", "person_id"]
 }

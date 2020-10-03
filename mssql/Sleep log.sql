@@ -10,7 +10,6 @@ CREATE TABLE [dbo].[Sleep log]
 	[out_of_bed_date_id] INT NOT NULL,
 	[out_of_bed_timestamp] TIME (0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[sleep_minutes_total] INT NULL,
 	[light_sleep_percentage] FLOAT NULL,
@@ -26,7 +25,6 @@ CREATE TABLE [dbo].[Sleep log]
 	CONSTRAINT [FK_Sleep log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 	CONSTRAINT [FK_Sleep log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Sleep log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
 	CHECK ([slept_well] = 'strongly disagree' OR [slept_well] = 'disagree' OR [slept_well] = 'neutral' OR [slept_well] = 'agree' OR [slept_well] = 'strongly agree'),
 	CHECK ([easy_wakeup] = 'strongly disagree' OR [easy_wakeup] = 'disagree' OR [easy_wakeup] = 'neutral' OR [easy_wakeup] = 'agree' OR [easy_wakeup] = 'strongly agree')
 )

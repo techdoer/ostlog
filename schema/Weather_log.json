@@ -26,9 +26,6 @@
 			"type": "integer",
 			"description ": "the location where the measures were recorded."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"condition": {
 			"type": "string",
 			"description": "sunny, rainy etc."
@@ -49,5 +46,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain"]
+	"required": [ "id", "calendar_date_id", "timestamp", "location_id" ]
 }

@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description": "location where chore was carried out."
 		},
-		"domain ": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the person who carried out the chore."
@@ -47,5 +44,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "chore_description", "status"]
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id", "chore_description", "status"]
 }

@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description": "location where observation was made."
 		},
-		"domain ": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the person to whom the metrics phenotype and physiological metrics apply."
@@ -44,5 +41,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "day_in_cycle", "flow"]
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id", "day_in_cycle", "flow"]
 }

@@ -26,9 +26,6 @@
 			"type": "integer",
 			"description ": "the location where the measures were recorded."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"noise_decibals": {
 			"type": "number",
 			"description": "the noise reading in dB at location"
@@ -37,5 +34,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "noise_db"]
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "noise_db"]
 }

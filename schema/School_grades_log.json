@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description": "location where school was carried out."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id": {
 			"type": "integer",
 			"description": "the person receiving the grade."
@@ -68,5 +65,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "term_start_date_id", "term_end_date_id", "location_id", "domain", "person_id", "education_level_isced", "subject_name"]
+	"required": ["id", "term_start_date_id", "term_end_date_id", "location_id", "person_id", "education_level_isced", "subject_name"]
 }

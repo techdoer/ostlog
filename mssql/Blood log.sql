@@ -9,7 +9,6 @@ CREATE TABLE [dbo].[Blood log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[blood_group] NVARCHAR(3),
 	[white_blood_cells_k_uL] FLOAT NULL,
@@ -73,6 +72,5 @@ CREATE TABLE [dbo].[Blood log]
 	CONSTRAINT [FK_Blood log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 	CONSTRAINT [FK_Blood log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Blood log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	CHECK ([blood_group]='A+' OR [blood_group]='A-' OR [blood_group]='B+' OR [blood_group]='B-' OR [blood_group]='O+' OR [blood_group]='O-' OR [blood_group]='AB+' OR [blood_group]='AB-'),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
+	CHECK ([blood_group]='A+' OR [blood_group]='A-' OR [blood_group]='B+' OR [blood_group]='B-' OR [blood_group]='O+' OR [blood_group]='O-' OR [blood_group]='AB+' OR [blood_group]='AB-')
 )

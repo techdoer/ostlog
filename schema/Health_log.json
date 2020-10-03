@@ -24,9 +24,6 @@
       "type": "integer",
       "description": "location where observation was observed."
     },
-    "domain": {
-      "$ref": "definitions.json#/definitions/domain"
-    },
     "person_id": {
       "type": "integer",
       "description ": "the subject under observation."
@@ -55,6 +52,6 @@
       "type": "string"
     }
   },
-  "required": [ "id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "symptom_id", "event_icd10_code", "new_occurance" ]
+  "required": [ "id", "calendar_date_id", "timestamp", "location_id", "person_id", "symptom_id", "event_icd10_code", "new_occurance" ]
 
 }

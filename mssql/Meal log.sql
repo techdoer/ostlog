@@ -9,7 +9,6 @@ CREATE TABLE [dbo].[Meal log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME (0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[meal_type] NVARCHAR(10) NOT NULL,
 	[duration_minutes] FLOAT NULL,
@@ -26,6 +25,5 @@ CREATE TABLE [dbo].[Meal log]
 	CHECK ([meal_type] = 'breakfast' OR [meal_type] = 'lunch' OR [meal_type] = 'dinner' OR [meal_type] = 'snack'),
 	CHECK ([meal_was_balanced] = 'strongly disagree' OR [meal_was_balanced] = 'disagree' OR [meal_was_balanced] = 'neutral' OR [meal_was_balanced] = 'agree' OR [meal_was_balanced] = 'strongly agree'),
 	CHECK ([meal_was_sufficient] = 'strongly disagree' OR [meal_was_sufficient] = 'disagree' OR [meal_was_sufficient] = 'neutral' OR [meal_was_sufficient] = 'agree' OR [meal_was_sufficient] = 'strongly agree'),
-	CHECK ([meal_was_nutritious] = 'strongly disagree' OR [meal_was_nutritious] = 'disagree' OR [meal_was_nutritious] = 'neutral' OR [meal_was_nutritious] = 'agree' OR [meal_was_nutritious] = 'strongly agree'),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
+	CHECK ([meal_was_nutritious] = 'strongly disagree' OR [meal_was_nutritious] = 'disagree' OR [meal_was_nutritious] = 'neutral' OR [meal_was_nutritious] = 'agree' OR [meal_was_nutritious] = 'strongly agree')
 )

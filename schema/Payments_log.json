@@ -24,9 +24,6 @@
 			"type": "integer",
 			"description ": "the location where payment was made."
 		},
-		"domain ": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"payer_id ": {
 			"type": "integer",
 			"description ": "the person making the payment."
@@ -61,5 +58,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "domain", "person_id", "payment_type", "item_description", "item_category", "amount_usd"]
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id", "payment_type", "item_description", "item_category", "amount_usd"]
 }

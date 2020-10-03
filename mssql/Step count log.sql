@@ -11,7 +11,6 @@ CREATE TABLE [dbo].[Step count log]
     [end_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
     [end_time] TIME (0) NOT NULL,	
 	[start_location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[step_count] INT NOT NULL,
 	[remarks] NVARCHAR(4000) NULL,   
@@ -20,6 +19,5 @@ CREATE TABLE [dbo].[Step count log]
 	CONSTRAINT [FK_Step count log-Calendar_date2] FOREIGN KEY ([end_date_id]) REFERENCES [dbo].[Calendar dates] ([date_id]),
     CONSTRAINT [FK Step_count_log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Step_count_log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	CONSTRAINT [FK_Step_count_log-Location] FOREIGN KEY ([start_location_id]) REFERENCES [dbo].[Location] ([location_id]),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental'),
+	CONSTRAINT [FK_Step_count_log-Location] FOREIGN KEY ([start_location_id]) REFERENCES [dbo].[Location] ([location_id])
 )

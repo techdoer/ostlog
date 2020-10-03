@@ -9,7 +9,6 @@ CREATE TABLE [dbo].[Menstrual cycle log]
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[person_id] INT NOT NULL,
 	[day_in_cycle] INT NOT NULL, -- 1 = first day, 2 = second day....
 	[flow] NVARCHAR(20) NULL,
@@ -19,8 +18,6 @@ CREATE TABLE [dbo].[Menstrual cycle log]
 	CONSTRAINT [FK_Menstrual cycle log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Menstrual cycle log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
 	CONSTRAINT [FK_Menstrual cycle log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
-
 	CHECK ([day_in_cycle] >= 0 AND [day_in_cycle] <= 10),
-	CHECK ([flow] = 'heavy' OR [flow] = 'light' OR [flow] = 'medium' OR [flow] = 'spotting'),
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
+	CHECK ([flow] = 'heavy' OR [flow] = 'light' OR [flow] = 'medium' OR [flow] = 'spotting')
 )

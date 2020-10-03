@@ -28,9 +28,6 @@
 			"type": "integer",
 			"description": "Main location where job is to be performed."
 		},
-		"domain": {
-			"$ref": "definitions.json#/definitions/domain"
-		},
 		"person_id ": {
 			"type": "integer",
 			"description ": "the job applicant."
@@ -42,5 +39,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id",  "employer_location_id", "domain", "person_id", "job_description"]
+	"required": ["id", "calendar_date_id", "timestamp", "location_id",  "employer_location_id", "person_id", "job_description"]
 }

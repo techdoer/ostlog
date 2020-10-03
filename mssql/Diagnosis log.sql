@@ -8,7 +8,6 @@ CREATE TABLE [dbo].[Diagnosis log]
 	[meta_id] INT NULL,
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[location_id] INT NULL,
-	[domain] NVARCHAR (15) DEFAULT 'physical' NOT NULL,
 	[medical_visit_id] INT NULL,
 	[patient_id] INT NOT NULL,
 	[body_site_code] INT NULL,
@@ -20,7 +19,5 @@ CREATE TABLE [dbo].[Diagnosis log]
 	CONSTRAINT [FK_Diagnosis log-People] FOREIGN KEY ([patient_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Diagnosis log-Doctors log] FOREIGN KEY ([medical_visit_id]) REFERENCES [dbo].[Doctors log] ([id]),
 	CONSTRAINT [FK_Diagnosis log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	CONSTRAINT [FK_Diagnosis log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
-
-	CHECK ([domain] = 'spiritual' OR [domain] = 'social' OR [domain] = 'physical' OR [domain] = 'intellectual' OR [domain] = 'financial' OR [domain] = 'emotional' OR [domain] = 'environmental')
+	CONSTRAINT [FK_Diagnosis log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id])
 )
