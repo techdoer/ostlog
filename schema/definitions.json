@@ -2,8 +2,8 @@
 	"definitions": {
 		"domain": {
 			"type": "string",
-			"enum": ["physical", "emotional", "spiritual", "intellectual", "environmental", "financial"],
-			"description": "one of the seven dimensions of well-being"
+			"enum": ["physical", "emotional", "spiritual", "intellectual", "financial"],
+			"description": "five dimensions of well-being"
 		},
 		"likert_scale": {
 			"type": "string",
