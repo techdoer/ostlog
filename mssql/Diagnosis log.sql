@@ -8,7 +8,6 @@ CREATE TABLE [dbo].[Diagnosis log]
 	[meta_id] INT NULL,
 	[calendar_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[location_id] INT NULL,
-	[medical_visit_id] INT NULL,
 	[patient_id] INT NOT NULL,
 	[body_site_code] INT NULL,
 	[diagnosis_icd10_code] NVARCHAR(10) NOT NULL, /* from the WHO's International Statistical Classification of Diseases and Related Health Problems. */

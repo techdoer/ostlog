@@ -11,7 +11,6 @@ CREATE TABLE [dbo].[Health log]
 	[location_id] INT NULL,
 	[person_id] INT NOT NULL,
 	[body_site_code] INT NULL,
-	[diagnosis_id] INT NULL,
 	[event_id] INT NOT NULL, /* foreign key from standard Symptoms table included in this kit */
 	[event_icd10_code] NVARCHAR(10), /* the WHO's ICD-10 code for this event */
 	[occurance] INT NULL, /* 1 = first, 2= recurring; 3 = last */

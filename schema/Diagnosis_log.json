@@ -24,10 +24,6 @@
 			"type": "integer",
 			"description": "location where observation was observed."
 		},
-		"medical_visit_id": {
-			"type": "integer",
-			"description ": "the medical professional who issued the diagnosis."
-		},
 		"patient_id": {
 			"type": "integer",
 			"description ": "the person who was diagnosed."
