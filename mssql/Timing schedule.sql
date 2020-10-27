@@ -10,12 +10,12 @@ CREATE TABLE [dbo].[Timing schedule]
 	-- begin columns based on FHIR Timing type - an event that may occur multiple times
 	
 	-- event
-	[event_date_id] INT NULL, 
+	[event_date_id] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL, 
 	[event_time] TIME(0) NULL, 
 
 	-- repeat 
 	[repeat_bounds_duration_minutes] INT NULL,
-	[repeat_bounds_range_start_date] INT NULL,
+	[repeat_bounds_range_start_date] INT DEFAULT CONVERT (char(8), GETDATE(), 112) NOT NULL,
 	[repeat_bounds_range_start_time] TIME(0) NULL,
 	[repeat_bounds_range_end_date] INT NULL,
 	[repeat_bounds_range_end_time] TIME(0) NULL,
