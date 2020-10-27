@@ -20,6 +20,5 @@ CREATE TABLE [dbo].[Health log]
 	CONSTRAINT [FK_Health log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
 	CONSTRAINT [FK_Health log-Symptom] FOREIGN KEY ([event_id]) REFERENCES [dbo].[Symptoms] ([id]),
 	CONSTRAINT [FK_Health log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	CONSTRAINT [FK_Health log-Diagnosis log] FOREIGN KEY ([diagnosis_id]) REFERENCES [dbo].[Diagnosis log] ([id]),
 	CONSTRAINT [FK_Health log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id])
 )
