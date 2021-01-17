@@ -25,6 +25,6 @@ CREATE TABLE [dbo].[Diet log]
 	CONSTRAINT [FK_Diet log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
 
 	CHECK ([diet_type] = 'vegetarian' OR [diet_type] = 'dairy-free' OR [diet_type] = 'nut-free' OR [diet_type] = 'gluten-free' OR [diet_type] = 'vegan'  OR [diet_type] = 'halal'  OR [diet_type] = 'kosher'  OR [diet_type] = 'other'),
-	CHECK ([status] = 'planned' OR [status] = 'in-progress' OR [status] = 'completed' OR [status] = 'cancelled'),
+	CHECK ([status]='active' OR [status]='completed' OR [status]='entered-in-error' OR [status]='intended' OR [status]='stopped' OR [status]='on-hold' OR [status] = 'unknown' OR [status] = 'not-taken'),
 	CHECK ([was_successful] = 'strongly disagree' OR [was_successful] = 'disagree' OR [was_successful] = 'neutral' OR [was_successful] = 'agree' OR [was_successful] = 'strongly agree')
 )
