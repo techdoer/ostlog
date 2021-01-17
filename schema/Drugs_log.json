@@ -46,7 +46,7 @@
 		},
 		"dosage_units": {
 			"type": "string",
-			"enum": ["g", "mg", "mcg", "U", "TU", "MU", "mmol", "ml"],
+			"enum": ["drp", "g", "mg", "mcg", "U", "TU", "MU", "mmol", "ml"],
 			"description": "equivalent to ATC classification's dosage units."
 		},
 		"body_site_code": {
