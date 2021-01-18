@@ -24,22 +24,21 @@
 		},
 		"person_id": {
 			"type": "integer",
-			"description ": "the person who is the subject of the story."
+			"description ": "the person who is dieting."
 		},
 		"status": {
-			"type": "string",
-			"enum": ["planned", "in-progress", "completed", "canceled"]
+			"$ref": "definitions.json#/definitions/status"
 		},
 		"diet_type": {
 			"type": "string",
-			"enum": ["vegetarian", "dairy-free", "nut-free", "gluten-free", "vegan", "halal", "kosher", "other"],
+			"enum": [ "vegetarian", "dairy-free", "nut-free", "gluten-free", "vegan", "halal", "kosher", "other" ],
 			"description": "from FHIR's https://www.hl7.org/fhir/valueset-encounter-diet.html"
 		},
-		"summary" {
-			"type": "string", 
+		"summary": {
+			"type": "string",
 			"description": "a brief summary of the diet."
 		},
-		"food_item_id": { 
+		"food_item_id": {
 			"type": "integer",
 			"description": "FHIR's valueset covering food https://www.hl7.org/fhir/valueset-food-type.html."
 		},
