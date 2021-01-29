@@ -44,15 +44,15 @@
 			"description": "total calories of the meal."
 		},
 		"meal_was_balanced": {
-			"$ref": "definitions.json#/definitions/likert_scale",
+			"$ref": "../definitions.json#/definitions/likert_scale",
 			"description": "indicates whether or not the person felt the meal was balanced."
 		},
 		"meal_was_sufficient": {
-			"$ref": "definitions.json#/definitions/likert_scale",
+			"$ref": "../definitions.json#/definitions/likert_scale",
 			"description": "indicates whether or not the person felt the meal was sufficient."
 		},
 		"meal_was_nutritious": {
-			"$ref": "definitions.json#/definitions/likert_scale",
+			"$ref": "../definitions.json#/definitions/likert_scale",
 			"description": "indicates whether or not the person felt the meal was nutritious."
 		},
 		"remarks": {

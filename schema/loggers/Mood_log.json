@@ -33,7 +33,7 @@
 			"description": "one word to describe the emotion a person is feeling."
 		},
 		"high_energy": {
-			"$ref": "definitions.json#/definitions/likert_scale"
+			"$ref": "../definitions.json#/definitions/likert_scale"
 		},
 		"remarks": {
 			"type": "string"

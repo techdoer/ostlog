@@ -25,7 +25,7 @@
 			"description": "location where visit was made."
 		},
 		"status": {
-			"$ref": "definitions.json#/definitions/status"
+			"$ref": "../definitions.json#/definitions/status"
 		},
 		"doctor_id": {
 			"type": "integer",

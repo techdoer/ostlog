@@ -27,7 +27,7 @@
 			"description ": "the person who is dieting."
 		},
 		"status": {
-			"$ref": "definitions.json#/definitions/status"
+			"$ref": "../definitions.json#/definitions/status"
 		},
 		"diet_type": {
 			"type": "string",
@@ -43,7 +43,7 @@
 			"description": "FHIR's valueset covering food https://www.hl7.org/fhir/valueset-food-type.html."
 		},
 		"was_effective": {
-			"$ref": "definitions.json#/definitions/likert_scale"
+			"$ref": "../definitions.json#/definitions/likert_scale"
 		},
 		"effectiveness_remarks": {
 			"type": "string"

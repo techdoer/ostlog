@@ -41,7 +41,7 @@
 			"description": "SNOWMED CT ID referencing a procedure. See https://www.hl7.org/fhir/valueset-procedure-code.html"
 		},
 		"was_effective": {
-			"$ref": "definitions.json#/definitions/likert_scale"
+			"$ref": "../definitions.json#/definitions/likert_scale"
 		},
 		"effective_remarks": {
 			"type": "string"

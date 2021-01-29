@@ -37,22 +37,22 @@
 			"description": "the worker."
 		},
 		"work is mentally demanding": {
-			"$ref": "definitions.json#/definitions/likert_scale"
+			"$ref": "../definitions.json#/definitions/likert_scale"
 		},
 		"work is physically demanding": {
-			"$ref": "definitions.json#/definitions/likert_scale"
+			"$ref": "../definitions.json#/definitions/likert_scale"
 		},
 		"feeling hurried or rushed at work": {
-			"$ref": "definitions.json#/definitions/likert_scale"
+			"$ref": "../definitions.json#/definitions/likert_scale"
 		},
 		"work is meeting expectations": {
-			"$ref": "definitions.json#/definitions/likert_scale"
+			"$ref": "../definitions.json#/definitions/likert_scale"
 		},
 		"hard work is required to meet performance levels": {
-			"$ref": "definitions.json#/definitions/likert_scale"
+			"$ref": "../definitions.json#/definitions/likert_scale"
 		},
 		"work is causing insecurity, irritation, or stress": {
-			"$ref": "definitions.json#/definitions/likert_scale"
+			"$ref": "../definitions.json#/definitions/likert_scale"
 		},
 		"direct_reports": {
 			"type": "integer",

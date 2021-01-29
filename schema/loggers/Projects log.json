@@ -37,7 +37,7 @@
 			"enum": ["planned", "in-progress", "completed", "canceled"]
 		},
 		"is_successful": {
-			"$ref": "definitions.json#/definitions/likert_scale",
+			"$ref": "../definitions.json#/definitions/likert_scale",
 			"description": "indicates whether the project was successful"
 		},
 		"remarks": {

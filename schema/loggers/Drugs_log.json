@@ -29,7 +29,7 @@
 			"description": "Reference to the diagnosis requiring the medication."
 		},
 		"status": {
-			"$ref": "definitions.json#/definitions/status"
+			"$ref": "../definitions.json#/definitions/status"
 		},
 		"drug_atc_code": {
 			"type": "string",
@@ -54,7 +54,7 @@
 			"description": "Body site administered to.  From FHIR/SNOWMED CT's Value Set http://hl7.org/fhir/ValueSet/approach-site-codes"
 		},
 		"was_effective": {
-			"$ref": "definitions.json#/definitions/likert_scale"
+			"$ref": "../definitions.json#/definitions/likert_scale"
 		},
 		"effectiveness_remarks": {
 			"type": "string"

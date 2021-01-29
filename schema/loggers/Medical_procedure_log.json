@@ -54,7 +54,7 @@
 			"description": "notes and observations from medical profesional regarding the procedure and results"
 		},
 		"was_effective": {
-			"$ref": "definitions.json#/definitions/likert_scale"
+			"$ref": "../definitions.json#/definitions/likert_scale"
 		},
 		"effectiveness_remarks": {
 			"type": "string"
