@@ -1,0 +1,86 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Vitals_log.json",
+	"title": "Vitals log",
+	"description": "Each entry characterizes vital sign and body measurement readings at a specific moment in time time.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of the readings."
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time of the readings."
+		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where readings carried out."
+		},
+		"person_id ": {
+			"type": "integer",
+			"description ": "the person to whom the readings belong."
+		},
+		"height_cm": {
+			"type": "number",
+			"description": "in centimeters"
+		},
+		"weight_kg": {
+			"type": "number",
+			"description": "in kilograms"
+		},
+		"right_foot_size_cm": {
+			"type": "number",
+			"description": "in centimeters"
+		},
+		"left_foot_size_cm": {
+			"type": "number",
+			"description": "in centimeters"
+		},
+		"head_circumference_cm": {
+			"type": "number",
+			"description": "in centimeters"
+		},
+		"body_temperature_c": {
+			"type": "number",
+			"description": "body temperature in celsius"
+		},
+		"blood_pressure_diastolic_mmhg": {
+			"type": "integer",
+			"description": ""
+		},
+		"blood_pressure_systolic_mmhg": {
+			"type": "integer",
+			"description": ""
+		},
+		"respiratory_rate_bpm": {
+			"type": "number",
+			"description": "breadth per minute"
+		},
+		"bfp_%": {
+			"type": "number",
+			"description": "body fat percentage"
+		},
+		"spo2_%": {
+			"type": "number",
+			"description": "peripheral capillary oxygen saturation Sp02"
+		},
+		"pef_l_min": {
+			"type": "number",
+			"description": "peak expiratory flow in litres per minute."
+		},
+		"remarks": {
+				"type": "string"
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id", "feeling_great"]
+}

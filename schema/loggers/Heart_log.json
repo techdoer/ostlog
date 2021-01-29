@@ -1,0 +1,107 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Heart_log.json",
+	"title": "Heart log",
+	"description": "Each entry characterises results from heart examinations or ECG.",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date when heart observation made."
+		},
+		"timestamp": {
+			"type ": "string ",
+			"description": "HH:MM:SS formatted time when heart observation made."
+		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where observation was made."
+		},
+		"person_id ": {
+			"type": "integer",
+			"description ": "the person to whose heart is being tested."
+		},
+		"min_heart_rate_bpm": {
+			"type": "number"
+		},
+		"avg_heart_rate_bpm": {
+			"type": "number"
+		},
+		"max_heart_rate_bpm": {
+			"type": "number"
+		},
+		"hrv": {
+			"type": "number"
+		},
+		"hrv_rmssd": {
+			"type": "number"
+		},
+		"hrv_sdnn": {
+			"type": "number"
+		},
+		"ecg_pr_ms": {
+			"type": "integer",
+			"description": "PR interval milliseconds"
+		},
+		"ecg_p_ms": {
+			"type": "integer",
+			"description": "p wave"
+		},
+		"ecg_qrs_ms": {
+			"type": "integer",
+			"description": "QRS complex milliseconds"
+		},
+		"ecg_t_ms": {
+			"type": "integer",
+			"description": "t wave"
+		},
+		"ecg_qt_ms": {
+			"type": "integer",
+			"description": "QT interval milliseconds"
+		},
+		"ecg_qtc_ms": {
+			"type": "integer",
+			"description": "QTC interval milliseconds"
+		},
+		"ecg_p_axis": {
+			"type": "integer"
+		},
+		"ecg_qrs_axis": {
+			"type": "integer"
+		},
+		"ecg_t_axis": {
+			"type": "integer"
+		},
+		"ecg_rv1_mv": {
+			"type": "number",
+			"description": " amplification millivolts"
+		},
+		"ecg_sv5_mv": {
+			"type": "number",
+			"description": " amplification millivolts"
+		},
+		"ecg_rv5_mv": {
+			"type": "number",
+			"description": " amplification millivolts"
+		},
+		"ecg_sv1_mv": {
+			"type": "number",
+			"description": " amplification millivolts"
+		},
+		"exam_results_url": {
+			"type": "string",
+			"description": "url to scanned results"
+		},
+		"remarks": {
+			"type": "string"
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id"]
+}
