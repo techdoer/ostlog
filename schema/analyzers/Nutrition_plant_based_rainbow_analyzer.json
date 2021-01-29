@@ -1,0 +1,62 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://ostlog.org/schema/Nutrition_plant_based_rainbow_analyzer.json",
+	"title": "Nutrition plant-based rainbow analyzer",
+	"description": "Each entry scores a person's meal according to its plant-based rainbow characteristics using a 3-point scale.",
+	"type": "object",
+	"properties": {
+
+		"id": {
+			"type": "integer"
+		},
+		"meta_id": {
+			"type": "integer",
+			"description": "reference to entry's metadata"
+		},
+		"calendar_date_id": {
+			"type": "string",
+			"description": "YYYYMMDD formatted date of data entry."
+		},
+		"timestamp": {
+			"type": "string",
+			"description": "HH:MM:SS formatted time of data entry."
+		},
+		"location_id": {
+			"type": "integer",
+			"description": "location where the meal took place."
+		},
+		"person_id": {
+			"type": "integer",
+			"description": "the person who ate the meal."
+		},
+		"blue_purple_score": {
+			"type": "integer",
+			"description": "1=low, 2=medium, 3=high. Signals the presence of anthocyanins in foods like eggplants, beets, blueberries, red cabbage and purple potatoes."
+		},
+		"green_score": {
+			"type": "integer",
+			"description": "1=low, 2=medium, 3=high.  Signals the presence of sulforaphane, isocyanates and indoles in many green vegetables like broccoli, brussels sprouds, arugula, kale, cauliflower and more."
+		},
+		"orange_score": {
+			"type": "integer",
+			"description": "1=low, 2=medium, 3=high.  Signals the presence of alpha-carotene and beta-carotene in foods like carrots, pumpkin, squash, and sweet potatoes."
+		},
+		"pale_green_white_score": {
+			"type": "integer",
+			"description": "1=low, 2=medium, 3=high.  Signals presence of allicins, quercetin and kaempferol in foods like garlic, onions, leeks and others."
+		},
+		"red_score": {
+			"type": "integer",
+			"description": "1=low, 2=medium, 3=high.  Signals presense of lycophene in foods like tomatoes, bell peppers, asparagus, and carrots. "
+		},
+		"yellow_green_score": {
+			"type": "integer",
+			"description": "1=low, 2=medium, 3=high. Signals presense of lutein and zeaxanthin in foods like squash, bell peppers, spinach, collard greens, mustard greens, peas, and avocados"
+		},
+		"remarks": {
+			"type": "string"
+		}
+	},
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id", "green_score", "orange_score", "pale_green_white_score", "red_score", "yellow_green_score"]
+}
