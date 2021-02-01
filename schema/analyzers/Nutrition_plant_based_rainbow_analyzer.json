@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "http://ostlog.org/schema/Nutrition_plant_based_rainbow_analyzer.json",
 	"title": "Nutrition plant-based rainbow analyzer",
-	"description": "Each entry scores a person's meal according to its plant-based rainbow characteristics using a 3-point scale.",
+	"description": "Scores a meal (low/med/high) according to the meal's plant-based rainbow characteristics.  This helps summarize intake of phytochemicals and other benefical plant-based substancesas.",
 	"type": "object",
 	"properties": {
 
@@ -29,6 +29,11 @@
 		"person_id": {
 			"type": "integer",
 			"description": "the person who ate the meal."
+		},
+		"meal_type": {
+			"type": "string",
+			"enum": [ "breakfast", "lunch", "dinner", "snack" ],
+			"description": ""
 		},
 		"blue_purple_score": {
 			"type": "integer",
@@ -58,5 +63,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id", "green_score", "orange_score", "pale_green_white_score", "red_score", "yellow_green_score"]
+	"required": [ "id", "calendar_date_id", "timestamp", "location_id", "person_id", "green_score", "orange_score", "pale_green_white_score", "red_score", "yellow_green_score" ]
 }
