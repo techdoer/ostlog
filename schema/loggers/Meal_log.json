@@ -36,8 +36,12 @@
 		},
 		"meal_type": {
 			"type": "string",
-			"enum": ["breakfast", "lunch", "dinner", "snack"],
+			"enum": [ "breakfast", "lunch", "dinner", "snack" ],
 			"description": ""
+		},
+		"courses": {
+			"type": "integer",
+			"description": "number of courses served in the meal"
 		},
 		"total_calories": {
 			"type": "number",

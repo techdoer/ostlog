@@ -13,6 +13,7 @@ CREATE TABLE [dbo].[Meal log]
 	[meal_type] NVARCHAR(10) NOT NULL,
 	[duration_minutes] FLOAT NULL,
 	[total_calories] FLOAT NULL,
+	[courses] INT NOT NULL,
 	[meal_was_balanced] NVARCHAR (20) NULL,
 	[meal_was_sufficient] NVARCHAR (20) NULL,
 	[meal_was_nutritious] NVARCHAR (20) NULL,
