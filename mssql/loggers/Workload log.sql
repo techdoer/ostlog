@@ -21,6 +21,8 @@ CREATE TABLE [dbo].[Workload log]
 	[direct_reports] INT NOT NULL,
 	[emails_received] INT NULL,
 	[emails_sent] INT NULL,
+	[emails_received_outside_working_hours] INT NULL,
+	[emails_sent_outside_working_hours] INT NULL,
 	[meetings_attended] INT NULL,
 	[hours_worked] FLOAT NULL,
 	[remarks] NVARCHAR (4000) NULL,

@@ -66,6 +66,14 @@
 			"type": "integer",
 			"description": "the number of emails sent during start and end date."
 		},
+		"emails_received_outside_working_hours": {
+			"type": "integer",
+			"description": "the number of emails received outside of standard working hours."
+		},
+		"emails_sent_outside_working_hours": {
+			"type": "integer",
+			"description": "the number of emails sent outside of standard working hours."
+		},
 		"meetings_attended": {
 			"type": "integer",
 			"description": "the number of meetings attended during start and end date."
