@@ -32,7 +32,7 @@
 		},
 		"workout_type": {
 			"type": "string",
-			"enum": ["walking", "running", "swimming", "cycling", "hiking", "gymnastics", "dancing", "roller-blading", "roller-skating", "stretching", "other"],
+			"enum": ["walking", "running", "swimming", "cycling", "hiking", "gymnastics", "dancing", "roller-blading", "roller-skating", "stretching", "pilates", "other"],
 			"description": ""
 		},
 		"duration_minutes": {
