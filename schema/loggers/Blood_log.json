@@ -113,6 +113,14 @@
 			"type": "number",
 			"description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
 		},
+		"erythroblasts_NRBC_%": {
+			"type": "number",
+			"description": "Nucleated red blood cells (NRBCs) are immature red blood cells produced in the bone marrow. In adults, their presence in the blood indicates a problem with bone marrow integrity or red blood cell production. "
+		},
+		"erythroblasts_NRBC_k_uL": {
+			"type": "number",
+			"description": "Nucleated red blood cells (NRBCs) are immature red blood cells produced in the bone marrow. In adults, their presence in the blood indicates a problem with bone marrow integrity or red blood cell production. "
+		},
 		"ferritin_ug_L": {
 			"type": "number",
 			"description": "ferritin measured as micrograms (ug) per liter (L)"

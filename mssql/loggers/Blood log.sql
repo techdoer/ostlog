@@ -31,6 +31,8 @@ CREATE TABLE [dbo].[Blood log]
 	[lymphocytes_cells_k_uL] FLOAT NULL, 
 	[monocytes_%] FLOAT NULL, 
 	[monocytes_cells_k_uL] FLOAT NULL, 
+	[erythroblasts_NRBC_%] FLOAT NULL,
+	[erythroblasts_NRBC_k_uL] FLOAT NULL,
 	[ferritin_ug_L] FLOAT NULL, 
 	[sideremia_ug_dL] FLOAT NULL, 
 	[creatinine_mg_dL] FLOAT NULL,
