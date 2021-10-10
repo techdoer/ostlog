@@ -125,6 +125,14 @@
 			"type": "number",
 			"description": "creatinine in milligrams (mg) per deciliter (dL)"
 		},
+		"transferrin_mg_dL": {
+			"type": "number",
+			"description": "Transferrin is the main protein in the blood that binds to iron and transports it throughout the body."
+		},
+		"transferrin_saturation_%": {
+			"type": "number",
+			"description": "It is the value of serum iron divided by the total iron-binding capacity of the available transferrin."
+		},
 		"eGFR_mL_min": {
 			"type": "number",
 			"description": "estimated glomerular filtration rate in milliliters (mL) per minute (min)."
