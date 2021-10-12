@@ -153,9 +153,17 @@
 			"type": "number",
 			"description": "bile acids micromol (umol) per liter (L)"
 		},
+		"azotemia_mg_%": {
+			"type": "number",
+			"description": "Azotemia is an elevation of blood urea nitrogen (BUN) and serum creatinine levels."
+		},
 		"glucose_mg_dL": {
 			"type": "number",
 			"description": "glucose in blood measured in milliggrams (mg) per deciliter (dL) "
+		},
+		"glycosylated hemoglobin_%": {
+			"type": "number",
+			"descrption": "measures the amount of glucose (sugar) in your blood. The test is often called A1c, or sometimes HbA1c. It's a simple blood test used to: Detect prediabetes — high sugar levels that can lead to diabetes, heart disease and stroke."
 		},
 		"uricacid_mg_dL": {
 			"type": "number",
@@ -213,6 +221,18 @@
 			"type": "number",
 			"description": "Toxoplasma IgM antibody in units (u) per milliliter (mL)"
 		},
+		"transglutaminase_IgA_U_ml": {
+			"type": "number",
+			"description": "A transglutaminase IgA (tTg-IgA) test is used to help doctors diagnose celiac disease."
+		},
+		"helicobacter_pylori_IgA_index": {
+			"type": "number",
+			"description": "This test looks for IgA antibodies which develop in the body in response to infection with the bacteria Helicobacter Pylori (H. Pylori)."
+		},
+		"helicobacter_pylori_IgG_UA_ml": {
+			"type": "number",
+			"description": "This blood test is used to detect a Helicobacter pylori (H. pylori) infection in the upper part of the small intestine (duodenum) and stomach. H. pylori may cause peptic ulcers, although most people with H."
+		},
 		"tsh_uu_mL": {
 			"type": "number",
 			"description": "Thyrotropin in microunit (uu) per milliliter (mL)"
@@ -225,9 +245,21 @@
 			"type": "number",
 			"description": "thyroxine in picomoles (pmol) per liter (L)"
 		},
+		"t4_free_ng_dl": {
+			"type": "number",
+			"description": "Measures the level of free T 4, or free thyroxine, in blood."
+		},
+		"amylase_U_l": {
+			"type": "number",
+			"description": "An amylase blood test measures the amount of amylase in blood."
+		},
 		"potassium_meq_L": {
 			"type": "number",
 			"description": "potassium in milligrams (meq) per liter (L)"
+		},
+		"magnesium_meq_L": {
+			"type": "number",
+			"description": "Measure of magnesium in the blood in milligrams (meq) per liter (L)."
 		},
 		"sodium_meq_L": {
 			"type": "number",
@@ -236,6 +268,14 @@
 		"calcium_meq_L": {
 			"type": "number",
 			"description": "calcium in in milliequivalents (meq) per liter (L)"
+		},
+		"chloride_meq_L": {
+			"type": "number",
+			"descrption": "The chloride blood test, or serum chloride level."
+		},
+		"proteine_total_g_%": {
+			"type": "number",
+			"descrption": "Measures the amount of protein in the blood."
 		},
 		"beta_hcg_mu_mL": {
 			"type": "number",
@@ -276,6 +316,10 @@
 		"lipemic index_md_dL": {
 			"type": "number",
 			"description": "A measurement of the abnormally high concentration of lipid in serum."
+		},
+		"vitamin_d3_ng_ml": {
+			"type": "number",
+			"description": "A measure of how much vitamin D is in the body."
 		},
 		"exam_results_url": {
 			"type": "string",
