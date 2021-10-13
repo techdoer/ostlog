@@ -1,333 +1,438 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Blood_log.json",
-	"title": "Blood log",
-	"description": "Each entry records results from a Complete Blood Count or similar blood examination .",
-	"type": "object",
-	"properties": {
-		"id": {
-			"type": "integer"
-		},
-		"meta_id": {
-			"type": "integer",
-			"description": "reference to entry's metadata"
-		},
-		"calendar_date_id": {
-			"type": "string",
-			"description": "YYYYMMDD formatted date of exam"
-		},
-		"timestamp": {
-			"type ": "string ",
-			"description": "HH:MM:SS formatted"
-		},
-		"location_id": {
-			"type": "integer",
-			"description": "location where observation was observed."
-		},
-		"person_id ": {
-			"type": "integer",
-			"description ": "the person to whom the blood results correspond"
-		},
-		"blood_group": {
-			"type": "string",
-			"enum": [ "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" ],
-			"description": ""
-		},
-		"white_blood_cells_k_uL": {
-			"type": "number",
-			"description": "white blood cell count - thousand (k) per microliter (uL)"
-		},
-		"red_blood_cells_M_uL": {
-			"type": "number",
-			"description": "red blood cell count - million (M) per microliter (uL)"
-		},
-		"hemoglobin_g_dL": {
-			"type": "number",
-			"description": "hemoglobin count - grams (g) per deciliter (dL)"
-		},
-		"hematocrit_%": {
-			"type": "number",
-			"description": "Hematocrit - percentage of white cell volume to red cell volume"
-		},
-		"mcv_fL": {
-			"type": "number",
-			"description": "mean corpuscular volume - average volume of a red blood cell in femtoliters (fL)"
-		},
-		"mch_pg": {
-			"type": "number",
-			"description": "mean corpuscular hemoglobin - the average amount of hemoglobin in the average red cell in picograms (pg)"
-		},
-		"mchc_g_dL": {
-			"type": "number",
-			"description": "mean corpuscular hemoglobin concentration - the average concentration of hemoglobin in a given volume of red cells in grams (g) per deciliter (dL)"
-		},
-		"mpv_fL": {
-			"type": "number",
-			"description": "mean platelet volume - measures the average amount (volume) of platelets in femtoliters (fL)"
-		},
-		"rdw_%": {
-			"type": "number",
-			"description": "Red cell distribution width (coefficient of variation) - measures the variability of a red cell size and shape as percentage"
-		},
-		"platelet_k_uL": {
-			"type": "number",
-			"description": "platelet count - measured as thousands (k) per microliter (uL)"
-		},
-		"neutrophils_%": {
-			"type": "number",
-			"description": "one of five types of white blood cells in percentage"
-		},
-		"neutrophils_cells_k_uL": {
-			"type": "number",
-			"description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
-		},
-		"eosinophils_%": {
-			"type": "number",
-			"description": "one of five types of white blood cells in percentage"
-		},
-		"eosinophils_cells_k_uL": {
-			"type": "number",
-			"description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
-		},
-		"basophils_%": {
-			"type": "number",
-			"description": "one of five types of white blood cells in percentage"
-		},
-		"basophils_cells_k_uL": {
-			"type": "number",
-			"description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
-		},
-		"lymphocytes_%": {
-			"type": "number",
-			"description": "one of five types of white blood cells in percentage"
-		},
-		"lymphocytes_cells_k_uL": {
-			"type": "number",
-			"description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
-		},
-		"monocytes_%": {
-			"type": "number",
-			"description": "one of five types of white blood cells in percentage"
-		},
-		"monocytes_cells_k_uL": {
-			"type": "number",
-			"description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
-		},
-		"erythroblasts_NRBC_%": {
-			"type": "number",
-			"description": "Nucleated red blood cells (NRBCs) are immature red blood cells produced in the bone marrow. In adults, their presence in the blood indicates a problem with bone marrow integrity or red blood cell production. "
-		},
-		"erythroblasts_NRBC_k_uL": {
-			"type": "number",
-			"description": "Nucleated red blood cells (NRBCs) are immature red blood cells produced in the bone marrow. In adults, their presence in the blood indicates a problem with bone marrow integrity or red blood cell production. "
-		},
-		"ferritin_ug_L": {
-			"type": "number",
-			"description": "ferritin measured as micrograms (ug) per liter (L)"
-		},
-		"sideremia_ug_dL": {
-			"type": "number",
-			"description": "transports iron in the blood; measured in micrograms (ug) per deciliter (dL)"
-		},
-		"creatinine_mg_dL": {
-			"type": "number",
-			"description": "creatinine in milligrams (mg) per deciliter (dL)"
-		},
-		"transferrin_mg_dL": {
-			"type": "number",
-			"description": "Transferrin is the main protein in the blood that binds to iron and transports it throughout the body."
-		},
-		"transferrin_saturation_%": {
-			"type": "number",
-			"description": "It is the value of serum iron divided by the total iron-binding capacity of the available transferrin."
-		},
-		"eGFR_mL_min": {
-			"type": "number",
-			"description": "estimated glomerular filtration rate in milliliters (mL) per minute (min)."
-		},
-		"albumin_g_dL": {
-			"type": "number",
-			"description": "albumin in grams (g) per deciliter (dL)"
-		},
-		"bile_acids_umol_L": {
-			"type": "number",
-			"description": "bile acids micromol (umol) per liter (L)"
-		},
-		"azotemia_mg_%": {
-			"type": "number",
-			"description": "Azotemia is an elevation of blood urea nitrogen (BUN) and serum creatinine levels."
-		},
-		"glucose_mg_dL": {
-			"type": "number",
-			"description": "glucose in blood measured in milliggrams (mg) per deciliter (dL) "
-		},
-		"glycosylated hemoglobin_%": {
-			"type": "number",
-			"descrption": "measures the amount of glucose (sugar) in your blood. The test is often called A1c, or sometimes HbA1c. It's a simple blood test used to: Detect prediabetes — high sugar levels that can lead to diabetes, heart disease and stroke."
-		},
-		"uricacid_mg_dL": {
-			"type": "number",
-			"description": "measure of uric acid in blood in milligrams (mg) per deciliter (dL)"
-		},
-		"triglycerides_mg_dL": {
-			"type": "number",
-			"description": "measure of triglycerides in blood in milligrams (mg) per deciliter (dL)"
-		},
-		"cholesterol_total_mg_dL": {
-			"type": "number",
-			"description": "cholesterol in blood milligrams (mg) per deciliter (dL)"
-		},
-		"cholesterol_hdl_mg_dL": {
-			"type": "number",
-			"description": "hdl cholesterol in blood milligrams (mg) per deciliter (dL)"
-		},
-		"cholesterol_ldl_mg_dL": {
-			"type": "number",
-			"description": "ldl cholesterol in blood milligrams (mg) per deciliter (dL)"
-		},
-		"ast_u_L": {
-			"type": "number",
-			"description": "Aspartate Aminotransferase for checking liver damage in units (u) per liter (L) "
-		},
-		"alt_u_L": {
-			"type": "number",
-			"description": "Alanine Aminotransferase for checking liver damange in units (u) per liter (L)"
-		},
-		"bilirubin_total_mg_dL": {
-			"type": "number",
-			"description": "Bilirubin total in milligrams (mg) per deciliter (dL)"
-		},
-		"bilirubin_direct_mg_dL": {
-			"type": "number",
-			"description": "Bilirubin direct in milligrams (mg) per deciliter (dL)"
-		},
-		"bilirubin_indirect_mg_dL": {
-			"type": "number",
-			"description": "Bilirubin indirect in milligrams (mg) per deciliter (dL)"
-		},
-		"ggt_u_L": {
-			"type": "number",
-			"description": "Gamma-glutamyl Transferase for checking liber damage. In units (u) per liter (L)"
-		},
-		"ldh_uL_L": {
-			"type": "number",
-			"description": "ldh lactic dehydrogenase in microliter (uL) per liter (L)"
-		},
-		"toxoplasma_IgG_u_mL": {
-			"type": "number",
-			"description": "Toxoplasma IgG antibody in units (u) per milliliter (mL)"
-		},
-		"toxoplasma_IgM_u_mL": {
-			"type": "number",
-			"description": "Toxoplasma IgM antibody in units (u) per milliliter (mL)"
-		},
-		"transglutaminase_IgA_U_ml": {
-			"type": "number",
-			"description": "A transglutaminase IgA (tTg-IgA) test is used to help doctors diagnose celiac disease."
-		},
-		"helicobacter_pylori_IgA_index": {
-			"type": "number",
-			"description": "This test looks for IgA antibodies which develop in the body in response to infection with the bacteria Helicobacter Pylori (H. Pylori)."
-		},
-		"helicobacter_pylori_IgG_UA_ml": {
-			"type": "number",
-			"description": "This blood test is used to detect a Helicobacter pylori (H. pylori) infection in the upper part of the small intestine (duodenum) and stomach. H. pylori may cause peptic ulcers, although most people with H."
-		},
-		"tsh_uu_mL": {
-			"type": "number",
-			"description": "Thyrotropin in microunit (uu) per milliliter (mL)"
-		},
-		"t3_pmol_L": {
-			"type": "number",
-			"description": "Triodothyronine in picomoles (pmol) per liter (L)"
-		},
-		"t4_pmol_L": {
-			"type": "number",
-			"description": "thyroxine in picomoles (pmol) per liter (L)"
-		},
-		"t4_free_ng_dl": {
-			"type": "number",
-			"description": "Measures the level of free T 4, or free thyroxine, in blood."
-		},
-		"amylase_U_l": {
-			"type": "number",
-			"description": "An amylase blood test measures the amount of amylase in blood."
-		},
-		"potassium_meq_L": {
-			"type": "number",
-			"description": "potassium in milligrams (meq) per liter (L)"
-		},
-		"magnesium_meq_L": {
-			"type": "number",
-			"description": "Measure of magnesium in the blood in milligrams (meq) per liter (L)."
-		},
-		"sodium_meq_L": {
-			"type": "number",
-			"description": "sodium in milliequivalents (meq) per liter (L)"
-		},
-		"calcium_meq_L": {
-			"type": "number",
-			"description": "calcium in in milliequivalents (meq) per liter (L)"
-		},
-		"chloride_meq_L": {
-			"type": "number",
-			"descrption": "The chloride blood test, or serum chloride level."
-		},
-		"proteine_total_g_%": {
-			"type": "number",
-			"descrption": "Measures the amount of protein in the blood."
-		},
-		"beta_hcg_mu_mL": {
-			"type": "number",
-			"description": "hormone human chorionic gonadotropin measured in million units (mu) per milliliter (mL)"
-		},
-		"crp_mg_L": {
-			"type": "number",
-			"description": "c-reactive protein measured in milligrams (mg) per liter (L)"
-		},
-		"alp_u_L": {
-			"type": "number",
-			"description": "alkaline phosphatase measured in units (u) per liter (L) "
-		},
-		"psa_ng_mL": {
-			"type": "number",
-			"description": "prostate specific antigen measured in nanograms (ng) per milliliter (mL)"
-		},
-		"psa_free_ng_mL": {
-			"type": "number",
-			"description": "Free prostate-specific antigen measured in nanograms (ng) per milliliter (mL)"
-		},
-		"esr_mm_hr": {
-			"type": "number",
-			"description": "Erythro Sedimentation rate measured in millimeters (mm) per hour (hr)"
-		},
-		"urea_mg_dL": {
-			"type": "number",
-			"description": "Enzymatic-spectrophotometric milligrams (mg) per deciliter (dL)"
-		},
-		"hemolysis_index_md_dL": {
-			"type": "number",
-			"description": "The hemolysis index is a measurement of the red colour of serum"
-		},
-		"icterus_index_md_dL": {
-			"type": "number",
-			"description": "The icterus index is a measure of the yellow colour of serum."
-		},
-		"lipemic index_md_dL": {
-			"type": "number",
-			"description": "A measurement of the abnormally high concentration of lipid in serum."
-		},
-		"vitamin_d3_ng_ml": {
-			"type": "number",
-			"description": "A measure of how much vitamin D is in the body."
-		},
-		"exam_results_url": {
-			"type": "string",
-			"description": "url to scanned copy of the results"
-		},
-		"remarks": {
-			"type": "string"
-		}
-	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id"]
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "id": "http://ostlog.org/schema/Blood_log.json",
+  "title": "Blood log",
+  "description": "Each entry records results from a Complete Blood Count or similar blood examination .",
+  "type": "object",
+
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "meta_id": {
+      "type": "integer",
+      "description": "reference to entry's metadata"
+    },
+    "calendar_date_id": {
+      "type": "string",
+      "description": "YYYYMMDD formatted date of exam"
+    },
+    "timestamp": {
+      "type ": "string ",
+      "description": "HH:MM:SS formatted"
+    },
+    "location_id": {
+      "type": "integer",
+      "description": "location where observation was observed."
+    },
+    "person_id ": {
+      "type": "integer",
+      "description ": "the person to whom the blood results correspond"
+    },
+    "blood_group": {
+      "type": "string",
+      "enum": [ "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" ],
+      "description": ""
+    },
+    "blood_cell_count": { "$ref": "#/$defs/blood_cells" },
+    "acids": { "$ref": "#/$defs/acids" },
+    "antibodies": { "$ref": "#/$defs/antibodies" },
+    "antigens": { "$ref": "#/$defs/antigens" },
+    "carbohydrates": { "$ref": "#/$defs/carbohydrates" },
+    "fats": { "$ref": "#/$defs/fats" },
+    "hormones": { "$ref": "#/$defs/hormones" },
+    "minerals": { "$ref": "#/$defs/minerals" },
+    "proteins": { "$ref": "#/$defs/proteins" },
+    "vitamins": { "$ref": "#/$defs/vitamins" },
+    "indicies": { "$ref": "#/$defs/indicies" },
+    "other": { "$ref": "#/$defs/other" },
+    "exam_results_url": {
+      "type": "string",
+      "description": "url to scanned copy of the results"
+    },
+    "remarks": {
+      "type": "string"
+    }
+  },
+
+  "required": [ "id", "calendar_date_id", "timestamp", "location_id", "person_id" ],
+
+  "$defs": {
+    "acids": {
+      "id": "/schemas/acids",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "bile_acids_umol_L": {
+          "type": "number",
+          "description": "bile acids micromol (umol) per liter (L)"
+        },
+        "uricacid_mg_dL": {
+          "type": "number",
+          "description": "measure of uric acid in blood in milligrams (mg) per deciliter (dL)"
+        }
+      }
+    },
+    "antibodies": {
+      "id": "/schemas/antibodies",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "helicobacter_pylori_IgA_index": {
+          "type": "number",
+          "description": "This test looks for IgA antibodies which develop in the body in response to infection with the bacteria Helicobacter Pylori (H. Pylori)."
+        },
+        "helicobacter_pylori_IgG_UA_ml": {
+          "type": "number",
+          "description": "This blood test is used to detect a Helicobacter pylori (H. pylori) infection in the upper part of the small intestine (duodenum) and stomach. H. pylori may cause peptic ulcers, although most people with H."
+        },
+        "toxoplasma_IgG_u_mL": {
+          "type": "number",
+          "description": "Toxoplasma IgG antibody in units (u) per milliliter (mL)"
+        },
+        "toxoplasma_IgM_u_mL": {
+          "type": "number",
+          "description": "Toxoplasma IgM antibody in units (u) per milliliter (mL)"
+        },
+        "transglutaminase_IgA_U_ml": {
+          "type": "number",
+          "description": "A transglutaminase IgA (tTg-IgA) test is used to help doctors diagnose celiac disease."
+        }
+      }
+    },
+    "antigens": {
+      "id": "/schemas/antigens",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+
+        "psa_ng_mL": {
+          "type": "number",
+          "description": "prostate specific antigen measured in nanograms (ng) per milliliter (mL)"
+        },
+        "psa_free_ng_mL": {
+          "type": "number",
+          "description": "Free prostate-specific antigen measured in nanograms (ng) per milliliter (mL)"
+        }
+      }
+    },
+    "blood_cells": {
+      "id": "/schemas/blood_cells",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "white_blood_cells_k_uL": {
+          "type": "number",
+          "description": "white blood cell count - thousand (k) per microliter (uL)"
+        },
+        "red_blood_cells_M_uL": {
+          "type": "number",
+          "description": "red blood cell count - million (M) per microliter (uL)"
+        },
+        "hemoglobin_g_dL": {
+          "type": "number",
+          "description": "hemoglobin count - grams (g) per deciliter (dL)"
+        },
+        "hematocrit_%": {
+          "type": "number",
+          "description": "Hematocrit - percentage of white cell volume to red cell volume"
+        },
+        "mcv_fL": {
+          "type": "number",
+          "description": "mean corpuscular volume - average volume of a red blood cell in femtoliters (fL)"
+        },
+        "mch_pg": {
+          "type": "number",
+          "description": "mean corpuscular hemoglobin - the average amount of hemoglobin in the average red cell in picograms (pg)"
+        },
+        "mchc_g_dL": {
+          "type": "number",
+          "description": "mean corpuscular hemoglobin concentration - the average concentration of hemoglobin in a given volume of red cells in grams (g) per deciliter (dL)"
+        },
+        "mpv_fL": {
+          "type": "number",
+          "description": "mean platelet volume - measures the average amount (volume) of platelets in femtoliters (fL)"
+        },
+        "rdw_%": {
+          "type": "number",
+          "description": "Red cell distribution width (coefficient of variation) - measures the variability of a red cell size and shape as percentage"
+        },
+        "platelet_k_uL": {
+          "type": "number",
+          "description": "platelet count - measured as thousands (k) per microliter (uL)"
+        },
+        "neutrophils_%": {
+          "type": "number",
+          "description": "one of five types of white blood cells in percentage"
+        },
+        "neutrophils_cells_k_uL": {
+          "type": "number",
+          "description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
+        },
+        "eosinophils_%": {
+          "type": "number",
+          "description": "one of five types of white blood cells in percentage"
+        },
+        "eosinophils_cells_k_uL": {
+          "type": "number",
+          "description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
+        },
+        "basophils_%": {
+          "type": "number",
+          "description": "one of five types of white blood cells in percentage"
+        },
+        "basophils_cells_k_uL": {
+          "type": "number",
+          "description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
+        },
+        "lymphocytes_%": {
+          "type": "number",
+          "description": "one of five types of white blood cells in percentage"
+        },
+        "lymphocytes_cells_k_uL": {
+          "type": "number",
+          "description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
+        },
+        "monocytes_%": {
+          "type": "number",
+          "description": "one of five types of white blood cells in percentage"
+        },
+        "monocytes_cells_k_uL": {
+          "type": "number",
+          "description": "one of five types of white blood cells measured in thousands (k) per microliter (uL)"
+        },
+        "erythroblasts_NRBC_%": {
+          "type": "number",
+          "description": "Nucleated red blood cells (NRBCs) are immature red blood cells produced in the bone marrow. In adults, their presence in the blood indicates a problem with bone marrow integrity or red blood cell production. "
+        },
+        "erythroblasts_NRBC_k_uL": {
+          "type": "number",
+          "description": "Nucleated red blood cells (NRBCs) are immature red blood cells produced in the bone marrow. In adults, their presence in the blood indicates a problem with bone marrow integrity or red blood cell production. "
+        }
+      }
+    },
+    "carbohydrates": {
+      "id": "/schemas/carbohydrates",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+
+        "glucose_mg_dL": {
+          "type": "number",
+          "description": "glucose in blood measured in milliggrams (mg) per deciliter (dL) "
+        },
+        "glycosylated hemoglobin_%": {
+          "type": "number",
+          "descrption": "measures the amount of glucose (sugar) in your blood. The test is often called A1c, or sometimes HbA1c. It's a simple blood test used to: Detect prediabetes — high sugar levels that can lead to diabetes, heart disease and stroke."
+        }
+      }
+    },
+    "fats": {
+      "id": "/schemas/fats",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "cholesterol_total_mg_dL": {
+          "type": "number",
+          "description": "cholesterol in blood milligrams (mg) per deciliter (dL)"
+        },
+        "cholesterol_hdl_mg_dL": {
+          "type": "number",
+          "description": "hdl cholesterol in blood milligrams (mg) per deciliter (dL)"
+        },
+        "cholesterol_ldl_mg_dL": {
+          "type": "number",
+          "description": "ldl cholesterol in blood milligrams (mg) per deciliter (dL)"
+        },
+        "triglycerides_mg_dL": {
+          "type": "number",
+          "description": "measure of triglycerides in blood in milligrams (mg) per deciliter (dL)"
+        }
+      }
+    },
+    "hormones": {
+      "id": "/schemas/hormones",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "beta_hcg_mu_mL": {
+          "type": "number",
+          "description": "hormone human chorionic gonadotropin measured in million units (mu) per milliliter (mL)"
+        },
+        "creatinine_mg_dL": {
+          "type": "number",
+          "description": "creatinine in milligrams (mg) per deciliter (dL)"
+        },
+        "tsh_uu_mL": {
+          "type": "number",
+          "description": "Thyrotropin in microunit (uu) per milliliter (mL)"
+        },
+        "t3_pmol_L": {
+          "type": "number",
+          "description": "Triodothyronine in picomoles (pmol) per liter (L)"
+        },
+        "t4_pmol_L": {
+          "type": "number",
+          "description": "thyroxine in picomoles (pmol) per liter (L)"
+        },
+        "t4_free_ng_dl": {
+          "type": "number",
+          "description": "Measures the level of free T 4, or free thyroxine, in blood."
+        }
+      }
+    },
+    "indicies": {
+      "id": "/schemas/indicies",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "azotemia_mg_%": {
+          "type": "number",
+          "description": "Azotemia is an elevation of blood urea nitrogen (BUN) and serum creatinine levels."
+        },
+        "eGFR_mL_min": {
+          "type": "number",
+          "description": "estimated glomerular filtration rate in milliliters (mL) per minute (min)."
+        },
+        "esr_mm_hr": {
+          "type": "number",
+          "description": "Erythro Sedimentation rate measured in millimeters (mm) per hour (hr)"
+        },
+        "hemolysis_index_md_dL": {
+          "type": "number",
+          "description": "The hemolysis index is a measurement of the red colour of serum"
+        },
+        "icterus_index_md_dL": {
+          "type": "number",
+          "description": "The icterus index is a measure of the yellow colour of serum."
+        },
+        "lipemic index_md_dL": {
+          "type": "number",
+          "description": "A measurement of the abnormally high concentration of lipid in serum."
+        },
+        "urea_mg_dL": {
+          "type": "number",
+          "description": "Enzymatic-spectrophotometric milligrams (mg) per deciliter (dL)"
+        }
+      }
+    },
+    "minerals": {
+      "id": "/schemas/minerals",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+
+        "calcium_meq_L": {
+          "type": "number",
+          "description": "calcium in in milliequivalents (meq) per liter (L)"
+        },
+        "chloride_meq_L": {
+          "type": "number",
+          "descrption": "The chloride blood test, or serum chloride level."
+        },
+        "magnesium_meq_L": {
+          "type": "number",
+          "description": "Measure of magnesium in the blood in milligrams (meq) per liter (L)."
+        },
+        "potassium_meq_L": {
+          "type": "number",
+          "description": "potassium in milligrams (meq) per liter (L)"
+        },
+        "sideremia_ug_dL": {
+          "type": "number",
+          "description": "transports iron in the blood; measured in micrograms (ug) per deciliter (dL)"
+        },
+        "sodium_meq_L": {
+          "type": "number",
+          "description": "sodium in milliequivalents (meq) per liter (L)"
+        }
+      }
+    },
+    "other": {
+      "id": "/schemas/other",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "bilirubin_total_mg_dL": {
+          "type": "number",
+          "description": "Bilirubin total in milligrams (mg) per deciliter (dL)"
+        },
+        "bilirubin_direct_mg_dL": {
+          "type": "number",
+          "description": "Bilirubin direct in milligrams (mg) per deciliter (dL)"
+        },
+        "bilirubin_indirect_mg_dL": {
+          "type": "number",
+          "description": "Bilirubin indirect in milligrams (mg) per deciliter (dL)"
+        }
+      }
+    },
+    "proteins": {
+      "id": "/schemas/proteins",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+
+        "albumin_g_dL": {
+          "type": "number",
+          "description": "albumin in grams (g) per deciliter (dL)"
+        },
+        "alt_u_L": {
+          "type": "number",
+          "description": "Alanine Aminotransferase for checking liver damange in units (u) per liter (L)"
+        },
+        "alp_u_L": {
+          "type": "number",
+          "description": "alkaline phosphatase measured in units (u) per liter (L) "
+        },
+        "amylase_U_l": {
+          "type": "number",
+          "description": "An amylase blood test measures the amount of amylase in blood."
+        },
+        "ast_u_L": {
+          "type": "number",
+          "description": "Aspartate Aminotransferase for checking liver damage in units (u) per liter (L) "
+        },
+        "crp_mg_L": {
+          "type": "number",
+          "description": "c-reactive protein measured in milligrams (mg) per liter (L)"
+        },
+        "ggt_u_L": {
+          "type": "number",
+          "description": "Gamma-glutamyl Transferase for checking liber damage. In units (u) per liter (L)"
+        },
+        "ldh_uL_L": {
+          "type": "number",
+          "description": "ldh lactic dehydrogenase in microliter (uL) per liter (L)"
+        },
+        "proteine_total_g_%": {
+          "type": "number",
+          "descrption": "Measures the amount of protein in the blood."
+        },
+        "ferritin_ug_L": {
+          "type": "number",
+          "description": "ferritin measured as micrograms (ug) per liter (L)"
+        },
+        "transferrin_mg_dL": {
+          "type": "number",
+          "description": "Transferrin is the main protein in the blood that binds to iron and transports it throughout the body."
+        },
+        "transferrin_saturation_%": {
+          "type": "number",
+          "description": "It is the value of serum iron divided by the total iron-binding capacity of the available transferrin."
+        }
+      }
+    },
+    "vitamins": {
+      "id": "/schemas/vitamins",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "vitamin_d3_ng_ml": {
+          "type": "number",
+          "description": "A measure of how much vitamin D is in the body."
+        }
+      }
+    }
+  }
 }
