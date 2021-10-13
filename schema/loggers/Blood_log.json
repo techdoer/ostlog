@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "id": "http://ostlog.org/schema/Blood_log.json",
   "title": "Blood log",
   "description": "Each entry records results from a Complete Blood Count or similar blood examination .",
@@ -34,7 +34,7 @@
       "enum": [ "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" ],
       "description": ""
     },
-    "blood_cell_count": { "$ref": "#/$defs/blood_cells" },
+    "blood_cells": { "$ref": "#/$defs/blood_cells" },
     "acids": { "$ref": "#/$defs/acids" },
     "antibodies": { "$ref": "#/$defs/antibodies" },
     "antigens": { "$ref": "#/$defs/antigens" },
