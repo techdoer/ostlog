@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "id": "http://ostlog.org/schema/Blood_log.json",
   "title": "Blood log",
-  "description": "Each entry records results from a Complete Blood Count or similar blood examination .",
+  "description": "Each entry records results from a Complete Blood Count or similar blood measurements.",
   "type": "object",
 
   "properties": {
@@ -11,23 +11,23 @@
     },
     "meta_id": {
       "type": "integer",
-      "description": "reference to entry's metadata"
+      "description": "reference to related metadata entry"
     },
     "calendar_date_id": {
       "type": "string",
-      "description": "YYYYMMDD formatted date of exam"
+      "description": "YYYYMMDD formatted date when blood was extracted"
     },
     "timestamp": {
       "type ": "string ",
-      "description": "HH:MM:SS formatted"
+      "description": "HH:MM:SS formatted time when blood was extracted"
     },
     "location_id": {
       "type": "integer",
-      "description": "location where observation was observed."
+      "description": "location where the blood was extracted"
     },
     "person_id ": {
       "type": "integer",
-      "description ": "the person to whom the blood results correspond"
+      "description ": "the person providing the blood sample"
     },
     "blood_group": {
       "type": "string",
@@ -39,10 +39,12 @@
     "antibodies": { "$ref": "#/$defs/antibodies" },
     "antigens": { "$ref": "#/$defs/antigens" },
     "carbohydrates": { "$ref": "#/$defs/carbohydrates" },
+    "enzymes": { "$ref": "#/$defs/enzymes" },
     "fats": { "$ref": "#/$defs/fats" },
     "hormones": { "$ref": "#/$defs/hormones" },
     "minerals": { "$ref": "#/$defs/minerals" },
     "proteins": { "$ref": "#/$defs/proteins" },
+    "protidogram": { "$ref": "#/$defs/protidogram" },
     "vitamins": { "$ref": "#/$defs/vitamins" },
     "indicies": { "$ref": "#/$defs/indicies" },
     "other": { "$ref": "#/$defs/other" },
@@ -128,10 +130,6 @@
         "red_blood_cells_M_uL": {
           "type": "number",
           "description": "red blood cell count - million (M) per microliter (uL)"
-        },
-        "hemoglobin_g_dL": {
-          "type": "number",
-          "description": "hemoglobin count - grams (g) per deciliter (dL)"
         },
         "hematocrit_%": {
           "type": "number",
@@ -224,6 +222,37 @@
         "glycosylated hemoglobin_%": {
           "type": "number",
           "descrption": "measures the amount of glucose (sugar) in your blood. The test is often called A1c, or sometimes HbA1c. It's a simple blood test used to: Detect prediabetes — high sugar levels that can lead to diabetes, heart disease and stroke."
+        }
+      }
+    },
+    "enzymes": {
+      "id": "/schemas/enzymes",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "alt_u_L": {
+          "type": "number",
+          "description": "Alanine Aminotransferase for checking liver damange in units (u) per liter (L)"
+        },
+        "alp_u_L": {
+          "type": "number",
+          "description": "alkaline phosphatase measured in units (u) per liter (L) "
+        },
+        "amylase_U_l": {
+          "type": "number",
+          "description": "An amylase blood test measures the amount of amylase in blood."
+        },
+        "ast_u_L": {
+          "type": "number",
+          "description": "Aspartate Aminotransferase for checking liver damage in units (u) per liter (L) "
+        },
+        "ggt_u_L": {
+          "type": "number",
+          "description": "Gamma-glutamyl Transferase for checking liber damage. In units (u) per liter (L)"
+        },
+        "ldh_uL_L": {
+          "type": "number",
+          "description": "ldh lactic dehydrogenase in microliter (uL) per liter (L)"
         }
       }
     },
@@ -377,33 +406,13 @@
           "type": "number",
           "description": "albumin in grams (g) per deciliter (dL)"
         },
-        "alt_u_L": {
-          "type": "number",
-          "description": "Alanine Aminotransferase for checking liver damange in units (u) per liter (L)"
-        },
-        "alp_u_L": {
-          "type": "number",
-          "description": "alkaline phosphatase measured in units (u) per liter (L) "
-        },
-        "amylase_U_l": {
-          "type": "number",
-          "description": "An amylase blood test measures the amount of amylase in blood."
-        },
-        "ast_u_L": {
-          "type": "number",
-          "description": "Aspartate Aminotransferase for checking liver damage in units (u) per liter (L) "
-        },
         "crp_mg_L": {
           "type": "number",
           "description": "c-reactive protein measured in milligrams (mg) per liter (L)"
         },
-        "ggt_u_L": {
+        "hemoglobin_g_dL": {
           "type": "number",
-          "description": "Gamma-glutamyl Transferase for checking liber damage. In units (u) per liter (L)"
-        },
-        "ldh_uL_L": {
-          "type": "number",
-          "description": "ldh lactic dehydrogenase in microliter (uL) per liter (L)"
+          "description": "hemoglobin count - grams (g) per deciliter (dL)"
         },
         "proteine_total_g_%": {
           "type": "number",
@@ -420,6 +429,57 @@
         "transferrin_saturation_%": {
           "type": "number",
           "description": "It is the value of serum iron divided by the total iron-binding capacity of the available transferrin."
+        }
+      }
+    },
+    "protidogram": {
+      "id": "/schemas/protidogram",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "alpha1_%": {
+          "type": "",
+          "description": ""
+        },
+        "alpha2_%": {
+          "type": "",
+          "description": ""
+        },
+        "beta1_%": {
+          "type": "",
+          "description": ""
+        },
+        "beta2_%": {
+          "type": "",
+          "description": ""
+        },
+        "gamma_%": {
+          "type": "",
+          "description": ""
+        },
+        "A-G_ratio": {
+          "type": "",
+          "description": ""
+        },
+        "alpha1_g_dl": {
+          "type": "",
+          "description": ""
+        },
+        "alpha2_g_dl": {
+          "type": "",
+          "description": ""
+        },
+        "beta1_g_dl": {
+          "type": "",
+          "description": ""
+        },
+        "beta2_g_dl": {
+          "type": "",
+          "description": ""
+        },
+        "gamma_g_dl": {
+          "type": "",
+          "description": ""
         }
       }
     },
