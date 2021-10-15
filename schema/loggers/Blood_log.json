@@ -42,11 +42,11 @@
     "enzymes": { "$ref": "#/$defs/enzymes" },
     "fats": { "$ref": "#/$defs/fats" },
     "hormones": { "$ref": "#/$defs/hormones" },
+    "indicies": { "$ref": "#/$defs/indicies" },
     "minerals": { "$ref": "#/$defs/minerals" },
     "proteins": { "$ref": "#/$defs/proteins" },
     "protidogram": { "$ref": "#/$defs/protidogram" },
     "vitamins": { "$ref": "#/$defs/vitamins" },
-    "indicies": { "$ref": "#/$defs/indicies" },
     "other": { "$ref": "#/$defs/other" },
     "exam_results_url": {
       "type": "string",
@@ -65,11 +65,11 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-        "bile_acids_umol_L": {
+        "bile_umol_L": {
           "type": "number",
           "description": "bile acids micromol (umol) per liter (L)"
         },
-        "uricacid_mg_dL": {
+        "uric_mg_dL": {
           "type": "number",
           "description": "measure of uric acid in blood in milligrams (mg) per deciliter (dL)"
         }
@@ -80,25 +80,25 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-        "helicobacter_pylori_IgA_index": {
+        "helicobacter_pylori_iga_index": {
           "type": "number",
-          "description": "This test looks for IgA antibodies which develop in the body in response to infection with the bacteria Helicobacter Pylori (H. Pylori)."
+          "description": "Measures IgA antibodies which develop in the body in response to infection with the bacteria Helicobacter Pylori (H. Pylori)"
         },
-        "helicobacter_pylori_IgG_UA_ml": {
+        "helicobacter_pylori_igg_AU_mL": {
           "type": "number",
-          "description": "This blood test is used to detect a Helicobacter pylori (H. pylori) infection in the upper part of the small intestine (duodenum) and stomach. H. pylori may cause peptic ulcers, although most people with H."
+          "description": "Measures IgA antibodies which develop in the body in response to infection with the bacteria Helicobacter Pylori (H. Pylori) in arbitrary units (AU) per milliliter (mL)"
         },
-        "toxoplasma_IgG_u_mL": {
+        "toxoplasma_igg_U_mL": {
           "type": "number",
-          "description": "Toxoplasma IgG antibody in units (u) per milliliter (mL)"
+          "description": "Toxoplasma IgG antibody in units (U) per milliliter (mL)"
         },
-        "toxoplasma_IgM_u_mL": {
+        "toxoplasma_igm_U_mL": {
           "type": "number",
-          "description": "Toxoplasma IgM antibody in units (u) per milliliter (mL)"
+          "description": "Toxoplasma IgM antibody in units (U) per milliliter (mL)"
         },
-        "transglutaminase_IgA_U_ml": {
+        "transglutaminase_iga_U_ml": {
           "type": "number",
-          "description": "A transglutaminase IgA (tTg-IgA) test is used to help doctors diagnose celiac disease."
+          "description": "A transglutaminase IgA (tTg-IgA) test is used to help doctors diagnose celiac disease in units (U) per milliliter (mL)"
         }
       }
     },
@@ -107,7 +107,6 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-
         "psa_ng_mL": {
           "type": "number",
           "description": "prostate specific antigen measured in nanograms (ng) per milliliter (mL)"
@@ -123,11 +122,11 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-        "white_blood_cells_k_uL": {
+        "white_k_uL": {
           "type": "number",
           "description": "white blood cell count - thousand (k) per microliter (uL)"
         },
-        "red_blood_cells_M_uL": {
+        "red_M_uL": {
           "type": "number",
           "description": "red blood cell count - million (M) per microliter (uL)"
         },
@@ -214,10 +213,9 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-
         "glucose_mg_dL": {
           "type": "number",
-          "description": "glucose in blood measured in milliggrams (mg) per deciliter (dL) "
+          "description": "glucose in blood measured in milligrams (mg) per deciliter (dL)"
         },
         "glycosylated hemoglobin_%": {
           "type": "number",
@@ -230,23 +228,23 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-        "alt_u_L": {
+        "alt_U_L": {
           "type": "number",
           "description": "Alanine Aminotransferase for checking liver damange in units (u) per liter (L)"
         },
-        "alp_u_L": {
+        "alp_U_L": {
           "type": "number",
           "description": "alkaline phosphatase measured in units (u) per liter (L) "
         },
-        "amylase_U_l": {
+        "amylase_U_L": {
           "type": "number",
           "description": "An amylase blood test measures the amount of amylase in blood."
         },
-        "ast_u_L": {
+        "ast_U_L": {
           "type": "number",
           "description": "Aspartate Aminotransferase for checking liver damage in units (u) per liter (L) "
         },
-        "ggt_u_L": {
+        "ggt_U_L": {
           "type": "number",
           "description": "Gamma-glutamyl Transferase for checking liber damage. In units (u) per liter (L)"
         },
@@ -304,9 +302,9 @@
           "type": "number",
           "description": "thyroxine in picomoles (pmol) per liter (L)"
         },
-        "t4_free_ng_dl": {
+        "t4_free_ng_dL": {
           "type": "number",
-          "description": "Measures the level of free T 4, or free thyroxine, in blood."
+          "description": "Measures the level of free T 4, or free thyroxine, in blood in nanograms (ng) per deciliter (dL) ."
         }
       }
     },
@@ -327,15 +325,15 @@
           "type": "number",
           "description": "Erythro Sedimentation rate measured in millimeters (mm) per hour (hr)"
         },
-        "hemolysis_index_md_dL": {
+        "hemolysis_index_mg_dL": {
           "type": "number",
-          "description": "The hemolysis index is a measurement of the red colour of serum"
+          "description": "The hemolysis index is a measurement of the red colour of serum in milligrams (mg) per deciLiter (dL)"
         },
-        "icterus_index_md_dL": {
+        "icterus_index_mg_dL": {
           "type": "number",
-          "description": "The icterus index is a measure of the yellow colour of serum."
+          "description": "The icterus index is a measure of the yellow colour of serum in milligrams (mg) per deciLiter (dL)."
         },
-        "lipemic index_md_dL": {
+        "lipemic index": {
           "type": "number",
           "description": "A measurement of the abnormally high concentration of lipid in serum."
         },
@@ -350,30 +348,29 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-
-        "calcium_meq_L": {
+        "calcium_mEq_L": {
           "type": "number",
-          "description": "calcium in in milliequivalents (meq) per liter (L)"
+          "description": "calcium in in milliequivalents (mEq) per liter (L)"
         },
-        "chloride_meq_L": {
+        "chloride_mEq_L": {
           "type": "number",
-          "descrption": "The chloride blood test, or serum chloride level."
+          "descrption": "The chloride blood test, or serum chloride level in milliequivalents (mEq) per liter (L)."
         },
-        "magnesium_meq_L": {
+        "magnesium_mEq_L": {
           "type": "number",
-          "description": "Measure of magnesium in the blood in milligrams (meq) per liter (L)."
+          "description": "Measure of magnesium in the blood in milliequivalents (mEq) per liter (L)."
         },
-        "potassium_meq_L": {
+        "potassium_mEq_L": {
           "type": "number",
-          "description": "potassium in milligrams (meq) per liter (L)"
+          "description": "potassium in milliequivalents (mEq) per liter (L)"
         },
         "sideremia_ug_dL": {
           "type": "number",
           "description": "transports iron in the blood; measured in micrograms (ug) per deciliter (dL)"
         },
-        "sodium_meq_L": {
+        "sodium_mEq_L": {
           "type": "number",
-          "description": "sodium in milliequivalents (meq) per liter (L)"
+          "description": "sodium in milliequivalents (mEq) per liter (L)"
         }
       }
     },
@@ -401,7 +398,6 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-
         "albumin_g_dL": {
           "type": "number",
           "description": "albumin in grams (g) per deciliter (dL)"
@@ -424,7 +420,7 @@
         },
         "transferrin_mg_dL": {
           "type": "number",
-          "description": "Transferrin is the main protein in the blood that binds to iron and transports it throughout the body."
+          "description": "Transferrin is the main protein in the blood that binds to iron and transports it throughout the body in milligrams (mg) per deciLiter(dL)."
         },
         "transferrin_saturation_%": {
           "type": "number",
@@ -438,48 +434,48 @@
       "type": "object",
       "properties": {
         "alpha1_%": {
-          "type": "",
-          "description": ""
+          "type": "number",
+          "description": "measures alpha1 globulins in the blood"
         },
         "alpha2_%": {
-          "type": "",
-          "description": ""
+          "type": "number",
+          "description": "measures alpha2 globulins in the blood"
         },
         "beta1_%": {
-          "type": "",
-          "description": ""
+          "type": "numer",
+          "description": "measures beta1 globulins in the blood"
         },
         "beta2_%": {
-          "type": "",
-          "description": ""
+          "type": "number",
+          "description": "measures beta2 globulins in the blood"
         },
         "gamma_%": {
-          "type": "",
-          "description": ""
+          "type": "number",
+          "description": "measures gamm globulins in the blood"
         },
         "A-G_ratio": {
           "type": "",
-          "description": ""
+          "description": "albumin - globulin ratio"
         },
-        "alpha1_g_dl": {
+        "alpha1_g_dL": {
           "type": "",
-          "description": ""
+          "description": "measures alpha1 globulins in the blood grams (g) per deciliter (dL)"
         },
-        "alpha2_g_dl": {
+        "alpha2_g_dL": {
           "type": "",
-          "description": ""
+          "description": "measures alpha2 globulins in the blood grams (g) per deciliter (dL)"
         },
-        "beta1_g_dl": {
+        "beta1_g_dL": {
           "type": "",
-          "description": ""
+          "description": "measures beta1 globulins in the blood grams (g) per deciliter (dL)"
         },
-        "beta2_g_dl": {
+        "beta2_g_dL": {
           "type": "",
-          "description": ""
+          "description": "measures beta2 globulins in the blood grams (g) per deciliter (dL)"
         },
-        "gamma_g_dl": {
+        "gamma_g_dL": {
           "type": "",
-          "description": ""
+          "description": "measures gamma globulins in the blood grams (g) per deciliter (dL)"
         }
       }
     },
@@ -488,9 +484,9 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-        "vitamin_d3_ng_ml": {
+        "vitamin_d3_ng_mL": {
           "type": "number",
-          "description": "A measure of how much vitamin D is in the body."
+          "description": "A measure of how much vitamin D is in the body in nanograms (ng) per milliliter (mL)."
         }
       }
     }
