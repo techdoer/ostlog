@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "id": "http://ostlog.org/schema/Blood_log.json",
+  "id": "http://ostlog.org/schema/log_Blood.json",
   "title": "Blood log",
   "description": "Each entry records results from a Complete Blood Count or similar blood measurements.",
   "type": "object",
@@ -68,6 +68,18 @@
         "bile_umol_L": {
           "type": "number",
           "description": "bile acids micromol (umol) per liter (L)"
+        },
+        "bilirubin_direct_mg_dL": {
+          "type": "number",
+          "description": "Bilirubin direct in milligrams (mg) per deciliter (dL)"
+        },
+        "bilirubin_indirect_mg_dL": {
+          "type": "number",
+          "description": "Bilirubin indirect in milligrams (mg) per deciliter (dL)"
+        },
+        "bilirubin_total_mg_dL": {
+          "type": "number",
+          "description": "Bilirubin total in milligrams (mg) per deciliter (dL)"
         },
         "uric_mg_dL": {
           "type": "number",
@@ -217,7 +229,7 @@
           "type": "number",
           "description": "glucose in blood measured in milligrams (mg) per deciliter (dL)"
         },
-        "glycosylated hemoglobin_%": {
+        "glycosylated_hemoglobin_%": {
           "type": "number",
           "descrption": "measures the amount of glucose (sugar) in your blood. The test is often called A1c, or sometimes HbA1c. It's a simple blood test used to: Detect prediabetes — high sugar levels that can lead to diabetes, heart disease and stroke."
         }
@@ -374,25 +386,6 @@
         }
       }
     },
-    "other": {
-      "id": "/schemas/other",
-      "$schema": "https://json-schema.org/draft/2020-12/schema",
-      "type": "object",
-      "properties": {
-        "bilirubin_total_mg_dL": {
-          "type": "number",
-          "description": "Bilirubin total in milligrams (mg) per deciliter (dL)"
-        },
-        "bilirubin_direct_mg_dL": {
-          "type": "number",
-          "description": "Bilirubin direct in milligrams (mg) per deciliter (dL)"
-        },
-        "bilirubin_indirect_mg_dL": {
-          "type": "number",
-          "description": "Bilirubin indirect in milligrams (mg) per deciliter (dL)"
-        }
-      }
-    },
     "proteins": {
       "id": "/schemas/proteins",
       "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -433,47 +426,47 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-        "alpha1_%": {
+        "protidogram_alpha1_%": {
           "type": "number",
           "description": "measures alpha1 globulins in the blood"
         },
-        "alpha2_%": {
+        "protidogram_alpha2_%": {
           "type": "number",
           "description": "measures alpha2 globulins in the blood"
         },
-        "beta1_%": {
+        "protidogram_beta1_%": {
           "type": "numer",
           "description": "measures beta1 globulins in the blood"
         },
-        "beta2_%": {
+        "protidogram_beta2_%": {
           "type": "number",
           "description": "measures beta2 globulins in the blood"
         },
-        "gamma_%": {
+        "protidogram_gamma_%": {
           "type": "number",
           "description": "measures gamm globulins in the blood"
         },
-        "A-G_ratio": {
+        "protidogram_A-G_ratio": {
           "type": "",
           "description": "albumin - globulin ratio"
         },
-        "alpha1_g_dL": {
+        "protidogram_alpha1_g_dL": {
           "type": "",
           "description": "measures alpha1 globulins in the blood grams (g) per deciliter (dL)"
         },
-        "alpha2_g_dL": {
+        "protidogram_alpha2_g_dL": {
           "type": "",
           "description": "measures alpha2 globulins in the blood grams (g) per deciliter (dL)"
         },
-        "beta1_g_dL": {
+        "protidogram_beta1_g_dL": {
           "type": "",
           "description": "measures beta1 globulins in the blood grams (g) per deciliter (dL)"
         },
-        "beta2_g_dL": {
+        "protidogram_beta2_g_dL": {
           "type": "",
           "description": "measures beta2 globulins in the blood grams (g) per deciliter (dL)"
         },
-        "gamma_g_dL": {
+        "protidogram_gamma_g_dL": {
           "type": "",
           "description": "measures gamma globulins in the blood grams (g) per deciliter (dL)"
         }

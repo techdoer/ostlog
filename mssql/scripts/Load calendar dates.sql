@@ -2,8 +2,8 @@
 -- Version: A script to pre-populate the Calendar dates dimension table.   Designed for Azure SQL Server. 
 -- URL:         -
 --
-DECLARE @StartDate DATETIME = '01/01/2017'
-DECLARE @EndDate DATETIME = '01/05/2017' 
+DECLARE @StartDate DATETIME = '01/01/2026'
+DECLARE @EndDate DATETIME = '31/12/2030' 
 
 DECLARE
 	@DayInMonth INT,
