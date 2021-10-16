@@ -9,6 +9,7 @@ CREATE TABLE [dbo].[log_Blood]
 	[timestamp] TIME(0) NOT NULL,
 	[location_id] INT NULL,
 	[person_id] INT NOT NULL,
+
 	[blood_group] NVARCHAR(3),
 
 	-- blood cells

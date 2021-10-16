@@ -1,18 +1,12 @@
 {
-
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Vitals_log.json",
+	"id": "http://ostlog.org/schema/log_Vitals.json",
 	"title": "Vitals log",
 	"description": "Each entry characterizes vital sign and body measurement readings at a specific moment in time time.",
 	"type": "object",
 	"properties": {
-
 		"id": {
 			"type": "integer"
-		},
-		"meta_id": {
-			"type": "integer",
-			"description": "reference to entry's metadata"
 		},
 		"calendar_date_id": {
 			"type": "string",
@@ -82,5 +76,5 @@
 				"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id", "feeling_great"]
+	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id"]
 }
