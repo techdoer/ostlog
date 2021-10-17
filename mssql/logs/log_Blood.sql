@@ -56,6 +56,7 @@ CREATE TABLE [dbo].[log_Blood]
 	-- carbohydrates
 	[carbohydrates_glucose_mg_dL] FLOAT NULL,
 	[carbohydrates_glycosylated_hemoglobin_%] FLOAT NULL,
+	[carbohydrates_glycosylated_hemoglobin_mmol_mol] FLOAT NULL,
 
 	-- enzymes
 	[enzymes_alt_U_L] FLOAT NULL, 
@@ -98,6 +99,7 @@ CREATE TABLE [dbo].[log_Blood]
 
 	-- proteins 
 	[proteins_albumin_g_dL] FLOAT NULL, 
+	[proteins_albumin_%] FLOAT NULL, 
 	[proteins_crp_mg_L] FLOAT NULL, 
 	[proteins_ferritin_ug_L] FLOAT NULL, 
 	[proteins_hemoglobin_g_dL] FLOAT NULL,

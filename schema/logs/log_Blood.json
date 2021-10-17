@@ -232,6 +232,10 @@
         "glycosylated_hemoglobin_%": {
           "type": "number",
           "descrption": "measures the amount of glucose (sugar) in your blood. The test is often called A1c, or sometimes HbA1c. It's a simple blood test used to: Detect prediabetes — high sugar levels that can lead to diabetes, heart disease and stroke."
+        },
+        "glycosylated_hemoglobin_mmol_mol": {
+          "type": "number",
+          "descrption": "measures the amount of glucose (sugar) in your blood in millimol (mmol) per mol (mol)"
         }
       }
     },
@@ -302,10 +306,6 @@
           "type": "number",
           "description": "creatinine in milligrams (mg) per deciliter (dL)"
         },
-        "tsh_uu_mL": {
-          "type": "number",
-          "description": "Thyrotropin in microunit (uu) per milliliter (mL)"
-        },
         "t3_pmol_L": {
           "type": "number",
           "description": "Triodothyronine in picomoles (pmol) per liter (L)"
@@ -317,6 +317,10 @@
         "t4_free_ng_dL": {
           "type": "number",
           "description": "Measures the level of free T 4, or free thyroxine, in blood in nanograms (ng) per deciliter (dL) ."
+        },
+        "tsh_uu_mL": {
+          "type": "number",
+          "description": "Thyrotropin in microunit (uu) per milliliter (mL)"
         }
       }
     },
@@ -391,6 +395,10 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
+        "albumin_%": {
+          "type": "number",
+          "description": "albumin in percentage."
+        },
         "albumin_g_dL": {
           "type": "number",
           "description": "albumin in grams (g) per deciliter (dL)"
