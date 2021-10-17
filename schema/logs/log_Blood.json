@@ -47,7 +47,6 @@
     "proteins": { "$ref": "#/$defs/proteins" },
     "protidogram": { "$ref": "#/$defs/protidogram" },
     "vitamins": { "$ref": "#/$defs/vitamins" },
-    "other": { "$ref": "#/$defs/other" },
     "exam_results_url": {
       "type": "string",
       "description": "url to scanned copy of the results"
