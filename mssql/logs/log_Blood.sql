@@ -40,14 +40,21 @@ CREATE TABLE [dbo].[log_Blood]
 	[acids_bilirubin_direct_mg_dL] FLOAT NULL,
 	[acids_bilirubin_indirect_mg_dL] FLOAT NULL,
 	[acids_bilirubin_total_mg_dL] FLOAT NULL,
+	[acids_folic_ng_dL] FLOAT NULL,
 	[acids_uric_mg_dL] FLOAT NULL,
 
 	-- antibodies
+	[antibodies_anti_tissue_transglutaminase_iga_U_ml] FLOAT NULL,
 	[antibodies_helicobacter_pylori_iga_index] FLOAT NULL,
 	[antibodies_helicobacter_pylori_igg_AU_ml] FLOAT NULL,
+	[antibodies_sars_cov_2_igg_index] FLOAT NULL,
+	[antibodies_sars_cov_2_igm_index] FLOAT NULL,
+	[antibodies_total_iga_antibodies_mg_dL] FLOAT NULL,
 	[antibodies_toxoplasma_igg_U_mL] FLOAT NULL, 
 	[antibodies_toxoplasma_igm_U_mL] FLOAT NULL, 
 	[antibodies_transglutaminase_iga_U_ml] FLOAT NULL,
+	[antibodies_vca_igg_U_mL] FLOAT NULL,
+	[antibodies_vca_igm_U_mL] FLOAT NULL,
 	
 	-- antigens
 	[antigens_psa_ng_mL] FLOAT NULL, 
@@ -86,7 +93,7 @@ CREATE TABLE [dbo].[log_Blood]
 	[indicies_esr_mm_hr] FLOAT NULL, 
 	[indicies_hemolysis_index_mg_dL] FLOAT NULL,
 	[indicies_icterus_index_mg_dL] FLOAT NULL,
-	[indicies_lipemic index_mg_dL] FLOAT NULL,
+	[indicies_lipemic_index] FLOAT NULL,
 	[indicies_urea_mg_dL] FLOAT NULL, 
 
 	-- minerals
@@ -103,9 +110,9 @@ CREATE TABLE [dbo].[log_Blood]
 	[proteins_crp_mg_L] FLOAT NULL, 
 	[proteins_ferritin_ug_L] FLOAT NULL, 
 	[proteins_hemoglobin_g_dL] FLOAT NULL,
+	[proteins_total_g_%] FLOAT NULL,	
 	[proteins_transferrin_mg_dL] FLOAT NULL,
 	[proteins_transferrin_saturation_%] FLOAT NULL,
-	[proteins_total_g_%] FLOAT NULL,	
 	
 	-- protidogram
 	[protidogram_alpha1_%] FLOAT NULL,
@@ -121,6 +128,7 @@ CREATE TABLE [dbo].[log_Blood]
 	[protidogram_gamma_g_dL] FLOAT NULL,
 
 	-- vitamins
+	[vitamins_b12_pg_mL] FLOAT NULL,
 	[vitamins_d3_ng_ml] FLOAT NULL,
 
 	[exam_results_url] NVARCHAR(512) NULL, 

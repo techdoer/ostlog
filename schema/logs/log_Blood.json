@@ -80,6 +80,10 @@
           "type": "number",
           "description": "Bilirubin total in milligrams (mg) per deciliter (dL)"
         },
+        "folic_ng_dL": {
+          "type": "number",
+          "description": "Folic acide in nanograms (g) per deciliter (dL)"
+        },
         "uric_mg_dL": {
           "type": "number",
           "description": "measure of uric acid in blood in milligrams (mg) per deciliter (dL)"
@@ -91,6 +95,14 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
+        "anti_tissue_transglutaminase_iga_U_ml": {
+          "type": "number",
+          "description": "Measures IgA anti-tissue transglutaminase antibodies in unis (U) per milliliter (mL)"
+        },
+        "anti_tissue_transglutaminase_igg_U_ml": {
+          "type": "number",
+          "description": "Measures IgG anti-tissue transglutaminase antibodies in unis (U) per milliliter (mL)"
+        },
         "helicobacter_pylori_iga_index": {
           "type": "number",
           "description": "Measures IgA antibodies which develop in the body in response to infection with the bacteria Helicobacter Pylori (H. Pylori)"
@@ -98,6 +110,18 @@
         "helicobacter_pylori_igg_AU_mL": {
           "type": "number",
           "description": "Measures IgA antibodies which develop in the body in response to infection with the bacteria Helicobacter Pylori (H. Pylori) in arbitrary units (AU) per milliliter (mL)"
+        },
+        "sars_cov_2_iga_mg_dL": {
+          "type": "number",
+          "description": ""
+        },
+        "sars_cov_2_igg_mg_dL": {
+          "type": "number",
+          "description": ""
+        },
+        "total_iga_antibodies_mg_dL": {
+          "type": "number",
+          "description": "Measures total IgA antibodies in milligrams (mg) per deciliter (dL)"
         },
         "toxoplasma_igg_U_mL": {
           "type": "number",
@@ -110,6 +134,14 @@
         "transglutaminase_iga_U_ml": {
           "type": "number",
           "description": "A transglutaminase IgA (tTg-IgA) test is used to help doctors diagnose celiac disease in units (U) per milliliter (mL)"
+        },
+        "vca_igg_U_mL": {
+          "type": "number",
+          "description": "VCA IgG antibodies in units (U) per milliliter (mL)"
+        },
+        "vca_igm_U_mL": {
+          "type": "number",
+          "description": "VCA IgM antibodies in units (U) per milliliter (mL)"
         }
       }
     },
@@ -274,10 +306,6 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-        "cholesterol_total_mg_dL": {
-          "type": "number",
-          "description": "cholesterol in blood milligrams (mg) per deciliter (dL)"
-        },
         "cholesterol_hdl_mg_dL": {
           "type": "number",
           "description": "hdl cholesterol in blood milligrams (mg) per deciliter (dL)"
@@ -285,6 +313,10 @@
         "cholesterol_ldl_mg_dL": {
           "type": "number",
           "description": "ldl cholesterol in blood milligrams (mg) per deciliter (dL)"
+        },
+        "cholesterol_total_mg_dL": {
+          "type": "number",
+          "description": "cholesterol in blood milligrams (mg) per deciliter (dL)"
         },
         "triglycerides_mg_dL": {
           "type": "number",
@@ -348,7 +380,7 @@
           "type": "number",
           "description": "The icterus index is a measure of the yellow colour of serum in milligrams (mg) per deciLiter (dL)."
         },
-        "lipemic index": {
+        "lipemic_index": {
           "type": "number",
           "description": "A measurement of the abnormally high concentration of lipid in serum."
         },
@@ -394,17 +426,21 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-        "albumin_%": {
-          "type": "number",
-          "description": "albumin in percentage."
-        },
         "albumin_g_dL": {
           "type": "number",
           "description": "albumin in grams (g) per deciliter (dL)"
         },
+        "albumin_%": {
+          "type": "number",
+          "description": "albumin in percentage."
+        },
         "crp_mg_L": {
           "type": "number",
           "description": "c-reactive protein measured in milligrams (mg) per liter (L)"
+        },
+        "ferritin_ug_L": {
+          "type": "number",
+          "description": "ferritin measured as micrograms (ug) per liter (L)"
         },
         "hemoglobin_g_dL": {
           "type": "number",
@@ -413,10 +449,6 @@
         "proteine_total_g_%": {
           "type": "number",
           "descrption": "Measures the amount of protein in the blood."
-        },
-        "ferritin_ug_L": {
-          "type": "number",
-          "description": "ferritin measured as micrograms (ug) per liter (L)"
         },
         "transferrin_mg_dL": {
           "type": "number",
@@ -484,7 +516,11 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
-        "vitamin_d3_ng_mL": {
+        "b12_pg_mL": {
+          "type": "number",
+          "description": "A measure of how much vitamin B12 is in the body in picograms (pg) per milliliter (mL)."
+        },
+        "d3_ng_mL": {
           "type": "number",
           "description": "A measure of how much vitamin D is in the body in nanograms (ng) per milliliter (mL)."
         }
