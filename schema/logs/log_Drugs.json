@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Drugs_log.json",
+	"id": "http://ostlog.org/schema/log_Drugs.json",
 	"title": "Drugs log",
 	"description": "Each entry characterizes a dose of medication taken at pre-defined intervals",
 	"type": "object",
@@ -23,10 +23,6 @@
 		"person_id": {
 			"type": "integer",
 			"description": "the person taking the medication."
-		},
-		"diagnosis_id": {
-			"type": "integer",
-			"description": "Reference to the diagnosis requiring the medication."
 		},
 		"status": {
 			"$ref": "../definitions.json#/definitions/status"

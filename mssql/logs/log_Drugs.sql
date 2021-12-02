@@ -1,13 +1,12 @@
 --
--- URL: https://github.com/techdoer/ostlog/blob/master/schema/Drugs_log.json
+-- URL: https://github.com/techdoer/ostlog/blob/master/schema/log_Drugs.json
 --
-CREATE TABLE [dbo].[Drugs log] (
+CREATE TABLE [dbo].[log_Drugs] (
 	[id] INT IDENTITY (1,1) NOT NULL,
 	[meta_id] INT NULL,
 	[schedule_id] INT NOT NULL,
 	[location_id] INT NULL,
 	[person_id] INT NOT NULL,
-	[diagnosis_id] INT NULL,
 	[name] NVARCHAR (512) NOT NULL, -- commercial name of drug taken
 	[status] NVARCHAR (10) NULL,  -- status based FHIR value-set: http://hl7.org/fhir/ValueSet/medication-statement-status 
 	[drug_atc_code] NVARCHAR (20) NULL, -- The Anatomical Therapeutic Chemical (ATC) Classification System
@@ -19,12 +18,10 @@ CREATE TABLE [dbo].[Drugs log] (
 	[effectivness_remarks] NVARCHAR (2048) NULL,
 	[side_effect_remarks] NVARCHAR (2048) NULL,
 	[remarks] NVARCHAR (4000) NULL,
-	CONSTRAINT [PK_Drugs log] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_Drugs log-Timing schedule] FOREIGN KEY ([schedule_id]) REFERENCES [dbo].[Timing schedule] ([id]),
-	CONSTRAINT [FK_Drugs log-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CONSTRAINT [FK_Drugs log-Meta log] FOREIGN KEY ([meta_id]) REFERENCES [dbo].[Meta log] ([id]),
-	CONSTRAINT [FK_Drugs log-Diagnosis log] FOREIGN KEY ([diagnosis_id]) REFERENCES [dbo].[Diagnosis log] ([id]),
-	CONSTRAINT [FK_Drugs log-Location] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Location] ([location_id]),
+	CONSTRAINT [PK_log_Drugs] PRIMARY KEY CLUSTERED ([id] ASC),
+	CONSTRAINT [FK_log_Drugs-Timing schedules] FOREIGN KEY ([schedule_id]) REFERENCES [dbo].[Timing schedules] ([id]),
+	CONSTRAINT [FK_log_Drugs-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_log_Drugs-Locations] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Locations] ([location_id]),
 
 	CHECK ([status]='active' OR [status]='completed' OR [status]='entered-in-error' OR [status]='intended' OR [status]='stopped' OR [status]='on-hold' OR [status] = 'unknown' OR [status] = 'not-taken'),
 	CHECK ([admin_route]='implant' OR [admin_route]='inhale' OR [admin_route]='nasal' OR [admin_route]='instill' OR  [admin_route]='oral' OR  [admin_route]='nasal' OR [admin_route]='parenteral' OR [admin_route]='rectal' OR [admin_route]='sublingual' OR [admin_route]='transdermal' OR [admin_route]='vaginal'),
