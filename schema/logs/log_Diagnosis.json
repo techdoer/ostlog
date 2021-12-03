@@ -1,16 +1,12 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Diagnosis_log.json",
+	"id": "http://ostlog.org/schema/log_Diagnosis.json",
 	"title": "Diagnosis log",
 	"description": "Each entry characterizes a diagnosis issued by a medical professional.",
 	"type": "object",
 	"properties": {
 		"id": {
 			"type": "integer"
-		},
-		"meta_id": {
-			"type": "integer",
-			"description": "reference to entry's metadata"
 		},
 		"calendar_date_id": {
 			"type": "string",

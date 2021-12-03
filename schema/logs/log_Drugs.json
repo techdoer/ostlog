@@ -8,10 +8,6 @@
 		"id": {
 			"type": "integer"
 		},
-		"meta_id": {
-			"type": "integer",
-			"description": "reference to entry's metadata"
-		},
 		"schedule_id": {
 			"type": "integer",
 			"description": "Drug prescription's timing schedule"

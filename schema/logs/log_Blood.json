@@ -9,10 +9,6 @@
     "id": {
       "type": "integer"
     },
-    "meta_id": {
-      "type": "integer",
-      "description": "reference to related metadata entry"
-    },
     "calendar_date_id": {
       "type": "string",
       "description": "YYYYMMDD formatted date when blood was extracted"
