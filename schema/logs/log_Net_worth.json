@@ -1,16 +1,12 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Net_worth_log.json",
+	"id": "http://ostlog.org/schema/log_Net_worth.json",
 	"title": "Net worth log",
 	"description": "Each entry records a person's net worth at a point in time.",
 	"type": "object",
 	"properties": {
 		"id": {
 			"type": "integer"
-		},
-		"meta_id": {
-			"type": "integer",
-			"description": "reference to entry's metadata"
 		},
 		"calendar_date_id": {
 			"type": "string",
@@ -52,7 +48,7 @@
 			"type": "number",
 			"description": "amount of loan debt in USD."
 		},
-		"credit_card_usd": {
+		"credit_cards_usd": {
 			"type": "number",
 			"description": "amount of credit card debt in USD."
 		},
