@@ -1,16 +1,12 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Medical_procedure_log.json",
+	"id": "http://ostlog.org/schema/log_Medical_procedure.json",
 	"title": "Medical procedure log",
 	"description": "Each entry describes a medical procedure administered to patient.",
 	"type": "object",
 	"properties": {
 		"id": {
 			"type": "integer"
-		},
-		"meta_id": {
-			"type": "integer",
-			"description": "reference to entry's metadata"
 		},
 		"schedule_id": {
 			"type": "integer",
@@ -32,11 +28,6 @@
 			"type": "integer",
 			"description": "This enumeration includes all codes from FHIR's body-site definition http://hl7.org/fhir/ValueSet/body-site."
 		},
-		"diagnosis_id": {
-			"type": "integer",
-			"description": "Reference to the diagnosis requiring the medical procedure."
-		},
-
 		"procedure_name": {
 			"type": "string",
 			"description": "A textual name of the procedure e.g. x-ray"
