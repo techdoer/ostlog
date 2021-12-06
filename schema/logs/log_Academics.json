@@ -1,16 +1,12 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/School_grades_log.json",
-	"title": "School grades log",
-	"description": "Each entry records a grade received for a specific course/subject during the specified term.",
+	"id": "http://ostlog.org/schema/log_Academics.json",
+	"title": "Academics log",
+	"description": "Each entry records academic performance for a specific course/subject during the specified term.",
 	"type": "object",
 	"properties": {
 		"id": {
 			"type": "integer"
-		},
-		"meta_id": {
-			"type": "integer",
-			"description": "reference to entry's metadata"
 		},
 		"term_start_date_id": {
 			"type": "string",
