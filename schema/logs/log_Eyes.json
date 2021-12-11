@@ -1,16 +1,12 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Eyes_log.json",
+	"id": "http://ostlog.org/schema/log_Eyes.json",
 	"title": "Eyes log",
 	"description": "Each entry records results from a standard eye exam.",
 	"type": "object",
 	"properties": {
 		"id": {
 			"type": "integer"
-		},
-		"meta_id": {
-			"type": "integer",
-			"description": "reference to entry's metadata"
 		},
 		"calendar_date_id": {
 			"type": "string",

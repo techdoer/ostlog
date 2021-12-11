@@ -1,16 +1,12 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://ostlog.org/schema/Heart_log.json",
-	"title": "Heart log",
+	"id": "http://ostlog.org/schema/log_Heartjson",
+	"title": "log_Heart",
 	"description": "Each entry characterises results from heart examinations or ECG.",
 	"type": "object",
 	"properties": {
 		"id": {
 			"type": "integer"
-		},
-		"meta_id": {
-			"type": "integer",
-			"description": "reference to entry's metadata"
 		},
 		"calendar_date_id": {
 			"type": "string",
@@ -103,5 +99,5 @@
 			"type": "string"
 		}
 	},
-	"required": ["id", "calendar_date_id", "timestamp", "location_id", "person_id"]
+	"required": [ "id", "calendar_date_id", "timestamp", "location_id", "person_id" ]
 }
