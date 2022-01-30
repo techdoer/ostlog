@@ -70,6 +70,8 @@ CREATE TABLE [dbo].[log_Blood]
 	[enzymes_alp_U_L] FLOAT NULL,
 	[enzymes_amylase_U_L] FLOAT NULL,
 	[enzymes_ast_U_L] FLOAT NULL, 
+	[enzymes_cpk_U_L] FLOAT NULL,
+	[enzymes_ck_mb_ng_mL] FLOAT NULL,
 	[enzymes_ggt_U_L] FLOAT NULL, 
 	[enzymes_ldh_uL_L] FLOAT NULL,	
 
@@ -91,9 +93,12 @@ CREATE TABLE [dbo].[log_Blood]
 	[indicies_azotemia_mg_%] FLOAT NULL,
 	[indicies_eGFR_mL_min] FLOAT NULL,
 	[indicies_esr_mm_hr] FLOAT NULL, 
+	[indicies_D_dimer_ng_mL] FLOAT NULL,
 	[indicies_hemolysis_index_mg_dL] FLOAT NULL,
 	[indicies_icterus_index_mg_dL] FLOAT NULL,
 	[indicies_lipemic_index] FLOAT NULL,
+	[indicies_pt_inr_index] FLOAT NULL,
+	[indicies_ptt_sec] FLOAT NULL,
 	[indicies_urea_mg_dL] FLOAT NULL, 
 
 	-- minerals
@@ -109,10 +114,13 @@ CREATE TABLE [dbo].[log_Blood]
 	[proteins_albumin_%] FLOAT NULL, 
 	[proteins_crp_mg_L] FLOAT NULL, 
 	[proteins_ferritin_ug_L] FLOAT NULL, 
+	[proteins_fibrinogen_mg_dL] FLOAT NULL,
 	[proteins_hemoglobin_g_dL] FLOAT NULL,
+	[proteins_lipase_U_L] FLOAT NULL,
 	[proteins_total_g_%] FLOAT NULL,	
 	[proteins_transferrin_mg_dL] FLOAT NULL,
 	[proteins_transferrin_saturation_%] FLOAT NULL,
+	[proteins_troponin_pg_mL] FLOAT NULL,
 	
 	-- protidogram
 	[protidogram_alpha1_%] FLOAT NULL,

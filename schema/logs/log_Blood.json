@@ -267,7 +267,6 @@
       }
     },
     "enzymes": {
-      "id": "/schemas/enzymes",
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
@@ -286,6 +285,14 @@
         "ast_U_L": {
           "type": "number",
           "description": "Aspartate Aminotransferase for checking liver damage in units (u) per liter (L) "
+        },
+        "cpk_U_L": {
+          "type": "number",
+          "description": "Creatine phosphokinase (CPK) in units (U) per liter (L) "
+        },
+        "ck-mb_ng_mL": {
+          "type": "number",
+          "description": "Creatine kinase (CK) in nanograms (ng) per mililiter (mL)"
         },
         "ggt_U_L": {
           "type": "number",
@@ -368,6 +375,10 @@
           "type": "number",
           "description": "Erythro Sedimentation rate measured in millimeters (mm) per hour (hr)"
         },
+        "D_dimer_ng_mL": {
+          "type": "number",
+          "description": "blood test that checks for, or monitors, blood-clotting problems in nanograms (ng) per mililiter (ml)"
+        },
         "hemolysis_index_mg_dL": {
           "type": "number",
           "description": "The hemolysis index is a measurement of the red colour of serum in milligrams (mg) per deciLiter (dL)"
@@ -379,6 +390,14 @@
         "lipemic_index": {
           "type": "number",
           "description": "A measurement of the abnormally high concentration of lipid in serum."
+        },
+        "pt_inr_index": {
+          "type": "number",
+          "description": "A PT/INR test helps find out if your blood is clotting normally."
+        },
+        "ptt_sec": {
+          "type": "number",
+          "description": "A partial thromboplastin time (PTT) test measures how long it takes for a clot to form in a blood sample in seconds (sec)"
         },
         "urea_mg_dL": {
           "type": "number",
@@ -438,9 +457,17 @@
           "type": "number",
           "description": "ferritin measured as micrograms (ug) per liter (L)"
         },
+        "fibrinogen_mg_dL": {
+          "type": "number",
+          "description": "measures fibrinogen in blood in milligrams (mg) per deciliter (dL)"
+        },
         "hemoglobin_g_dL": {
           "type": "number",
           "description": "hemoglobin count - grams (g) per deciliter (dL)"
+        },
+        "lipase_U_L": {
+          "type": "number",
+          "description": "measures Lipase in units (U) per liter (L)"
         },
         "proteine_total_g_%": {
           "type": "number",
@@ -453,6 +480,10 @@
         "transferrin_saturation_%": {
           "type": "number",
           "description": "It is the value of serum iron divided by the total iron-binding capacity of the available transferrin."
+        },
+        "troponin_pg_mL": {
+          "type": "number",
+          "description": "measures the levels of troponin T or troponin I proteins in the blood in picograms (pg) per mililiter (mL)."
         }
       }
     },
@@ -523,4 +554,4 @@
       }
     }
   }
-}
+} 
