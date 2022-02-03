@@ -1,7 +1,7 @@
 --
--- URL: https://github.com/techdoer/ostlog/blob/master/schema/log_Medical_procedure.json
+-- URL: https://github.com/techdoer/ostlog/blob/master/schema/log_Medical_procedures.json
 --
-CREATE TABLE [dbo].[log_Medical_procedure]
+CREATE TABLE [dbo].[log_Medical_procedures]
 (
 	[id] INT IDENTITY (1,1) NOT NULL,
 	[schedule_id] INT NOT NULL,
@@ -16,9 +16,9 @@ CREATE TABLE [dbo].[log_Medical_procedure]
 	[effectivness_remarks] NVARCHAR (2048) NULL,
 	[side_effect_remarks] NVARCHAR (2048) NULL,
 	[remarks] NVARCHAR(2056) NULL,   
-	CONSTRAINT [PK_log_Medical_procedure] PRIMARY KEY CLUSTERED ([id] ASC),
-	CONSTRAINT [FK_log_Medical_procedure-Timing schedules] FOREIGN KEY ([schedule_id]) REFERENCES [dbo].[Timing schedules] ([id]),
-	CONSTRAINT [FK_log_Medical_procedure-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
-	CONSTRAINT [FK_log_Medical_procedure-Locations] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Locations] ([location_id]),
+	CONSTRAINT [PK_log_Medical_procedures] PRIMARY KEY CLUSTERED ([id] ASC),
+	CONSTRAINT [FK_log_Medical_procedures-Timing schedules] FOREIGN KEY ([schedule_id]) REFERENCES [dbo].[Timing schedules] ([id]),
+	CONSTRAINT [FK_log_Medical_procedures-People] FOREIGN KEY ([person_id]) REFERENCES [dbo].[People] ([id]),
+	CONSTRAINT [FK_log_Medical_procedures-Locations] FOREIGN KEY ([location_id]) REFERENCES [dbo].[Locations] ([location_id]),
 	CHECK ([was_effective] = 'strongly disagree' OR [was_effective] = 'disagree' OR [was_effective] = 'neutral' OR [was_effective] = 'agree' OR [was_effective] = 'strongly agree')
 )
